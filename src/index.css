@@ -29,4 +29,8 @@
   --input-clr: #747a85;
   --next-submit-reset-clr: #f7f7f7;
   --quote-text-clr: #f7f7f7;
+
+  /* font family */
+  --font-family-body: 'Inter', sans-serif;
+  --font-size: 1rem;
 }
