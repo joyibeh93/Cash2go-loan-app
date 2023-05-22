@@ -34,3 +34,39 @@
   --font-family-body: 'Inter', sans-serif;
   --font-size: 1rem;
 }
+
+.container {
+  display: flex;
+}
+
+.left-side {
+  display: flex;
+  background-image: url(./assets/5623076\ 1.png);
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+
+  /* padding: 3em 0 0; */
+}
+.steps-container {
+  margin-top: 3em;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+  margin-top: 4em;
+}
+.logo img {
+  margin-right: 0.5em;
+}
+
+.authenticate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
