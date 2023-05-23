@@ -1,0 +1,22 @@
+/* ===========STYLING OF  THE LOGIN PAGE========== */
+.laptop-resize{
+    width: 21.87em;
+    position: absolute;
+    top: 4.6875rem;
+    right: 42.6875rem;
+  }
+  
+  .laptop-resize img{
+    width: 100%;
+  }
+  .login-logo{
+    position: absolute;
+    top:25rem;
+  }
+  .footnote{
+    color: #fff;
+    position: absolute;
+    top: 34.375rem;
+    font-size: 0.875rem;
+  
+  }
