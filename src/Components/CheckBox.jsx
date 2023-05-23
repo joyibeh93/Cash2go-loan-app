@@ -1,9 +1,10 @@
 import React from 'react';
 
-const CheckBox = () => {
+const CheckBox = ({ inProgress, completed }) => {
   return (
-    <div>
-      <input type="checkbox" />
+    <div className="input-checkbox">
+      <input type="checkbox" id="checkbox" />
+      <label htmlFor="checkbox"></label>
     </div>
   );
 };
