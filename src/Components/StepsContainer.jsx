@@ -6,39 +6,54 @@ const StepsContainer = () => {
   return (
     <div className="steps-container">
       <div className="authenticate">
-        <CheckBox />
+        <CheckBox completed={true} />
+
         <div className="num">
-          <CheckBoxSteps stepsNum="step1" />
-          <CheckBoxSteps stepsDescription="step2" />
+          <CheckBoxSteps
+            stepsNum="step"
+            Num="1"
+            stepsDescription="fill your work email and number"
+          />
         </div>
       </div>
 
       <div className="authenticate">
-        <CheckBox />
-        <div className="num">
-          <CheckBoxSteps stepsNum="step2" />
-          <CheckBoxSteps stepsDescription="step2" />
+        <CheckBox inProgress={true} />
+        <div className="step2 num">
+          <CheckBoxSteps
+            stepsNum="step"
+            Num="2"
+            stepsDescription="fill the otp sent to your email"
+          />
         </div>
       </div>
       <div className="authenticate">
         <CheckBox />
-        <div className="num">
-          <CheckBoxSteps stepsNum="step3" />
-          <CheckBoxSteps stepsDescription="step2" />
+        <div className="step3 num">
+          <CheckBoxSteps
+            stepsNum="step"
+            Num="3"
+            stepsDescription="create your password"
+          />
         </div>
       </div>
       <div className="authenticate">
         <CheckBox />
-        <div className="num">
-          <CheckBoxSteps stepsNum="step4" />
-          <CheckBoxSteps stepsDescription="step2" />
+        <div className="step4 num">
+          <CheckBoxSteps
+            stepsNum="step"
+            Num="4"
+            stepsDescription="security questions"
+          />
         </div>
       </div>
       <div className="authenticate">
-        <CheckBox />
-        <div className="num">
-          <CheckBoxSteps stepsNum="final step" />
-          <CheckBoxSteps stepsDescription="step2" />
+        <CheckBox className="five" />
+        <div className="step5 num">
+          <CheckBoxSteps
+            stepsNum="final step"
+            stepsDescription="log into cash2go"
+          />
         </div>
       </div>
     </div>

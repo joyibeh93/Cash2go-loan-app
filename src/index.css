@@ -29,16 +29,27 @@
   --input-clr: #747a85;
   --next-submit-reset-clr: #f7f7f7;
   --quote-text-clr: #f7f7f7;
+  --steps-clr: #f7f7f7;
 
   /* font family */
   --font-family-body: 'Inter', sans-serif;
   --font-size: 1rem;
 }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: var(--font-family-body);
+}
 
 .container {
   display: flex;
 }
-
+/* blue backround section */
 .left-side {
   display: flex;
   background-image: url(./assets/5623076\ 1.png);
@@ -51,22 +62,116 @@
   /* padding: 3em 0 0; */
 }
 .steps-container {
-  margin-top: 3em;
+  margin-top: 8em;
+  margin-left: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--steps-clr);
 }
 
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 1em;
-  margin-top: 4em;
+  margin-right: 1.5em;
+  margin-top: 5.5em;
 }
 .logo img {
   margin-right: 0.5em;
 }
 
-.authenticate {
+.input-checkbox input[type='checkbox'] {
+  /* Hide the default checkbox */
+  visibility: hidden;
+}
+.input-checkbox label {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 18em;
+  position: absolute;
+  width: 28px;
+}
+.input-checkbox label::after {
+  content: '';
+  position: absolute;
+  bottom: -49.8px; /* Adjust the distance from the bottom */
+  left: 50%; /* Position in the middle */
+  transform: translateX(-50%); /* Move horizontally to center */
+  width: 2px; /* Width of the vertical line */
+  height: 50px; /* Height of the vertical line */
+  background-color: #fff; /* Color of the vertical line */
+}
+
+.input-checkbox .check-in-progress label:after {
+  /* Show the checkmark when the checkbox is checked  */
+  content: '';
+  /* Position the checkmark at the center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Translate the checkmark to center it */
+  transform: translate(-50%, -50%);
+  /* Set the size of the checkmark */
+  width: 10px;
+  height: 10px;
+  /* Add rounded corners */
+  border-radius: 50%;
+  /* Set the background color of the checkmark */
+  background-color: #fff;
+}
+
+.input-checkbox .task-completed label:after {
+  /* Show a "good" mark when the task is completed */
+  content: '✓';
+  /* Position the mark at the center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Translate the mark to center it */
+  transform: translate(-50%, -50%);
+  /* Set the size and style of the mark */
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--dashboard-top-bg-clr);
+  background-color: var(--main-bg-clr);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.authenticate {
+  display: flex;
+  justify-content: center;
+}
+.desc {
+  font-size: 0.8rem;
+  margin-bottom: 3em;
+}
+.step2 {
+  margin-right: 1.2em;
+}
+.step3 {
+  margin-right: 3.6em;
+}
+.step4 {
+  margin-right: 4.8em;
+}
+.step5 {
+  margin-right: 5.5em;
+}
+.step-num {
+  /* margin-top: 3em; */
+  text-transform: uppercase;
+}
+.num {
+  margin-bottom: 2em;
+}
+/* end of blue background section */

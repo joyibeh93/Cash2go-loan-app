@@ -10,6 +10,7 @@ const MainOtp = () => {
         <div className="check">
           <StepsContainer />
         </div>
+        <div className="right-side"></div>
       </div>
     </div>
   );

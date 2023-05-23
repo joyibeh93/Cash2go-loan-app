@@ -1,10 +1,12 @@
 import React from 'react';
 
-const CheckBoxSteps = ({ stepsNum, stepsDescription }) => {
+const CheckBoxSteps = ({ stepsNum, stepsDescription, Num }) => {
   return (
     <div>
-      <p>{stepsNum}</p>
-      <span>{stepsDescription}</span>
+      <p className="step-num">
+        {stepsNum} <span>{Num}</span>
+      </p>
+      <span className="desc">{stepsDescription}</span>
     </div>
   );
 };
