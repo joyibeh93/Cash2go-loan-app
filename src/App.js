@@ -1,12 +1,15 @@
 import './index.css';
 import './App.css';
-import MainOtp from './Components/MainOtp';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SignUpStep2 from './Pages/SignUpStep2';
 
 function App() {
   return (
-    <div>
-      <MainOtp />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<SignUpStep2 />} />
+      </Routes>
+    </Router>
   );
 }
 
