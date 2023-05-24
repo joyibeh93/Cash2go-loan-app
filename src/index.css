@@ -44,26 +44,47 @@
 }
 html {
   font-family: var(--font-family-body);
+  color: var(--main-text-color);
 }
-
+a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
 .container {
   display: flex;
+  justify-content: space-between;
 }
-/* blue backround section */
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  /* margin-left: 7.25em; */
+}
+
+/********************* blue backround section *************************/
 .left-side {
+  display: flex;
+  flex: 1;
+  width: 50%;
+  height: 100vh;
+  flex-shrink: 0;
+}
+.background-container {
   display: flex;
   background-image: url(./assets/5623076\ 1.png);
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 100vh;
-
-  /* padding: 3em 0 0; */
+  height: 100%;
 }
+
 .steps-container {
   margin-top: 8em;
-  margin-left: 1.5em;
+  margin-left: 3em;
+  padding: 0 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,7 +96,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 1.5em;
+  margin-left: 5em;
   margin-top: 5.5em;
 }
 .logo img {
@@ -92,7 +113,7 @@ html {
   border-radius: 50%;
   cursor: pointer;
   height: 28px;
-  left: 18em;
+  left: 20em;
   position: absolute;
   width: 28px;
 }
@@ -174,6 +195,12 @@ html {
 .num {
   margin-bottom: 2em;
 }
-/* end of blue background section */
+/******************** end of blue background section **************************/
+
+/* ********** button styles *****************/
+button {
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+}
 
 
