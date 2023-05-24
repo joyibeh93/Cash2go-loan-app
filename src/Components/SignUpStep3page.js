@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
 import StepsContainer from './StepsContainer';
-import SignIn from './SignIn';
+import SignIn from './SignUpStep3';
 import '../Signupstep3.css'
 
 const SignInPage = () => {
