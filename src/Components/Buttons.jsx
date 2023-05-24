@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Buttons = ({ button }) => {
-  return <button className="btn">{button}</button>;
+  return <button type="submit">{button}</button>;
 };
 
 export default Buttons;

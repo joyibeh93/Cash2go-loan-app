@@ -83,3 +83,18 @@ form h1 {
 form p {
   margin: 0.4em 0;
 }
+.btn {
+  font-family: var(--font-family-body);
+  background-color: var(--submit-btn-bg-clr);
+  padding: 0.5em 1.5em;
+  width: 50%;
+  border-radius: 1em;
+  margin-top: 0.5em;
+  text-align: center;
+}
+.btn button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+}

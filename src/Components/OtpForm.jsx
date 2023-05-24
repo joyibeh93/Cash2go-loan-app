@@ -4,8 +4,10 @@ import * as yup from 'yup';
 import { nanoid } from 'nanoid';
 import '../OtpForm.css';
 import Buttons from './Buttons';
+import { useNavigate } from 'react-router-dom';
 
 const OtpForm = () => {
+  const navigate = useNavigate();
   const validationSchema = yup.object().shape({
     otp: yup
       .array()
@@ -34,8 +36,17 @@ const OtpForm = () => {
     },
     validationSchema,
     onSubmit: (values) => {
+      const enteredOtp = values.otp.join('');
+      const correctPin = '1234'; // Replace with the correct PIN value
+
       // Handle form submission
-      console.log(values);
+      if (enteredOtp === correctPin) {
+        // PIN is correct, navigate to the desired page
+        navigate.push('/signupstep3');
+      } else {
+        // PIN is incorrect, handle error or show a message
+        console.log('Incorrect PIN');
+      }
     },
   });
 
@@ -74,7 +85,9 @@ const OtpForm = () => {
         </span>{' '}
         to resend
       </p>
-      <Buttons button="Submit" />
+      <div className="btn">
+        <Buttons button="Submit" />
+      </div>
     </form>
   );
 };
