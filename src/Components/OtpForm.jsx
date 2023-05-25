@@ -42,7 +42,7 @@ const OtpForm = () => {
       // Handle form submission
       if (enteredOtp === correctPin) {
         // PIN is correct, navigate to the desired page
-        navigate.push('/signupstep3');
+        navigate('/signupstep3');
       } else {
         // PIN is incorrect, handle error or show a message
         console.log('Incorrect PIN');
