@@ -57,7 +57,7 @@ const OtpForm = () => {
   };
 
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form action="" onSubmit={formik.handleSubmit}>
       <div className="OtpForm">
         <div className="otpInput">
           {Array.from({ length: 4 }).map((_, index) => (
