@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 import '../Signupstep3.css'
 
 const SignIn = () => {
@@ -14,9 +15,13 @@ const SignIn = () => {
           .required('Please re-enter your password')
     });
 
+    const navigate = useNavigate(); // Initialized the useNavigate hook
+
     const handleSubmit = (values, { setSubmitting }) => {
         console.log(values);
         setSubmitting(false);
+
+        navigate('/signupstep4');  // Navigate to the next page
     };
 
     return (
@@ -40,8 +45,8 @@ const SignIn = () => {
                     </div>
 
                     <div>
-                        <label htmlFor="password">Re-enter Password</label>
-                        <Field className='field' type="password" id="password" name="password" placeholder="********" />
+                        <label htmlFor="confirmpassword">Re-enter Password</label>
+                        <Field className='field' type="password" id="confirmpassword" name="confirmpassword" placeholder="********" />
                         <ErrorMessage name="password" component="div" />
                     </div>
 
