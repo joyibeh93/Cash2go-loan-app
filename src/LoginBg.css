@@ -35,66 +35,32 @@
   --font-family-body: 'Inter', sans-serif;
   --font-size: 1rem;
 }
-form {
-  display: flex;
-  flex-direction: column;
+.background {
+  background-image: url(./assets/5623076\ 1.png);
+  background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4em;
-}
-.OtpForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1em;
-  padding: 0 6em;
-  width: 60%;
-  background-color: var(--otp-bg-clr);
-}
-
-.OtpForm input {
-  width: 3em;
-  padding: 0.5em;
-  margin-right: 0.5em;
-  color: var(--input-clr);
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
-}
-.otpInput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2em;
+  height: 100%;
   width: 100%;
 }
-.error {
-  border-color: var(--rejected-btn-bg-clr);
+.background-image {
+  margin-left: 11.1em;
 }
-
-.error-message {
-  color: var(--rejected-btn-bg-clr);
-  margin-top: 5px;
-}
-form h1 {
-  margin: 1em 0 0.5em;
-}
-form p {
-  margin: 0.4em 0;
-}
-.btn {
-  font-family: var(--font-family-body);
-  background-color: var(--submit-btn-bg-clr);
-  padding: 0.5em 1.5em;
-  width: 50%;
-  border-radius: 1em;
-  margin-top: 0.5em;
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  position: absolute;
+  bottom: 2em;
+  left: 3em;
 }
-.btn button {
-  background-color: transparent;
-  color: #fff;
-  border: none;
-  outline: none;
+.quote {
+  color: var(--dashboard-bg-clr);
+  margin-top: 1em;
+}
+.quote-text {
+  margin: 0.5em 0;
+  color: var(--credit-score-bg-clr);
 }

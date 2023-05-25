@@ -42,7 +42,7 @@ const OtpForm = () => {
       // Handle form submission
       if (enteredOtp === correctPin) {
         // PIN is correct, navigate to the desired page
-        navigate.push('/signupstep3');
+        navigate('/signupstep3');
       } else {
         // PIN is incorrect, handle error or show a message
         console.log('Incorrect PIN');
@@ -57,7 +57,7 @@ const OtpForm = () => {
   };
 
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form action="" onSubmit={formik.handleSubmit}>
       <div className="OtpForm">
         <div className="otpInput">
           {Array.from({ length: 4 }).map((_, index) => (
@@ -88,6 +88,7 @@ const OtpForm = () => {
       <div className="btn">
         <Buttons button="Submit" />
       </div>
+      <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
     </form>
   );
 };
