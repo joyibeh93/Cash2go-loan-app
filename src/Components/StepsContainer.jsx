@@ -6,8 +6,7 @@ const StepsContainer = () => {
   return (
     <div className="steps-container">
       <div className="authenticate">
-        <CheckBox completed={true} />
-
+        <CheckBox />
         <div className="num">
           <CheckBoxSteps
             stepsNum="step"
