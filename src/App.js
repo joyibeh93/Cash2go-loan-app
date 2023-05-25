@@ -3,14 +3,14 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignUpStep2 from './Pages/SignUpStep2';
 import ResetPassword from './Pages/ResetPassword';
-import Forget from './Pages/forget'; 
+import ResetStep2 from './Pages/ResetStep2';
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<SignUpStep2 />} />
+        <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
-        <Route path="/" element={<Forget/>}/> 
+        <Route path="/" element={<ResetStep2 />} />
       </Routes>
     </Router>
   );
