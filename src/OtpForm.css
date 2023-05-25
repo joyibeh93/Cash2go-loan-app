@@ -40,7 +40,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8em;
+  margin-bottom: 4em;
 }
 .OtpForm {
   display: flex;

@@ -88,6 +88,7 @@ const OtpForm = () => {
       <div className="btn">
         <Buttons button="Submit" />
       </div>
+      <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
     </form>
   );
 };
