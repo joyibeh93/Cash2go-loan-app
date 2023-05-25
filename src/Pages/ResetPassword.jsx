@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginBg from '../Components/LoginBg';
+import ResetPasswordForm from '../Components/ResetPswrdForm';
 
 const ResetPassword = () => {
   return (
@@ -7,7 +8,9 @@ const ResetPassword = () => {
       <div className="left-side">
         <LoginBg />
       </div>
-      <div className="right-side"></div>
+      <div className="right-side">
+        <ResetPasswordForm />
+      </div>
     </div>
   );
 };
