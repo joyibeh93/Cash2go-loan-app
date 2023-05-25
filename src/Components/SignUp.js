@@ -20,7 +20,7 @@ const Signup = () => {
         <div className='signup'>
             <h2>Sign Up</h2>
             <Formik
-                initialValues={{ email: '', companyID: '' }}
+                initialValues={{ email: '', companyID }}
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
             >
