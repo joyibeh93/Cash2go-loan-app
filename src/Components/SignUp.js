@@ -8,6 +8,7 @@ const Signup = () => {
     const validationSchema = Yup.object({
         email: Yup.string().email('Invalid email address').required('Email is required'),
         companyID: Yup.string().required('Company ID is required'),
+
     });
 
     const handleSubmit = (values, { setSubmitting }) => {
@@ -24,19 +25,19 @@ const Signup = () => {
                 onSubmit={handleSubmit}
             >
                 <Form>
-                    <div>
+                    <div className='email'>
                         <label htmlFor="email">Email</label>
                         <Field className='field' type="email" id="email" name="email" placeholder="myworkemail@work.com" />
                         <ErrorMessage name="email" component="div" />
                     </div>
 
-                    <div>
+                    <div className='companyID'>
                         <label htmlFor="companyID">Company ID</label>
                         <Field className='field' type="companyID" id="companyID" name="companyID" placeholder="123ABC" />
                         <ErrorMessage name="companyID" component="div" />
                     </div>
 
-                    <button type="submit">Next</button>
+                    <button type="submit">Next --></button>
                     <p>Term of use &nbsp; &nbsp; Privacy policy</p>
                 </Form>
             </Formik>

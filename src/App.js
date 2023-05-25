@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route original path="/" element={<SignUpStep1 />} />
+        <Route path="/" element={<SignUpStep1 />} />
         <Route path="/signupstep2" element={<SignUpStep2 />} />
       </Routes>
     </Router>

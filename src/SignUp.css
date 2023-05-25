@@ -50,11 +50,13 @@ html {
 
 .container {
   display: flex;
+
 }
 
 /* blue backround section */
 .left-side {
   display: flex;
+  flex: 50%;
   background-image: url(./assets/5623076\ 1.png);
   background-repeat: no-repeat;
   justify-content: center;
@@ -63,6 +65,10 @@ html {
   height: 100vh;
 
   /* padding: 3em 0 0; */
+}
+
+.right-side {
+  flex: 50%;
 }
 
 .steps-container {
@@ -199,32 +205,39 @@ html {
 
 .signup {
   margin-top: 180px;
-  margin-left: 150px;
   align-items: center;
-
 }
 
 h2 {
 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   margin-bottom: 60px;
-  margin-left: 140px;
+  margin-left: 250px;
+  color: #172232;
   /* text-align: center; */
+}
+
+.companyID {
+  margin-left: 97px;
+}
+
+.email {
+  margin-left: 60px;
 }
 
 label {
   float: left;
   width: 30%;
-  color: gray;
+  color: #747a74;
   font-weight: 50;
   font-size: 12px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin-bottom: 7px;
 }
 
 ::-webkit-input-placeholder {
-  padding-left: 10px;
+  padding-left: 5px;
   font-size: 11px;
   opacity: 0.4;
 }
@@ -234,25 +247,27 @@ label {
   height: 35px;
   width: 380px;
   /* background-color: #eeedede0; */
-  border-top: 1px solid gray;
-  border-left: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid #747a74;
+  border-left: 1px solid #747a74;
+  border-bottom: 1px solid #747a74;
   border-right: 0px solid;
-  border-radius: 5px 0px 5px 5px;
+  border-radius: 5px;
 }
 
 button {
-  margin-top: 15px;
-  height: 35px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  margin-left: 19px;
+  height: 38px;
   width: 380px;
+  font-size: 14px;
   background-color: #172232;
-  color: white;
+  color: #f7f7f7;
   border-radius: 8px;
 }
 
 p {
   font-size: 12px;
-  color: gray;
-  margin-top: 70px;
-  margin-left: 110px;
+  color: #747a74;
+  margin-left: 140px;
 }
