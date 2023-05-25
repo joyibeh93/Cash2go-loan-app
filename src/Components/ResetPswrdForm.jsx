@@ -55,6 +55,7 @@ const ResetPasswordForm = () => {
           </Form>
         )}
       </Formik>
+      <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
     </div>
   );
 };

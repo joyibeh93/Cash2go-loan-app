@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 18em;
+  height: 100vh;
+  /* margin-bottom: 18em; */
   padding: 3em;
 }
 
@@ -35,4 +36,7 @@
 .re-btn {
   margin-left: 4em;
   width: 70%;
+}
+.terms {
+  margin-top: 5em;
 }
