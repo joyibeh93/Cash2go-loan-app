@@ -1,89 +1,61 @@
-:root {
-    /*** background colors ***/
-    --main-bg-clr: #f7f7f7;
-    --otp-bg-clr: #dfdede;
-    --input-bg-clr: #b9bdc2;
-    --sign-up-btn-bg-clr: #172232;
-    --next-btn-bg-clr: #172232;
-    --submit-btn-bg-clr: #172232;
-    --side-bar-bg-clr: #252d39;
-    --dashboard-top-bg-clr: #252d39;
-    --dashboard-bg-clr: #f7f7f7;
-    --existing-btn-bg-clr: #b9bdc2;
-    --new-btn-bg-clr: #ff6f5a;
-    --approved-btn-bg-clr: #169872;
-    --rejected-btn-bg-clr: #fd3d39;
-    --pending-btn-bg-clr: #c0f5f9;
-    --credit-score-bg-clr: #b9bdc2;
-    --excellent-btn-bg-clr: #169872;
-    --good-btn-bg-clr: #747a85;
-    --user-icon-bg-clr: #747a85;
-    --defaulted-bg-clr: #fd3d39;
-    --paid-bg-clr: #169872;
-    --congratulations-bg-clr: #454e5c;
-  
-    /*** text colors ***/
-    --main-text-color: #172232;
-    --sign-up-cl: #f7f7f7;
-    --label-clr: #747a74;
-    --input-clr: #747a85;
-    --next-submit-reset-clr: #f7f7f7;
-    --quote-text-clr: #f7f7f7;
-    --steps-clr: #f7f7f7;
-  
-    /* font family */
-    --font-family-body: 'Inter', sans-serif;
-    --font-size: 1rem;
-  }
-  .form-cont{
-    width: 60em; 
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:  #f7f7f7;
-    height: 100vh;
-    padding: 3em; 
-  }
-  Form{
-  padding: 1em 3em;
-  margin: 0.625em;
-  width: 100%; 
+.form-container {
+  width: 60em;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items:center;
-  }
-   .label-cont{
-    display: flex;
-    flex-direction: column;
-  }  
-  select{
+  background-color: #f7f7f7;
+  height: 100vh;
+  padding: 3em;
+}
+
+.form {
+  /* padding: 1em 8em; */
+  margin: 0.625em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+select {
   display: block;
   padding: 0.5em 1.5em;
   outline: none;
   border-radius: 0.6em;
   margin-bottom: 1em;
-  margin-top:0.5em ;
-  }
-  input{
+  margin-top: 0.5em;
+  width: 100%;
+}
+/* .label {
+  margin-right: 15em;
+} */
+input {
   display: block;
-  padding: 0.5em 2em;
+  padding: 0.5em 5em;
   border-radius: 0.6em;
   margin-top: 0.5em;
-  }
-.sec-btn{
+  width: 100%;
+}
+.answer {
+  /*padding: 0.5em, 10em; */
+  /* width: 28em; */
+  padding: 0.5em, 2.5em;
+}
+
+.sec-btn {
   background-color: var(--submit-btn-bg-clr);
   padding: 0.5em 1.5em;
-  width: 50%;
+  width: 80%;
   border-radius: 1em;
   margin-top: 0.5em;
   text-align: center;
   color: #fff;
-
+  margin-left: 3em;
 }
 
-  .terms {
-    margin-top: 5em;
-    font-size: 0.8rem;
-  }
+.terms {
+  margin-top: 5em;
+  font-size: 0.8rem;
+}

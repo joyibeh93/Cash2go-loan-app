@@ -1,13 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import '../QuestionForm.css'
+import '../QuestionForm.css';
 import { nanoid } from 'nanoid';
 
 const validationSchema = Yup.object().shape({
   Question: Yup.string().required('please select a security question'),
   Answer: Yup.string().required('please fill your answer'),
-
 });
 
 const initialValues = {
@@ -25,40 +24,52 @@ const QuestionForm = () => {
     console.log(values);
   };
   return (
-    <div className='form-cont'>
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={handleSubmit}
-    >
-      {({errors, touched})=>(
-      <Form>
-        <div className= "label-cont">
-            <label htmlFor="Question">Select your security question</label>
-            <Field as="select" id="Question" name="Question">
+    <div className="form-container">
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ errors, touched }) => (
+          <Form className="form">
+            <label className="label" htmlFor="Question">
+              Select your security question
+            </label>
+            <Field as="select" id="Question" name="Question" className="input">
               <option value="">Select a question</option>
-              <option value="Where did you meet your spouse?">where did you meet your spouse?</option>
-            <option value="What city did you grow up?">what city did you grow up?</option>
-            <option value="What is the name of your pet?">what is the name of your pet?</option>
-            <option value="Where is your best subject?">what is your best subject?</option>
-            <option value="What is the name of your school?">what is the name of your school?</option>
+              <option value="Where did you meet your spouse?">
+                where did you meet your spouse?
+              </option>
+              <option value="What city did you grow up?">
+                what city did you grow up?
+              </option>
+              <option value="What is the name of your pet?">
+                what is the name of your pet?
+              </option>
+              <option value="Where is your best subject?">
+                what is your best subject?
+              </option>
+              <option value="What is the name of your school?">
+                what is the name of your school?
+              </option>
             </Field>
             <ErrorMessage name="Question" component="div" />
-          </div>
 
-          <div className= "label-cont">
-          <label htmlFor="Answer">Your answer</label>
-          <Field type="Answer" id="Answer" name="Answer" />
-          <ErrorMessage name="Answer" component="div" />
-        </div>  
+            <label htmlFor="Answer" className="label">
+              Your answer
+            </label>
+            <Field type="Answer" id="Answer" name="Answer" className="input" />
+            <ErrorMessage name="Answer" component="div" />
 
-          <button className='sec-btn' type="submit">Sign up</button>
-        </Form>
-      )}
+            <button className="sec-btn" type="submit">
+              Sign up
+            </button>
+          </Form>
+        )}
       </Formik>
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
     </div>
   );
 };
 
-export default QuestionForm
+export default QuestionForm;
