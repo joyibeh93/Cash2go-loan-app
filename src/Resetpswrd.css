@@ -5,10 +5,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-<<<<<<< HEAD
-  /* margin-bottom: 18em; */
-=======
->>>>>>> dev1
   padding: 3em;
 }
 
@@ -19,11 +15,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-<<<<<<< HEAD
-  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
-=======
->>>>>>> dev1
 }
+
 .label {
   display: block;
   margin-bottom: 5px;
@@ -39,10 +32,12 @@
   border-radius: 1em;
   margin-bottom: 1em;
 }
+
 .re-btn {
   margin-left: 4em;
   width: 70%;
 }
+
 .terms {
   margin-top: 5em;
 }
