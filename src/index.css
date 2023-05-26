@@ -121,45 +121,35 @@ a {
   position: absolute;
   width: 28px;
 }
-.input-checkbox label::after {
+/* .input-checkbox label::after {
   content: '';
   position: absolute;
-  bottom: -48.8px; /* Adjust the distance from the bottom */
-  left: 50%; /* Position in the middle */
-  transform: translateX(-50%); /* Move horizontally to center */
-  width: 2px; /* Width of the vertical line */
-  height: 50px; /* Height of the vertical line */
-  background-color: #fff; /* Color of the vertical line */
-}
+  bottom: -48.8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 50px;
+  background-color: #fff;
+} */
 
 .input-checkbox label:after {
-  /* Show the checkmark when the checkbox is checked  */
   content: '';
-  /* Position the checkmark at the center */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* Translate the checkmark to center it */
   transform: translate(-50%, -50%);
-  /* Set the size of the checkmark */
   width: 10px;
   height: 10px;
-  /* Add rounded corners */
   border-radius: 50%;
-  /* Set the background color of the checkmark */
   background-color: #fff;
 }
 
 .input-checkbox .task-completed label:after {
-  /* Show a "good" mark when the task is completed */
   content: '✓';
-  /* Position the mark at the center */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* Translate the mark to center it */
   transform: translate(-50%, -50%);
-  /* Set the size and style of the mark */
   font-size: 1.3rem;
   font-weight: 400;
   color: var(--dashboard-top-bg-clr);
@@ -180,20 +170,8 @@ a {
   margin-bottom: 3em;
   color: var(--credit-score-bg-clr);
 }
-/* .step2 {
-  margin-right: 1.2em;
-}
-.step3 {
-  margin-right: 3.6em;
-}
-.step4 {
-  margin-right: 4.8em;
-}
-.step5 {
-  margin-right: 5.5em;
-} */
+
 .step-num {
-  /* margin-top: 3em; */
   text-transform: uppercase;
 }
 .num {
