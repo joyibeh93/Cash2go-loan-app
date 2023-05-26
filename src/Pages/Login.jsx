@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from  '../Components/Logo';
-import laptop from '../assets/Laptop 1.png';
+//import laptop from '../assets/Laptop 1.png';
 import '../Login.css'
 
 
