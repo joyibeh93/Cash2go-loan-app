@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import '../QuestionForm.css';
 import { nanoid } from 'nanoid';
+import { useNavigate } from 'react-router-dom';
 
 const validationSchema = Yup.object().shape({
   Question: Yup.string().required('please select a security question'),
@@ -15,12 +16,14 @@ const initialValues = {
 };
 
 const QuestionForm = () => {
+  const navigate = useNavigate();
   const handleSubmit = (values) => {
     // generate a random id
     const id = nanoid();
     //add id to values object
     values.id = id;
     // Handle form submission
+    navigate('/resetpassword');
     console.log(values);
   };
   return (
@@ -53,13 +56,21 @@ const QuestionForm = () => {
                 what is the name of your school?
               </option>
             </Field>
-            <ErrorMessage name="Question" component="div" />
+            <ErrorMessage
+              name="Question"
+              component="div"
+              className="error-message"
+            />
 
             <label htmlFor="Answer" className="label">
               Your answer
             </label>
             <Field type="Answer" id="Answer" name="Answer" className="input" />
-            <ErrorMessage name="Answer" component="div" />
+            <ErrorMessage
+              name="Answer"
+              component="div"
+              className="error-message"
+            />
 
             <button className="sec-btn" type="submit">
               Sign up
