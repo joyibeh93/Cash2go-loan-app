@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import '../QuestionForm.css';
 import { nanoid } from 'nanoid';
 import { useNavigate } from 'react-router-dom';
+import Buttons from './Buttons';
 
 const validationSchema = Yup.object().shape({
   Question: Yup.string().required('please select a security question'),
@@ -23,7 +24,7 @@ const QuestionForm = () => {
     //add id to values object
     values.id = id;
     // Handle form submission
-    navigate('/resetpassword');
+    navigate('/login');
     console.log(values);
   };
   return (
@@ -72,9 +73,9 @@ const QuestionForm = () => {
               className="error-message"
             />
 
-            <button className="sec-btn" type="submit">
-              Sign up
-            </button>
+            <div className="button">
+              <Buttons button="Submit" />
+            </div>
           </Form>
         )}
       </Formik>

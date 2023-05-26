@@ -80,7 +80,7 @@ const SignIn = () => {
             className="error-message"
           />
 
-          <div className="btn">
+          <div className="button">
             <Buttons button="Sign up" />
           </div>
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
