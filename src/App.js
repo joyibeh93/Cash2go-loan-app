@@ -10,6 +10,7 @@ function App() {
         <Route path="/signupstep2" element={<SignUpStep2 />} />
       </Routes>
     </Router>
+    
   );
 }
 
