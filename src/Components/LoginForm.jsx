@@ -1,26 +1,25 @@
-import React from 'react'
+import React from 'react';
 import { Formik } from 'formik';
-import * as Yup from 'yup'
-
+import * as Yup from 'yup';
+import '../Login.css';
 
 // Creating schema
 const schema = Yup.object().shape({
-    email: Yup.string()
-      .required("Email is a required field")
-      .email("Invalid email format"),
-    password: Yup.string()
-      .required("Password is a required field")
-      .min(8, "Password must be at least 8 characters"),
-  });
-  
+  email: Yup.string()
+    .required('Email is a required field')
+    .email('Invalid email format'),
+  password: Yup.string()
+    .required('Password is a required field')
+    .min(8, 'Password must be at least 8 characters'),
+});
 
 export const LoginForm = () => {
   return (
     <>
-        {/* Wrapping form inside formik tag and passing our schema to validationSchema prop */}
+      {/* Wrapping form inside formik tag and passing our schema to validationSchema prop */}
       <Formik
         validationSchema={schema}
-        initialValues={{ email: "", password: "" }}
+        initialValues={{ email: '', password: '' }}
         onSubmit={(values) => {
           // Alert the input values of the form that we filled
           alert(JSON.stringify(values));
@@ -36,10 +35,10 @@ export const LoginForm = () => {
         }) => (
           <div className="login">
             <div className="form">
-           {/* Passing handleSubmit parameter tohtml form onSubmit property */}
+              {/* Passing handleSubmit parameter tohtml form onSubmit property */}
               <form noValidate onSubmit={handleSubmit}>
-                <span className='loginheader'>Login</span>
-              {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
+                <span className="loginheader">Login</span>
+                {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
                 <label htmlFor="email">Email </label>
                 <input
                   type="email"
@@ -55,9 +54,9 @@ export const LoginForm = () => {
                 <p className="error">
                   {errors.email && touched.email && errors.email}
                 </p>
-                 {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
-                 <label htmlFor="password">Password</label>
-                 <input
+                {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
+                <label htmlFor="password">Password</label>
+                <input
                   type="password"
                   name="password"
                   onChange={handleChange}
@@ -66,7 +65,7 @@ export const LoginForm = () => {
                   placeholder="Enter password"
                   className="form-control"
                 />
-                 {/* If validation is not passed show errors */}
+                {/* If validation is not passed show errors */}
                 <p className="error">
                   {errors.password && touched.password && errors.password}
                 </p>
@@ -77,16 +76,16 @@ export const LoginForm = () => {
           </div>
         )}
       </Formik>
-      <div className='footnote'>
-        <p className="terms">Forgot Password? &nbsp; &nbsp; &nbsp; &nbsp; Sign Up</p>
-      <div className='footnote2'>
-        <p className="terms">Term of use &nbsp; &nbsp; &nbsp; &nbsp; Privacy policy</p>
-
+      <div className="footnote">
+        <p className="terms">
+          Forgot Password? &nbsp; &nbsp; &nbsp; &nbsp; Sign Up
+        </p>
+        <div className="footnote2">
+          <p className="terms">
+            Term of use &nbsp; &nbsp; &nbsp; &nbsp; Privacy policy
+          </p>
+        </div>
       </div>
-
-      </div>
-      
-      
     </>
   );
-}
+};
