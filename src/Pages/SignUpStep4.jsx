@@ -10,8 +10,8 @@ const SignUpStep4 = () => {
     <div className="left-side">
       <div className="background-container">
         <Logo />
-      
-          <StepsContainer />
+  
+        <StepsContainer />
       </div>
       <div className="right-side">
         <QuestionForm />
