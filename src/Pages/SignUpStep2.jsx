@@ -9,11 +9,9 @@ const SignUpStep2 = () => {
       <div className="left-side">
         <div className="background-container">
           <Logo />
-          <div className="check">
-            <StepsContainer />
-          </div>
+          <StepsContainer />
         </div>
-        <div className="right-side otp">
+        <div className="right-side">
           <OtpForm />
         </div>
       </div>
