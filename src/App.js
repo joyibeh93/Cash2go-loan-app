@@ -1,6 +1,5 @@
 import './index.css';
 import './App.css';
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignUpStep2 from './Pages/SignUpStep2';
 import ResetPassword from './Pages/ResetPassword';

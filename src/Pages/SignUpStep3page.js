@@ -7,21 +7,17 @@ import '../Signupstep3.css'
 const SignUpStep3page = () => {
 
   return (
-
-    <div className="container">
+<div className="container">
       <div className="left-side">
         <div className="background-container">
           <Logo />
-          <div className="check">
-            <StepsContainer />
-          </div>
+          <StepsContainer />
         </div>
         <div className="right-side">
           <SignIn />
         </div>
       </div>
     </div>
-   
   )
 }
 

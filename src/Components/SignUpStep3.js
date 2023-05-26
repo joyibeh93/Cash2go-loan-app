@@ -31,23 +31,23 @@ const SignIn = () => {
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
             >
-                <Form>
+                <Form className='center'>
                     <div>
                         <label htmlFor="username">Username</label>
                         <Field className='field' type="text" id="username" name="username" placeholder="myworkemail@work.com" />
-                        <ErrorMessage name="username" component="div" />
+                        <ErrorMessage name="username" component="div" className="error" />
                     </div>
 
                     <div>
                         <label htmlFor="password">Password</label>
                         <Field className='field' type="password" id="password" name="password" placeholder="********" />
-                        <ErrorMessage name="password" component="div" />
+                        <ErrorMessage name="password" component="div" className="error"/>
                     </div>
 
                     <div>
                         <label htmlFor="confirmpassword">Re-enter Password</label>
-                        <Field className='field' type="password" id="confirmpassword" name="confirmpassword" placeholder="********" />
-                        <ErrorMessage name="password" component="div" />
+                        <Field className='field' type="password" id="confirmPassword" name="confirmPassword" placeholder="********" />
+                        <ErrorMessage name="confirmPassword" component="div" className="error"/>
                     </div>
 
                     <button type="submit">Sign up</button>
