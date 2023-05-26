@@ -11,7 +11,7 @@ const SignUpStep2 = () => {
           <Logo />
           <StepsContainer />
         </div>
-        <div className="right-side otp">
+        <div className="right-side">
           <OtpForm />
         </div>
       </div>
