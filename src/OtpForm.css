@@ -86,8 +86,8 @@ form p {
 .btn {
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
-  padding: 0.5em 1.5em;
-  width: 50%;
+  padding: 0.5em 1em;
+  /* width: 50%; */
   border-radius: 1em;
   margin-top: 0.5em;
   text-align: center;
@@ -97,4 +97,7 @@ form p {
   color: #fff;
   border: none;
   outline: none;
+}
+.otp {
+  width: 70%;
 }
