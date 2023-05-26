@@ -11,16 +11,17 @@ const Signup = () => {
 
     });
 
-    const handleSubmit = (values, { setSubmitting }) => {
+    const handleSubmit = (values, { setSubmitting }, reset) => {
         console.log(values);
         setSubmitting(false);
+        reset();
     };
 
     return (
         <div className='signup'>
             <h2>Sign Up</h2>
             <Formik
-                initialValues={{ email: '', companyID }}
+                initialValues={{ email: '', companyID: '' }}
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
             >
@@ -33,7 +34,7 @@ const Signup = () => {
 
                     <div className='companyID'>
                         <label htmlFor="companyID">Company ID</label>
-                        <Field className='field' type="companyID" id="companyID" name="companyID" placeholder="123ABC" />
+                        <Field className='field' type="companyID" required maxLength={6} id="companyID" name="companyID" placeholder="123ABC" />
                         <ErrorMessage name="companyID" component="div" />
                     </div>
 
