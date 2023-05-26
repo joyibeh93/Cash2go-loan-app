@@ -31,7 +31,7 @@ const SignIn = () => {
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
             >
-                <Form className='center'>
+                <Form>
                     <div>
                         <label htmlFor="username">Username</label>
                         <Field className='field' type="text" id="username" name="username" placeholder="myworkemail@work.com" />
