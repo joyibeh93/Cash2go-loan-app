@@ -42,7 +42,7 @@ const OtpForm = () => {
       // Handle form submission
       if (enteredOtp === correctPin) {
         // PIN is correct, navigate to the desired page
-        navigate('/resetpassword');
+        navigate('/signupstep3');
       } else {
         // PIN is incorrect, handle error or show a message
         console.log('Incorrect PIN');
@@ -85,7 +85,7 @@ const OtpForm = () => {
         </span>{' '}
         to resend
       </p>
-      <div className="btn">
+      <div className="btn otp">
         <Buttons button="Submit" />
       </div>
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>

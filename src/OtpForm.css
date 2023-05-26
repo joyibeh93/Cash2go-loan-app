@@ -86,11 +86,12 @@ form p {
 .btn {
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
-  padding: 0.5em 1.5em;
-  width: 50%;
-  border-radius: 1em;
-  margin-top: 0.5em;
+  padding: 15px 5px;
+  border-radius: 12px;
+  margin-top: 5px;
   text-align: center;
+  width: 50%;
+  margin-left: 3em;
 }
 .btn button {
   background-color: transparent;
