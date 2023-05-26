@@ -2,6 +2,7 @@ import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import '../QuestionForm.css'
+import { nanoid } from 'nanoid';
 
 const validationSchema = Yup.object().shape({
   Question: Yup.string().required('please select a security question'),
@@ -16,18 +17,23 @@ const initialValues = {
 
 const QuestionForm = () => {
   const handleSubmit = (values) => {
+    // generate a random id
+    const id = nanoid();
+    //add id to values object
+    values.id = id;
     // Handle form submission
     console.log(values);
   };
   return (
-    <div className='form-container'>
+    <div className='form-cont'>
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
+      {({errors, touched})=>(
       <Form>
-        <div>
+        <div className= "label-cont">
             <label htmlFor="Question">Select your security question</label>
             <Field as="select" id="Question" name="Question">
               <option value="">Select a question</option>
@@ -39,18 +45,18 @@ const QuestionForm = () => {
             </Field>
             <ErrorMessage name="Question" component="div" />
           </div>
-          <div>
+
+          <div className= "label-cont">
           <label htmlFor="Answer">Your answer</label>
           <Field type="Answer" id="Answer" name="Answer" />
           <ErrorMessage name="Answer" component="div" />
-        </div>        
-          <button className='btn' type="submit">Submit</button>
+        </div>  
+
+          <button className='sec-btn' type="submit">Sign up</button>
         </Form>
+      )}
       </Formik>
-      <div className="terms">
-      <p>Terms of use </p>
-      <p>Privacy policy </p>
-      </div>
+      <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
     </div>
   );
 };

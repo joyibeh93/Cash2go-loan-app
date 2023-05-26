@@ -2,7 +2,6 @@ import React from 'react'
 import Logo from '../Components/Logo'
 import StepsContainer from '../Components/StepsContainer'
 import QuestionForm from '../Components/QuestionForm'
-import '../index.css'
 
 
 const SignUpStep4 = () => {
@@ -11,11 +10,10 @@ const SignUpStep4 = () => {
     <div className="left-side">
       <div className="background-container">
         <Logo />
-        <div className="check">
+      
           <StepsContainer />
-        </div>
       </div>
-      <div className="right-side otp">
+      <div className="right-side">
         <QuestionForm />
       </div>
     </div>
