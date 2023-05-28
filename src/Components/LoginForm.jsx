@@ -2,7 +2,7 @@ import React from 'react';
 import Buttons from './Buttons';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import '../Login.css';
 
 // Creating schema
@@ -10,14 +10,12 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .required('Email is required')
     .email('Invalid email format'),
-  password: Yup.string()
-    .required('Password is required ')
-
+  password: Yup.string().required('Password is required '),
 });
 
 export const LoginForm = () => {
   return (
-    <>
+    <div className="login-container">
       {/* Wrapping form inside formik tag and passing our schema to validationSchema prop */}
       <Formik
         validationSchema={schema}
@@ -35,64 +33,60 @@ export const LoginForm = () => {
           handleBlur,
           handleSubmit,
         }) => (
-            <div >
-              {/* Passing handleSubmit parameter tohtml form onSubmit property */}
-              <form noValidate onSubmit={handleSubmit} className="form">
-                <span className="loginheader">Login</span>
-                {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
-                <label htmlFor="email">Email </label>
-                <input
-                  type="email"
-                  name="email"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.email}
-                  placeholder="myworkemail@work.com"
+          <div>
+            {/* Passing handleSubmit parameter tohtml form onSubmit property */}
+            <form noValidate onSubmit={handleSubmit} className="form">
+              <span className="loginheader">Login</span>
+              {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
+              <label htmlFor="email">Email </label>
+              <input
+                type="email"
+                name="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+                placeholder="myworkemail@work.com"
                 //   className="form-control inp_text"
-                  id="email"
-                  className='input'
-                />
-                {/* If validation is not passed show errors */}
-                <p className="error">
-                  {errors.email && touched.email && errors.email}
-                </p>
-                {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
-                <label htmlFor="password" >Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.password}
-                  className='input'
+                id="email"
+                className="input"
+              />
+              {/* If validation is not passed show errors */}
+              <p className="error-message">
+                {errors.email && touched.email && errors.email}
+              </p>
+              {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.password}
+                className="input"
                 //   placeholder="Enter password"
                 //   className="form-control"
-                />
-                {/* If validation is not passed show errors */}
-                <p className="error">
-                  {errors.password && touched.password && errors.password}
-                </p>
-                {/* Click on submit button to submit the form */}
-                <div className='button'>
-                 <Buttons button='Login' />
-
-                </div>
-               
-              </form>
-            </div>
-       
+              />
+              {/* If validation is not passed show errors */}
+              <p className="error-message">
+                {errors.password && touched.password && errors.password}
+              </p>
+              {/* Click on submit button to submit the form */}
+              <div className="login-btn">
+                <Buttons button="Login" />
+              </div>
+            </form>
+          </div>
         )}
       </Formik>
       <div className="footnote">
         <p>
-          <Link to='/resetpassword'> Forgot Password?  </Link> &nbsp; &nbsp; &nbsp; &nbsp; <Link to='/'> Sign Up </Link>
+          <Link to="/resetpassword"> Forgot Password? </Link> &nbsp; &nbsp;
+          &nbsp; &nbsp; <Link to="/"> Sign Up </Link>
         </p>
         <div className="footnote2">
-          <p>
-            Term of use &nbsp; &nbsp; &nbsp; &nbsp; Privacy policy
-          </p>
+          <p>Term of use &nbsp; &nbsp; &nbsp; &nbsp; Privacy policy</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
