@@ -4,6 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import '../Login.css';
+import eyeIcon from '../assets/eye icon.svg';
 
 // Creating schema
 const schema = Yup.object().shape({
@@ -35,7 +36,7 @@ export const LoginForm = () => {
         }) => (
           <div>
             {/* Passing handleSubmit parameter tohtml form onSubmit property */}
-            <form noValidate onSubmit={handleSubmit} className="form">
+            <form noValidate onSubmit={handleSubmit} className="form-login">
               <span className="loginheader">Login</span>
               {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
               <label htmlFor="email">Email </label>
@@ -48,7 +49,7 @@ export const LoginForm = () => {
                 placeholder="myworkemail@work.com"
                 //   className="form-control inp_text"
                 id="email"
-                className="input"
+                className="login-input"
               />
               {/* If validation is not passed show errors */}
               <p className="error-message">
@@ -62,7 +63,7 @@ export const LoginForm = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.password}
-                className="input"
+                className="login-input"
                 //   placeholder="Enter password"
                 //   className="form-control"
               />

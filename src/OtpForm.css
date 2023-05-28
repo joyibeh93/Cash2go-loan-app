@@ -98,4 +98,5 @@ form p {
   color: #fff;
   border: none;
   outline: none;
+  cursor: pointer;
 }

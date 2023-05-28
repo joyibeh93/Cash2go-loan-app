@@ -8,22 +8,23 @@
   width: 100%;
 }
 
-.form {
-  border-radius: 10px;
+.form-login {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-right: 10em;
+  /* margin-right: 5em; */
+  padding: 0 5em;
 }
 
-.form input {
-  background: #f2f2f2;
+.login-input {
   border-radius: 5px;
-  /* margin: 12px 0; */
-  padding: 15px 10px;
-  box-sizing: border-box;
+  width: 30em;
+  padding: 0.8em;
   font-family: var(--font-family-body);
+  outline: 0;
+  border: 1px solid black;
 }
 .loginheader {
   color: var(--main-text-color);
@@ -33,12 +34,8 @@
   font-weight: bold;
 }
 
-.form input:focus {
-  border-color: var(--input-clr);
-}
-
 .login-btn {
-  width: 70%;
+  width: 80%;
   font-family: var(--font-family-body);
   text-transform: uppercase;
   outline: 0;
