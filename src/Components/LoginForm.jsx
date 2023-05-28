@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import '../Login.css';
-import eyeIcon from '../assets/eye icon.svg';
+// import eyeIcon from '../assets/eye icon.svg';
 
 // Creating schema
 const schema = Yup.object().shape({
