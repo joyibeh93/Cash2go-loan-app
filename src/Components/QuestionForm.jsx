@@ -67,13 +67,7 @@ const QuestionForm = () => {
             <label htmlFor="Answer" className="label">
               Your answer
             </label>
-            <Field
-              type="Answer"
-              as="text"
-              id="Answer"
-              name="Answer"
-              className="input"
-            />
+            <Field type="Answer" id="Answer" name="Answer" className="input" />
             <ErrorMessage
               name="Answer"
               component="div"
