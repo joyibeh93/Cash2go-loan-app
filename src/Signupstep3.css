@@ -14,16 +14,57 @@
   border: none;
   cursor: pointer;
 }
-.eye {
-  position: absolute;
+/*.eye {
+  /*position: absolute;
   left: 68em;
   bottom: 23em;
-}
-.eye2 {
+
   position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}*/
+
+/*.eye2 {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  /*position: absolute;
   top: 17.5em;
   left: 68em;
-}
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }*/
+
 .terms {
   margin: 3em auto;
 }
+
+.password-input-container {
+  position: relative;
+}
+
+.input.password-input {
+  padding-right: 2.5rem ; /* Add padding to accommodate the icon */
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-toggle-icon img {
+  width: 1.5rem;
+  height: auto;
+}
+
+
