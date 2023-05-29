@@ -85,7 +85,7 @@ const OtpForm = () => {
         </span>{' '}
         to resend
       </p>
-      <div className="btn">
+      <div className="btn otp">
         <Buttons button="Submit" />
       </div>
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>

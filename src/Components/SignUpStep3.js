@@ -3,9 +3,9 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
-
+import '../OtpForm.css';
 import '../Signupstep3.css';
-
+import eyeIcon from '../assets/eye icon.svg';
 const SignIn = () => {
   const validationSchema = Yup.object({
     username: Yup.string().required('Username is required'),
@@ -59,6 +59,7 @@ const SignIn = () => {
             name="password"
             placeholder="********"
           />
+          <img src={eyeIcon} className="eye" alt="eye-icon" />
           <ErrorMessage
             name="password"
             component="div"
@@ -75,13 +76,14 @@ const SignIn = () => {
             name="confirmPassword"
             placeholder="********"
           />
+          <img src={eyeIcon} className="eye2" alt="eye-icon" />
           <ErrorMessage
             name="confirmPassword"
             component="div"
             className="error-message"
           />
 
-          <div className="btn">
+          <div className="button">
             <Buttons button="Sign up" />
           </div>
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
