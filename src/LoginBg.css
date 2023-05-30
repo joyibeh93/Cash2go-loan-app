@@ -44,7 +44,8 @@
   width: 100%;
 }
 .background-image {
-  margin-left: 11.1em;
+  
+   margin-left: 11.1em; 
 }
 .logo-container {
   display: flex;
