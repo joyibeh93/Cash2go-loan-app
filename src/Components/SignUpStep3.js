@@ -6,6 +6,7 @@ import Buttons from './Buttons';
 import '../OtpForm.css';
 import '../Signupstep3.css';
 import eyeIcon from '../assets/eye icon.svg';
+
 const SignIn = () => {
   const validationSchema = Yup.object({
     username: Yup.string().required('Username is required'),
