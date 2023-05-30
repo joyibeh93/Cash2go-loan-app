@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
@@ -10,19 +10,26 @@ import eyeIcon from '../assets/eye icon.svg';
 const SignIn = () => {
   const validationSchema = Yup.object({
     username: Yup.string().required('Username is required'),
-    password: Yup.string().required('Password is required'),
+    password: Yup.string()
+      .required('Password is required')
+      .min(8, 'Password must be at least 8 characters long'),
     confirmPassword: Yup.string()
       .oneOf([Yup.ref('password'), null], 'Passwords must match')
       .required('Please re-enter your password'),
   });
 
   const navigate = useNavigate(); // Initialized the useNavigate hook
+  const [showPassword, setShowPassword] = useState(false); // Added state for password visibility
 
   const handleSubmit = (values, { setSubmitting }) => {
     console.log(values);
     setSubmitting(false);
 
     navigate('/signupstep4'); // Navigate to the next page
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevState) => !prevState);
   };
 
   return (
@@ -52,14 +59,21 @@ const SignIn = () => {
           <label className="label" htmlFor="password">
             Password
           </label>
+
           <Field
             className="input"
-            type="password"
+            type={showPassword ? 'text' : 'password'} // Updated the type attribute
             id="password"
             name="password"
             placeholder="********"
           />
-          <img src={eyeIcon} className="eye" alt="eye-icon" />
+          <img
+            src={eyeIcon}
+            className="eye"
+            alt="eye-icon"
+            onClick={togglePasswordVisibility} // Added onClick event handler
+          />
+
           <ErrorMessage
             name="password"
             component="div"
@@ -69,14 +83,21 @@ const SignIn = () => {
           <label htmlFor="confirmpassword" className="label">
             Re-enter Password
           </label>
+
           <Field
-            className="input"
-            type="password"
+            className="input password-input"
+            type={showPassword ? 'text' : 'password'} // Updated the type attribute
             id="confirmPassword"
             name="confirmPassword"
             placeholder="********"
           />
-          <img src={eyeIcon} className="eye2" alt="eye-icon" />
+          <img
+            src={eyeIcon}
+            className="eye2"
+            alt="eye-icon"
+            onClick={togglePasswordVisibility} // Added onClick event handler
+          />
+
           <ErrorMessage
             name="confirmPassword"
             component="div"
