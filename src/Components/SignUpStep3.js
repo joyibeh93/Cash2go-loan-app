@@ -10,15 +10,16 @@ import eyeIcon from '../assets/eye icon.svg';
 const SignIn = () => {
   const validationSchema = Yup.object({
     username: Yup.string().required('Username is required'),
-    password: Yup.string().required('Password is required')
-    .min(8, 'Password must be at least 8 characters long'),
+    password: Yup.string()
+      .required('Password is required')
+      .min(8, 'Password must be at least 8 characters long'),
     confirmPassword: Yup.string()
       .oneOf([Yup.ref('password'), null], 'Passwords must match')
       .required('Please re-enter your password'),
   });
 
   const navigate = useNavigate(); // Initialized the useNavigate hook
-  const [showPassword, setShowPassword] = useState(false) // Added state for password visibility
+  const [showPassword, setShowPassword] = useState(false); // Added state for password visibility
 
   const handleSubmit = (values, { setSubmitting }) => {
     console.log(values);
@@ -58,9 +59,9 @@ const SignIn = () => {
           <label className="label" htmlFor="password">
             Password
           </label>
-          <div className='password-input-container'>
+
           <Field
-            className="input password-input"
+            className="input"
             type={showPassword ? 'text' : 'password'} // Updated the type attribute
             id="password"
             name="password"
@@ -68,11 +69,11 @@ const SignIn = () => {
           />
           <img
             src={eyeIcon}
-            className="password-toggle-icon"
+            className="eye"
             alt="eye-icon"
             onClick={togglePasswordVisibility} // Added onClick event handler
           />
-          </div>
+
           <ErrorMessage
             name="password"
             component="div"
@@ -82,7 +83,7 @@ const SignIn = () => {
           <label htmlFor="confirmpassword" className="label">
             Re-enter Password
           </label>
-          <div className='password-input-container'>
+
           <Field
             className="input password-input"
             type={showPassword ? 'text' : 'password'} // Updated the type attribute
@@ -92,11 +93,11 @@ const SignIn = () => {
           />
           <img
             src={eyeIcon}
-            className="password-toggle-icon"
+            className="eye2"
             alt="eye-icon"
             onClick={togglePasswordVisibility} // Added onClick event handler
           />
-          </div>
+
           <ErrorMessage
             name="confirmPassword"
             component="div"
