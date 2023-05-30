@@ -2,7 +2,7 @@ import './index.css';
 import './App.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SignUpStep1 from './Components/SignUpStep1';
+import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
 //import Dashboard from './Pages/Dashboard';
 import ResetPassword from './Pages/ResetPassword';
@@ -14,11 +14,12 @@ function App() {
     <Router>
       <Routes>
         {/* <Route path="/" element={<Dashboard />} /> */}
-        <Route path="/" element={<SignUpStep2 />} />
+        <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/signupstep4" element={<SignUpStep4 />} />
         <Route path="/signupstep3" element={<SignUpStep3 />} />
         <Route path="/login" element={<Login />} />
+        <Route exact path="/" element={<SignUpStep1 />} />
       </Routes>
     </Router>
   );
