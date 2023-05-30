@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
 
 const validationSchema = Yup.object().shape({
-  Question: Yup.string().required('please select a security question'),
+  Question: Yup.string().required('please select a security question').string("number not allowed"),
   Answer: Yup.string().required('please fill your answer'),
 });
 
