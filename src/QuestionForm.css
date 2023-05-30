@@ -19,27 +19,23 @@
   align-items: flex-start;
 }
 
-select {
+.select {
   display: block;
-  padding: 0.5em 1.5em;
+  padding: 0.8em;
   outline: none;
   border-radius: 0.6em;
   margin-bottom: 1em;
   margin-top: 0.5em;
   width: 100%;
+  /* text-align: start; */
 }
-/* .label {
-  margin-right: 15em;
-} */
+
 input {
   display: block;
   padding: 0.5em 5em;
   border-radius: 0.6em;
   margin-top: 0.5em;
   width: 100%;
-}
-.answer {
-  padding: 0.5em, 2.5em;
 }
 
 .terms {
