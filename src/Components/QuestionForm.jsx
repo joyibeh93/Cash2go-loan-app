@@ -6,7 +6,6 @@ import { nanoid } from 'nanoid';
 import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
 import '../Styles/OtpForm.css';
-import Confirm from '../assets/confirm.svg';
 import Congrats from '../assets/congratulations.svg';
 
 const validationSchema = Yup.object().shape({
