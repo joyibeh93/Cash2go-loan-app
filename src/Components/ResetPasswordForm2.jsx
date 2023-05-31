@@ -36,7 +36,7 @@ const ResetPasswordForm = () => {
 
   return (
     <div className="form-container">
-      <h2>Reset Password</h2>
+      <h1>Reset Password</h1>
       <Formik
         initialValues={{ securityQuestion: '', message: '' }}
         validationSchema={validationSchema}
