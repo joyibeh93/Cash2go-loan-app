@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Buttons from './Buttons';
 import eyeIcon from '../assets/eye icon.svg';
 import { Formik } from 'formik';
@@ -15,7 +15,7 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .required('Email is required')
     .email('Invalid email format'),
-  password: Yup.string().required('Password is required '),
+  password: Yup.string().required('Password is required ').min(8, 'Password must be at least 8 characters long'),
 });
 // const navigate = useNavigate(); // Initialized the useNavigate hook
 
@@ -26,6 +26,18 @@ const handleSubmit = (values, { setSubmitting }) => {
 };
 
 export const LoginForm = () => {
+  const [showPassword, setShowPassword] = useState(false); // Added state for password visibility
+  // const handleSubmit = (values, { setSubmitting }) => {
+  //   console.log(values);
+  //   setSubmitting(false);
+
+  //  // navigate('/dashboard'); // Navigate to the next page
+  // };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevState) => !prevState);
+  };
+
   return (
     <div className="login-container">
       {/* Wrapping form inside formik tag and passing our schema to validationSchema prop */}
@@ -66,7 +78,7 @@ export const LoginForm = () => {
               {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
               <label htmlFor="password">Password</label>
               <input
-                type="password"
+                type={showPassword ? 'text' : 'password'} // Updated the type attribute
                 name="password"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -75,7 +87,7 @@ export const LoginForm = () => {
                 //   placeholder="Enter password"
                 //   className="form-control"
               />
-               <img src={eyeIcon} className="login-eye" alt="eye-icon" />
+               <img src={eyeIcon} className="login-eye" alt="eye-icon"  onClick={togglePasswordVisibility} />
               {/* If validation is not passed show errors */}
               <p className="error-message">
                 {errors.password && touched.password && errors.password}
