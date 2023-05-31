@@ -2,7 +2,6 @@ import React from 'react';
 import Logo from '../Components/Logo';
 import StepsContainer from '../Components/StepsContainer';
 import SignUp from '../Components/SignUp';
-import '../SignUp.css';
 
 const SignUpPage = () => {
   return (

@@ -3,8 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import Buttons from './Buttons';
-import '../Resetpswrd.css';
-
+import '../Styles/Resetpswrd.css';
+import { useNavigate } from 'react-router-dom';
 // A validation schema for the email field using Yup
 const emailSchema = Yup.object().shape({
   email: Yup.string()
@@ -14,6 +14,8 @@ const emailSchema = Yup.object().shape({
 
 // A functional component for the form
 const ResetPasswordForm = () => {
+  const navigate = useNavigate();
+
   // A function to handle the form submission
   const handleSubmit = (values) => {
     // Generate a random id for the form data
@@ -22,6 +24,7 @@ const ResetPasswordForm = () => {
     values.id = id;
     // Do something with the values, such as sending them to an API
     console.log(values);
+    navigate('/resetpassword2');
   };
 
   return (
@@ -41,7 +44,7 @@ const ResetPasswordForm = () => {
               className="input"
               id="email"
               name="email"
-              type="text"
+              type="email"
               placeholder="Enter your email address"
             />
             <ErrorMessage
