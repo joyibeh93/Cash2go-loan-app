@@ -1,8 +1,8 @@
 import React from 'react';
-import '../Styles/Dashboard.css';
+import ContactInfo from '../Components/ContactInfo';
 import Sidebar from '../Components/Sidebar';
 
-const Dashboard = () => {
+const ContactInfoPage = () => {
   return (
     <div className="dashboard-container">
       <div className="left-sidebar">
@@ -13,9 +13,10 @@ const Dashboard = () => {
           <h1>home</h1>
         </div>
         <div className="content-container"></div>
+        <ContactInfo />
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default ContactInfoPage;

@@ -21,7 +21,8 @@
 .login-input {
   border-radius: 5px;
   width: 30em;
-  padding: 0.8em;
+  padding: 1em;
+  margin-top: 1em;
   font-family: var(--font-family-body);
   outline: 0;
   border: 1px solid black;
