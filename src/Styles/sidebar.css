@@ -65,6 +65,27 @@
   position: absolute;
   top: 20rem;
 }
+.p-red,.p-green{
+height: 1.25rem;
+width: 1.25rem;
+border-radius: 50%;
+font-size: 0.9375rem;
+background-color: var(--defaulted-bg-clr);
+
+}
+.p-green{
+  background-color: var(--approved-btn-bg-clr);
+}
+ .one{
+  position: absolute;
+  top:10.5rem;
+  left: 9.5rem;
+}
+.one1{
+  position: absolute;
+  top:13.5rem;
+  left: 9.5rem;
+}
 .log-out {
   position: absolute;
   top: 33rem;

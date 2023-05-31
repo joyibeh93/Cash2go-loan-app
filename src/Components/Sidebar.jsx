@@ -33,10 +33,18 @@ const Sidebar = () => {
         <div className="links">
           <img src={Recovery} alt="Dashboard-icon" />
           <p>Recovery</p>
+          <p className='p-red'>
+            <span className='one'>1</span>
+          </p>
         </div>
         <div className="links">
           <img src={Message} alt="Dashboard-icon" />
           <p>Messages</p>
+          <p className='p-green'>
+            <span className='one1'>1</span>
+          </p>
+          
+
         </div>
       </div>
       <div className="sidebar-items2">
