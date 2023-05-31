@@ -4,23 +4,21 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router';
-import '../PasswordReset.css'
-
-
+import '../PasswordReset.css';
 
 const ResetPasswordForm = () => {
-
   const navigate = useNavigate(); // Get the navigation function
 
   const handleSubmit = (values, { setSubmitting }) => {
     // Simulate API request to reset password
-    axios.post('/api/reset-password', values)
-      .then(response => {
+    axios
+      .post('/api/reset-password', values)
+      .then((response) => {
         // Handle successful password reset
         console.log('Password reset successfully.');
         navigate('/resetpassword3'); // Navigate to the next page
       })
-      .catch(error => {
+      .catch((error) => {
         // Handle password reset error
         console.error('Error resetting password:', error);
       })
@@ -45,12 +43,11 @@ const ResetPasswordForm = () => {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting }) => (
-          <Form className='form'>
-            <div className="form-field">
+          <Form className="form">
             <label className="label" htmlFor="Question">
               Security Question
             </label>
-            <Field as="select" id="Question" name="Question" className="select">
+            <Field as="select" id="Question" name="Question" className="input">
               <option value="">Select a question</option>
               <option value="Where did you meet your spouse?">
                 where did you meet your spouse?
@@ -73,21 +70,20 @@ const ResetPasswordForm = () => {
               component="div"
               className="error-message"
             />
-            </div>
 
-            <div className="form-field">
-              <label htmlFor="message">Your answer</label>
-              <Field
-                type="text"
-                id="message"
-                name="message"
-              />
-              <ErrorMessage name="message" component="div" className="error-message" />
-            </div>
+            <label htmlFor="message" className="Label">
+              Your answer
+            </label>
+            <Field type="text" id="message" name="message" className="input" />
+            <ErrorMessage
+              name="message"
+              component="div"
+              className="error-message"
+            />
 
-            <div className="btn re-btn">
-                <Buttons button="Reset" />
-              </div>
+            <div className="button">
+              <Buttons button="Reset" />
+            </div>
           </Form>
         )}
       </Formik>

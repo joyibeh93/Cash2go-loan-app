@@ -9,7 +9,9 @@ import '../OtpForm.css';
 
 const validationSchema = Yup.object().shape({
   Question: Yup.string().required('please select a security question'),
-  Answer: Yup.string().matches(/^[a-zA-Z\s]*$/, "only text is allowed").required('please fill your answer'),
+  Answer: Yup.string()
+    .matches(/^[a-zA-Z\s]*$/, 'only text is allowed')
+    .required('please fill your answer'),
 });
 
 const initialValues = {
@@ -40,7 +42,7 @@ const QuestionForm = () => {
             <label className="label" htmlFor="Question">
               Select your security question
             </label>
-            <Field as="select" id="Question" name="Question" className="select">
+            <Field as="select" id="Question" name="Question" className="input">
               <option value="">Select a question</option>
               <option value="Where did you meet your spouse?">
                 where did you meet your spouse?
