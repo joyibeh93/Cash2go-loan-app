@@ -6,6 +6,8 @@ import { nanoid } from 'nanoid';
 import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
 import '../Styles/OtpForm.css';
+import Confirm from '../assets/confirm.svg';
+import Congrats from '../assets/congratulations.svg';
 
 const validationSchema = Yup.object().shape({
   Question: Yup.string().required('please select a security question'),
@@ -83,6 +85,17 @@ const QuestionForm = () => {
         )}
       </Formik>
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <img src={Congrats} alt="good-mark" className="good" />
+        <h3>Congratulations !!!</h3>
+        <p>
+          Your Signup for Cash2go app is now complete. Get ready to unlock great
+          financial possibilities and achieve your goals
+        </p>
+        <button className="continue">Continue</button>
+      </div>
+      <div class="overlay hidden"></div>
     </div>
   );
 };

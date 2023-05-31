@@ -10,7 +10,6 @@ import SignUpStep4 from './Pages/SignUpStep4';
 import SignUpStep3 from './Pages/SignUpStep3page';
 import Login from './Pages/Login';
 import PasswordResetPage from './Pages/PasswordResetPage';
-
 function App() {
   return (
     <Router>

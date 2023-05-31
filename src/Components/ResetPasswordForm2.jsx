@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router';
+import Congrats from '../assets/congratulations.svg';
 
 const ResetPasswordForm = () => {
   const navigate = useNavigate(); // Get the navigation function
@@ -87,6 +88,14 @@ const ResetPasswordForm = () => {
         )}
       </Formik>
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <img src={Congrats} alt="good-mark" className="good" />
+        <h3>Reset Link</h3>
+        <p>A password reset link have been sent to myworkemail@work.com</p>
+        <button className="continue">Continue</button>
+      </div>
+      <div class="overlay hidden"></div>
     </div>
   );
 };
