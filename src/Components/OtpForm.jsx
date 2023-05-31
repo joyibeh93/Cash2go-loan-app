@@ -2,7 +2,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { nanoid } from 'nanoid';
-import '../OtpForm.css';
+import '../Styles/OtpForm.css';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router-dom';
 
