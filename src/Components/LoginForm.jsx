@@ -1,5 +1,6 @@
 import React from 'react';
 import Buttons from './Buttons';
+import eyeIcon from '../assets/eye icon.svg';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
@@ -67,6 +68,7 @@ export const LoginForm = () => {
                 //   placeholder="Enter password"
                 //   className="form-control"
               />
+               <img src={eyeIcon} className="login-eye" alt="eye-icon" />
               {/* If validation is not passed show errors */}
               <p className="error-message">
                 {errors.password && touched.password && errors.password}

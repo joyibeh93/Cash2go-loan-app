@@ -54,6 +54,11 @@
   color: #ffffff;
   border: none;
 }
+.login-eye{
+  position: absolute;
+  top: 19rem;
+  left: 75rem;
+}
 
 .footnote {
   display: flex;
