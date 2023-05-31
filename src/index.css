@@ -107,6 +107,19 @@ a {
 .logo img {
   margin-right: 0.5em;
 }
+.dashboard-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 2.3em; */
+ 
+}
+.dashboard-logo,.img{
+  width: 100px;
+} 
+.nav-logo{
+  width: 50px;
+}
 
 .input-checkbox input[type='checkbox'] {
   /* Hide the default checkbox */

@@ -3,7 +3,8 @@ import Buttons from './Buttons';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
-import '../Login.css';
+import '../Styles/Login.css';
+
 // import { useNavigate } from 'react-router-dom';
 
 // import eyeIcon from '../assets/eye icon.svg';

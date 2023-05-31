@@ -1,10 +1,10 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import '../SignUp.css';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router-dom';
-
+import eyeIcon from '../assets/eye icon.svg';
+import '../Styles/Signup1.css';
 const Signup = () => {
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -23,7 +23,7 @@ const Signup = () => {
 
   return (
     <div className="form-container">
-      <h2>Sign Up</h2>
+      <h1>Sign Up</h1>
       <Formik
         initialValues={{ email: '', companyID: '' }}
         validationSchema={validationSchema}
@@ -56,8 +56,9 @@ const Signup = () => {
             maxLength={6}
             id="companyID"
             name="companyID"
-            placeholder="123ABC"
+            placeholder="******"
           />
+          <img src={eyeIcon} className="eye1" alt="eye-icon" />
           <ErrorMessage
             name="companyID"
             component="div"
