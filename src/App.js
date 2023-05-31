@@ -9,6 +9,9 @@ import ResetPassword from './Pages/ResetPassword';
 import SignUpStep4 from './Pages/SignUpStep4';
 import SignUpStep3 from './Pages/SignUpStep3page';
 import Login from './Pages/Login';
+import PasswordResetPage from './Pages/PasswordResetPage';
+import PredictionInfoPage from './Pages/PredictionInfoPage';
+import ContactInfoPage from './Pages/ContactInfoPage';
 function App() {
   return (
     <Router>
@@ -20,6 +23,9 @@ function App() {
         <Route path="/signupstep3" element={<SignUpStep3 />} />
         <Route path="/login" element={<Login />} />
         <Route exact path="/" element={<SignUpStep1 />} />
+        <Route path="/resetpassword2" element={<PasswordResetPage />} />
+        <Route path="/predictioninfo" element={<PredictionInfoPage />} />
+        <Route path="/contactinfo" element={<ContactInfoPage />} />
       </Routes>
     </Router>
   );
