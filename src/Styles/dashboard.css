@@ -1,0 +1,9 @@
+
+/* Styling for the Nav bar */
+.dashboard-container{
+    display: flex;
+}
+.nav-bar{
+    flex: 4;
+    background-color: blue;
+}

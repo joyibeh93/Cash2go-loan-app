@@ -1,0 +1,18 @@
+
+:root{
+    --side-bar-bg-clr: #252d39;
+}
+.sidebar{
+    width: 230px;
+    background-color: var(--side-bar-bg-clr);
+    min-height: 100vh;
+    /* padding: 5px; */
+    
+}
+.top-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    
+}

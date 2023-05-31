@@ -4,7 +4,7 @@ import brandName from '../assets/Cash2go_logo2.svg';
 
 const Logo = () => {
   return (
-    <div className="logo">
+    <div className="logo dashboard-logo">
       <img src={cash2goLogo} alt="cash2gologo" />
       <img src={brandName} alt="brandname" />
     </div>
