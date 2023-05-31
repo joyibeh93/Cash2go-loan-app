@@ -3,17 +3,22 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import Buttons from './Buttons';
+import { useNavigate } from 'react-router';
 import '../PasswordReset.css'
 
-//import './ResetPasswordForm.css'; // Import CSS file
+
 
 const ResetPasswordForm = () => {
+
+  const navigate = useNavigate(); // Get the navigation function
+
   const handleSubmit = (values, { setSubmitting }) => {
     // Simulate API request to reset password
     axios.post('/api/reset-password', values)
       .then(response => {
         // Handle successful password reset
         console.log('Password reset successfully.');
+        navigate('/resetpassword3'); // Navigate to the next page
       })
       .catch(error => {
         // Handle password reset error
@@ -42,17 +47,36 @@ const ResetPasswordForm = () => {
         {({ isSubmitting }) => (
           <Form className='form'>
             <div className="form-field">
-              <label htmlFor="securityQuestion">Security Question</label>
-              <Field
-                type="text"
-                id="securityQuestion"
-                name="securityQuestion"
-              />
-              <ErrorMessage name="securityQuestion" component="div" className="error-message" />
+            <label className="label" htmlFor="Question">
+              Security Question
+            </label>
+            <Field as="select" id="Question" name="Question" className="select">
+              <option value="">Select a question</option>
+              <option value="Where did you meet your spouse?">
+                where did you meet your spouse?
+              </option>
+              <option value="What city did you grow up?">
+                what city did you grow up?
+              </option>
+              <option value="What is the name of your pet?">
+                what is the name of your pet?
+              </option>
+              <option value="Where is your best subject?">
+                what is your best subject?
+              </option>
+              <option value="What is the name of your school?">
+                what is the name of your school?
+              </option>
+            </Field>
+            <ErrorMessage
+              name="Question"
+              component="div"
+              className="error-message"
+            />
             </div>
 
             <div className="form-field">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">Your answer</label>
               <Field
                 type="text"
                 id="message"

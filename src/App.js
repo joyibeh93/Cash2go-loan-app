@@ -2,7 +2,7 @@ import './index.css';
 import './App.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-//import PasswordResetPage from './Pages/PasswordResetPage';
+import PasswordResetPage from './Pages/PasswordResetPage';
 import SignUpStep2 from './Pages/SignUpStep2';
 import Dashboard from './Pages/Dashboard';
 import ResetPassword from './Pages/ResetPassword';
@@ -20,8 +20,8 @@ function App() {
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/signupstep4" element={<SignUpStep4 />} />
         <Route path="/signupstep3" element={<SignUpStep3 />} />
-        <Route path="/login" element={<Login />} />
-        {/*<Route path="/" element={<PasswordResetPage />} />*/}
+        <Route path="/login" element={<Login />} /> 
+        <Route path="/passwordreset" element={<PasswordResetPage />} />
       </Routes>
     </Router>
   );
