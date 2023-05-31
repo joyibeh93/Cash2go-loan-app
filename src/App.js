@@ -2,7 +2,7 @@ import './index.css';
 import './App.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import SignUpStep1 from './Pages/SignUpStep1';
+import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
 // import Dashboard from './Pages/Dashboard';
 import ResetPassword from './Pages/ResetPassword';
@@ -21,8 +21,8 @@ function App() {
         <Route path="/signupstep4" element={<SignUpStep4 />} />
         <Route path="/signupstep3" element={<SignUpStep3 />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route exact path="/" element={<SignUpStep1 />} /> */}
-        <Route path="/" element={<PasswordResetPage />} />
+        <Route exact path="/" element={<SignUpStep1 />} />
+        <Route path="/resetpassword2" element={<PasswordResetPage />} />
       </Routes>
     </Router>
   );

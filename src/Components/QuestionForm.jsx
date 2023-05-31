@@ -1,11 +1,11 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import '../QuestionForm.css';
+import '../Styles/QuestionForm.css';
 import { nanoid } from 'nanoid';
 import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
-import '../OtpForm.css';
+import '../Styles/OtpForm.css';
 
 const validationSchema = Yup.object().shape({
   Question: Yup.string().required('please select a security question'),

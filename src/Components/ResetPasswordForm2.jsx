@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router';
-import '../PasswordReset.css';
 
 const ResetPasswordForm = () => {
   const navigate = useNavigate(); // Get the navigation function
