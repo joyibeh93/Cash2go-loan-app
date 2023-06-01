@@ -1,5 +1,7 @@
-import { ListItem } from '@material-ui/core';
-import React, { useEffect, useState } from 'react'
+import React from "react"
+import Download from '../assets/Download.svg'
+import userIcon from '../assets/user-icon.svg'
+// import React, { useEffect, useState } from 'react'
 
 
 const data = [
@@ -34,15 +36,23 @@ const DashBoard1_Down = () => {
             <table>
                 <thead>
                     <tr>All Applications <span>
-                        {/* <img src={ } alt='Download' /> */}
+                        <img src={Download} alt='Download' />
                     </span></tr>
                     <tr>Sorted by Date</tr>
                     <tr>
                         <th>Product</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Credit Score</th>
-                        <th>Amount</th>
+                        <th>Date <span>
+                            <img src={Download} alt='Download' />
+                        </span></th>
+                        <th>Status <span>
+                            <img src={Download} alt='Download' />
+                        </span></th>
+                        <th>Credit Score <span>
+                            <img src={Download} alt='Download' />
+                        </span></th>
+                        <th>Amount <span>
+                            <img src={Download} alt='Download' />
+                        </span></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,12 +69,16 @@ const DashBoard1_Down = () => {
                                 <td>{item.creditScore}</td>
                                 <td>{item.amount}</td> */}
 
-                                <td>{val.product} <br /><a href=''>more info </a>
+                                <td><span>
+                                    <img src={userIcon} alt='user-icon' />
+                                </span>{val.product} <br /><a href=''>more info </a>
                                 </td>
                                 <td>{val.date}</td>
                                 <td>{val.status}</td>
                                 <td>{val.creditScore}</td>
-                                <td>{val.amount}</td>
+                                <td>{val.amount} <span>
+                                    <img src={Download} alt='Download' />
+                                </span></td>
                             </tr>
                         )
                     })}
