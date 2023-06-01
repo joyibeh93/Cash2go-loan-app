@@ -30,56 +30,56 @@ const QuestionForm = () => {
   };
 
   const handleModalClose = () => {
-    setShowModal(false)
+    setShowModal(false);
     // navigate to login page after modal popup
     navigate('/login');
-
   };
 
   const Modal = () => {
     //  modal component popup
     return (
       <div>
-      <div className ="modal">
-      <button className="close-modal">&times;</button>
-      <img src={Congrats} alt="good-mark" className="good" />
-      <h3>Congratulations !!!</h3>
-      <p>
-        Your Signup for Cash2go app is now complete. Get ready to unlock great
-        financial possibilities and achieve your goals
-      </p>
-      <button className="continue" onClick={handleModalClose}>Continue</button>
-    </div>
-    <div overlay= "true"></div>
-    </div>
-
+        <div className="modal">
+          <button className="close-modal">&times;</button>
+          <img src={Congrats} alt="good-mark" className="good" />
+          <h3>Congratulations !!!</h3>
+          <p>
+            Your Signup for Cash2go app is now complete. Get ready to unlock
+            great financial possibilities and achieve your goals
+          </p>
+          <button className="continue" onClick={handleModalClose}>
+            Continue
+          </button>
+        </div>
+        <div overlay="true"></div>
+      </div>
     );
   };
 
   // const handleSubmit = (values) => {
-    // generate a random id
-    // const id = nanoid();
-    //add id to values object
-    // values.id = id;
-    // Handle form submissions
-    // navigate('/login');
-    // console.log(values);
+  // generate a random id
+  // const id = nanoid();
+  //add id to values object
+  // values.id = id;
+  // Handle form submissions
+  // navigate('/login');
+  // console.log(values);
   // }
   return (
     <div className="form-container">
       <Formik
-      //passes the initial values of the form as an object
+        //passes the initial values of the form as an object
         initialValues={initialValues}
         //validates form input
         validationSchema={validationSchema}
         // Handle form submission
         onSubmit={(values) => {
-           // generate a random id
+          // generate a random id
           const id = nanoid();
           //add id to values object
           values.id = id;
-          console.log (values)
-          handleModalOpen(); 
+          console.log(values);
+          handleModalOpen();
         }}
       >
         {({ errors, touched }) => (
@@ -129,7 +129,8 @@ const QuestionForm = () => {
       </Formik>
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
       {/* {renders modal component if showModal is true otherwise renders nothing} */}
-      {showModal && <Modal/>} 
+      {showModal && <Modal />}
+      {showModal && <div className="overlay"></div>}
     </div>
   );
 };

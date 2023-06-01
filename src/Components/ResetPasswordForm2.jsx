@@ -1,64 +1,95 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import axios from 'axios';
+import '../Styles/QuestionForm.css';
+import { nanoid } from 'nanoid';
+import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
-import { useNavigate } from 'react-router';
+import '../Styles/OtpForm.css';
 import Congrats from '../assets/congratulations.svg';
+import { useState } from 'react';
 
-const ResetPasswordForm = () => {
-  const handleSubmit = (values, { setSubmitting }) => {
-    // Simulate API request to reset password
-    axios
-      .post('/api/reset-password', values)
-      .then((response) => {
-        // Handle successful password reset
-        console.log('Password reset successfully.');
-      })
-      .catch((error) => {
-        // Handle password reset error
-        console.error('Error resetting password:', error);
-      })
-      .finally(() => {
-        setSubmitting(false);
-      });
-  };
+const validationSchema = Yup.object().shape({
+  Question: Yup.string().required('please select a security question'),
+  Answer: Yup.string()
+    .matches(/^[a-zA-Z\s]*$/, 'only text is allowed')
+    .required('please fill your answer'),
+});
+
+const initialValues = {
+  Question: '',
+  Answer: '',
+};
+
+const QuestionForm = () => {
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
+  const handleModalOpen = () => {
+    //show modal component popup
     setShowModal(true);
   };
-  const closeModal = () => {
+
+  const handleModalClose = () => {
     setShowModal(false);
+    // navigate to login page after modal popup
   };
-  const navigate = useNavigate();
   const goToPassword3 = () => {
     navigate('/resetpassword3');
   };
 
-  const validationSchema = Yup.object().shape({
-    securityQuestion: Yup.string().required('Security question is required'),
-    message: Yup.string()
-      .required('Message is required')
-      .matches(/^[a-zA-Z\s]+$/, 'Message must contain only letters'),
-  });
+  const Modal = () => {
+    //  modal component popup
+    return (
+      <div>
+        <div className="modal">
+          <button className="close-modal" onClick={handleModalClose}>
+            &times;
+          </button>
+          <img src={Congrats} alt="good-mark" className="good" />
+          <h3>Reset Link</h3>
+          <p>
+            A Password reset link have been sent to{' '}
+            <span>myworkemail@work.com</span>
+          </p>
+          <button className="continue" onClick={goToPassword3}>
+            Continue
+          </button>
+        </div>
+        <div overlay="true"></div>
+      </div>
+    );
+  };
 
+  // const handleSubmit = (values) => {
+  // generate a random id
+  // const id = nanoid();
+  //add id to values object
+  // values.id = id;
+  // Handle form submissions
+  // navigate('/login');
+  // console.log(values);
+  // }
   return (
     <div className="form-container">
-      <h1>Reset Password</h1>
       <Formik
-        initialValues={{ securityQuestion: '', message: '' }}
+        //passes the initial values of the form as an object
+        initialValues={initialValues}
+        //validates form input
         validationSchema={validationSchema}
+        // Handle form submission
         onSubmit={(values) => {
-          console.log('');
-          openModal();
-          handleSubmit();
+          // generate a random id
+          const id = nanoid();
+          //add id to values object
+          values.id = id;
+          console.log(values);
+          handleModalOpen();
         }}
       >
-        {({ isSubmitting }) => (
+        {({ errors, touched }) => (
           <Form className="form">
             <label className="label" htmlFor="Question">
-              Security Question
+              Select your security question
             </label>
             <Field as="select" id="Question" name="Question" className="input">
               <option value="">Select a question</option>
@@ -84,39 +115,28 @@ const ResetPasswordForm = () => {
               className="error-message"
             />
 
-            <label htmlFor="message" className="Label">
+            <label htmlFor="Answer" className="label">
               Your answer
             </label>
-            <Field type="text" id="message" name="message" className="input" />
+            <Field type="text" id="Answer" name="Answer" className="input" />
             <ErrorMessage
-              name="message"
+              name="Answer"
               component="div"
               className="error-message"
             />
 
             <div className="button">
-              <Buttons button="Reset" />
+              <Buttons button="Submit" />
             </div>
           </Form>
         )}
       </Formik>
-      {showModal && (
-        <div className="modal">
-          <button className="close-modal" onClick={closeModal}>
-            &times;
-          </button>
-          <img src={Congrats} alt="good-mark" className="good" />
-          <h3>Reset Link</h3>
-          <p>A password reset link have been sent to myworkemail@work.com</p>
-          <button className="continue" onClick={goToPassword3}>
-            Continue
-          </button>
-        </div>
-      )}
-      {showModal && <div className="overlay"></div>}
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+      {/* {renders modal component if showModal is true otherwise renders nothing} */}
+      {showModal && <Modal />}
+      {showModal && <div className="overlay"></div>}
     </div>
   );
 };
 
-export default ResetPasswordForm;
+export default QuestionForm;
