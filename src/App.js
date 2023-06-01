@@ -21,7 +21,7 @@ function App() {
         <Route path="/signupstep4" element={<SignUpStep4 />} />
         <Route path="/signupstep3" element={<SignUpStep3 />} />
         <Route path="/login" element={<Login />} /> 
-        <Route path="/passwordreset" element={<PasswordResetPage />} />
+        <Route path="/" element={<PasswordResetPage />} />
       </Routes>
     </Router>
   );
