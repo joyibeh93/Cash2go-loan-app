@@ -3,8 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
-//import '../OtpForm.css';
-//import '../Signupstep3.css';
+import '../Styles/Resetpassword3.css';
 import eyeIcon from '../assets/eye icon.svg';
 
 const ResetPassword3 = () => {
@@ -33,7 +32,7 @@ const ResetPassword3 = () => {
 
   return (
     <div className="form-container">
-        <h1>Reset Password</h1>
+      <h1>Reset Password</h1>
       <Formik
         initialValues={{ password: '', confirmPassword: '' }}
         validationSchema={validationSchema}
@@ -53,7 +52,7 @@ const ResetPassword3 = () => {
           />
           <img
             src={eyeIcon}
-            className="eye"
+            className="eye-1"
             alt="eye-icon"
             onClick={togglePasswordVisibility} // Added onClick event handler
           />
@@ -77,7 +76,7 @@ const ResetPassword3 = () => {
           />
           <img
             src={eyeIcon}
-            className="eye2"
+            className="eye-2"
             alt="eye-icon"
             onClick={togglePasswordVisibility} // Added onClick event handler
           />
