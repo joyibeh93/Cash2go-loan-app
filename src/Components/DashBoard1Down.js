@@ -60,29 +60,34 @@ const DashBoard1_Down = () => {
                     {/* {data.map((item) */}
                     {data.map((val, key) => {
                         return (
-                            <tr key={key}
-                            // key= {item.id}   > 
-                            >
-                                {/* <td>{item.product}</td>
+                            <>
+                                <tr key={key}
+                                // key= {item.id}   > 
+                                >
+                                    {/* <td>{item.product}</td>
                                 <td>{item.date}</td>
                                 <td>{item.status}</td>
                                 <td>{item.creditScore}</td>
                                 <td>{item.amount}</td> */}
 
-                                <td><span>
-                                    <img src={userIcon} alt='user-icon' />
-                                </span>{val.product} <br /><a href=''>more info </a>
-                                </td>
-                                <td>{val.date}</td>
-                                <td>{val.status}</td>
-                                <td>{val.creditScore}</td>
-                                <td>{val.amount} <span>
-                                    <img src={Download} alt='Download' />
-                                </span></td>
-                            </tr>
+                                    <td><span>
+                                        <img src={userIcon} alt='user-icon' />
+                                    </span>{val.product} <br /><a href=''>more info </a>
+                                    </td>
+                                    <td>{val.date}</td>
+                                    <td>{val.status}</td>
+                                    <td>{val.creditScore}</td>
+                                    <td>{val.amount} <span>
+                                        <img src={Download} alt='Download' />
+                                    </span></td>
+                                </tr>
+                            </>
                         )
                     })}
                 </tbody>
+                <th><button>Prev</button> <button>1</button><button>2</button> _
+                    <button>5</button><button>6</button><button>Next</button>
+                </th>
             </table>
         </div>
     );
