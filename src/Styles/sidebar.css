@@ -44,12 +44,11 @@
 }
 .sidebar-logo {
   position: absolute;
-
-  margin-left: 1.5rem;
 }
 .sidebar-items1 {
   position: absolute;
   top: 3.5rem;
+  left: 2rem;
 }
 .links {
   display: flex;
@@ -64,6 +63,29 @@
 .sidebar-items2 {
   position: absolute;
   top: 20rem;
+  left: 2rem;
+}
+.p-red,
+.p-green {
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  font-size: 0.9375rem;
+  background-color: var(--defaulted-bg-clr);
+  text-align: center;
+}
+.p-green {
+  background-color: var(--approved-btn-bg-clr);
+}
+.one {
+  position: absolute;
+  top: 10.5rem;
+  left: 9.5rem;
+}
+.one1 {
+  position: absolute;
+  top: 13.4rem;
+  left: 9.7rem;
 }
 .log-out {
   position: absolute;

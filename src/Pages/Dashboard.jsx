@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles/Dashboard.css';
 import Sidebar from '../Components/Sidebar';
+import Navbar from '../Components/Navbar';
 
 const Dashboard = () => {
   return (
@@ -10,7 +11,8 @@ const Dashboard = () => {
       </div>
       <div className="main-dashboard">
         <div className="top-bar">
-          <h1>home</h1>
+          <Navbar/>
+        
         </div>
         <div className="content-container"></div>
       </div>

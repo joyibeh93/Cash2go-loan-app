@@ -1,7 +1,7 @@
 import React from 'react';
 import ContactInfo from '../Components/ContactInfo';
 import Sidebar from '../Components/Sidebar';
-
+import Navbar from '../Components/Navbar';
 const ContactInfoPage = () => {
   return (
     <div className="dashboard-container">
@@ -10,7 +10,7 @@ const ContactInfoPage = () => {
       </div>
       <div className="main-dashboard">
         <div className="top-bar">
-          <h1>home</h1>
+          <Navbar />
         </div>
         <div className="content-container"></div>
         <ContactInfo />
