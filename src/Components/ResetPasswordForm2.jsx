@@ -7,8 +7,22 @@ import { useNavigate } from 'react-router';
 import Congrats from '../assets/congratulations.svg';
 
 const ResetPasswordForm = () => {
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-
+  const handleSubmit = (values, { setSubmitting }) => {
+    // Simulate API request to reset password
+    axios
+      .post('/api/reset-password', values)
+      .then((response) => {
+        // Handle successful password reset
+        console.log('Password reset successfully.');
+      })
+      .catch((error) => {
+        // Handle password reset error
+        console.error('Error resetting password:', error);
+      })
+      .finally(() => {
+        setSubmitting(false);
+      });
+  };
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -20,23 +34,6 @@ const ResetPasswordForm = () => {
   const navigate = useNavigate();
   const goToPassword3 = () => {
     navigate('/resetpassword3');
-  };
-  const handleSubmit = (values, { setSubmitting }) => {
-    // Simulate API request to reset password
-    axios
-      .post('/api/reset-password', values)
-      .then((response) => {
-        // Handle successful password reset
-        console.log('Password reset successfully.');
-        setIsFormSubmitted(true); // Set formSubmitted to true after successful submission
-      })
-      .catch((error) => {
-        // Handle password reset error
-        console.error('Error resetting password:', error);
-      })
-      .finally(() => {
-        setSubmitting(false);
-      });
   };
 
   const validationSchema = Yup.object().shape({
@@ -52,7 +49,11 @@ const ResetPasswordForm = () => {
       <Formik
         initialValues={{ securityQuestion: '', message: '' }}
         validationSchema={validationSchema}
-        onSubmit={handleSubmit}
+        onSubmit={(values) => {
+          console.log('');
+          openModal();
+          handleSubmit();
+        }}
       >
         {({ isSubmitting }) => (
           <Form className="form">
@@ -94,19 +95,19 @@ const ResetPasswordForm = () => {
             />
 
             <div className="button">
-              <Buttons button="Reset" onClick={openModal} />
+              <Buttons button="Reset" />
             </div>
           </Form>
         )}
       </Formik>
-      {showModal && isFormSubmitted && (
+      {showModal && (
         <div className="modal">
-          <button class="close-modal" onClick={closeModal}>
+          <button className="close-modal" onClick={closeModal}>
             &times;
           </button>
           <img src={Congrats} alt="good-mark" className="good" />
           <h3>Reset Link</h3>
-          <p>A password resent link have been sent to myworkemail@work.com</p>
+          <p>A password reset link have been sent to myworkemail@work.com</p>
           <button className="continue" onClick={goToPassword3}>
             Continue
           </button>
