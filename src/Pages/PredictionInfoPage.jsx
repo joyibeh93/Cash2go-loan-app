@@ -1,6 +1,7 @@
 import React from 'react';
 import PredictionInfo from '../Components/PredictionInfo';
 import Sidebar from '../Components/Sidebar';
+import Navbar from '../Components/Navbar';
 
 const PredictionInfoPage = () => {
   return (
@@ -10,7 +11,7 @@ const PredictionInfoPage = () => {
       </div>
       <div className="main-dashboard">
         <div className="top-bar">
-          <h1>home</h1>
+          <Navbar />
         </div>
         <div className="content-container"></div>
         <PredictionInfo />
