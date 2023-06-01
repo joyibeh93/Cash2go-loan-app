@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -7,8 +7,20 @@ import { useNavigate } from 'react-router';
 import Congrats from '../assets/congratulations.svg';
 
 const ResetPasswordForm = () => {
-  const navigate = useNavigate(); // Get the navigation function
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+  const closeModal = () => {
+    setShowModal(false);
+  };
+  const navigate = useNavigate();
+  const goToPassword3 = () => {
+    navigate('/resetpassword3');
+  };
   const handleSubmit = (values, { setSubmitting }) => {
     // Simulate API request to reset password
     axios
@@ -16,7 +28,7 @@ const ResetPasswordForm = () => {
       .then((response) => {
         // Handle successful password reset
         console.log('Password reset successfully.');
-        navigate('/resetpassword3'); // Navigate to the next page
+        setIsFormSubmitted(true); // Set formSubmitted to true after successful submission
       })
       .catch((error) => {
         // Handle password reset error
@@ -82,20 +94,26 @@ const ResetPasswordForm = () => {
             />
 
             <div className="button">
-              <Buttons button="Reset" />
+              <Buttons button="Reset" onClick={openModal} />
             </div>
           </Form>
         )}
       </Formik>
+      {showModal && isFormSubmitted && (
+        <div className="modal">
+          <button class="close-modal" onClick={closeModal}>
+            &times;
+          </button>
+          <img src={Congrats} alt="good-mark" className="good" />
+          <h3>Reset Link</h3>
+          <p>A password resent link have been sent to myworkemail@work.com</p>
+          <button className="continue" onClick={goToPassword3}>
+            Continue
+          </button>
+        </div>
+      )}
+      {showModal && <div className="overlay"></div>}
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
-      <div class="modal hidden">
-        <button class="close-modal">&times;</button>
-        <img src={Congrats} alt="good-mark" className="good" />
-        <h3>Reset Link</h3>
-        <p>A password reset link have been sent to myworkemail@work.com</p>
-        <button className="continue">Continue</button>
-      </div>
-      <div class="overlay hidden"></div>
     </div>
   );
 };
