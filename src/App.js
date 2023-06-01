@@ -1,6 +1,5 @@
 import './index.css';
 import './App.css';
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
@@ -12,6 +11,7 @@ import Login from './Pages/Login';
 import PasswordResetPage from './Pages/PasswordResetPage';
 import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
+import ResetPassword3page from './Pages/ResetPassword3page';
 function App() {
   return (
     <Router>
@@ -26,6 +26,7 @@ function App() {
         <Route path="/resetpassword2" element={<PasswordResetPage />} />
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />
+        <Route path="/resetpassword3" element={<ResetPassword3page />} />
       </Routes>
     </Router>
   );
