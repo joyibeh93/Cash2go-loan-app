@@ -1,15 +1,18 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import '../QuestionForm.css';
+import '../Styles/QuestionForm.css';
 import { nanoid } from 'nanoid';
 import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
-import '../OtpForm.css';
+import '../Styles/OtpForm.css';
+import Congrats from '../assets/congratulations.svg';
 
 const validationSchema = Yup.object().shape({
   Question: Yup.string().required('please select a security question'),
-  Answer: Yup.string().required('please fill your answer'),
+  Answer: Yup.string()
+    .matches(/^[a-zA-Z\s]*$/, 'only text is allowed')
+    .required('please fill your answer'),
 });
 
 const initialValues = {
@@ -40,7 +43,7 @@ const QuestionForm = () => {
             <label className="label" htmlFor="Question">
               Select your security question
             </label>
-            <Field as="select" id="Question" name="Question" className="select">
+            <Field as="select" id="Question" name="Question" className="input">
               <option value="">Select a question</option>
               <option value="Where did you meet your spouse?">
                 where did you meet your spouse?
@@ -81,6 +84,17 @@ const QuestionForm = () => {
         )}
       </Formik>
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <img src={Congrats} alt="good-mark" className="good" />
+        <h3>Congratulations !!!</h3>
+        <p>
+          Your Signup for Cash2go app is now complete. Get ready to unlock great
+          financial possibilities and achieve your goals
+        </p>
+        <button className="continue">Continue</button>
+      </div>
+      <div class="overlay hidden"></div>
     </div>
   );
 };

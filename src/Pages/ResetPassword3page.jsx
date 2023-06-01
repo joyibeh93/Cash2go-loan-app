@@ -1,19 +1,18 @@
 import React from 'react'
 import LoginBg from '../Components/LoginBg'
-import ResetPasswordForm from '../Components/ResetPasswordForm'
+import ResetPassword3 from '../Components/ResetPassword3'
 
-
-const PasswordResetPage = () => {
+const ResetPassword3page = () => {
   return (
     <div className="container">
       <div className="left-side">
         <LoginBg />
       </div>
       <div className="right-side">
-        <ResetPasswordForm />
+        <ResetPassword3 />
       </div>
     </div>
   )
 }
 
-export default PasswordResetPage
+export default ResetPassword3page

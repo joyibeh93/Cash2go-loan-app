@@ -16,6 +16,7 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 .label {
   display: block;
   margin-bottom: 5px;
@@ -31,10 +32,12 @@
   border-radius: 0.5em;
   margin-bottom: 1em;
 }
+
 .re-btn {
   margin-left: 4em;
   width: 70%;
 }
+
 .terms {
   margin-top: 5em;
 }

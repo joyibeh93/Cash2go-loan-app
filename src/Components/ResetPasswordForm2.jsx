@@ -4,23 +4,21 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router';
-import '../PasswordReset.css'
-
-
+import Congrats from '../assets/congratulations.svg';
 
 const ResetPasswordForm = () => {
-
   const navigate = useNavigate(); // Get the navigation function
 
   const handleSubmit = (values, { setSubmitting }) => {
     // Simulate API request to reset password
-    axios.post('/api/reset-password', values)
-      .then(response => {
+    axios
+      .post('/api/reset-password', values)
+      .then((response) => {
         // Handle successful password reset
         console.log('Password reset successfully.');
         navigate('/resetpassword3'); // Navigate to the next page
       })
-      .catch(error => {
+      .catch((error) => {
         // Handle password reset error
         console.error('Error resetting password:', error);
       })
@@ -38,19 +36,18 @@ const ResetPasswordForm = () => {
 
   return (
     <div className="form-container">
-      <h2>Reset Password</h2>
+      <h1>Reset Password</h1>
       <Formik
         initialValues={{ securityQuestion: '', message: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         {({ isSubmitting }) => (
-          <Form className='form'>
-            <div className="form-field">
+          <Form className="form">
             <label className="label" htmlFor="Question">
               Security Question
             </label>
-            <Field as="select" id="Question" name="Question" className="select">
+            <Field as="select" id="Question" name="Question" className="input">
               <option value="">Select a question</option>
               <option value="Where did you meet your spouse?">
                 where did you meet your spouse?
@@ -73,25 +70,32 @@ const ResetPasswordForm = () => {
               component="div"
               className="error-message"
             />
-            </div>
 
-            <div className="form-field">
-              <label htmlFor="message">Your answer</label>
-              <Field
-                type="text"
-                id="message"
-                name="message"
-              />
-              <ErrorMessage name="message" component="div" className="error-message" />
-            </div>
+            <label htmlFor="message" className="Label">
+              Your answer
+            </label>
+            <Field type="text" id="message" name="message" className="input" />
+            <ErrorMessage
+              name="message"
+              component="div"
+              className="error-message"
+            />
 
-            <div className="btn re-btn">
-                <Buttons button="Reset" />
-              </div>
+            <div className="button">
+              <Buttons button="Reset" />
+            </div>
           </Form>
         )}
       </Formik>
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <img src={Congrats} alt="good-mark" className="good" />
+        <h3>Reset Link</h3>
+        <p>A password reset link have been sent to myworkemail@work.com</p>
+        <button className="continue">Continue</button>
+      </div>
+      <div class="overlay hidden"></div>
     </div>
   );
 };
