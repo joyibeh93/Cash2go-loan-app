@@ -85,7 +85,7 @@ const DashBoard1_Down = () => {
                         )
                     })}
                 </tbody>
-                <th><button>Prev</button> <button>1</button><button>2</button> _
+                <th><button>Prev</button> <button>1</button><button>2</button> <button>_</button>
                     <button>5</button><button>6</button><button>Next</button>
                 </th>
             </table>
