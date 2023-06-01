@@ -9,7 +9,7 @@ const LoginBg = () => {
     <div>
       <div className="background">
         <div className="background-image">
-          <img src={Laptopimg} alt="laptop-img" /> 
+          <img src={Laptopimg} alt="laptop-img" />
         </div>
         <div className="logo-container">
           <Logo />

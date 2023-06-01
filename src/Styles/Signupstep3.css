@@ -19,11 +19,15 @@
   left: 68em;
   bottom: 23em;
 }
+
 .eye2 {
   position: absolute;
+  cursor: pointer;
   top: 17.5em;
   left: 68em;
+  cursor: pointer;
 }
+
 .terms {
   margin: 3em auto;
 }

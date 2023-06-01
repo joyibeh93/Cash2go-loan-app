@@ -3,7 +3,10 @@ import Buttons from './Buttons';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
-import '../Login.css';
+import '../Styles/Login.css';
+
+// import { useNavigate } from 'react-router-dom';
+
 // import eyeIcon from '../assets/eye icon.svg';
 
 // Creating schema
@@ -13,6 +16,13 @@ const schema = Yup.object().shape({
     .email('Invalid email format'),
   password: Yup.string().required('Password is required '),
 });
+// const navigate = useNavigate(); // Initialized the useNavigate hook
+
+const handleSubmit = (values, { setSubmitting }) => {
+  console.log(values);
+  setSubmitting(false);
+  // navigate('/dashboard');
+};
 
 export const LoginForm = () => {
   return (
@@ -21,10 +31,7 @@ export const LoginForm = () => {
       <Formik
         validationSchema={schema}
         initialValues={{ email: '', password: '' }}
-        onSubmit={(values) => {
-          // Alert the input values of the form that we filled
-          alert(JSON.stringify(values));
-        }}
+        onSubmit={handleSubmit}
       >
         {({
           values,
