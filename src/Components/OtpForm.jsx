@@ -5,6 +5,7 @@ import { nanoid } from 'nanoid';
 import '../Styles/OtpForm.css';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const OtpForm = () => {
   const navigate = useNavigate();
@@ -18,16 +19,16 @@ const OtpForm = () => {
         test: (value) => {
           return value.join('').trim() !== '';
         },
-      })
-      .test({
-        name: 'match-pin',
-        message: 'Incorrect PIN',
-        test: (value) => {
-          const enteredOtp = value.join('');
-          const correctPin = '1234'; // Replace with the correct PIN value
-          return enteredOtp === correctPin;
-        },
       }),
+    // .test({
+    //   name: 'match-pin',
+    //   message: 'Incorrect PIN',
+    //   test: (value) => {
+    //     const enteredOtp = value.join('');
+    //     const correctPin = '1234'; // Replace with the correct PIN value
+    //     return enteredOtp === correctPin;
+    //   },
+    // }),
   });
 
   const formik = useFormik({
@@ -35,17 +36,29 @@ const OtpForm = () => {
       otp: ['', '', '', ''],
     },
     validationSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       const enteredOtp = values.otp.join('');
-      const correctPin = '1234'; // Replace with the correct PIN value
+      console.log(enteredOtp);
 
-      // Handle form submission
-      if (enteredOtp === correctPin) {
-        // PIN is correct, navigate to the desired page
-        navigate('/signupstep3');
-      } else {
-        // PIN is incorrect, handle error or show a message
-        console.log('Incorrect PIN');
+      try {
+        const response = await axios.patch(
+          'https://cash2go-backendd.onrender.com/api/v1/user/verify-otp',
+          {
+            otp: enteredOtp,
+          }
+        );
+
+        // Assuming the API returns a success status code (e.g., 200)
+        if (response.status === 400) {
+          // OTP is correct, navigate to the desired page
+          navigate('/signupstep3');
+        } else {
+          // OTP is incorrect, handle error or show a message
+          console.log('Incorrect OTP');
+        }
+      } catch (error) {
+        // Handle error from the API
+        console.error(error);
       }
     },
   });
@@ -57,7 +70,7 @@ const OtpForm = () => {
   };
 
   return (
-    <form action="" onSubmit={formik.handleSubmit}>
+    <form onSubmit={formik.handleSubmit}>
       <div className="OtpForm">
         <div className="otpInput">
           {Array.from({ length: 4 }).map((_, index) => (
