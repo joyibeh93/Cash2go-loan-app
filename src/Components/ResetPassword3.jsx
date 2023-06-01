@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
 import '../Styles/Resetpassword3.css';
 import eyeIcon from '../assets/eye icon.svg';
+import Congrats from '../assets/congratulations.svg';
 
 const ResetPassword3 = () => {
   const validationSchema = Yup.object({
@@ -16,18 +17,29 @@ const ResetPassword3 = () => {
       .required('Please re-enter your password'),
   });
 
-  const navigate = useNavigate(); // Initialized the useNavigate hook
-  const [showPassword, setShowPassword] = useState(false); // Added state for password visibility
+  // Initialized the useNavigate hook
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = (values, { setSubmitting }) => {
     console.log(values);
     setSubmitting(false);
-
-    navigate('/login'); // Navigate to the next page
   };
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
+  };
+  // Added state for password visibility
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+  const closeModal = () => {
+    setShowModal(false);
+  };
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate('/login');
   };
 
   return (
@@ -36,7 +48,11 @@ const ResetPassword3 = () => {
       <Formik
         initialValues={{ password: '', confirmPassword: '' }}
         validationSchema={validationSchema}
-        onSubmit={handleSubmit}
+        onSubmit={(values) => {
+          console.log(values);
+          openModal();
+          handleSubmit();
+        }}
       >
         <Form className="form">
           <label className="label" htmlFor="password">
@@ -90,9 +106,27 @@ const ResetPassword3 = () => {
           <div className="button">
             <Buttons button="Reset" />
           </div>
-          <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
+      {showModal && (
+        <div className="modal">
+          <button class="close-modal" onClick={closeModal}>
+            &times;
+          </button>
+          <img src={Congrats} alt="good-mark" className="good" />
+          <h3>Password Changed</h3>
+          <p>
+            Congratulations your password has been successfully changed.You may
+            now proceed to log in.
+          </p>
+          <button className="continue" onClick={goToLogin}>
+            Continue
+          </button>
+        </div>
+      )}
+      {showModal && <div className="overlay"></div>}
+
+      <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
     </div>
   );
 };
