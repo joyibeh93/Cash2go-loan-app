@@ -22,6 +22,6 @@ function App() {
         <Route exact path="/" element={<SignUpStep1 />} />
       </Routes>
     </Router>
-  );
+      );
 }
 export default App;
