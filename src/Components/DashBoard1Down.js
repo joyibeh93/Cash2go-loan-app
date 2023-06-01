@@ -35,11 +35,13 @@ const DashBoard1_Down = () => {
         <div className="dashBoardTable">
             <table>
                 <thead>
-                    <tr>All Applications <span>
-                        <img src={Download} alt='Download' />
-                    </span></tr>
-                    <tr>Sorted by Date</tr>
-                    <tr>
+                    <div className="all">
+                        <tr>All Applications <span>
+                            <img src={Download} alt='Download' />
+                        </span></tr>
+                        <tr>Sorted by Date</tr>
+                    </div>
+                    <tr className="bodyHeader">
                         <th>Product</th>
                         <th>Date <span>
                             <img src={Download} alt='Download' />
@@ -70,9 +72,12 @@ const DashBoard1_Down = () => {
                                 <td>{item.creditScore}</td>
                                 <td>{item.amount}</td> */}
 
-                                    <td><span>
+                                    <td> <div className="userIcon">
                                         <img src={userIcon} alt='user-icon' />
-                                    </span>{val.product} <br /><a href=''>more info </a>
+                                    </div>
+                                        <div className="user">
+                                            {val.product} </div>
+                                        <br /><a href=''>more info </a>
                                     </td>
                                     <td>{val.date}</td>
                                     <td>{val.status}</td>
@@ -85,7 +90,7 @@ const DashBoard1_Down = () => {
                         )
                     })}
                 </tbody>
-                <th><button>Prev</button> <button>1</button><button>2</button> <button>_</button>
+                <th className="footer" ><button>  Prev</button> <button>1</button><button>2</button> <button>_</button>
                     <button>5</button><button>6</button><button>Next</button>
                 </th>
             </table>
