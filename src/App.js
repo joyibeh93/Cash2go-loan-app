@@ -13,6 +13,7 @@ import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 
+
 function App() {
   return (
     <Router>
@@ -24,7 +25,7 @@ function App() {
         <Route path="/signupstep3" element={<SignUpStep3 />} />
         <Route path="/login" element={<Login />} />
         <Route exact path="/" element={<SignUpStep1 />} />
-        <Route path="/resetpassword2" element={<PasswordResetPage />} />
+        <Route path="/" element={<PasswordResetPage />} />
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
