@@ -4,7 +4,7 @@
 }
 
 .navbar-search{
-    width: 18.75rem;
+    width: 14.85rem;
     height: 2.1875rem;
     margin-top: -0.125rem;
 }
@@ -12,6 +12,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.searchicon{
+    position: absolute;
+    top: 12px;
+    left:390px;
+}
+.right-arrow{
+    position: absolute;
+    top: 12px;
+    right:790px;
+
 }
 .navbar-userIcon{
     margin-right: 0.3125rem;
