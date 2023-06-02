@@ -3,7 +3,7 @@ import usericon from '../assets/user-icon.svg';
 import searchicon from '../assets/Search.svg';
 import rightarrow from '../assets/Right-arrow.svg';
 import '../Styles/navbar.css';
-import bellIcon from '../assets/Bell-iconont S';
+import bellIcon from '../assets/Bell-icon.svg';
 function Navbar() {
   return (
     <div className="navbar-item">
@@ -11,7 +11,7 @@ function Navbar() {
       <input type="search" placeholder="Search" className="navbar-search" />
       <img src={rightarrow} alt="right-arrow" className="right-arrow" />
       <div className="navbar-item2">
-        <img src={bellIcon} alt="bell-icon" />
+        <img src={bellIcon} className="bell" alt="bell-icon" />
         <div>
           <img src={usericon} alt="user-icon" className="navbar-userIcon" />
         </div>
