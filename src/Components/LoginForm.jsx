@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import Buttons from './Buttons';
 import eyeIcon from '../assets/eye icon.svg';
 import { Formik } from 'formik';
@@ -15,7 +15,9 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .required('Email is required')
     .email('Invalid email format'),
-  password: Yup.string().required('Password is required ').min(8, 'Password must be at least 8 characters long'),
+  password: Yup.string()
+    .required('Password is required ')
+    .min(8, 'Password must be at least 8 characters long'),
 });
 // const navigate = useNavigate(); // Initialized the useNavigate hook
 
@@ -87,7 +89,12 @@ export const LoginForm = () => {
                 //   placeholder="Enter password"
                 //   className="form-control"
               />
-               <img src={eyeIcon} className="login-eye" alt="eye-icon"  onClick={togglePasswordVisibility} />
+              <img
+                src={eyeIcon}
+                className="login-eye"
+                alt="eye-icon"
+                onClick={togglePasswordVisibility}
+              />
               {/* If validation is not passed show errors */}
               <p className="error-message">
                 {errors.password && touched.password && errors.password}
@@ -103,7 +110,7 @@ export const LoginForm = () => {
       <div className="footnote">
         <p>
           <Link to="/resetpassword"> Forgot Password? </Link> &nbsp; &nbsp;
-          &nbsp; &nbsp; <Link to="/"> Sign Up </Link>
+          &nbsp; &nbsp; <Link to="/signupstep1"> Sign Up </Link>
         </p>
         <div className="footnote2">
           <p>Term of use &nbsp; &nbsp; &nbsp; &nbsp; Privacy policy</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../Components/Logo';
 import StepsContainer from '../Components/StepsContainer';
-import OtpForm from '../Components/OtpForm';
+import OtpForm from '../Components/OtpForm2';
 
 const SignUpStep2 = () => {
   return (
