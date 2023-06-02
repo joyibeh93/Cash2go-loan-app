@@ -2,6 +2,7 @@ import React from 'react';
 import '../Styles/Dashboard.css';
 import Sidebar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar';
+import MainDashboard from '../Components/MainDashboard';
 
 const Dashboard = () => {
   return (
@@ -14,7 +15,9 @@ const Dashboard = () => {
           <Navbar/>
         
         </div>
-        <div className="content-container"></div>
+        <div className="content-container">
+          <MainDashboard/>
+        </div>
       </div>
     </div>
   );

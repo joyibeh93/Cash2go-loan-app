@@ -53,5 +53,8 @@
 .top-bar {
   background-color: var(--side-bar-bg-clr);
   margin-left: 0.7rem;
-  padding: 5px;
+  padding: 8px;
+}
+.content-container {
+  padding: 1rem;
 }

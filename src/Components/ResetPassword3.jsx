@@ -48,7 +48,11 @@ const ResetPassword3 = () => {
       <Formik
         initialValues={{ password: '', confirmPassword: '' }}
         validationSchema={validationSchema}
-        onSubmit={handleSubmit}
+        onSubmit={(values) => {
+          console.log(values);
+          openModal();
+          handleSubmit();
+        }}
       >
         <Form className="form">
           <label className="label" htmlFor="password">
@@ -100,7 +104,7 @@ const ResetPassword3 = () => {
           />
 
           <div className="button">
-            <Buttons button="Reset" onClick={openModal} />
+            <Buttons button="Reset" />
           </div>
         </Form>
       </Formik>

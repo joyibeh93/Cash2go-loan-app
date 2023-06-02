@@ -35,62 +35,71 @@
   --font-family-body: 'Inter', sans-serif;
   --font-size: 1rem;
 }
-.sidebar {
+
+.notification {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--existing-btn-bg-clr);
-  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
 }
-.sidebar-logo {
-  position: absolute;
+.exit-new button {
+  margin-left: 0.8rem;
 }
-.sidebar-items1 {
-  position: absolute;
-  top: 3.5rem;
-  left: 2rem;
+.exisiting {
+  background-color: var(--existing-btn-bg-clr);
+  border: none;
+  padding: 0.5rem;
 }
-.links {
+.new {
+  background-color: var(--new-btn-bg-clr);
+  color: var(--main-bg-clr);
+  border: none;
+  padding: 0.5rem 1.2rem;
+}
+.dash-top {
   display: flex;
-  margin: 1.5rem 0;
-  font-size: 1.2rem;
-  margin-left: 0.5rem;
-  font-size: 0.9rem;
-}
-.links p {
-  margin-left: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  margin-top: 1rem;
 }
 
-.sidebar-items2 {
-  position: absolute;
-  top: 20rem;
-  left: 2rem;
-}
-.p-red,
-.p-green {
-  height: 1.25rem;
-  width: 1.25rem;
-  border-radius: 50%;
-  font-size: 0.9375rem;
-  background-color: var(--defaulted-bg-clr);
-  text-align: center;
-}
-.p-green {
+.approved {
   background-color: var(--approved-btn-bg-clr);
+  color: var(--main-bg-clr);
+  border: none;
+  padding: 0.2rem;
 }
-.one {
-  position: absolute;
-  top: 9.9rem;
-  left: 8.2rem;
+.pending {
+  background-color: var(--pending-btn-bg-clr);
+  border: none;
+  padding: 0.2rem;
+  font-size: 1.05rem;
 }
-.one1 {
-  position: absolute;
-  top: 12.9rem;
-  left: 8.3rem;
+
+.rejected {
+  background-color: var(--rejected-btn-bg-clr);
+  border: none;
+  padding: 0.2rem;
+  color: var(--main-bg-clr);
 }
-.log-out {
+.approved-black {
   position: absolute;
-  top: 33rem;
-  left: 2rem;
-  font-size: 1.2rem;
+  left: 36.5rem;
+  bottom: 22.2rem;
+}
+.pending-black {
+  position: absolute;
+  left: 55rem;
+  bottom: 22.2rem;
+}
+.rejected-black {
+  position: absolute;
+  left: 71.5rem;
+  bottom: 22.2rem;
+}
+.loan-count {
+  margin: 0.5rem 0;
 }
