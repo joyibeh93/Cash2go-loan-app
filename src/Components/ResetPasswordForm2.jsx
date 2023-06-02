@@ -21,7 +21,7 @@ const initialValues = {
   Answer: '',
 };
 
-const QuestionForm = () => {
+const ResetPasswordForm2 = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const handleModalOpen = () => {
@@ -126,7 +126,7 @@ const QuestionForm = () => {
             />
 
             <div className="button">
-              <Buttons button="Submit" />
+              <Buttons button="Reset" />
             </div>
           </Form>
         )}
@@ -140,4 +140,4 @@ const QuestionForm = () => {
   );
 };
 
-export default QuestionForm;
+export default ResetPasswordForm2;
