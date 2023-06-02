@@ -3,6 +3,7 @@ import '../Styles/Dashboard.css';
 import Sidebar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar';
 import MainDashboard from '../Components/MainDashboard';
+import DashBoardDown from '../Components/Dashboard1_down';
 
 const Dashboard = () => {
   return (
@@ -12,11 +13,11 @@ const Dashboard = () => {
       </div>
       <div className="main-dashboard">
         <div className="top-bar">
-          <Navbar/>
-        
+          <Navbar />
         </div>
         <div className="content-container">
-          <MainDashboard/>
+          <MainDashboard />
+          <DashBoardDown />
         </div>
       </div>
     </div>
