@@ -4,11 +4,10 @@ import eyeIcon from '../assets/eye icon.svg';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../Styles/Login.css';
 
-// import { useNavigate } from 'react-router-dom';
 
-// import eyeIcon from '../assets/eye icon.svg';
 
 // Creating schema
 const schema = Yup.object().shape({
@@ -19,22 +18,19 @@ const schema = Yup.object().shape({
     .required('Password is required ')
     .min(8, 'Password must be at least 8 characters long'),
 });
-// const navigate = useNavigate(); // Initialized the useNavigate hook
 
-const handleSubmit = (values, { setSubmitting }) => {
-  console.log(values);
-  setSubmitting(false);
-  // navigate('/dashboard');
-};
 
 export const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false); // Added state for password visibility
-  // const handleSubmit = (values, { setSubmitting }) => {
-  //   console.log(values);
-  //   setSubmitting(false);
+  const navigate = useNavigate(); // Initialized the useNavigate hook
 
-  //  // navigate('/dashboard'); // Navigate to the next page
-  // };
+  
+  const handleSubmit = (values, { setSubmitting }) => {
+    console.log(values);
+    setSubmitting(false);
+
+    navigate('/dashboard'); // Navigate to the next page
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
