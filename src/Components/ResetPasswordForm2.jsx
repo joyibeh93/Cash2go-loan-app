@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -8,8 +8,6 @@ import Congrats from '../assets/congratulations.svg';
 
 const ResetPasswordForm = () => {
   const navigate = useNavigate(); // Get the navigation function
-  const [modalVisible, setModalVisible] = useState(false); // State to manage the visibility of the modal
-
 
   const handleSubmit = (values, { setSubmitting }) => {
     // Simulate API request to reset password
@@ -18,7 +16,6 @@ const ResetPasswordForm = () => {
       .then((response) => {
         // Handle successful password reset
         console.log('Password reset successfully.');
-        setModalVisible(true); // show your modal
         navigate('/resetpassword3'); // Navigate to the next page
       })
       .catch((error) => {
@@ -91,30 +88,14 @@ const ResetPasswordForm = () => {
         )}
       </Formik>
       <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
-      {/*<div class="modal hidden">
+      <div class="modal hidden">
         <button class="close-modal">&times;</button>
         <img src={Congrats} alt="good-mark" className="good" />
         <h3>Reset Link</h3>
         <p>A password reset link have been sent to myworkemail@work.com</p>
         <button className="continue">Continue</button>
       </div>
-        <div class="overlay hidden"></div>*/}
-
-      {modalVisible && (
-        <div className="modal">
-          <button
-            className="close-modal"
-            onClick={() => setModalVisible(false)} // Hide the modal on close
-          >
-            &times;
-          </button>
-          <img src={Congrats} alt="good-mark" className="good" />
-        <h3>Reset Link</h3>
-        <p>A password reset link have been sent to myworkemail@work.com</p>
-        <button className="continue">Continue</button>
-        </div>
-      )}
-      {modalVisible && <div className="overlay"></div>}
+        <div class="overlay hidden"></div>
     </div>
     
   );
