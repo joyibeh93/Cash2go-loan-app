@@ -21,8 +21,8 @@ function App() {
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/signupstep4" element={<SignUpStep4 />} />
         <Route path="/signupstep3" element={<SignUpStep3 />} />
-        <Route path="/login" element={<Login />} />
-        <Route exact path="/" element={<SignUpStep1 />} />
+        <Route exact path="/" element={<Login />} />
+        <Route path="/signupstep1" element={<SignUpStep1 />} />
         <Route path="/resetpassword2" element={<PasswordResetPage />} />
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />

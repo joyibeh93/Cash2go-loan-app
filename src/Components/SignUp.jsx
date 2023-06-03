@@ -5,6 +5,7 @@ import Buttons from './Buttons';
 import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
+// import axios from 'axios';
 const Signup = () => {
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -20,6 +21,21 @@ const Signup = () => {
     setSubmitting(false);
     navigate('/signupstep2');
   };
+  // const handleSubmit = async (values) => {
+  //   try {
+  //     const response = await axios.post(
+  //       'https://cash2go-backendd.onrender.com/api/v1/user/send-otp',
+  //       values
+  //     );
+  //     const authenticate = response.data;
+  //     console.log(authenticate);
+  //     if (authenticate) {
+  //       navigate('/signupstep2');
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <div className="form-container">

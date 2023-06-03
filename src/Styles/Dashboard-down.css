@@ -35,27 +35,33 @@
   --font-family-body: 'Inter', sans-serif;
   --font-size: 1rem;
 }
-
-.dashboard-container {
+.tablehead {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  border-bottom: 1px solid;
+  border-width: 100%;
 }
-.left-sidebar {
-  width: 20%;
-  background-color: var(--side-bar-bg-clr);
-  height: 100vh;
+.dashBoardTable {
+  background-color: #f0f0f0;
 }
-.main-dashboard {
-  width: 85%;
-  height: 100vh;
-  color: var(--good-btn-bg-clr);
+.first-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.top-bar {
-  background-color: var(--side-bar-bg-clr);
-  margin-left: 0.7rem;
-  padding: 0.1rem;
+.first-data img {
+  margin: 0 0.4rem;
 }
-.content-container {
-  padding: 1rem 5rem;
-  font-size: 0.8rem;
+.approved-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--approved-btn-bg-clr);
+  color: var(--main-bg-clr);
+  width: 60%;
+  margin-left: 1rem;
 }
