@@ -23,7 +23,7 @@ const Bvn = () => {
 
     
     // Navigate to the next page
-      navigate('/loan-default');
+      navigate('/loandefault');
   };
 
   return (
