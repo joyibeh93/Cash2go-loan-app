@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../Styles/Bvn.css'
-import { useNavigate } from 'react-router';
 
 const Bvn = () => {
   const [bvn, setBvn] = useState('');
