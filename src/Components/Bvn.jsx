@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../Styles/Bvn.css'
 
 const Bvn = () => {
   const [bvn, setBvn] = useState('');
   const [bvnError, setBvnError] = useState('');
+  const navigate = useNavigate();
 
   const handleBvnChange = (event) => {
     const { value } = event.target;
@@ -18,7 +20,9 @@ const Bvn = () => {
       setBvnError('BVN must be 11 digits long.');
       return;
     }
-
+    
+    // Navigate to the next page
+      navigate('/loan-default');
   };
 
   return (
