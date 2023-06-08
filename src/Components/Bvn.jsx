@@ -28,9 +28,9 @@ const Bvn = () => {
 
   return (
     <div>
-      <h1 className="form-title">Applications</h1>
-      <p className="form-title">View All Loan application</p>
-      <form className="form-container" onSubmit={handleSubmit}>
+      <h1 className="bvn-header">Applications</h1>
+      <p className="bvn-header">View All Loan application</p>
+      <form className="bvn-container" onSubmit={handleSubmit}>
         <h3>Use BVN</h3>
         <br></br>
         <p>Applicants BVN</p>
@@ -50,9 +50,7 @@ const Bvn = () => {
         <button type="submit" className="submit-button"> Next <span>&#8594;</span></button>
       </form>
 
-   
-
-      <form className="form-container" onSubmit={handleSubmit}>
+      <form className="bvn-container" onSubmit={handleSubmit}>
         <h3>Upload Bank Statement</h3>
         <br></br>
         <p>Upload Bank Details</p>
