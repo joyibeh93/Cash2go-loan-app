@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} /> 
+        {/*<Route path="/dashboard" element={<Dashboard />} /> 
         <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/signupstep4" element={<SignUpStep4 />} />
@@ -30,7 +30,7 @@ function App() {
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />
         <Route path="/bvn" element={<BvnPage />} /> 
-        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+  <Route path="/resetpassword3" element={<ResetPassword3page />} />*/}
         <Route path="/" element={<LoanDefaultPage />} />
       </Routes>
     </Router>
