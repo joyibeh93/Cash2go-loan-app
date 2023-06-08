@@ -13,37 +13,14 @@ import PasswordResetPage from './Pages/PasswordResetPage';
 import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
-<<<<<<< HEAD
-// import DashBoard1_Down from './Components/DashBoard1Down';
-function App() {
-  return (
-    <>
-      {/* <DashBoard1_Down /> */}
-      <Router>
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/signupstep2" element={<SignUpStep2 />} />
-          <Route path="/resetpassword" element={<ResetPassword />} />
-          <Route path="/signupstep4" element={<SignUpStep4 />} />
-          <Route path="/signupstep3" element={<SignUpStep3 />} />
-          <Route exact path="/" element={<Login />} />
-          <Route path="/signupstep1" element={<SignUpStep1 />} />
-          <Route path="/resetpassword2" element={<PasswordResetPage />} />
-          <Route path="/predictioninfo" element={<PredictionInfoPage />} />
-          <Route path="/contactinfo" element={<ContactInfoPage />} />
-          <Route path="/resetpassword3" element={<ResetPassword3page />} />
-        </Routes>
-      </Router>
-    </>
-  );
-=======
-import BvnPage from './Pages/BvnPage';
+// import BvnPage from './Pages/BvnPage';
+
 function App() {
   return (
     <Router>
       <Routes>
-         <Route path="/bvn" element={<BvnPage />} /> 
-        <Route path="/dashboard" element={<Dashboard />} /> 
+        {/* <Route path="/bvn" element={<BvnPage />} />  */}
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/signupstep4" element={<SignUpStep4 />} />
@@ -56,7 +33,6 @@ function App() {
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
       </Routes>
     </Router>
-      );
->>>>>>> dev1
+  );
 }
 export default App;
