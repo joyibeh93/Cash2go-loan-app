@@ -6,8 +6,15 @@ import pendingTransparent from '../assets/pending-transparent.svg';
 import approvedBlack from '../assets/approvedblack.svg';
 import pendingBlack from '../assets/pendingblack.svg';
 import rejectedBlack from '../assets/rejectedblack.svg';
+import { useNavigate } from 'react-router-dom';
 
-function MainDashboard() {
+//function MainDashboard() {
+  const MainDashboard = () => {
+    const navigate = useNavigate();
+    const handleNewButtonClick = () => {
+      navigate("/bvn");
+    };
+
   return (
     <div className="dashboard-content">
       <p>Dashboard</p>
@@ -20,7 +27,7 @@ function MainDashboard() {
         </div>
         <div className="exit-new">
           <button className="exisiting">Existing</button>
-          <button className="new">New</button>
+          <button className="new" onClick={handleNewButtonClick}>New</button>
         </div>
       </div>
       <div className="dash-top">
