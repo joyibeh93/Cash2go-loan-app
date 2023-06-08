@@ -1,0 +1,33 @@
+.button {
+  font-family: var(--font-family-body);
+  background-color: var(--submit-btn-bg-clr);
+  padding: 0.8em;
+  border-radius: 12px;
+  margin-top: 2px;
+  text-align: center;
+  width: 80%;
+  margin-left: 3em;
+}
+.button button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.eye {
+  position: absolute;
+  left: 68em;
+  bottom: 23em;
+}
+
+.eye2 {
+  position: absolute;
+  cursor: pointer;
+  top: 17.5em;
+  left: 68em;
+  cursor: pointer;
+}
+
+.terms {
+  margin: 3em auto;
+}
