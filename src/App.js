@@ -13,7 +13,7 @@ import PasswordResetPage from './Pages/PasswordResetPage';
 import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
-import BvnPage from './Pages/BvnPage';
+// import BvnPage from './Pages/BvnPage';
 function App() {
   return (
     <Router>
