@@ -40,7 +40,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem;
+  margin: 0.8rem 0;
 }
 .exit-new button {
   margin-left: 0.8rem;
@@ -49,12 +49,14 @@
   background-color: var(--existing-btn-bg-clr);
   border: none;
   padding: 0.5rem;
+  font-size: 0.8rem;
 }
 .new {
   background-color: var(--new-btn-bg-clr);
   color: var(--main-bg-clr);
   border: none;
   padding: 0.5rem 1.2rem;
+  font-size: 0.8rem;
 }
 .dash-top {
   display: flex;
@@ -63,7 +65,7 @@
   background-color: #f0f0f0;
   padding: 0.8rem;
   border-radius: 0.6rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .approved {
@@ -71,12 +73,13 @@
   color: var(--main-bg-clr);
   border: none;
   padding: 0.2rem;
+  font-size: 0.8rem;
 }
 .pending {
   background-color: var(--pending-btn-bg-clr);
   border: none;
   padding: 0.2rem;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
 }
 
 .rejected {
@@ -84,21 +87,22 @@
   border: none;
   padding: 0.2rem;
   color: var(--main-bg-clr);
+  font-size: 0.8rem;
 }
 .approved-black {
   position: absolute;
-  left: 36.5rem;
-  bottom: 22.2rem;
+  left: 34.5rem;
+  bottom: 24.8rem;
 }
 .pending-black {
   position: absolute;
-  left: 55rem;
-  bottom: 22.2rem;
+  left: 51.5rem;
+  bottom: 24.8rem;
 }
 .rejected-black {
   position: absolute;
-  left: 71.5rem;
-  bottom: 22.2rem;
+  left: 66.5rem;
+  bottom: 24.8rem;
 }
 .loan-count {
   margin: 0.5rem 0;

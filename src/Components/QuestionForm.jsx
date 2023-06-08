@@ -32,7 +32,7 @@ const QuestionForm = () => {
   const handleModalClose = () => {
     setShowModal(false);
     // navigate to login page after modal popup
-    navigate('/login');
+    navigate('/');
   };
 
   const Modal = () => {
