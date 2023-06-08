@@ -1,6 +1,8 @@
 import React from "react"
 import Download from '../assets/Download.svg'
 import userIcon from '../assets/user-icon.svg'
+// import { Link } from "react-router-dom"
+
 // import React, { useEffect, useState } from 'react'
 
 
@@ -78,6 +80,7 @@ const DashBoard1_Down = () => {
                                         <div className="user">
                                             {val.product} </div>
                                         <br /><a href=''>more info </a>
+                                        {/* <Link to="/signupstep1"> More info </Link> */}
                                     </td>
                                     <td>{val.date}</td>
                                     <td>{val.status}</td>
