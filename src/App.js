@@ -1,4 +1,3 @@
-import React from 'react';
 import './index.css';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -15,11 +14,11 @@ import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 import BvnPage from './Pages/BvnPage';
+import LoanDefaultPage from './Pages/LoanDefaultPage';
 function App() {
   return (
     <Router>
       <Routes>
-         <Route path="/bvn" element={<BvnPage />} /> 
         <Route path="/dashboard" element={<Dashboard />} /> 
         <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
@@ -35,6 +34,6 @@ function App() {
         <Route path="/loandefault" element={<LoanDefaultPage />} />
       </Routes>
     </Router>
-  );
+      );
 }
 export default App;
