@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
 import Dashboard from './Pages/Dashboard';
@@ -44,7 +45,6 @@ function App() {
   return (
     <Router>
       <Routes>
-         <Route path="/bvn" element={<BvnPage />} /> 
         <Route path="/dashboard" element={<Dashboard />} /> 
         <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
