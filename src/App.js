@@ -14,6 +14,7 @@ import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
+import Application from './Pages/Application';
 function App() {
   return (
     <Router>
@@ -30,6 +31,7 @@ function App() {
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />
         <Route path='/message' element={<Message/>}/>
+        <Route path='/application' element={<Application/>}/>
   <Route path="/resetpassword3" element={<ResetPassword3page />} />
       </Routes>
     </Router>
