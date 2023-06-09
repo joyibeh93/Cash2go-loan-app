@@ -38,10 +38,10 @@ const OtpForm = (props) => {
   });
 
   const navigate = useNavigate();
-// sends a post request to the server
-const sendOtpToEmail = async () => {
+// sends a post request to the server to send otp to the provided email
+const sendOtpToEmail = async (props) => {
   try {
-    const response = await axios.post('/api/send-otp', {
+    const response = await axios.post('https://cash2go-backendd.onrender.com/api/v1/user/send-otp', {
       email:props.email, // Replace with the user's email address
     });
 
@@ -63,7 +63,7 @@ const handleVerifyOtp = async (values, { setSubmitting }) => {
   const enteredOtp = otp.join('');
 
   try {
-    const response = await axios.patch('/api/verify-otp', { otp: enteredOtp });
+    const response = await axios.patch(`https://cash2go-backendd.onrender.com/api/v1/user/verify-otp?email=${props.email}`, { otp: enteredOtp });
 
     if (response.data.success) {
       console.log('OTP verification successful!');

@@ -1,4 +1,7 @@
 
+import './index.css';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
@@ -15,7 +18,7 @@ import LoanDefaultPage from './Pages/LoanDefaultPage'
 import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
 import Application from './Pages/Application';
-
+import LoanDefaultPage from './Pages/LoanDefaultPage';
 
 
 function App() {

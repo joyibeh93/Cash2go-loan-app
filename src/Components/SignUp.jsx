@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
+import OtpForm from './OtpForm2';
 import '../Styles/Signup1.css';
 import axios from 'axios';
 
 const Signup = () => {
+const [email,setEmail]=useState('')
+
   const validationSchema = Yup.object({
     email: Yup.string()
       .email('Invalid email address')
@@ -25,8 +28,9 @@ const Signup = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
 
     setSubmitting(true);
-    navigate('/signupstep2');
+    //navigate('/signupstep2');
     const email = values.email;
+    setEmail(email)
     const companyID = values.companyID;
     try {
       const response = await axios.post(
@@ -110,6 +114,7 @@ const Signup = () => {
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
+      {showOtpForm && <OtpForm email={email} />}
     </div>
   );
 };
