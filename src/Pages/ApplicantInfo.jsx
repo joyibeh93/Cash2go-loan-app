@@ -14,7 +14,7 @@ const ApplicantDetails = () => {
       <div className="main-dashboard">
         <div className="top-bar">
           <Navbar />
-        </div>
+        </div>g
         <div className='chart'>
          <PieChart/>
          <Chart/>

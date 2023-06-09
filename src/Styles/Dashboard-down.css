@@ -65,3 +65,7 @@
   width: 60%;
   margin-left: 1rem;
 }
+
+.rejected{
+  background-color: var(--defaulted-bg-clr);
+}
