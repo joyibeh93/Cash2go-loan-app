@@ -9,6 +9,8 @@ import axios from 'axios';
 import OtpForm from './OtpForm';
 
 const Signup = () => {
+const [email,setEmail]=useState('')
+
   const validationSchema = Yup.object({
     email: Yup.string()
       .email('Invalid email address')
@@ -24,7 +26,9 @@ const Signup = () => {
     setShowOtpForm(true);
     navigate('/signupstep2');
 
+    //navigate('/signupstep2');
     const email = values.email;
+    setEmail(email)
     const companyID = values.companyID;
     const data = {
       email: email,
@@ -108,7 +112,7 @@ const Signup = () => {
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
-      {/* {showOtpForm && <OtpForm email={email} />} */}
+      {showOtpForm && <OtpForm email={email} />}
     </div>
   );
 };
