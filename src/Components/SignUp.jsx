@@ -104,12 +104,7 @@ import Buttons from './Buttons';
 // import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
-<<<<<<< HEAD
-import axios from 'axios';
-
-=======
 import OtpForm from './OtpForm';
->>>>>>> dev1
 
 const Signup = () => {
   const [showOtpForm, setShowOtpForm] = useState(false);
@@ -124,56 +119,14 @@ const Signup = () => {
 
   // const navigate = useNavigate(); // Initialized the useNavigate hook
 
-<<<<<<< HEAD
-  // const handleSubmit = (values, { setSubmitting }) => {
-  //   console.log(values);
-  //   setSubmitting(false);
-  //   navigate('/signupstep2');
-  // };
-  const handleSubmit = async (values, { setSubmitting }) => {
-
-    setSubmitting(true);
-    navigate('/signupstep2');
-    const email = values.email;
-    const companyID = values.companyID;
-    try {
-      const response = await axios.post(
-        'https://cash2go-backendd.onrender.com/api/v1/user/signup',
-        {
-          email: email,
-          companyID: companyID,
-        }
-      );
-
-      const authenticated = response.data;
-      console.log(authenticated);
-
-      if (authenticated) {
-        navigate('/signupstep2');
-        // navigate('/otp-auth?email=${encodeURLComponent(email)}');
-
-      }
-      // } catch (error) {
-      //   console.error("Error:", error);
-      //   if (error.response) {
-      //     setStatus(error.response.data.message);
-      //     setTimeout(() => {
-      //       setStatus("")
-      //     }, "5000")
-      //   }
-    } finally {
-      setSubmitting(false)
-    }
-=======
   const handleSubmit = (values, { setSubmitting }) => {
     setEmail(values.email);
     setShowOtpForm(true);
     setSubmitting(false);
->>>>>>> dev1
   };
 
   return (
-    <div className="form-container" style={{paddingTop:"190px"}}>
+    <div className="form-container" style={{ paddingTop: "190px" }}>
       <h1>Sign Up</h1>
       {!showOtpForm && (
         <Formik
