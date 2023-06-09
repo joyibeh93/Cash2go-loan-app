@@ -32,7 +32,7 @@ const navigate = useNavigate();
     <div className="form-container">
       <h1>Predict Loan Default</h1>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form className="form">
+        <Form className="Loan_form">
           <div className="column">
             <div className="row">
               <h3>Bvn</h3>
@@ -181,7 +181,7 @@ const navigate = useNavigate();
             </div>
           </div>
 
-          <button type="submit">Make Prediction</button>
+          <button type="submit" className="default-submit">Make Prediction</button>
         </Form>
       </Formik>
     </div>
