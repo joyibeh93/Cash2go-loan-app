@@ -23,19 +23,39 @@ const Signup = () => {
   //   setSubmitting(false);
   //   navigate('/signupstep2');
   // };
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values, { setSubmitting }) => {
+
+    setSubmitting(true);
+    navigate('/signupstep2');
+    const email = values.email;
+    const companyID = values.companyID;
     try {
       const response = await axios.post(
         'https://cash2go-backendd.onrender.com/api/v1/user/signup',
-        values
+        {
+          email: email,
+          companyID: companyID,
+        }
       );
-      const authenticate = response.data;
-      console.log(authenticate);
-      if (authenticate) {
+
+      const authenticated = response.data;
+      console.log(authenticated);
+
+      if (authenticated) {
         navigate('/signupstep2');
+        // navigate('/otp-auth?email=${encodeURLComponent(email)}');
+
       }
-    } catch (error) {
-      console.error(error);
+      // } catch (error) {
+      //   console.error("Error:", error);
+      //   if (error.response) {
+      //     setStatus(error.response.data.message);
+      //     setTimeout(() => {
+      //       setStatus("")
+      //     }, "5000")
+      //   }
+    } finally {
+      setSubmitting(false)
     }
   };
 
