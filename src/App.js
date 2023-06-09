@@ -18,7 +18,7 @@ import LoanDefaultPage from './Pages/LoanDefaultPage'
 import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
 import Application from './Pages/Application';
-import ApplicantInfo from './Pages/ApplicantInfo'
+import LoanDefaultPage from './Pages/LoanDefaultPage';
 
 
 function App() {
