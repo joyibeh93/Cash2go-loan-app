@@ -103,9 +103,9 @@ import * as Yup from 'yup';
 import Buttons from './Buttons';
 // import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
-import '../Styles/Signup1.css';
+import '../Styles/Signup1.css
+import OtpForm from './OtpForm';
 import axios from 'axios';
-
 
 const Signup = () => {
   const [showOtpForm, setShowOtpForm] = useState(false);
@@ -120,6 +120,10 @@ const Signup = () => {
 
   // const navigate = useNavigate(); // Initialized the useNavigate hook
 
+  const handleSubmit = (values, { setSubmitting }) => {
+    setEmail(values.email);
+    setShowOtpForm(true);
+    setSubmitting(false);
   // const handleSubmit = (values, { setSubmitting }) => {
   //   console.log(values);
   //   setSubmitting(false);
@@ -139,10 +143,13 @@ const Signup = () => {
     } catch (error) {
       console.error(error);
     }
+
   };
 
   return (
+
     <div className="form-container" style={{paddingTop:"190px"}}>
+
       <h1>Sign Up</h1>
       {!showOtpForm && (
         <Formik
