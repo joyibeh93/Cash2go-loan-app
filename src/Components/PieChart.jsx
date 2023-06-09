@@ -35,29 +35,21 @@ const PieChart = () => {
     id: 'textCenter',
     beforeDatasetsDraw(chart, args, pluginOptions) {
       const { ctx} = chart;
-
-
+      const xCoor =chart.getDatasetMeta(0).data[0].x;
+      const yCoor =chart.getDatasetMeta(0).data[0].y;
       ctx.save();
-      ctx.font = ' bolder 10px sans-serif';
+      ctx.font = ' bolder 40px sans-serif';
       ctx.fillStyle = 'green';
       ctx.textAlign='center'
-      
       ctx.textBaseLine= 'middle'
-      ctx.fillText('720 ', chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y)
-      ctx.font = '8px';
-      ctx.paddingBottom= '200px'
+      ctx.fillText('720 ', xCoor,yCoor -20);
+  
+  
+      ctx.font = ' bolder 20px sans-serif';
       ctx.fillStyle = 'grey';
-      ctx.textAlign='center'
-      ctx.textBaseLine= 'middle'
+      ctx.fillText('credit Score ', xCoor,yCoor + 10);
 
-      ctx.save();
-      ctx.font = ' bolder 10px sans-serif';
-      ctx.fillStyle = 'green';
-      ctx.textAlign='center'
-      ctx.paddingBottom= '50px'
-      ctx.fillText(' credit score', chart.getDatasetMeta(0.).data[0].x, chart.getDatasetMeta(0).data[0].y)
-      ctx.textAlign='center'
-      ctx.textBaseLine= 'middle'
+
     }
   }
 
