@@ -28,12 +28,14 @@ import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 import BvnPage from './Pages/BvnPage';
-import LoanDefaultPage from './Pages/LoanDefaultPage';
+
+import BvnPage from './Pages/BvnPage';
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} /> 
+         <Route path="/bvn" element={<BvnPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/signupstep4" element={<SignUpStep4 />} />
@@ -46,9 +48,12 @@ function App() {
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/bvn" element={<BvnPage />} />
         <Route path="/loandefault" element={<LoanDefaultPage />} />
+        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+        <Route path="/bvn" element={<BvnPage />} />
+        <Route path="/loandefault" element={<LoanDefaultPage />} />
       </Routes>
     </Router>
-      );
+  );
 }
 
 export default App;
