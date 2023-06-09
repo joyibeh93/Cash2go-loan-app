@@ -118,7 +118,7 @@ const navigate = useNavigate();
                 required
                 placeholder="45,000.00"
                 inputMode="numeric"
-                pattern="[0-9]*"
+                pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
               />
             </div>
 
@@ -130,7 +130,7 @@ const navigate = useNavigate();
                 required
                 placeholder=">25,000.00"
                 inputMode="numeric"
-                pattern="[0-9]*"
+                pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
               />
             </div>
 
@@ -142,7 +142,7 @@ const navigate = useNavigate();
                 required
                 placeholder=">25,000.00"
                 inputMode="numeric"
-                pattern="[0-9]*"
+                pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
               />
             </div>
 
