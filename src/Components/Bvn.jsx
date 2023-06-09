@@ -50,8 +50,6 @@ const Bvn = () => {
         <button type="submit" className="submit-button"> Next <span>&#8594;</span></button>
       </form>
 
-   
-
       <form className="form-container" onSubmit={handleSubmit}>
         <h3>Upload Bank Statement</h3>
         <br></br>
