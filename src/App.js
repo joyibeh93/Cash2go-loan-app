@@ -15,7 +15,6 @@ import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 import BvnPage from './Pages/BvnPage';
 
-=======
 import BvnPage from './Pages/BvnPage';
 function App() {
   return (
