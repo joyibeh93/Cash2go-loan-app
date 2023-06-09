@@ -12,13 +12,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
 import Dashboard from './Pages/Dashboard';
-import './index.css';
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import SignUpStep1 from './Pages/SignUpStep1';
-import SignUpStep2 from './Pages/SignUpStep2';
-import Dashboard from './Pages/Dashboard';
 import ResetPassword from './Pages/ResetPassword';
 import SignUpStep4 from './Pages/SignUpStep4';
 import SignUpStep3 from './Pages/SignUpStep3page';
@@ -29,6 +22,7 @@ import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 import LoanDefaultPage from './Pages/LoanDefaultPage'
 import BvnPage from './Pages/BvnPage';
+
 
 function App() {
   return (
