@@ -32,28 +32,49 @@ const Chart =() => {
                 labels: ['Short-term','Long-term'],
                 data:[50 ,100,90 ,80,40,85],
                 backgroundColor:'#454e5c',
-            }],  
-            options:{
-            scales:{
-                xAxis:[{
-                    grid:{
-                        display:false,
-                    },
-                    border:{
-                        display:false,
-                    }
-                }],
-                y :[{
-                    gridLines:{
-                        display:false,
-                    }
-                }], 
-            } 
-        }
+            }],     
     }
-
     
     const options = {
+        type: 'bar',
+    data,
+    options:{
+        scales:{
+            x:[{
+                grid:{
+                    drawOnChartArea:false
+                },
+                border:{
+                    display:false,
+                }
+            }],
+            y :{
+                beginAtZero:true,
+                grid:{
+                    drawOnChartArea:false
+                },
+                ticks:{
+                    maxTicksLimit:4,
+                    callback:((context ,index)=>{
+                        console.log(context)
+                        let response;
+                        if (context === 1){
+                            response = '10k';
+                        } else if (context === 2){
+                            response = '50k';
+                        }else if (context === 3){
+                            response = '100k';
+                        }else{
+                            response ='0';
+                        }
+                        return response;
+                    })
+                },
+               
+            }
+            
+        } 
+    }
     }
     return (
         <div className="container">
