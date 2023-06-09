@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
+import { useNavigate } from "react-router-dom";
 import '../Styles/LoanDefault.css'
 
 const initialValues = {
@@ -15,10 +16,16 @@ const initialValues = {
   property_area: "",
 };
 
+
 const LoanDefault = () => {
+const navigate = useNavigate();
+
   const handleSubmit = (values) => {
     // Handle form submission logic here
     console.log(values);
+
+    // Navigate to the next page
+    navigate('/userinfo')
   };
 
   return (
