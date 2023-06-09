@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Buttons from './Buttons';
@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
 import axios from 'axios';
+import OtpForm from './OtpForm';
 
 const Signup = () => {
   const validationSchema = Yup.object({
@@ -14,27 +15,26 @@ const Signup = () => {
       .required('Email is required'),
     companyID: Yup.string().required('Company ID is required'),
   });
-
+  const [showOtpForm, setShowOtpForm] = useState(false);
+  const [email, setEmail] = useState('');
   const navigate = useNavigate(); // Initialized the useNavigate hook
-
-  // const handleSubmit = (values, { setSubmitting }) => {
-  //   console.log(values);
-  //   setSubmitting(false);
-  //   navigate('/signupstep2');
-  // };
+  const [status, setStatus] = useState('');
   const handleSubmit = async (values, { setSubmitting }) => {
-
     setSubmitting(true);
+    setShowOtpForm(true);
     navigate('/signupstep2');
+
     const email = values.email;
     const companyID = values.companyID;
+    const data = {
+      email: email,
+      companyID: companyID,
+    };
+
     try {
       const response = await axios.post(
         'https://cash2go-backendd.onrender.com/api/v1/user/signup',
-        {
-          email: email,
-          companyID: companyID,
-        }
+        data
       );
 
       const authenticated = response.data;
@@ -42,21 +42,21 @@ const Signup = () => {
 
       if (authenticated) {
         navigate('/signupstep2');
-        // navigate('/otp-auth?email=${encodeURLComponent(email)}');
-
+        // navigate(`/otp-auth?email=${encodeURIComponent(email)}`);
       }
-      // } catch (error) {
-      //   console.error("Error:", error);
-      //   if (error.response) {
-      //     setStatus(error.response.data.message);
-      //     setTimeout(() => {
-      //       setStatus("")
-      //     }, "5000")
-      //   }
+    } catch (error) {
+      console.error("Error:", error);
+      if (error.response) {
+        setStatus(error.response.data.message);
+        setTimeout(() => {
+          setStatus("");
+        }, 5000);
+      }
     } finally {
-      setSubmitting(false)
+      setSubmitting(false);
     }
   };
+
 
   return (
     <div className="form-container">
@@ -108,6 +108,7 @@ const Signup = () => {
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
+      {showOtpForm && <OtpForm email={email} />}
     </div>
   );
 };
