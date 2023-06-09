@@ -1,4 +1,7 @@
 
+import './index.css';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
