@@ -103,8 +103,9 @@ import * as Yup from 'yup';
 import Buttons from './Buttons';
 // import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
-import '../Styles/Signup1.css';
+import '../Styles/Signup1.css
 import OtpForm from './OtpForm';
+import axios from 'axios';
 
 const Signup = () => {
   const [showOtpForm, setShowOtpForm] = useState(false);
@@ -123,10 +124,32 @@ const Signup = () => {
     setEmail(values.email);
     setShowOtpForm(true);
     setSubmitting(false);
+  // const handleSubmit = (values, { setSubmitting }) => {
+  //   console.log(values);
+  //   setSubmitting(false);
+  //   navigate('/signupstep2');
+  // };
+  const handleSubmit = async (values) => {
+    try {
+      const response = await axios.post(
+        'https://cash2go-backendd.onrender.com/api/v1/user/signup',
+        values
+      );
+      const authenticate = response.data;
+      console.log(authenticate);
+      if (authenticate) {
+        navigate('/signupstep2');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+
   };
 
   return (
-    <div className="form-container" style={{ paddingTop: "190px" }}>
+
+    <div className="form-container" style={{paddingTop:"190px"}}>
+
       <h1>Sign Up</h1>
       {!showOtpForm && (
         <Formik
