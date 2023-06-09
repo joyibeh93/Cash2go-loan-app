@@ -19,18 +19,12 @@ import ResetPassword3page from './Pages/ResetPassword3page';
 
 =======
 import BvnPage from './Pages/BvnPage';
-import LoanDefaultPage from './Pages/LoanDefaultPage';
->>>>>>> dev1
 function App() {
   return (
     <Router>
       <Routes>
-<<<<<<< HEAD
-        {/* <Route path="/bvn" element={<BvnPage />} />  */}
+         <Route path="/bvn" element={<BvnPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
-=======
-        <Route path="/dashboard" element={<Dashboard />} /> 
->>>>>>> dev1
         <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/signupstep4" element={<SignUpStep4 />} />
