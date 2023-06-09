@@ -6,7 +6,7 @@ import userIcon from '../assets/user-icon.svg';
 import approvedTransparent from '../assets/approved-transparent.svg';
 import rejectedTransparent from '../assets/rejected-transparent.svg';
 import { Link } from "react-router-dom"
-import MoreInfo from "./MoreInfo"
+//import MoreInfo from "./MoreInfo"
 // import pendingTransparent from '../assets/pending-transparent.svg';
 // const data = [
 //   {
