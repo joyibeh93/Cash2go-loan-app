@@ -126,7 +126,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="form-container" style={{paddingTop:"190px"}}>
+    <div className="form-container" style={{ paddingTop: "190px" }}>
       <h1>Sign Up</h1>
       {!showOtpForm && (
         <Formik
