@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
+//import OtpForm from './OtpForm2';
 import '../Styles/Signup1.css';
 import axios from 'axios';
 
@@ -110,6 +111,7 @@ const Signup = () => {
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
+      {/* {showOtpForm && <OtpForm email={email} />} */}
     </div>
   );
 };
