@@ -38,7 +38,7 @@ const QuestionForm = () => {
   const Modal = () => {
     //  modal component popup
     return (
-      <div>
+      <div >
         <div className="modal">
           <button className="close-modal">&times;</button>
           <img src={Congrats} alt="good-mark" className="good" />
@@ -66,7 +66,7 @@ const QuestionForm = () => {
   // console.log(values);
   // }
   return (
-    <div className="form-container">
+    <div className="form-container" style={{paddingTop:"190px"}}>
       <Formik
         //passes the initial values of the form as an object
         initialValues={initialValues}
