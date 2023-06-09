@@ -1,4 +1,3 @@
-import React from 'react';
 import './index.css';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -14,8 +13,7 @@ import PasswordResetPage from './Pages/PasswordResetPage';
 import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
-<<<<<<< HEAD
-// import BvnPage from './Pages/BvnPage';
+import BvnPage from './Pages/BvnPage';
 
 =======
 import BvnPage from './Pages/BvnPage';
@@ -34,6 +32,9 @@ function App() {
         <Route path="/resetpassword2" element={<PasswordResetPage />} />
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />
+        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+        <Route path="/bvn" element={<BvnPage />} />
+        <Route path="/loandefault" element={<LoanDefaultPage />} />
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/bvn" element={<BvnPage />} />
         <Route path="/loandefault" element={<LoanDefaultPage />} />
