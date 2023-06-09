@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
-//import OtpForm from './OtpForm2';
 import '../Styles/Signup1.css';
 import axios from 'axios';
 import OtpForm from './OtpForm';
@@ -60,9 +59,7 @@ const Signup = () => {
 
 
   return (
-
     <div className="form-container" style={{ paddingTop: "190px" }}>
-
       <h1>Sign Up</h1>
       <Formik
         initialValues={{ email: '', companyID: '' }}
@@ -91,7 +88,7 @@ const Signup = () => {
           </label>
           <Field
             className="input"
-            type="companyID"
+            type="text" // Corrected the input type to 'text'
             required
             maxLength={6}
             id="companyID"
