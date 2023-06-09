@@ -8,6 +8,9 @@ const UserInfo = () => {
   const Contact = () =>{
     navigate('/ContactInfo')
   }
+  const Review = () =>{
+    navigate('/Review')
+  }
   return (
     <div className="info-content">
       <div className="notification">
@@ -17,7 +20,7 @@ const UserInfo = () => {
         </div>
         <div className="side-btn">
             <button className="Info" onClick={Contact}>Info</button>
-            <button className="Review">Review</button>
+            <button className="Review" onClick={Review}>Review</button>
         </div>
       </div>
       <div className="user-status">

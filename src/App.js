@@ -19,6 +19,7 @@ import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
 import Application from './Pages/Application';
 import LoanDefaultPage from './Pages/LoanDefaultPage';
+import Applicantinfo from './Pages/ApplicantInfo'
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
         <Route path="/application" element={<Application />} />
         <Route path="/message" element={<Message />} />
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
-        <Route path="/applicantinfo" element={<ApplicantInfo />} />
+        <Route path="/applicantinfo" element={<Applicantinfo />} />
         
         
       </Routes>
