@@ -14,11 +14,12 @@ import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 import BvnPage from './Pages/BvnPage';
+import ApplicantDetails from './Pages/ApplicantInfo';
 function App() {
   return (
     <Router>
       <Routes>
-         <Route path="/" element={<BvnPage />} /> 
+         {/* <Route path="/" element={<BvnPage />} />  */}
         <Route path="/dashboard" element={<Dashboard />} /> 
         <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
@@ -29,7 +30,8 @@ function App() {
         <Route path="/resetpassword2" element={<PasswordResetPage />} />
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />
-  <Route path="/resetpassword3" element={<ResetPassword3page />} />
+        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+         <Route path="/" element={<ApplicantDetails/>} /> 
       </Routes>
     </Router>
 
