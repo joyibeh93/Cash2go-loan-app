@@ -1,7 +1,14 @@
-import React from 'react';
+import './index.css';
+import './App.css';
+
+
+import SignUpStep1 from './Pages/SignUpStep1';
+import SignUpStep2 from './Pages/SignUpStep2';
+import Dashboard from './Pages/Dashboard';
 import './index.css';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
@@ -15,10 +22,8 @@ import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 import LoanDefaultPage from './Pages/LoanDefaultPage'
-// <<<<<<< HEAD
-// import BvnPage from './Pages/BvnPage';
-// =======
 import BvnPage from './Pages/BvnPage';
+
 
 function App() {
   return (
@@ -38,8 +43,12 @@ function App() {
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/bvn" element={<BvnPage />} />
         <Route path="/loandefault" element={<LoanDefaultPage />} />
+        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+        <Route path="/bvn" element={<BvnPage />} />
+        <Route path="/loandefault" element={<LoanDefaultPage />} />
       </Routes>
     </Router>
   );
 }
+
 export default App;
