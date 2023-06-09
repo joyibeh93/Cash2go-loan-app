@@ -35,7 +35,8 @@ const PieChart = () => {
     id: 'textCenter',
     beforeDatasetsDraw(chart, args, pluginOptions) {
       const { ctx} = chart;
-      const xCoor =chart.getDatasetMeta(0).data[0].x;
+       const xCoor=  (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);
+       const yCoor = (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);      const xCoor =chart.getDatasetMeta(0).data[0].x;
       const yCoor =chart.getDatasetMeta(0).data[0].y;
       ctx.save();
       ctx.font = ' bolder 40px sans-serif';
