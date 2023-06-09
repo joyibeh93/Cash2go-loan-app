@@ -1,5 +1,3 @@
-import './index.css';
-import './App.css';
 
 
 import SignUpStep1 from './Pages/SignUpStep1';
@@ -23,6 +21,9 @@ import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 import LoanDefaultPage from './Pages/LoanDefaultPage'
 import BvnPage from './Pages/BvnPage';
+import Message from './Pages/Message';
+import Application from './Pages/Application';
+import LoanDefaultPage from './Pages/LoanDefaultPage';
 
 
 function App() {
@@ -43,9 +44,8 @@ function App() {
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/bvn" element={<BvnPage />} />
         <Route path="/loandefault" element={<LoanDefaultPage />} />
-        <Route path="/resetpassword3" element={<ResetPassword3page />} />
-        <Route path="/bvn" element={<BvnPage />} />
-        <Route path="/loandefault" element={<LoanDefaultPage />} />
+        <Route path="/application" element={<Application />} />
+        <Route path="/message" element={<Message />} />
       </Routes>
     </Router>
   );
