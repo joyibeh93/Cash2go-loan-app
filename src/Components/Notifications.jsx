@@ -2,14 +2,14 @@ import React from "react";
 
 const notifications = () => {
   return (
-    <div className="messageContainer">
+    <div className="notificationsContainer">
       {/* Top bar */}
       <div className="topBar">
         <p>
-          Messages <span>&gt;</span>
+          Notifications <span>&gt;</span>
         </p>
         <div className="titleAndSettings">
-          <h2>Messages</h2>
+          <h2>Notifications</h2>
           <div className="buttonDiv">
             <button>Settings</button>
             <button>Mark all as read</button>
@@ -18,87 +18,104 @@ const notifications = () => {
       </div>
 
       {/* Notification Bar */}
-      <div className="notifications">
-        <div className="notificationsDiv">
-          <p>All Notifications</p>
-          <p>Sorted by Date</p>
-        </div>
-        <img src="" alt="" />
+      <div className="notificationsDiv">
+        <p>All Notifications</p>
+        <p>Sorted by Date</p>
       </div>
       <div className="lineDiv"></div>
 
-      {/* {Messages} */}
-      <div className="messages">
-        <div className="message">
-          <div className="messageDiv">
-            <p className="name">Ogbeni Mallam</p>
+      {/* {notifications} */}
+      <div className="notifications">
+        <div className="notification">
+          <input type="checkbox" name="checked" />
+          <div className="notificationDiv">
+            <h3 className="name">Application Report</h3>
             <p className="text">
-              Hi Gbenga Stutern, I want to make enquiry of long term business
-              loan. What are the things to consider for to get a good credit
-              score...
+              The short term loan of Ogbeni Mallam Stutern (003556Z) just got
+              approved with a 70% prediction metric
             </p>
           </div>
-          <img src="" alt="" />
+          <p className="notif-dot">...</p>
         </div>
         <div className="lineDiv"></div>
-        <div className="message">
-          <div className="messageDiv">
-            <p className="name">Mary Analyst</p>
+        <div className="notification">
+          <input type="checkbox" name="checked" />
+          <div className="notificationDiv">
+            <h3 className="name">Security Alert</h3>
             <p className="text">
-              Hi, I am Mary, risk analayst in Company AA. I would like to invite
-              for a hangout tagged “Analysing the fun” held at Bamboo kitchen
-              on...
+              A new device has logged into your account. If this was not you,
+              please change your password immediately.
             </p>
           </div>
-          <img src="" alt="" />
+          <p className="notif-dot">...</p>
         </div>
         <div className="lineDiv"></div>
-        <div className="message">
-          <div className="messageDiv">
-            <p className="name">Muktar Bello</p>
+        <div className="notification">
+          <input type="checkbox" name="checked" />
+          <div className="notificationDiv">
+            <h3 className="name">Application Report</h3>
             <p className="text">
-              Hi Gbenga, I received your last message with thanks. I am working
-              to enable a good credit score, hope to work with on the...
+              The long term loan of Pelumi Stutern (003557Z) just got rejected
+              with a 50% prediction metric
             </p>
           </div>
-          <img src="" alt="" />
+          <p className="notif-dot">...</p>
         </div>
         <div className="lineDiv"></div>
-        <div className="message">
-          <div className="messageDiv">
-            <p className="name">Niyi Analyst</p>
+        <div className="notification">
+          <input type="checkbox" name="checked" />
+          <div className="notificationDiv">
+            <h3 className="name">New Resources</h3>
             <p className="text">
-              Hi Gbenga, the risk analyst course is already available at AZ
-              University. Don’t forget to register on time, deadline is on
+              A new tutorial has been published in the resource channel.
             </p>
           </div>
-          <img src="" alt="" />
+          <p className="notif-dot">...</p>
         </div>
         <div className="lineDiv"></div>
-        <div className="message">
-          <div className="messageDiv">
-            <p className="name">Bukola Adepoju</p>
+        <div className="notification">
+          <input type="checkbox" name="checked" />
+          <div className="notificationDiv">
+            <h3 className="name">System Updates</h3>
             <p className="text">
-              Hi Gbenga, can I know why my application was rejected
+              A new web app version 5.0 will be launched by 30th of May.
             </p>
           </div>
-          <img src="" alt="" />
+          <p className="notif-dot">...</p>
+        </div>
+        <div className="lineDiv"></div>
+        <div className="notification">
+          <input type="checkbox" name="checked" />
+          <div className="notificationDiv">
+            <h3 className="name">Application Download</h3>
+            <p className="text">
+              You just downlaoded the application report of Ogbeni Mallam
+              (003556Z)
+            </p>
+          </div>
+          <p className="notif-dot">...</p>
         </div>
         <div className="lineDiv"></div>
       </div>
 
-    {/* {Go-to} */}
-    <div className="goTo">
-        <button><span>&larr;</span>Prev</button>
+      {/* {Go-to} */}
+      <div className="goTo">
+        <button>
+          <span>&larr;</span>Prev
+        </button>
         <div className="numbers">
-            <button>1</button>
-            <button>2</button>
-            <button><img src="" alt="" /></button>
-            <button>5</button>
-            <button>6</button>
+          <button>1</button>
+          <button>2</button>
+          <button>
+            <img src="" alt="" />
+          </button>
+          <button>5</button>
+          <button>6</button>
         </div>
-        <button><span>&rarr;</span>Next</button>
-    </div>
+        <button>
+          <span>&rarr;</span>Next
+        </button>
+      </div>
     </div>
   );
 };

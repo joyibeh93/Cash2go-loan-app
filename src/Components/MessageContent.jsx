@@ -15,7 +15,7 @@ function MessageContent() {
             </div>
             <div className="exit-new">
                 <button className="markAll">Mark All</button>
-                <button className="deleteMarked">Delete Marked</button>
+                <button className="markRead">Mark All as Read</button>
             </div>
         </div>
         <div className="msg-nav">
@@ -46,11 +46,11 @@ function MessageContent() {
                     <h3>Inbox</h3>
                     <p> Sorted by Date</p>
                 </div>
-                <div className='msg-cnt-dot'>
-                    <MessageContentInfo/>
-                </div>
+                <p className='msg-cnt-dot'>
+                    ...
+                </p>
             </div>
-
+            <MessageContentInfo/>
         </div>
     </div>
   )
