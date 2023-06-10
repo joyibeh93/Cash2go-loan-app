@@ -4,13 +4,13 @@ import * as Yup from 'yup';
 import Buttons from './Buttons';
 //import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
-import OtpForm from './OtpForm2';
 import '../Styles/Signup1.css';
 import axios from 'axios';
+// import OtpForm from './OtpForm';
 
 const Signup = () => {
-const [email,setEmail]=useState('')
-const [showOtpForm,setShowOtpForm]=useState(false)
+  const [email, setEmail] = useState('')
+  const [showOtpForm, setShowOtpForm] = useState(false)
 
 
   const validationSchema = Yup.object({
@@ -20,7 +20,7 @@ const [showOtpForm,setShowOtpForm]=useState(false)
     companyID: Yup.string().required('Company ID is required'),
   });
 
- // const navigate = useNavigate(); // Initialized the useNavigate hook
+  // const navigate = useNavigate(); // Initialized the useNavigate hook
 
   // const handleSubmit = (values, { setSubmitting }) => {
   //   console.log(values);
@@ -28,19 +28,25 @@ const [showOtpForm,setShowOtpForm]=useState(false)
   //   navigate('/signupstep2');
   // };
   const handleSubmit = async (values, { setSubmitting }) => {
-
     setSubmitting(true);
+<<<<<<<< < Temporary merge branch 1
+    setShowOtpForm(true);
+    navigate('/signupstep2');
+
+=========
     //navigate('/signupstep2');
     const email = values.email;
-   
+
     const companyID = values.companyID;
+    const data = {
+      email: email,
+      companyID: companyID,
+    };
+
     try {
       const response = await axios.post(
         'https://cash2go-backendd.onrender.com/api/v1/user/signup',
-        {
-          email: email,
-          companyID: companyID,
-        }
+        data
       );
 
       const authenticated = response.data;
@@ -51,27 +57,18 @@ const [showOtpForm,setShowOtpForm]=useState(false)
 
         setEmail(email)
         setShowOtpForm(true)
-       // navigate('/signupstep2');
+        // navigate('/signupstep2');
         // navigate('/otp-auth?email=${encodeURLComponent(email)}');
 
       }
-      // } catch (error) {
-      //   console.error("Error:", error);
-      //   if (error.response) {
-      //     setStatus(error.response.data.message);
-      //     setTimeout(() => {
-      //       setStatus("")
-      //     }, "5000")
-      //   }
     } finally {
-      setSubmitting(false)
+      setSubmitting(false);
     }
   };
 
+
   return (
-
-    <div className="form-container" style={{paddingTop:"190px"}}>
-
+    <div className="form-container" style={{ paddingTop: "190px" }}>
       <h1>Sign Up</h1>
       <Formik
         initialValues={{ email: '', companyID: '' }}
@@ -100,7 +97,7 @@ const [showOtpForm,setShowOtpForm]=useState(false)
           </label>
           <Field
             className="input"
-            type="companyID"
+            type="text" // Corrected the input type to 'text'
             required
             maxLength={6}
             id="companyID"
