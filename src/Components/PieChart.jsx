@@ -3,12 +3,7 @@ import '../Styles/chart.css'
 import approvedTransparent from '../assets/approved-transparent.svg';
 import RightArrow from '../assets/Right-arrow.svg'
 import { Link } from 'react-router-dom';
-import {
-  Chart as ChartJs,
-  ArcElement,
-  Tooltip,
-  Legend
-} from 'chart.js'
+import { Chart as ChartJs,ArcElement,Tooltip, Legend} from 'chart.js'
 import { Doughnut } from 'react-chartjs-2'
 
 

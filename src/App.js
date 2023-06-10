@@ -18,7 +18,6 @@ import ResetPassword3page from './Pages/ResetPassword3page';
 import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
 import Application from './Pages/Application';
-import LoanDefaultPage from './Pages/LoanDefaultPage';
 import Applicantinfo from './Pages/ApplicantInfo'
 
 
