@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import Buttons from './Buttons';
 //import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
-import OtpForm from './OtpForm2';
 import '../Styles/Signup1.css';
 import axios from 'axios';
 // import OtpForm from './OtpForm';
@@ -30,6 +29,11 @@ const Signup = () => {
   // };
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
+<<<<<<<< < Temporary merge branch 1
+    setShowOtpForm(true);
+    navigate('/signupstep2');
+
+=========
     //navigate('/signupstep2');
     const email = values.email;
 
