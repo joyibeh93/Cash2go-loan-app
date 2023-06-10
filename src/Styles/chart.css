@@ -15,7 +15,7 @@
     height: 20%;
     font-size: 30px;
 }
-p{
+.chartStyle{
     display: flex;
   justify-content:space-evenly;
 }

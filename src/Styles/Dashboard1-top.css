@@ -68,6 +68,7 @@
   margin: 1rem 0;
 }
 
+
 .approved {
   background-color: var(--approved-btn-bg-clr);
   color: var(--main-bg-clr);

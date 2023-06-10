@@ -31,7 +31,7 @@ import { useNavigate } from 'react-router-dom';
         </div>
       </div>
       <div className="dash-top">
-        <div>
+        <div className='dast-top1'>
           <p>Approved Loan</p>
           <p className="loan-count">
             <strong>104</strong>
@@ -45,7 +45,7 @@ import { useNavigate } from 'react-router-dom';
           </p>
         </div>
         <img src={approvedBlack} className="approved-black" alt="" />
-        <div>
+        <div className='dast-top1'>
           <p>Pending Reviews</p>
           <p className="loan-count">
             <strong>81</strong>
@@ -58,7 +58,7 @@ import { useNavigate } from 'react-router-dom';
           </p>
         </div>
         <img src={pendingBlack} className="pending-black" alt="" />
-        <div>
+        <div className='dast-top1'>
           <p>Approved Loan</p>
           <p className="loan-count">
             <strong>20</strong>
