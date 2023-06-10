@@ -1,6 +1,6 @@
 import React from "react";
 
-const message = () => {
+const notifications = () => {
   return (
     <div className="messageContainer">
       {/* Top bar */}
@@ -103,4 +103,4 @@ const message = () => {
   );
 };
 
-export default message;
+export default notifications;
