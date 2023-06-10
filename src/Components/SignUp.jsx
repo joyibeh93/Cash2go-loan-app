@@ -6,7 +6,7 @@ import Buttons from './Buttons';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
 import axios from 'axios';
-// import OtpForm from './OtpForm';
+import OtpForm from './OtpForm';
 
 const Signup = () => {
   const [email, setEmail] = useState('')
@@ -28,16 +28,13 @@ const Signup = () => {
   //   navigate('/signupstep2');
   // };
   const handleSubmit = async (values, { setSubmitting }) => {
-    setSubmitting(true);
-<<<<<<<< < Temporary merge branch 1
-    setShowOtpForm(true);
-    navigate('/signupstep2');
-
-=========
+    //navigate('/signupstep2');
     //navigate('/signupstep2');
     const email = values.email;
-
     const companyID = values.companyID;
+    setSubmitting(true);
+
+    setShowOtpForm(true);
     const data = {
       email: email,
       companyID: companyID,

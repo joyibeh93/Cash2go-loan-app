@@ -65,7 +65,7 @@ const PieChart = () => {
         >
 
         </Doughnut>
-        <p>(720 - 850)
+        <p className='pie-p'>(720 - 850)
           <button className="approved">
             {' '}
             <img src={approvedTransparent} alt="approved-icon" /> Excellent
