@@ -2,29 +2,37 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Buttons from './Buttons';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
+import OtpForm from './OtpForm2';
 import '../Styles/Signup1.css';
 import axios from 'axios';
 // import OtpForm from './OtpForm';
 
 const Signup = () => {
+  const [email, setEmail] = useState('')
+  const [showOtpForm, setShowOtpForm] = useState(false)
+
+
   const validationSchema = Yup.object({
     email: Yup.string()
       .email('Invalid email address')
       .required('Email is required'),
     companyID: Yup.string().required('Company ID is required'),
   });
-  const [showOtpForm, setShowOtpForm] = useState(false);
-  const [email, setEmail] = useState('');
-  const navigate = useNavigate(); // Initialized the useNavigate hook
-  const [status, setStatus] = useState('');
+
+  // const navigate = useNavigate(); // Initialized the useNavigate hook
+
+  // const handleSubmit = (values, { setSubmitting }) => {
+  //   console.log(values);
+  //   setSubmitting(false);
+  //   navigate('/signupstep2');
+  // };
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
-    setShowOtpForm(true);
-    navigate('/signupstep2');
-
+    //navigate('/signupstep2');
     const email = values.email;
+
     const companyID = values.companyID;
     const data = {
       email: email,
@@ -38,19 +46,16 @@ const Signup = () => {
       );
 
       const authenticated = response.data;
-      console.log(authenticated);
+      //console.log(authenticated);
+      alert(authenticated);
 
       if (authenticated) {
-        navigate('/signupstep2');
-        // navigate(`/otp-auth?email=${encodeURIComponent(email)}`);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      if (error.response) {
-        setStatus(error.response.data.message);
-        setTimeout(() => {
-          setStatus("");
-        }, 5000);
+
+        setEmail(email)
+        setShowOtpForm(true)
+        // navigate('/signupstep2');
+        // navigate('/otp-auth?email=${encodeURLComponent(email)}');
+
       }
     } finally {
       setSubmitting(false);
@@ -108,7 +113,7 @@ const Signup = () => {
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
-      {/* {showOtpForm && <OtpForm email={email} />} */}
+      {showOtpForm && <OtpForm email={email} />}
     </div>
   );
 };

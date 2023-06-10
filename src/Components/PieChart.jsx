@@ -3,12 +3,7 @@ import '../Styles/chart.css'
 import approvedTransparent from '../assets/approved-transparent.svg';
 import RightArrow from '../assets/Right-arrow.svg'
 import { Link } from 'react-router-dom';
-import {
-  Chart as ChartJs,
-  ArcElement,
-  Tooltip,
-  Legend
-} from 'chart.js'
+import { Chart as ChartJs,ArcElement,Tooltip, Legend} from 'chart.js'
 import { Doughnut } from 'react-chartjs-2'
 
 
@@ -36,8 +31,8 @@ const PieChart = () => {
     beforeDatasetsDraw(chart, args, pluginOptions) {
       const { ctx} = chart;
        const xCoor=  (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);
-       const yCoor = (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);      const xCoor =chart.getDatasetMeta(0).data[0].x;
-      const yCoor =chart.getDatasetMeta(0).data[0].y;
+       const yCoor = (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y); 
+      // const yCoor =chart.getDatasetMeta(0).data[0].y;
       ctx.save();
       ctx.font = ' bolder 40px sans-serif';
       ctx.fillStyle = 'green';
