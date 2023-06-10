@@ -81,7 +81,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
                 <h4>Ogbeni Malani</h4>
-                <Link to="/MoreInfo"> More info </Link>
+                <Link to="/loandefault"> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>
