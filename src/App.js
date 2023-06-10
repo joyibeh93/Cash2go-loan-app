@@ -14,7 +14,7 @@ import PasswordResetPage from './Pages/PasswordResetPage';
 import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
-import LoanDefaultPage from './Pages/LoanDefaultPage'
+// import LoanDefaultPage from './Pages/LoanDefaultPage'
 import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
 import Application from './Pages/Application';
