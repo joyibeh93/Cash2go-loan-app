@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
 import axios from 'axios';
-import OtpForm from './OtpForm';
+// import OtpForm from './OtpForm';
 
 const Signup = () => {
   const validationSchema = Yup.object({
