@@ -6,7 +6,7 @@ import Buttons from './Buttons';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
 import axios from 'axios';
-// import OtpForm from './OtpForm';
+import OtpForm from './OtpForm';
 
 const Signup = () => {
   const [email, setEmail] = useState('')
@@ -20,7 +20,7 @@ const Signup = () => {
     companyID: Yup.string().required('Company ID is required'),
   });
 
-  // const navigate = useNavigate(); // Initialized the useNavigate hook
+  //const navigate = useNavigate(); // Initialized the useNavigate hook
 
   // const handleSubmit = (values, { setSubmitting }) => {
   //   console.log(values);
@@ -29,11 +29,7 @@ const Signup = () => {
   // };
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
-<<<<<<<< < Temporary merge branch 1
     setShowOtpForm(true);
-    navigate('/signupstep2');
-
-=========
     //navigate('/signupstep2');
     const email = values.email;
 
