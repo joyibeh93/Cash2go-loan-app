@@ -33,56 +33,55 @@ const Recovery = () => {
             </div>
             <br /><br />
             <div className="recoveryTable">
-                <table>
-                    <thead>
-                        <tr className="tablehead">
-                            <th className='applicant'>Applicants</th>
-                            <th>Date Due<span>
-                                <img src={Download} alt='Download' />
-                            </span></th>
-                            <th>Progress <span>
-                                <img src={Download} alt='Download' />
-                            </span></th>
-                            <th>Credit Score <span>
-                                <img src={Download} alt='Download' />
-                            </span></th>
-                            <th>Total Amount <span>
-                                <img src={Download} alt='Download' />
-                            </span></th>
-                            <th>Amount Left <span>
-                                <img src={Download} alt='Download' />
-                            </span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
 
-                        {data.map((val, key) => {
-                            return (
-                                <>
-                                    <tr key={key}   >
-                                        <div ><td className='userRec'> <div className="recUserIcon">
-                                            <img src={userIcon} alt='user-icon' />
-                                        </div>
-                                            <div className="recUserName">
-                                                <p>{val.applicants}</p>
+                <tr className="tableheadRec">
+                    <th className='applicant'>Applicants</th>
+                    <th>Date Due<span>
+                        <img src={Download} alt='Download' />
+                    </span></th>
+                    <th>Progress <span>
+                        <img src={Download} alt='Download' />
+                    </span></th>
+                    <th>Credit Score <span>
+                        <img src={Download} alt='Download' />
+                    </span></th>
+                    <th>Total Amount <span>
+                        <img src={Download} alt='Download' />
+                    </span></th>
+                    <th>Amount Left <span>
+                        <img src={Download} alt='Download' />
+                    </span></th>
+                </tr>
 
-                                                {/* <Link to="/MoreInfo"> More info </Link> */}
-                                                <span>more info</span></div>
-                                        </td></div>
-                                        <td>{val.dateDue}</td>
-                                        <td>{val.progress}</td>
-                                        <td>{val.creditScore}</td>
-                                        <td>{val.totalAmount} </td>
-                                        <td>{val.amountLeft} <span className='dots'>...</span></td>
-                                    </tr>
-                                </>
-                            )
-                        })}
-                    </tbody>
-                    <th className="footer" ><button>  Prev</button> <button>1</button><button>2</button> <button>_</button>
-                        <button>5</button><button>6</button><button>Next</button>
-                    </th>
-                </table>
+                <tbody>
+
+                    {data.map((val, key) => {
+                        return (
+                            <>
+                                <tr key={key}   >
+                                    <div ><td className='userRec'> <div className="recUserIcon">
+                                        <img src={userIcon} alt='user-icon' />
+                                    </div>
+                                        <div className="recUserName">
+                                            <p>{val.applicants}</p>
+
+                                            {/* <Link to="/MoreInfo"> More info </Link> */}
+                                            <span>more info</span></div>
+                                    </td></div>
+                                    <td>{val.dateDue}</td>
+                                    <td>{val.progress}</td>
+                                    <td>{val.creditScore}</td>
+                                    <td>{val.totalAmount} </td>
+                                    <td>{val.amountLeft} <span className='dots'>...</span></td>
+                                </tr>
+                            </>
+                        )
+                    })}
+                </tbody>
+                <th className="footer" ><button>  Prev</button> <button>1</button><button>2</button> <button>_</button>
+                    <button>5</button><button>6</button><button>Next</button>
+                </th>
+
             </div>
 
         </div>

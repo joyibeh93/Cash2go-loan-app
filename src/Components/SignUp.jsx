@@ -23,7 +23,6 @@ const Signup = () => {
     setSubmitting(true);
 
     //navigate('/signupstep2');
-    //navigate('/signupstep2');
     const email = values.email;
     const companyID = values.companyID;
     const data = {
