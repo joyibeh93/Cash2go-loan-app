@@ -98,7 +98,7 @@ const handleVerifyOtp = async (values, { setSubmitting }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={errors.otp && errors.otp[i] ? 'error' : ''}
-                  disabled={!otpRequested}
+                  disabled={otpRequested}
                 />
               ))}
             </div>
