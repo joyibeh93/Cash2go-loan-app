@@ -2,14 +2,15 @@ import React from 'react';
 import Drive from '../assets/Drive.svg';
 import Download from '../assets/Download.svg';
 import { Link } from 'react-router-dom';
+import '../Styles/Predictioninfo.css';
 
 const MsgInfo = () => {
     return (
       <>
         <div className="top-header">
           <div className="name">
-            <h1>Mukatar Bello</h1>
-            <span>Contact information</span>
+            <h1>Muktar Bello</h1>
+            <span>ID 20239076</span>
           </div>
           <div className="icon">
             <img src={Drive} alt="file-drive-icon" />
@@ -25,7 +26,7 @@ const MsgInfo = () => {
               <Link to="/contactinfo">Contact Info</Link>
           </li>
             <li>
-              <Link to="/msginfo">Message</Link>
+            <Link to="/msginfo">message</Link>    
             </li>
           </ul>
         </div>
