@@ -36,6 +36,7 @@ const PieChart = ({color,Anlytper}) => {
        const xCoor=  (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);
        const yCoor = (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y); 
       // const yCoor =chart.getDatasetMeta(0).data[0].y;
+    
       ctx.save();
       ctx.font = ' bolder 30px sans-serif';
       ctx.fillStyle = 'green';
