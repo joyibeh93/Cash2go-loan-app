@@ -14,7 +14,6 @@ const data = [
     { applicants: 'Ebube Stutern', dateDue: '30 / 03 / 23', progress: 'Pending', creditScore: '402', totalAmount: 'N 50,000.00', amountLeft: 'N 5,000.00' },
     { applicants: 'Ekere Stutern', dateDue: '30 / 03 / 23', progress: 'Pending', creditScore: '308', totalAmount: 'N 60,000.00', amountLeft: 'N 6,000.00' },
     { applicants: 'Ekere Stutern', dateDue: '30 / 03 / 23', progress: 'Pending', creditScore: '670', totalAmount: 'N 30,000.00', amountLeft: 'N 3,000.00' },
-    { dots: '...' }
 ]
 
 const Recovery = () => {
@@ -61,10 +60,10 @@ const Recovery = () => {
                             return (
                                 <>
                                     <tr key={key}   >
-                                        <div ><td className='user'> <div className="userIcon">
+                                        <div ><td className='userRec'> <div className="recUserIcon">
                                             <img src={userIcon} alt='user-icon' />
                                         </div>
-                                            <div className="userName">
+                                            <div className="recUserName">
                                                 <p>{val.applicants}</p>
 
                                                 {/* <Link to="/MoreInfo"> More info </Link> */}
@@ -74,7 +73,7 @@ const Recovery = () => {
                                         <td>{val.progress}</td>
                                         <td>{val.creditScore}</td>
                                         <td>{val.totalAmount} </td>
-                                        <td>{val.amountLeft} {val.dots}</td>
+                                        <td>{val.amountLeft} <span className='dots'>...</span></td>
                                     </tr>
                                 </>
                             )

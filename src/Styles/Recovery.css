@@ -65,14 +65,20 @@ th {
     font-size: 10px;
 }
 
-.user {
+.userRec {
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.userName {
+.recUserName {
     margin-left: 20px;
+}
+
+.dots {
+    font-weight: 400px;
+    margin-right: 30px;
+
 }
 
 .first-data {
