@@ -12,7 +12,7 @@ function ApplicationContent() {
         <div>
             <ul>
                 <li>Applications</li>
-                <li>All Applications</li>
+                <li className='appcnt'> All Applications</li>
             </ul>
         </div>
         <div className="dashBoardTable">

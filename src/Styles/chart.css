@@ -15,7 +15,8 @@
     height: 20%;
     font-size: 30px;
 }
-.doughnut-info{
+
+.pie-p{
     display: flex;
   justify-content:space-evenly;
 }

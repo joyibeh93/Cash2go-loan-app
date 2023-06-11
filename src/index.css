@@ -89,7 +89,7 @@ a {
 .steps-container {
   margin-top: 5em;
   /* margin-left: 3em; */
-  padding: 0 5em;
+  padding: 0 3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,11 +101,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 2em;
+  margin-left: 1em;
   margin-top: 5.5em;
 }
 .logo img {
-  margin-right: 0.5em;
+  margin-right: 0.2em;
 }
 
 .input-checkbox input[type='checkbox'] {
