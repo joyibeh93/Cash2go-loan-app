@@ -19,7 +19,7 @@ import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
 import Application from './Pages/Application';
 import Applicantinfo from './Pages/ApplicantInfo'
-import Analytics from './Pages/Analytics';
+import NewMessage from './Pages/NewMessage';
 
 
 function App() {
@@ -41,8 +41,8 @@ function App() {
         <Route path="/bvn" element={<BvnPage />} />
         <Route path="/loandefault" element={<LoanDefaultPage />} />
         <Route path="/application" element={<Application />} />
-        <Route path="/analytics" element={<Analytics />} />
         <Route path="/message" element={<Message />} />
+        <Route path="/newmessage" element={<NewMessage />} />
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         

@@ -1,4 +1,5 @@
 import React from "react";
+import '../Styles/MessageContentInfo.css'
 import doubleClickRed from "../assets/doubleClickRed.png";
 import shareArrow from "../assets/shareArrow.jpg";
 import msg1 from "../assets/msg1.jpg";
@@ -11,7 +12,7 @@ const MessageContentInfo = () => {
     <div className="messages">
       <div className="message">
         <input type="checkbox" name="select" />
-        <img src={msg1} alt="profil-pic" />
+        <img src={msg1} alt="profil-pic" className="profile" />
         <div className="messageDiv">
           <p className="name">Ogbeni Mallam</p>
           <p className="text">
@@ -21,16 +22,16 @@ const MessageContentInfo = () => {
           </p>
         </div>
         <div className="msg-icons">
-          <img src={doubleClickRed} alt="selected" />
-          <img src={shareArrow} alt="share" />
+          <img src={doubleClickRed} alt="selected" className="doubleclick" />
+          <img src={shareArrow} alt="share" className="share"/>
         </div>
       </div>
       <div className="lineDiv"></div>
       <div className="message">
         <input type="checkbox" name="select" />
-        <img src={msg2} alt="profil-pic" />
+        <img src={msg2} alt="profil-pic" className="profile" />
         <div className="messageDiv">
-          <p className="name">Mary Analyst</p>
+          <p className="name green">Mary Analyst</p>
           <p className="text">
             Hi, I am Mary, risk analayst in Company AA. I would like to invite
             for a hangout tagged “Analysing the fun” held at Bamboo kitchen
@@ -38,30 +39,30 @@ const MessageContentInfo = () => {
           </p>
         </div>
         <div className="msg-icons">
-          <img src={doubleClickRed} alt="selected" />
-          <img src={shareArrow} alt="share" />
+          <img src={doubleClickRed} alt="selected" className="doubleclick"/>
+          <img src={shareArrow} alt="share" className="share"/>
         </div>
       </div>
       <div className="lineDiv"></div>
       <div className="message">
         <input type="checkbox" name="select" />
-        <img src={msg3} alt="profil-pic" />
+        <img src={msg3} alt="profil-pic" className="profile" />
         <div className="messageDiv">
-          <p className="name">Muktar Bello</p>
+          <p className="name green">Muktar Bello</p>
           <p className="text">
             Hi Gbenga, I received your last message with thanks. I am working to
             enable a good credit score, hope to work with on the...
           </p>
         </div>
         <div className="msg-icons">
-          <img src={doubleClickRed} alt="selected" />
-          <img src={shareArrow} alt="share" />
+          <img src={doubleClickRed} alt="selected" className="doubleclick" />
+          <img src={shareArrow} alt="share" className="share"/>
         </div>
       </div>
       <div className="lineDiv"></div>
       <div className="message">
         <input type="checkbox" name="select" />
-        <img src={msg4} alt="profil-pic" />
+        <img src={msg4} alt="profil-pic" className="profile" />
         <div className="messageDiv">
           <p className="name">Niyi Analyst</p>
           <p className="text">
@@ -70,8 +71,8 @@ const MessageContentInfo = () => {
           </p>
         </div>
         <div className="msg-icons">
-          <img src={doubleClickRed} alt="selected" />
-          <img src={shareArrow} alt="share" />
+          <img src={doubleClickRed} alt="selected" className="doubleclick" />
+          <img src={shareArrow} alt="share" className="share"/>
         </div>
       </div>
       <div className="lineDiv"></div>

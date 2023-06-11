@@ -107,7 +107,7 @@ const notifications = () => {
           <button>1</button>
           <button>2</button>
           <button>
-            <img src="" alt="" />
+            ...
           </button>
           <button>5</button>
           <button>6</button>
