@@ -47,8 +47,8 @@ const Signup = () => {
       );
 
       const authenticated = response.data;
-      //console.log(authenticated);
-      alert(authenticated);
+    //console.log(authenticated);
+      //alert(authenticated);
 
       if (authenticated) {
 
