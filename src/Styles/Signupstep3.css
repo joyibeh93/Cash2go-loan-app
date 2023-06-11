@@ -17,12 +17,12 @@
 .eye {
   position: absolute;
   left: 77em;
-  bottom: 18em;
+  bottom: 19.5em;
 }
 
 .eye2 {
   position: absolute;
-  top: 21.5em;
+  top: 24em;
   left: 77em;
   cursor: pointer;
 }
