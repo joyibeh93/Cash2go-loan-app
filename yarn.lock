@@ -3446,11 +3446,6 @@ color-convert@^2.0.1:
   dependencies:
     color-name "~1.1.4"
 
-color-convert@0.2.x:
-  version "0.2.1"
-  resolved "https://registry.npmjs.org/color-convert/-/color-convert-0.2.1.tgz"
-  integrity sha512-FWbwpCgyRV41Vml0iKU9UmL0dVTKORnm7ZC8h8cdfvutk2bU7ZcMLtSleggScK/IpUVXILg9Pw86LhPUQyTaVg==
-
 color-name@~1.1.4:
   version "1.1.4"
   resolved "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz"
@@ -6750,13 +6745,6 @@ mkdirp@~0.5.1:
   integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
   dependencies:
     minimist "^1.2.6"
-
-"mrcolor@https://github.com/rook2pawn/mrcolor/archive/master.tar.gz":
-  version "0.0.1"
-  resolved "https://github.com/rook2pawn/mrcolor/archive/master.tar.gz"
-  integrity sha512-feteSepg0FRp0fW3RafigAjU7gXiiaa4OlMW39FEmcvQPbD7Zlpc2PSu4hVBPSBR4XNee8n6EjCTfK0O37DL5A==
-  dependencies:
-    color-convert "0.2.x"
 
 ms@^2.1.1, ms@2.1.2:
   version "2.1.2"

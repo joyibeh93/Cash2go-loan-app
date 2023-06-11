@@ -49,7 +49,7 @@ const Sidebar = () => {
         </Link>
       </div>
       <div className="sidebar-items2">
-        <Link to="/resources" className="links">
+        <Link to="" className="links">
           <img src={Resources} alt="Dashboard-icon" />
           <p>Resources</p>
         </Link>
@@ -57,13 +57,13 @@ const Sidebar = () => {
           <img src={Settings} alt="Dashboard-icon" />
           <p>Settings</p>
         </Link>
-        <Link to="/help-center" className="links">
+        <Link to="" className="links">
           <img src={HelpCenter} alt="Dashboard-icon" />
           <p>Help Center</p>
         </Link>
       </div>
 
-      <Link to="/log-out" className="log-out">Log out</Link>
+      <Link to="/" className="log-out">Log out</Link>
     </div>
   );
 };
