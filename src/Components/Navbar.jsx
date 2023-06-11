@@ -4,14 +4,22 @@ import searchicon from '../assets/Search.svg';
 import rightarrow from '../assets/Right-arrow.svg';
 import '../Styles/navbar.css';
 import bellIcon from '../assets/Bell-icon.svg';
+import { useNavigate } from 'react-router-dom';
+
 function Navbar() {
+  const navigate = useNavigate(); 
+
+  const handleBellIconOnClick = () => {
+    navigate('/notification');  // Redirect the user to the notifications page
+  }
+
   return (
     <div className="navbar-item">
       <img src={searchicon} alt="searhicon" className="searchicon" />
       <input type="search" placeholder="Search" className="navbar-search" />
       <img src={rightarrow} alt="right-arrow" className="right-arrow" />
       <div className="navbar-item2">
-        <img src={bellIcon} className="bell" alt="bell-icon" />
+        <img src={bellIcon} className="bell" alt="bell-icon" onClick={handleBellIconOnClick}/>
         <div>
           <img src={usericon} alt="user-icon" className="navbar-userIcon" />
         </div>
