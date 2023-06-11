@@ -51,25 +51,25 @@ const Bvn = () => {
       </form>
 
       <form className="bvn-container" onSubmit={handleSubmit}>
-        <h3>Upload Bank Statement</h3>
+        <h3 className='bank-statement'>Upload Bank Statement</h3>
         <br></br>
-        <p>Upload Bank Details</p>
+        <p className='bank-details'>Upload Bank Details</p>
         <input
-          type="text"
+          type="file"
           name="bvn"
           required
-          className="input-field"
-          placeholder="2380111111111111"
+          className="input-field file-field"
+          placeholder=""
           inputMode="numeric"
-          pattern="[0-9]*"
+          // pattern="[0-9]*"
           value={bvn}
           onChange={handleBvnChange}
         />
-        <p>Upload PDF. Check sample Here</p>
+        <p className='upload-pdf'>Upload PDF. Check sample Here</p>
 
         {bvnError && <p className="error-message">{bvnError}</p>}
         <br/><br/>
-        <button type="submit" className="submit-button"> Next <span>&#8594;</span></button>
+        <button type="submit" className="submit-button btn-file-submit"> Next <span>&#8594;</span></button>
       </form>
     </div>
   );
