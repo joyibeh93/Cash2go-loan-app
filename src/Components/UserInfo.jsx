@@ -1,15 +1,19 @@
 import React from "react";
 import approvedTransparent from "../assets/approved-transparent.svg";
 import pendingTransparent from "../assets/pending-transparent.svg";
+import approvedBlack from '../assets/approvedblack.svg';
+import pendingBlack from '../assets/pendingblack.svg';
+import rejectedBlack from '../assets/rejectedblack.svg';
 import "../Styles/UserInfo.css";
 import { useNavigate } from "react-router-dom";
+
 const UserInfo = () => {
   const navigate = useNavigate()
   const Contact = () =>{
     navigate('/ContactInfo')
   }
   const Review = () =>{
-    navigate('/Review')
+    navigate('/ReviewPage')
   }
   return (
     <div className="info-content">
@@ -36,7 +40,7 @@ const UserInfo = () => {
               <img src={approvedTransparent} alt="approved-icon" /> Approved
             </button>
           </p>
-          <img src={""} alt="" />
+          <img className="approved-black" src={approvedBlack} alt="" />
         </div>
         {/* credit utilization details */}
         <div>
@@ -51,7 +55,7 @@ const UserInfo = () => {
               <img src={pendingTransparent} alt="approved-icon" /> Pending
             </button>
           </p>
-          <img src={""} alt="" />
+          <img className="pending-black" src={pendingBlack} alt="" />
         </div>
         {/* outstanding debt details */}
         <div>
@@ -66,7 +70,7 @@ const UserInfo = () => {
               <img src={approvedTransparent} alt="approved-icon" /> Excellent
             </button>
           </p>
-          <img src={""} alt="" />
+          <img className="rejected-black" src={rejectedBlack} alt="" />
         </div>
       </div>
     </div>
