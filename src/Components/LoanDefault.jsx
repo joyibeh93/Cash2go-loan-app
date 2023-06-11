@@ -25,7 +25,7 @@ const navigate = useNavigate();
     console.log(values);
 
     // Navigate to the next page
-    navigate('/userinfo')
+    navigate('/applicantinfo')
   };
 
   return (
