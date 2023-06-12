@@ -12,14 +12,17 @@ ChartJs.register(
   Tooltip,
   Legend
 );
-const PieChart = () => {
+const PieChart = ({color,Anlytper}) => {
+  const defaultColor=['#249c56', 'white']
+  const score='720'
   const data = {
     label:[],
     datasets: [{
       label: 'credit score',
       data: [0 - 719, 720 - 1000],
-      backgroundColor: ['#249c56', 'white'],
+      backgroundColor: color|| defaultColor,
       borderColor: ['white', 'white'],
+      
     
     }]
   }
@@ -35,11 +38,11 @@ const PieChart = () => {
       // const yCoor =chart.getDatasetMeta(0).data[0].y;
     
       ctx.save();
-      ctx.font = ' bolder 40px sans-serif';
+      ctx.font = ' bolder 30px sans-serif';
       ctx.fillStyle = 'green';
       ctx.textAlign='center'
       ctx.textBaseLine= 'middle'
-      ctx.fillText('720 ', xCoor,yCoor -20);
+      ctx.fillText(Anlytper||score, xCoor,yCoor -10);
   
   
       ctx.font = ' bolder 20px sans-serif';
