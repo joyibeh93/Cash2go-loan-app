@@ -19,7 +19,6 @@ import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
 import Application from './Pages/Application';
 import Applicantinfo from './Pages/ApplicantInfo'
-import Notification from './Pages/Notification';
 
 function App() {
   return (
