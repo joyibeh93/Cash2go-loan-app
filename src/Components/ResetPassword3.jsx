@@ -20,10 +20,40 @@ const ResetPassword3 = () => {
   // Initialized the useNavigate hook
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = (values, { setSubmitting }) => {
-    console.log(values);
-    setSubmitting(false);
+  // const handleSubmit = (values, { setSubmitting }) => {
+  //   console.log(values);
+  //   setSubmitting(false);
+  // };
+
+  const handleSubmit = async (values, { setSubmitting }) => {
+    setSubmitting(true);
+    const { password } = values;
+    const data = {
+      password: password,
+    };
+
+    try {
+      const response = await fetch(
+        'https://cash2go-backendd.onrender.com/api/v1/user/resetPassword',
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (response.ok) {
+        setShowModal(true);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
+      setSubmitting(false);
+    }
   };
+
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
