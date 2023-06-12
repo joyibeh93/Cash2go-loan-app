@@ -23,8 +23,10 @@ import Notification from './Pages/Notification';
 import Analytics from './Pages/Analytics';
 
 
+
 function App() {
   return (
+
     <Router>
       <Routes>
         <Route path="/bvn" element={<BvnPage />} />
@@ -47,8 +49,7 @@ function App() {
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/analytics" element={<Analytics />} />
-        
-        
+
       </Routes>
     </Router>
   );
