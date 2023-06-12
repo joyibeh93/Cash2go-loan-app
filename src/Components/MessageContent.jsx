@@ -9,7 +9,7 @@ function MessageContent() {
   const [message, setMessage] = useState("inbox");
 
   return (
-    <div className=".messageContent">
+    <div className="messageContent">
       <div className="msg-top-bar">
         <div>
           <p className="msg-cnt-mb">
@@ -73,3 +73,4 @@ function MessageContent() {
 }
 
 export default MessageContent;
+
