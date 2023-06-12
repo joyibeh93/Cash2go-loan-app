@@ -6,8 +6,8 @@ import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import '../Styles/Login.css';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import axios from 'axios';
+import { Formik} from 'formik';
+//import axios from 'axios';
 
 // const schema = Yup.object().shape({
 //   email: Yup.string()
