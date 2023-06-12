@@ -19,6 +19,7 @@ import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
 import Application from './Pages/Application';
 import Applicantinfo from './Pages/ApplicantInfo'
+import Notification from './Pages/Notification';
 import Analytics from './Pages/Analytics';
 
 
@@ -44,6 +45,7 @@ function App() {
         <Route path="/message" element={<Message />} />
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/applicantinfo" element={<Applicantinfo />} />
+        <Route path="/notification" element={<Notification />} />
         <Route path="/analytics" element={<Analytics />} />
         
         
