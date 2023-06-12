@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Buttons from './Buttons';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
-import axios from 'axios';
+// import axios from 'axios';
 import OtpForm from './OtpForm';
 
 const Signup = () => {
@@ -33,9 +33,9 @@ const Signup = () => {
 
     try {
       const response = await fetch(
-        'https://cash2go-backendd.onrender.com/api/v1/user',
+        'https://cash2go-backendd.onrender.com/api/v1/user/signup',
         {
-          method: 'PATCH',
+          method: 'GET',
           headers: {
             'Content-Type': 'application/json',
           },
@@ -45,7 +45,7 @@ const Signup = () => {
 
       const authenticated = await response.json();
 
-    //console.log(authenticated);
+      //console.log(authenticated);
       //alert(authenticated);
 
 
@@ -119,10 +119,10 @@ const Signup = () => {
           />
 
           <div className="button">
-            {/* <Buttons button="Next" /> */}
-            <Link to="/signupstep2" className="button">
+            <Buttons button="Next" />
+            {/* <Link to="/signupstep2" className="button">
               <Buttons button="Next" />
-            </Link>
+            </Link> */}
           </div>
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
