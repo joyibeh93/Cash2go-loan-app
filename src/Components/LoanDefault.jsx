@@ -29,7 +29,7 @@ const navigate = useNavigate();
   };
 
   return (
-    <div className="form-container">
+    <div className="form-containersss">
       <h1 className="predict-h1">Predict Loan Default</h1>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className="Loan_form">

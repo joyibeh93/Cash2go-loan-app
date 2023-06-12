@@ -5,6 +5,8 @@ import Chart from '../Components/Chart';
 import PieChart from '../Components/PieChart';
 import PreviousApp from '../Components/PreviousApp';
 import UserInfo from '../Components/UserInfo';
+import { Link } from 'react-router-dom'
+
 const ApplicantDetails = () => {
   return (
   <div>
@@ -24,6 +26,7 @@ const ApplicantDetails = () => {
          <Chart/>
          </div>
          <PreviousApp/>
+         <Link to="/msginfo">Message</Link>
       </div>
     </div>
   </div>

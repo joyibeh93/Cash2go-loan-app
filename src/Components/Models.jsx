@@ -3,27 +3,33 @@ import "../Styles/settings.css"
 import downArrow from '../assets/down-arrow.svg';
 import rejectedTransparent from '../assets/rejected-transparent.svg';
 import Switch from './Switch';
-import Padlock from './Padlock';
+import Padlock from './Padlock'; 
+import approvedTransparent from '../assets/approved-transparent.svg';
 import { useState } from 'react';
 
 
-
 const Models= () => {
-    const [value, setValue] = useState(false)
+  const [value, setValue] = useState(false)
+
   return (
     <div >
+      <div className='heady
+      '>
         <h1>Settings</h1>
         <div className="exit-new">
-          <button className="exisiting">Manage</button>
-          <button className="new">Create New Model</button>
+          <button className="markAll">Manage</button>
+          <button className="markRead">Create new Model</button>
+          </div>
         </div>
-        <span>Models</span>
-        <span>Notification</span>
-        <span>Security & Privacy</span>
-        <span>Activity</span>
+    <div className='categories'>
+      <span>Models</span>
+      <span>Notification</span>
+      <span>Security & privacy</span>
+      <span>Activity</span>
+    </div>
         <div className='settings'>
             <table>
-            <thead className="tablehead">
+            <thead>
           <tr>
             <th>Model Name</th>
             <th>
@@ -40,7 +46,7 @@ const Models= () => {
             </th>
         </tr>
         </thead> 
-        <tbody>
+         <tbody>
           <tr >
             <td className="first-data">
               <Switch
@@ -55,68 +61,83 @@ const Models= () => {
             <td>01/04/23</td>
             <td>
               <p className="rejected-down">
-                <img src={rejectedTransparent} alt="" /> Active
+                {' '}
+                <img src={approvedTransparent} alt="approved-icon" />
+              Active
               </p>
             </td>
             <td>Default</td>
             <td>{Padlock}</td>
           </tr>
-          <tr>
-            <td className="first-data">
-            <Switch
-            isOn ={value}
-            onColor="#ff6f5a"
-            handleToggle={()=> setValue(!value)}/>{''}
-              <div className="data-title">
-                <h4>Alpha Model</h4>
-                <span>Prioritize Prev loans</span>
-              </div>
-              <p className="rejected-down">
-                <img src={rejectedTransparent} alt="" /> Inactive
-              </p>
-            </td>
-            <td>01/04/23</td>
-            <td>Admin</td>
-            <td><i class="fa-regular fa-pen-to-square"></i></td>
-          </tr>
-
-          <tr>
+          <tr >
             <td className="first-data">
               <Switch
               isOn ={value}
-               onColor="#ff6f5a"
-               handleToggle={()=> setValue(!value)}/>{' '}
+              onColor="#ff6f5a"
+              handleToggle={()=> setValue(!value)}/>{' '}
+              <div className="data-title">
+                <h4>Alpha Model</h4>
+                <span>Priotize Prev.Loans</span>
+              </div>
+            </td>
+            <td>01/04/23</td>
+            <td>
+              <p className="rejected-btn">
+                {' '}
+                <img src={rejectedTransparent} alt="approved-icon" />
+              inctive
+              </p>
+            </td>
+            <td>Admin</td>
+            <td><i class="fa-regular fa-pen-to-square"></i></td>
+          </tr>
+          <tr >
+            <td className="first-data">
+              <Switch
+              isOn ={value}
+              onColor="#ff6f5a"
+              handleToggle={()=> setValue(!value)}/>{' '}
               <div className="data-title">
                 <h4>Credit First Model</h4>
-                <span>Prioritize Prev loans</span>
+                <span>Credit Score Main</span>
               </div>
-              <p className="rejected-down">
-                <img src={rejectedTransparent} alt="" /> Inactive
-              </p>
             </td>
             <td>01/04/23</td>
+            <td>
+              <p className="rejected-btn">
+                {' '}
+                <img src={rejectedTransparent} alt="approved-icon" />
+              inctive
+              </p>
+            </td>
             <td>Gbenga</td>
             <td><i class="fa-regular fa-pen-to-square"></i></td>
           </tr>
-          <tr>
+          <tr >
             <td className="first-data">
-             <Switch
-             isOn ={value}
-             onColor="#EF476F"
-             handleToggle={()=> setValue(!value)}/>{' '}{' '}
+              <Switch
+              isOn ={value}
+              onColor="#ff6f5a"
+              handleToggle={()=> setValue(!value)}/>{' '}
               <div className="data-title">
                 <h4>CSI Model</h4>
-                <span>Prioritize Prev loans</span>
+                <span>Credit Score Only</span>
               </div>
-              <p className="rejected-down">
-                <img src={rejectedTransparent} alt="" /> Inactive
-              </p>
             </td>
             <td>01/04/23</td>
+            <td>
+              <p className="rejected-btn">
+                {' '}
+                <img src={rejectedTransparent} alt="approved-icon" />
+              inctive
+              </p>
+            </td>
             <td>Gbenga</td>
             <td><i class="fa-regular fa-pen-to-square"></i></td>
           </tr>
-          </tbody>
+
+
+          </tbody> 
             </table>
         </div>
         

@@ -77,12 +77,43 @@
     width: 50px;
   }
 .settings{
-  display: flex;
+    display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
-    max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
+}
+.tableheadSet{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2007em;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  border-bottom: 1px solid;
+  border-width: 100%;
+}
+.heady{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+}
+.categories{
+    display: flex;
+    flex-direction: row;
+  gap: 40px;
+}
+.rejected-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:  #454e5c;
+  color: var(--main-bg-clr);
+  width: 60%;
+  margin-left: 1rem;
 }

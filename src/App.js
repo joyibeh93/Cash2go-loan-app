@@ -20,10 +20,14 @@ import Message from './Pages/Message';
 import Application from './Pages/Application';
 import Applicantinfo from './Pages/ApplicantInfo'
 import Notification from './Pages/Notification';
-import Settings from './Pages/Settings';
+import Analytics from './Pages/Analytics';
+import Settings from './Pages/Settings'
+
+
 
 function App() {
   return (
+
     <Router>
       <Routes>
         <Route path="/bvn" element={<BvnPage />} />
@@ -45,8 +49,9 @@ function App() {
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
-        
+        <Route path="/analytics" element={<Analytics />} />
         <Route path="/" element={<Settings/>} />
+
       </Routes>
     </Router>
   );

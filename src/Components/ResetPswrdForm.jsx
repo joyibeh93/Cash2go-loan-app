@@ -5,6 +5,8 @@ import { nanoid } from 'nanoid';
 import Buttons from './Buttons';
 import '../Styles/Resetpswrd.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 // A validation schema for the email field using Yup
 const emailSchema = Yup.object().shape({
   email: Yup.string()
@@ -17,14 +19,30 @@ const ResetPasswordForm = () => {
   const navigate = useNavigate();
 
   // A function to handle the form submission
-  const handleSubmit = (values) => {
+  const handleSubmit = async (values) => {
     // Generate a random id for the form data
     const id = nanoid();
     // Add the id to the values object
     values.id = id;
     // Do something with the values, such as sending them to an API
     console.log(values);
-    navigate('/resetpassword2');
+
+    try {
+      // Make API call to reset password
+      const response = await axios.patch(
+        'https://cash2go-backendd.onrender.com/api/v1/user',
+        values
+      );
+
+      console.log(response.data); // Log the response from the API
+
+      // Simulate an API call with a delay
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      navigate('/resetpassword2');
+    } catch (error) {
+      console.log(error); // Log any errors
+    }
   };
 
   return (
@@ -64,3 +82,4 @@ const ResetPasswordForm = () => {
 };
 
 export default ResetPasswordForm;
+
