@@ -9,7 +9,7 @@ import Dashboard from './Pages/Dashboard';
 import ResetPassword from './Pages/ResetPassword';
 import SignUpStep4 from './Pages/SignUpStep4';
 import SignUpStep3 from './Pages/SignUpStep3page';
-//import Login from './Pages/Login';
+import Login from './Pages/Login';
 import PasswordResetPage from './Pages/PasswordResetPage';
 import PredictionInfoPage from './Pages/PredictionInfoPage';
 import ContactInfoPage from './Pages/ContactInfoPage';
@@ -22,8 +22,7 @@ import Applicantinfo from './Pages/ApplicantInfo'
 import Notification from './Pages/Notification';
 import Analytics from './Pages/Analytics';
 import Settings from './Pages/Settings'
-
-//import Recovery from './Pages/Recovery';
+import Recovery from './Pages/Recovery';
 
 
 
@@ -39,7 +38,7 @@ function App() {
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/signupstep4" element={<SignUpStep4 />} />
         <Route path="/signupstep3" element={<SignUpStep3 />} />
-         {/* <Route exact path="/" element={<Login />} /> */}
+        <Route exact path="/" element={<Login />} />
         <Route path="/signupstep1" element={<SignUpStep1 />} />
         <Route path="/resetpassword2" element={<PasswordResetPage />} />
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
@@ -53,9 +52,9 @@ function App() {
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/analytics" element={<Analytics />} />
+        <Route path="/" element={<Settings/>} />
+        <Route path="/recovery" element={<Recovery />} />
         <Route path="/settings" element={<Settings/>} />
-
-        {/*<Route path="/recovery" element={<Recovery />} />*/}
       </Routes>
     </Router>
   );
