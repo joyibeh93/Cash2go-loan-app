@@ -7,15 +7,14 @@
     display: flex;
     height: 7em;
 }
-
-input{
+.msgcntinfo{
     height: 1em;
     margin-right: -37em;
     margin-left: -17em;
     position: relative;
     top: 1.7em;
     left: 0.5em;
-}
+} 
 
 .doubleclick{
     height: 1.3em;

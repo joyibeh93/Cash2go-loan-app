@@ -25,9 +25,9 @@ const MsgInfo = () => {
             <li>
               <Link to="/contactinfo">Contact Info</Link>
           </li>
-            <li>
+           <li>
             <Link to="/msginfo">message</Link>    
-            </li>
+            </li> 
           </ul>
         </div>
         <div className="info-table">

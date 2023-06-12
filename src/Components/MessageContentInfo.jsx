@@ -20,7 +20,7 @@ const MessageContentInfo = () => {
       <div className="lineDivTop"></div>
       <div className="messages">
         <div className="message">
-          <input type="checkbox" name="select" />
+          <input type="checkbox" name="select" className="msgcntinfo" />
           <img src={msg1} alt="profil-pic" className="profile" />
           <div className="messageDiv">
             <p className="name">Ogbeni Mallam</p>
@@ -37,7 +37,7 @@ const MessageContentInfo = () => {
         </div>
         <div className="lineDiv"></div>
         <div className="message">
-          <input type="checkbox" name="select" />
+          <input type="checkbox" name="select" className="msgcntinfo" />
           <img src={msg2} alt="profil-pic" className="profile" />
           <div className="messageDiv">
             <p className="name green">Mary Analyst</p>
@@ -54,7 +54,7 @@ const MessageContentInfo = () => {
         </div>
         <div className="lineDiv"></div>
         <div className="message">
-          <input type="checkbox" name="select" />
+          <input type="checkbox" name="select" className="msgcntinfo" />
           <img src={msg3} alt="profil-pic" className="profile" />
           <div className="messageDiv">
             <p className="name green">Muktar Bello</p>
@@ -70,7 +70,7 @@ const MessageContentInfo = () => {
         </div>
         <div className="lineDiv"></div>
         <div className="message">
-          <input type="checkbox" name="select" />
+          <input type="checkbox" name="select" className="msgcntinfo" />
           <img src={msg4} alt="profil-pic" className="profile" />
           <div className="messageDiv">
             <p className="name">Niyi Analyst</p>
