@@ -45,6 +45,10 @@ const Signup = () => {
 
       const authenticated = await response.json();
 
+    //console.log(authenticated);
+      //alert(authenticated);
+
+
       if (authenticated) {
         setEmail(email);
         setShowOtpForm(true);
