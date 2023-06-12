@@ -21,6 +21,7 @@ import Application from './Pages/Application';
 import Applicantinfo from './Pages/ApplicantInfo'
 import Notification from './Pages/Notification';
 import Analytics from './Pages/Analytics';
+import Recovery from './Components/Recovery';
 
 
 
@@ -49,6 +50,8 @@ function App() {
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/analytics" element={<Analytics />} />
+        <Route path="/recovery" element={<Recovery />} />
+
 
       </Routes>
     </Router>
