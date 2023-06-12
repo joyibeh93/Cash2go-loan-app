@@ -1,9 +1,13 @@
 import React from "react";
 import "../Styles/MessageContent.css";
 import MessageContentInfo from "./MessageContentInfo";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import MsgForm from "./MsgForm";
+import ThreadForm from "./ThreadForm";
 
 function MessageContent() {
+  const [message, setMessage] = useState("inbox");
+
   return (
     <div className=".messageContent">
       <div className="msg-top-bar">
@@ -19,40 +23,36 @@ function MessageContent() {
         </div>
       </div>
       <div className="msg-nav">
-        <div className="msg-section">
+        <div className="msg-section" onClick={() => setMessage("inbox")}>
           <p>Inbox</p>
           <div className="msg-line selected"></div>
         </div>
-        <Link to='/newmessage'>
-          <div className="msg-section">
-            <p>New</p>
-            <div className="msg-line"></div>
-          </div>
-        </Link>
-        <div className="msg-section">
+        <div className="msg-section" onClick={() => setMessage("new")}>
+          <p>New</p>
+          <div className="msg-line"></div>
+        </div>
+        <div className="msg-section" onClick={() => setMessage("sent")}>
           <p>Sent</p>
           <div className="msg-line"></div>
         </div>
-        <div className="msg-section">
+        <div className="msg-section" onClick={() => setMessage("thread")}>
           <p>Thread</p>
           <div className="msg-line"></div>
         </div>
-        <div className="msg-section">
+        <div className="msg-section" onClick={() => setMessage("Trash")}>
           <p>Trash</p>
           <div className="msg-line"></div>
         </div>
       </div>
-      <div className="Msg-inbox">
-        <div className="msg-cnt-note">
-          <div>
-            <h4>Inbox</h4>
-            <p> Sorted by Date</p>
-          </div>
-          <p className="msg-cnt-dot">...</p>
-        </div>
-        <div className="lineDivTop"></div>
+      {message === "inbox" ? (
         <MessageContentInfo />
-      </div>
+      ) : message === "new" ? (
+        <MsgForm />
+      ) : message === "thread" ? (
+        <ThreadForm />
+      ) : (
+        <MessageContent />
+      )}
       <div className="goTo">
         <button className="prev">
           <span className="arrow-left">&larr;</span>Prev

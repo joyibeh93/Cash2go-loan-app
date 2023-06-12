@@ -21,7 +21,6 @@ import Application from './Pages/Application';
 import Applicantinfo from './Pages/ApplicantInfo'
 import Notification from './Pages/Notification';
 
-
 function App() {
   return (
     <Router>
@@ -42,7 +41,6 @@ function App() {
         <Route path="/loandefault" element={<LoanDefaultPage />} />
         <Route path="/application" element={<Application />} />
         <Route path="/message" element={<Message />} />
-        <Route path="/newmessage" element={<NewMessage />} />
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
