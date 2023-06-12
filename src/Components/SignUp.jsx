@@ -38,6 +38,10 @@ const Signup = () => {
 
       const authenticated = response.data;
 
+    //console.log(authenticated);
+      //alert(authenticated);
+
+
       if (authenticated) {
         setEmail(email);
         setShowOtpForm(true);

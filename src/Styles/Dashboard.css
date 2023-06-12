@@ -43,7 +43,7 @@
 .left-sidebar {
   width: 20%;
   background-color: var(--side-bar-bg-clr);
-  height: 100vh;
+  max-height: 100vh
 }
 .main-dashboard {
   width: 85%;

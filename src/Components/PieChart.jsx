@@ -7,6 +7,7 @@
 // import { Doughnut } from 'react-chartjs-2'
 
 
+
 // ChartJs.register(
 //   ArcElement,
 //   Tooltip,
@@ -24,6 +25,49 @@
 //     }]
 //   }
 //   const options = {
+=======
+ChartJs.register(
+  ArcElement,
+  Tooltip,
+  Legend
+);
+const PieChart = ({color,Anlytper}) => {
+  const defaultColor=['#249c56', 'white']
+  const score='720'
+  const data = {
+    label:[],
+    datasets: [{
+      label: 'credit score',
+      data: [0 - 719, 720 - 1000],
+      backgroundColor: color|| defaultColor,
+      borderColor: ['white', 'white'],
+      
+    
+    }]
+  }
+  const options = {
+
+  }
+  const textCenter = {
+    id: 'textCenter',
+    beforeDatasetsDraw(chart, args, pluginOptions) {
+      const { ctx} = chart;
+       const xCoor=  (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);
+       const yCoor = (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y); 
+      // const yCoor =chart.getDatasetMeta(0).data[0].y;
+    
+      ctx.save();
+      ctx.font = ' bolder 30px sans-serif';
+      ctx.fillStyle = 'green';
+      ctx.textAlign='center'
+      ctx.textBaseLine= 'middle'
+      ctx.fillText(Anlytper||score, xCoor,yCoor -10);
+  
+  
+      ctx.font = ' bolder 20px sans-serif';
+      ctx.fillStyle = 'grey';
+      ctx.fillText('credit Score ', xCoor,yCoor + 10);
+
 
 //   }
 //   const textCenter = {
