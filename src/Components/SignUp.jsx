@@ -22,6 +22,7 @@ const Signup = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
 
+
     //navigate('/signupstep2');
     const email = values.email;
     const companyID = values.companyID;
@@ -31,12 +32,18 @@ const Signup = () => {
     };
 
     try {
-      const response = await axios.post(
-        'https://cash2go-backendd.onrender.com/api/v1/user/signup',
-        data
+      const response = await fetch(
+        'https://cash2go-backendd.onrender.com/api/v1/user',
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }
       );
 
-      const authenticated = response.data;
+      const authenticated = await response.json();
 
     //console.log(authenticated);
       //alert(authenticated);
@@ -49,6 +56,22 @@ const Signup = () => {
     } finally {
       setSubmitting(false);
     }
+
+    // try {
+    //   const response = await axios.patch(
+    //     'https://cash2go-backendd.onrender.com/api/v1/user/signup',
+    //     data
+    //   );
+
+    //   const authenticated = response.data;
+
+    //   if (authenticated) {
+    //     setEmail(email);
+    //     setShowOtpForm(true);
+    //   }
+    // } finally {
+    //   setSubmitting(false);
+    // }
   };
 
   return (
@@ -96,6 +119,7 @@ const Signup = () => {
           />
 
           <div className="button">
+            {/* <Buttons button="Next" /> */}
             <Link to="/signupstep2" className="button">
               <Buttons button="Next" />
             </Link>

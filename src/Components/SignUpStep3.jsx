@@ -24,8 +24,8 @@ const SignIn = () => {
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
-      const response = await fetch('https://cash2go-backendd.onrender.com/api/v1/user/signup', {
-        method: 'POST',
+      const response = await fetch('https://cash2go-backendd.onrender.com/api/v1/user', {
+        method: ' POST',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -127,6 +127,7 @@ const SignIn = () => {
           />
 
           <div className="button">
+            {/* <Buttons button="Sign Up" /> */}
             <Link to="/signupstep4" className="button">
               <Buttons button="Sign Up" />
             </Link>
