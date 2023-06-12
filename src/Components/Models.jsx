@@ -85,7 +85,7 @@ const Models= () => {
               <p className="rejected-btn">
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
-              inctive
+              inactive
               </p>
             </td>
             <td>Admin</td>
@@ -107,7 +107,7 @@ const Models= () => {
               <p className="rejected-btn">
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
-              inctive
+              inactive
               </p>
             </td>
             <td>Gbenga</td>
@@ -129,7 +129,7 @@ const Models= () => {
               <p className="rejected-btn">
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
-              inctive
+              inactive
               </p>
             </td>
             <td>Gbenga</td>

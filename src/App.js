@@ -54,6 +54,7 @@ function App() {
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/" element={<Settings/>} />
         <Route path="/recovery" element={<Recovery />} />
+        <Route path="/settings" element={<Settings/>} />
       </Routes>
     </Router>
   );
