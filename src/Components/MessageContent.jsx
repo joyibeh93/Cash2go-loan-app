@@ -9,7 +9,7 @@ function MessageContent() {
   const [message, setMessage] = useState("inbox");
 
   return (
-    <div className=".messageContent">
+    <div className="messageContent">
       <div className="msg-top-bar">
         <div>
           <p className="msg-cnt-mb">
@@ -27,19 +27,19 @@ function MessageContent() {
           <p>Inbox</p>
           <div className="msg-line selected"></div>
         </div>
-        <div className="msg-section" onClick={() => setMessage("new")}>
+        <div className="msg-section" >
           <p>New</p>
           <div className="msg-line"></div>
         </div>
-        <div className="msg-section" onClick={() => setMessage("sent")}>
+        <div className="msg-section" >
           <p>Sent</p>
           <div className="msg-line"></div>
         </div>
-        <div className="msg-section" onClick={() => setMessage("thread")}>
+        <div className="msg-section" >
           <p>Thread</p>
           <div className="msg-line"></div>
         </div>
-        <div className="msg-section" onClick={() => setMessage("Trash")}>
+        <div className="msg-section" >
           <p>Trash</p>
           <div className="msg-line"></div>
         </div>
@@ -73,3 +73,4 @@ function MessageContent() {
 }
 
 export default MessageContent;
+

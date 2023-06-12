@@ -3,8 +3,11 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import {useNavigate} from 'react-router-dom'
 import * as Yup from 'yup';
 import Buttons from './Buttons';
+// import { Link } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
-import OtpForm from './OtpForm2';
+import '../Styles/Signup1.css';
+// import axios from 'axios';
+import OtpForm from './OtpForm';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -29,6 +32,7 @@ const Signup = () => {
     };
 
     try {
+
       // Send OTP
       await fetch(
         'https://cash2go-backendd.onrender.com/api/v1/user/send-otp',
@@ -41,6 +45,7 @@ const Signup = () => {
         }
       );
 
+
       // Verify OTP
       const verifyOtpResponse = await fetch(
         'https://cash2go-backendd.onrender.com/api/v1/user/verify-otp',
@@ -52,6 +57,12 @@ const Signup = () => {
           body: JSON.stringify({ email: email, otp: enteredOtp }), // Replace enteredOtp with the actual OTP entered by the user
         }
       );
+
+      const authenticated = await response.json();
+
+      //console.log(authenticated);
+      //alert(authenticated);
+
 
       const authenticated = await verifyOtpResponse.json();
 
@@ -111,6 +122,7 @@ const Signup = () => {
 
           <div className="button">
             <Buttons button="Next" />
+
           </div>
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
