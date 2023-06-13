@@ -21,34 +21,26 @@ ChartJs.register(
 );
 
 const LineChart = () => {
-  const data = {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
-    datasets: [
-      {
-        label: "Data in peson range",
-        data: [20, 19.5, 19, 18, 21, 19, 17, 18, 17, 15,13,11 ],
-        backgroundColor: "#454e5c",
-        borderColor: "grey",
-        pointBorderColor: "transparent",
-        pointBorderWidth: 4,
-        tension:0.4,
-        fill:true,
-      },
-    ],
-  };
+  const data={
+    labels:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    datasets:[{
+        // label:"Line 1",
+        data:[25,32,30,23,20,25,38,41,36,35,37,28],
+        borderColor:"red",
+        tension:0.2,
+        pointRadius:0
+
+    },
+    {
+        // label:"Line 2",
+        data:[15,18,20,25,40,41,43,45,46,36,35,25],
+        borderColor:"green",
+        tension:0.2,
+        pointRadius:0
+
+    }
+]
+}
   const options = {
     plugins: {
       legend: false,
@@ -65,13 +57,10 @@ const LineChart = () => {
         max:50,
         ticks: {
             stepSize:2,
+            callback: (value) =>  value + 'k',
+            // autoSkipPadding:0,
           maxTicksLimit: 5,
-          callback: (value) =>  value + 'k'
-            
         },
-        grid:{
-            borderDash:[10]
-        }
       },
     },
   };
