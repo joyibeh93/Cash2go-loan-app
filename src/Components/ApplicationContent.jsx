@@ -67,7 +67,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Oloyomi stutern</h4>
+              <h4>Muktarr Bello</h4>
                 <span>014907</span>
               </div>
             </td>
@@ -87,7 +87,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Musa Ibrahim</h4>
+              <h4>Ogbeni Malani</h4>
                 <span>014990</span>
               </div>
             </td>
@@ -107,7 +107,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Bukola Adepoju</h4>
+              <h4>Rukayat stute</h4>
                 <span>014990</span>
               </div>
             </td>
@@ -127,7 +127,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Love Onyeka</h4>
+                <h4>Love Onyekah</h4>
                 <span>015678</span>
               </div>
             </td>
@@ -147,7 +147,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Chrisopher Fals</h4>
+              <h4>Ogbeni Malani</h4>
                 <span>015679</span>
               </div>
             </td>
@@ -187,7 +187,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Poju Great</h4>
+              <h4>Rukayat stute</h4>
                 <span>015078</span>
               </div>
             </td>

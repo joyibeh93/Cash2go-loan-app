@@ -89,10 +89,15 @@
   top: 13.4rem;
   left: 8.3rem;
 }
+.logout-div{
+  background-color: var(--side-bar-bg-clr);
+  
+}
 .log-out {
-  position: absolute;
+  position: absolute; 
   top: 33rem;
-  left: 2rem;
+  left: 2rem; 
+  margin-top: 150px;
   font-size: 1.2rem;
   color:var(--steps-clr) 
 }

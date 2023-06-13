@@ -61,28 +61,16 @@ const Sidebar = () => {
           <img src={HelpCenter} alt="Dashboard-icon" />
           <p>Help Center</p>
         </Link>
+        <div className='logout-div'>
+           <Link to="/login" className="log-out">Log out</Link>
+        </div>
       </div>
+      <div className='logout-div'>
+           <Link to="/login" className="log-out">Log out</Link>
+      </div>
+      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <Link to="/login" className="log-out">Log out</Link>
+      
     </div>
   );
 };
