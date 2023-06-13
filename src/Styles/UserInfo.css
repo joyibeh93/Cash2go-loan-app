@@ -97,4 +97,21 @@
   .details { 
     margin: 0.5rem 0;
   }
-  
+  .approved-black {
+    position: absolute;
+    left: 36.5rem;
+    bottom: 28rem;
+    width: 1.875rem;
+  }
+  .pending-black {
+    position: absolute;
+    left: 54.5rem;
+    bottom: 28rem;
+    width: 1.875rem;
+  }
+  .rejected-black {
+    position: absolute;
+    left: 75.9rem;
+    bottom: 28rem;
+    width: 1.875rem;
+  }

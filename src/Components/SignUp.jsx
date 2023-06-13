@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import {useNavigate} from 'react-router-dom'
 import * as Yup from 'yup';
 import Buttons from './Buttons';
-//import { useNavigate } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
-import axios from 'axios';
+// import axios from 'axios';
 import OtpForm from './OtpForm';
 
 const Signup = () => {
-  const [email, setEmail] = useState('')
-  const [showOtpForm, setShowOtpForm] = useState(false)
-
+  const [email, setEmail] = useState('');
+  const [showOtpForm, setShowOtpForm] = useState(false);
+  const navigate=useNavigate()
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -20,20 +21,10 @@ const Signup = () => {
     companyID: Yup.string().required('Company ID is required'),
   });
 
-  // const navigate = useNavigate(); // Initialized the useNavigate hook
-
-  // const handleSubmit = (values, { setSubmitting }) => {
-  //   console.log(values);
-  //   setSubmitting(false);
-  //   navigate('/signupstep2');
-  // };
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
-    
-   //navigate('/signupstep2');
-    //navigate('/signupstep2');
+    const enteredOtp = values.otp;
     const email = values.email;
-
     const companyID = values.companyID;
     const data = {
       email: email,
@@ -41,31 +32,50 @@ const Signup = () => {
     };
 
     try {
-      const response = await axios.post(
-        'https://cash2go-backendd.onrender.com/api/v1/user/signup',
-        data
+
+      // Send OTP
+      await fetch(
+        'https://cash2go-backendd.onrender.com/api/v1/user/send-otp',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({data }),
+        }
       );
 
-      const authenticated = response.data;
+
+      // Verify OTP
+      const verifyOtpResponse = await fetch(
+        'https://cash2go-backendd.onrender.com/api/v1/user/verify-otp',
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email: email, otp: enteredOtp }), // Replace enteredOtp with the actual OTP entered by the user
+        }
+      );
+
       //console.log(authenticated);
-      alert(authenticated);
+      //alert(authenticated);
+
+
+      const authenticated = await verifyOtpResponse.json();
 
       if (authenticated) {
-
-        setEmail(email)
-        setShowOtpForm(true)
-        // navigate('/signupstep2');
-        // navigate('/otp-auth?email=${encodeURLComponent(email)}');
-
+        setEmail(email);
+        setShowOtpForm(true);
+        navigate('../SignUpStep2')
       }
     } finally {
       setSubmitting(false);
     }
   };
 
-
   return (
-    <div className="form-container" style={{ paddingTop: "190px" }}>
+    <div className="form-container" style={{ paddingTop: '190px' }}>
       <h1>Sign Up</h1>
       <Formik
         initialValues={{ email: '', companyID: '' }}
@@ -94,7 +104,7 @@ const Signup = () => {
           </label>
           <Field
             className="input"
-            type="text" // Corrected the input type to 'text'
+            type="text"
             required
             maxLength={6}
             id="companyID"
@@ -110,6 +120,7 @@ const Signup = () => {
 
           <div className="button">
             <Buttons button="Next" />
+
           </div>
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
@@ -120,5 +131,3 @@ const Signup = () => {
 };
 
 export default Signup;
-
-
