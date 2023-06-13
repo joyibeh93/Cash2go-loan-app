@@ -5,6 +5,7 @@ import userIcon from '../assets/user-icon.svg';
 import approvedTransparent from '../assets/approved-transparent.svg';
 import rejectedTransparent from '../assets/rejected-transparent.svg';
 import '../Styles/Dashboard-down.css';
+import { Link } from 'react-router-dom';
 
 function ApplicationContent() {
   return (
@@ -47,9 +48,10 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Ogbeni Malani</h4>
+              <Link to='/applicantinfo'><h4>Ogbeni Malani</h4></Link>
                 <span>012889</span>
               </div>
+              
             </td>
             <td>02 / 04 / 23</td>
             <td>
@@ -67,7 +69,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Oloyomi stutern</h4>
+                <Link to='/applicantinfo'><h4>Oloyomi stutern</h4></Link>
                 <span>014907</span>
               </div>
             </td>
