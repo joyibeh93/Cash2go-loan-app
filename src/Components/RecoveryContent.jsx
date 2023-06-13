@@ -7,6 +7,7 @@ import approvedTransparent from '../assets/approved-transparent.svg';
 import rejectedTransparent from '../assets/rejected-transparent.svg';
 //import { Link } from "react-router-dom"
 import '../Styles/Recovery.css'
+import { Link } from 'react-router-dom';
 
 const DashBoard1_Down = () => {
   return (
@@ -20,7 +21,7 @@ const DashBoard1_Down = () => {
                 </div>
                 <div className="exit-new">
                 <button className="exisiting recoverybtn">Settings</button>
-                <button className="new reoveryEdit">Edith</button>
+                <button className="new reoveryEdit">Edit</button>
                 </div>
             </div>
         </div>
@@ -57,7 +58,7 @@ const DashBoard1_Down = () => {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Ogbeni Malani</h4>
+                <Link to='/applicantinfo'><h4>Ogbeni Malani</h4></Link>
                 <p className='recoveryID'> ID202390112 </p>
                 {/* <span>more info</span> */}
               </div>
