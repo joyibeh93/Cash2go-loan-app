@@ -53,7 +53,7 @@ function App() {
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/analytics" element={<Analytics />} />
-        <Route path="/" element={<Settings/>} />
+        <Route path="/settings" element={<Settings/>} />
 
         {/*<Route path="/recovery" element={<Recovery />} />*/}
       </Routes>
