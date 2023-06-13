@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import {useNavigate} from 'react-router-dom'
 import * as Yup from 'yup';
 import Buttons from './Buttons';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
-import axios from 'axios';
+// import axios from 'axios';
 import OtpForm from './OtpForm';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [showOtpForm, setShowOtpForm] = useState(false);
+  const navigate=useNavigate()
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -21,9 +23,7 @@ const Signup = () => {
 
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
-
-
-    //navigate('/signupstep2');
+    const enteredOtp = values.otp;
     const email = values.email;
     const companyID = values.companyID;
     const data = {
@@ -32,46 +32,46 @@ const Signup = () => {
     };
 
     try {
-      const response = await fetch(
-        'https://cash2go-backendd.onrender.com/api/v1/user',
+
+      // Send OTP
+      await fetch(
+        'https://cash2go-backendd.onrender.com/api/v1/user/send-otp',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({data }),
+        }
+      );
+
+
+      // Verify OTP
+      const verifyOtpResponse = await fetch(
+        'https://cash2go-backendd.onrender.com/api/v1/user/verify-otp',
         {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify({ email: email, otp: enteredOtp }), // Replace enteredOtp with the actual OTP entered by the user
         }
       );
 
-      const authenticated = await response.json();
-
-    //console.log(authenticated);
+      //console.log(authenticated);
       //alert(authenticated);
 
+
+      const authenticated = await verifyOtpResponse.json();
 
       if (authenticated) {
         setEmail(email);
         setShowOtpForm(true);
+        navigate('../SignUpStep2')
       }
     } finally {
       setSubmitting(false);
     }
-
-    // try {
-    //   const response = await axios.patch(
-    //     'https://cash2go-backendd.onrender.com/api/v1/user/signup',
-    //     data
-    //   );
-
-    //   const authenticated = response.data;
-
-    //   if (authenticated) {
-    //     setEmail(email);
-    //     setShowOtpForm(true);
-    //   }
-    // } finally {
-    //   setSubmitting(false);
-    // }
   };
 
   return (
@@ -119,10 +119,8 @@ const Signup = () => {
           />
 
           <div className="button">
-            {/* <Buttons button="Next" /> */}
-            <Link to="/signupstep2" className="button">
-              <Buttons button="Next" />
-            </Link>
+            <Buttons button="Next" />
+
           </div>
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
@@ -133,5 +131,3 @@ const Signup = () => {
 };
 
 export default Signup;
-
-
