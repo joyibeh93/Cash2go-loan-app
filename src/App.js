@@ -21,9 +21,9 @@ import Application from './Pages/Application';
 import Applicantinfo from './Pages/ApplicantInfo'
 import Notification from './Pages/Notification';
 import Analytics from './Pages/Analytics';
-import Settings from './Pages/Settings'
+import Settings from './Pages/Settings';
+//import RecoveryPage from './Pages/RecoveryPage';
 
-//import Recovery from './Pages/Recovery';
 
 
 
@@ -54,8 +54,7 @@ function App() {
         <Route path="/notification" element={<Notification />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/settings" element={<Settings/>} />
-
-        {/*<Route path="/recovery" element={<Recovery />} />*/}
+        {/*<Route path="/recovery" element={<RecoveryPage />} />*/}
       </Routes>
     </Router>
   );
