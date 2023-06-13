@@ -20,6 +20,7 @@ import Message from './Pages/Message';
 import Application from './Pages/Application';
 import Applicantinfo from './Pages/ApplicantInfo'
 import Notification from './Pages/Notification';
+import ReviewPage from './Pages/ReviewPage';
 
 
 function App() {
@@ -45,6 +46,9 @@ function App() {
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
+        <Route path="/review" element={<ReviewPage />} />
+        
+        
         
         
       </Routes>
