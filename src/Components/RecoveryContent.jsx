@@ -206,7 +206,7 @@ const DashBoard1_Down = () => {
             <td>
             <p className="msg-cnt-dot">...</p>
             </td>
-          </tr>
+          </tr>checkout 
           
         </tbody>
       </table>
