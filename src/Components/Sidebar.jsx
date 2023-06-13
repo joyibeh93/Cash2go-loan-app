@@ -9,6 +9,7 @@ import Message from '../assets/Message.svg';
 import Resources from '../assets/Resources.svg';
 import Settings from '../assets/Settings.svg';
 import HelpCenter from '../assets/Helpcenter.svg';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -18,26 +19,26 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar-items1">
-        <div className="links">
+        <Link to="/dashboard" className="links">
           <img src={Grid} alt="Dashboard-icon" />
           <p>Dashboard</p>
-        </div>
-        <div className="links">
+        </Link>
+        <Link to="/application" className="links">
           <img src={Applications} alt="Application-icon" />
           <p>Applications</p>
-        </div>
-        <div className="links">
+        </Link>
+        <Link to="/analytics" className="links">
           <img src={Analytics} alt="Dashboard-icon" />
           <p>Analytics</p>
-        </div>
-        <div className="links">
+        </Link>
+        <Link to="/recovery" className="links">
           <img src={Recovery} alt="Dashboard-icon" />
           <p>Recovery</p>
           <p className='p-red'>
             <span className='one'>1</span>
           </p>
-        </div>
-        <div className="links">
+        </Link>
+        <Link to="/message" className="links">
           <img src={Message} alt="Dashboard-icon" />
           <p>Messages</p>
           <p className='p-green'>
@@ -45,24 +46,31 @@ const Sidebar = () => {
           </p>
           
 
-        </div>
+        </Link>
       </div>
       <div className="sidebar-items2">
-        <div className="links">
+        <Link to="" className="links">
           <img src={Resources} alt="Dashboard-icon" />
           <p>Resources</p>
-        </div>
-        <div className="links">
+        </Link>
+        <Link to="/settings" className="links">
           <img src={Settings} alt="Dashboard-icon" />
           <p>Settings</p>
-        </div>
-        <div className="links">
+        </Link>
+        <Link to="" className="links">
           <img src={HelpCenter} alt="Dashboard-icon" />
           <p>Help Center</p>
+        </Link>
+        <div className='logout-div'>
+           <Link to="/login" className="log-out">Log out</Link>
         </div>
       </div>
+      <div className='logout-div'>
+           <Link to="/login" className="log-out">Log out</Link>
+      </div>
+      
 
-      <p className="log-out">Log out</p>
+      
     </div>
   );
 };

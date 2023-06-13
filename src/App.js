@@ -1,12 +1,7 @@
 
-
-import SignUpStep1 from './Pages/SignUpStep1';
-import SignUpStep2 from './Pages/SignUpStep2';
-import Dashboard from './Pages/Dashboard';
 import './index.css';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
 
 import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
@@ -23,11 +18,19 @@ import LoanDefaultPage from './Pages/LoanDefaultPage'
 import BvnPage from './Pages/BvnPage';
 import Message from './Pages/Message';
 import Application from './Pages/Application';
-import LoanDefaultPage from './Pages/LoanDefaultPage';
+import Applicantinfo from './Pages/ApplicantInfo'
+import Notification from './Pages/Notification';
+import Analytics from './Pages/Analytics';
+import Settings from './Pages/Settings'
+import Recovery from './Pages/Recovery';
+
+
+
 
 
 function App() {
   return (
+
     <Router>
       <Routes>
         <Route path="/bvn" element={<BvnPage />} />
@@ -46,6 +49,13 @@ function App() {
         <Route path="/loandefault" element={<LoanDefaultPage />} />
         <Route path="/application" element={<Application />} />
         <Route path="/message" element={<Message />} />
+        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+        <Route path="/applicantinfo" element={<Applicantinfo />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/" element={<Settings/>} />
+        <Route path="/recovery" element={<Recovery />} />
+        <Route path="/settings" element={<Settings/>} />
       </Routes>
     </Router>
   );

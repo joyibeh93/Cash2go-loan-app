@@ -6,7 +6,7 @@ import userIcon from '../assets/user-icon.svg';
 import approvedTransparent from '../assets/approved-transparent.svg';
 import rejectedTransparent from '../assets/rejected-transparent.svg';
 import { Link } from "react-router-dom"
-import MoreInfo from "./MoreInfo"
+//import MoreInfo from "./MoreInfo"
 // import pendingTransparent from '../assets/pending-transparent.svg';
 // const data = [
 //   {
@@ -81,7 +81,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
                 <h4>Ogbeni Malani</h4>
-                <Link to="/MoreInfo"> More info </Link>
+                <Link to="/applicantinfo"> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>
@@ -102,7 +102,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
                 <h4>Muktarr Bello</h4>
-                <Link to="/MoreInfo"> More info </Link>
+                <Link to="/applicantinfo"> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>
@@ -123,7 +123,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
                 <h4>Rukayat stute</h4>
-                <Link to="/MoreInfo"> More info </Link>
+                <Link to="/applicantinfo"> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>
@@ -144,7 +144,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
                 <h4>Ogbeni Malani</h4>
-                <Link to="/MoreInfo"> More info </Link>
+                <Link to="/applicantinfo"> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>

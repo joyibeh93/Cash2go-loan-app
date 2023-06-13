@@ -46,9 +46,6 @@ const PreviousApp = () => {
               </p>
             </td>
             <td>$967.00</td>
-            <td>
-              <img src={download} alt="" />
-            </td>
           </tr>
           </tbody>
         </table>

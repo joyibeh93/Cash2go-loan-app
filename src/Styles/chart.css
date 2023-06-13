@@ -15,7 +15,8 @@
     height: 20%;
     font-size: 30px;
 }
-p{
+
+.pie-p{
     display: flex;
   justify-content:space-evenly;
 }
@@ -44,7 +45,7 @@ p{
 }
 .previousTable{
     margin: 0 auto;
-    width:70%;
+    width:80%;
     background-color: #f0f0f0;
 }
 .rejected-down{

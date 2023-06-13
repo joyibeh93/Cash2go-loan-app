@@ -25,17 +25,17 @@ const navigate = useNavigate();
     console.log(values);
 
     // Navigate to the next page
-    navigate('/userinfo')
+    navigate('/applicantinfo')
   };
 
   return (
-    <div className="form-container">
-      <h1>Predict Loan Default</h1>
+    <div className="form-containersss">
+      <h1 className="predict-h1">Predict Loan Default</h1>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className="Loan_form">
           <div className="column">
             <div className="row">
-              <h3>Bvn</h3>
+              <h3 className="predict-h3">Bvn</h3>
               <Field
                 type="text"
                 name="bvn"
@@ -43,11 +43,12 @@ const navigate = useNavigate();
                 placeholder="23589000453"
                 inputMode="numeric"
                 pattern="[0-9]*"
+                className="loan-default"
               />
             </div>
 
             <div className="row">
-              <h3>Dependant</h3>
+              <h3 className="predict-h3">Dependant</h3>
               <Field
                 as="select"
                 type="text"
@@ -64,7 +65,7 @@ const navigate = useNavigate();
             </div>
 
             <div className="row">
-              <h3>Self-employed</h3>
+              <h3 className="predict-h3">Self-employed</h3>
               <Field
                 as="select"
                 type="text"
@@ -79,7 +80,7 @@ const navigate = useNavigate();
             </div>
 
             <div className="row">
-              <h3>Married</h3>
+              <h3 className="predict-h3">Married</h3>
               <Field
                 as="select"
                 type="text"
@@ -94,7 +95,7 @@ const navigate = useNavigate();
             </div>
 
             <div className="row">
-              <h3>Education</h3>
+              <h3 className="predict-h3">Education</h3>
               <Field
                 as="select"
                 type="text"
@@ -119,11 +120,12 @@ const navigate = useNavigate();
                 placeholder="45,000.00"
                 inputMode="numeric"
                 pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
+                className="loan-default"
               />
             </div>
 
             <div className="row">
-              <h3>Applicants income</h3>
+              <h3 className="predict-h3">Applicants income</h3>
               <Field
                 type="text"
                 name="applicants_income"
@@ -131,11 +133,12 @@ const navigate = useNavigate();
                 placeholder=">25,000.00"
                 inputMode="numeric"
                 pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
+                className="loan-default"
               />
             </div>
 
             <div className="row">
-              <h3>Co-applicants income</h3>
+              <h3 className="predict-h3">Co-applicants income</h3>
               <Field
                 type="text"
                 name="co_applicants_income"
@@ -143,11 +146,12 @@ const navigate = useNavigate();
                 placeholder=">25,000.00"
                 inputMode="numeric"
                 pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
+                className="loan-default"
               />
             </div>
 
             <div className="row">
-              <h3>Credit history</h3>
+              <h3 className="predict-h3">Credit history</h3>
               <Field
                 as="select"
                 type="text"
@@ -166,7 +170,7 @@ const navigate = useNavigate();
             </div>
 
             <div className="row">
-              <h3>Property area</h3>
+              <h3 className="predict-h3">Property area</h3>
               <Field
                 as="select"
                 type="text"

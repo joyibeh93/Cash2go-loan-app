@@ -59,6 +59,7 @@
 }
 .links p {
   margin-left: 1rem;
+  color:var(--steps-clr) 
 }
 
 .sidebar-items2 {
@@ -68,8 +69,8 @@
 }
 .p-red,
 .p-green {
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 1.34rem;
+  width: 1.34rem;
   border-radius: 50%;
   font-size: 0.9375rem;
   background-color: var(--defaulted-bg-clr);
@@ -80,17 +81,23 @@
 }
 .one {
   position: absolute;
-  top: 9.9rem;
+  top: 10.2rem;
   left: 8.2rem;
 }
 .one1 {
   position: absolute;
-  top: 12.9rem;
+  top: 13.4rem;
   left: 8.3rem;
 }
+.logout-div{
+  background-color: var(--side-bar-bg-clr);
+  
+}
 .log-out {
-  position: absolute;
+  position: absolute; 
   top: 33rem;
-  left: 2rem;
+  left: 2rem; 
+  margin-top: 150px;
   font-size: 1.2rem;
+  color:var(--steps-clr) 
 }

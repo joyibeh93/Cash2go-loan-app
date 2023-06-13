@@ -1,14 +1,10 @@
+
 import React from 'react'
 import '../Styles/chart.css'
 import approvedTransparent from '../assets/approved-transparent.svg';
 import RightArrow from '../assets/Right-arrow.svg'
 import { Link } from 'react-router-dom';
-import {
-  Chart as ChartJs,
-  ArcElement,
-  Tooltip,
-  Legend
-} from 'chart.js'
+import { Chart as ChartJs,ArcElement,Tooltip, Legend} from 'chart.js'
 import { Doughnut } from 'react-chartjs-2'
 
 
@@ -17,13 +13,15 @@ ChartJs.register(
   Tooltip,
   Legend
 );
-const PieChart = () => {
+const PieChart = ({ color, Anlytper }) => {
+  const defaultColor = ['#249c56', 'white'];
+  const score = '720';
   const data = {
     label:[],
     datasets: [{
       label: 'credit score',
       data: [0 - 719, 720 - 1000],
-      backgroundColor: ['#249c56', 'white'],
+      backgroundColor: color || defaultColor,
       borderColor: ['white', 'white'],
     
     }]
@@ -35,29 +33,22 @@ const PieChart = () => {
     id: 'textCenter',
     beforeDatasetsDraw(chart, args, pluginOptions) {
       const { ctx} = chart;
-
-
+       const xCoor=  (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);
+       const yCoor = (chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y); 
+      // const yCoor =chart.getDatasetMeta(0).data[0].y;
       ctx.save();
-      ctx.font = ' bolder 10px sans-serif';
+      ctx.font = ' bolder 30px sans-serif';
       ctx.fillStyle = 'green';
       ctx.textAlign='center'
-      
       ctx.textBaseLine= 'middle'
-      ctx.fillText('720 ', chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y)
-      ctx.font = '8px';
-      ctx.paddingBottom= '200px'
+      ctx.fillText(Anlytper || score, xCoor, yCoor - 10);
+  
+  
+      ctx.font = ' bolder 20px sans-serif';
       ctx.fillStyle = 'grey';
-      ctx.textAlign='center'
-      ctx.textBaseLine= 'middle'
+      ctx.fillText('credit Score ', xCoor,yCoor + 10);
 
-      ctx.save();
-      ctx.font = ' bolder 10px sans-serif';
-      ctx.fillStyle = 'green';
-      ctx.textAlign='center'
-      ctx.paddingBottom= '50px'
-      ctx.fillText(' credit score', chart.getDatasetMeta(0.).data[0].x, chart.getDatasetMeta(0).data[0].y)
-      ctx.textAlign='center'
-      ctx.textBaseLine= 'middle'
+
     }
   }
 
@@ -77,7 +68,7 @@ const PieChart = () => {
         >
 
         </Doughnut>
-        <p>(720 - 850)
+        <p className='pie-p'>(720 - 850)
           <button className="approved">
             {' '}
             <img src={approvedTransparent} alt="approved-icon" /> Excellent
@@ -91,7 +82,8 @@ const PieChart = () => {
     </div>
   </div>
     </div>
-  )
-}
-
-export default PieChart
+ );
+ 
+ };
+ 
+ export default PieChart;

@@ -68,41 +68,46 @@
   margin: 1rem 0;
 }
 
+
 .approved {
   background-color: var(--approved-btn-bg-clr);
   color: var(--main-bg-clr);
   border: none;
-  padding: 0.2rem;
+  padding: 0.3rem;
   font-size: 0.8rem;
 }
 .pending {
   background-color: var(--pending-btn-bg-clr);
   border: none;
-  padding: 0.2rem;
+  padding: 0.3rem;
   font-size: 0.9rem;
+
 }
 
 .rejected {
   background-color: var(--rejected-btn-bg-clr);
   border: none;
-  padding: 0.2rem;
+  padding: 0.3rem;
   color: var(--main-bg-clr);
   font-size: 0.8rem;
 }
 .approved-black {
   position: absolute;
-  left: 34.5rem;
-  bottom: 24.8rem;
+  left: 36.5rem;
+  bottom: 28rem;
+  width: 1.875rem;
 }
 .pending-black {
   position: absolute;
-  left: 51.5rem;
-  bottom: 24.8rem;
+  left: 54.5rem;
+  bottom: 28rem;
+  width: 1.875rem;
 }
 .rejected-black {
   position: absolute;
-  left: 66.5rem;
-  bottom: 24.8rem;
+  left: 75.9rem;
+  bottom: 28rem;
+  width: 1.875rem;
 }
 .loan-count {
   margin: 0.5rem 0;

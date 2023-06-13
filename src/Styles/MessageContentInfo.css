@@ -1,0 +1,63 @@
+.messages{
+    margin-left: -30em;
+    margin-top: 3em;
+}
+
+.message{
+    display: flex;
+    height: 7em;
+}
+.msgcntinfo{
+    height: 1em;
+    margin-right: -37em;
+    margin-left: -17em;
+    position: relative;
+    top: 1.7em;
+    left: 0.5em;
+} 
+
+.doubleclick{
+    height: 1.3em;
+    margin-right: 1em;
+}
+
+.share{
+    height: 1em;
+}
+
+.msg-icons{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 2.1em;
+    left: 4em;
+}
+
+.profile{
+    margin-left: -10em;
+    margin-right: 2em;
+    height: 5em;
+}
+
+.messageDiv{
+    width: 50em;
+}
+
+.name{
+    margin-bottom: 1em;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.green{
+    color: rgb(57, 158, 57);
+}
+
+.lineDiv{
+    width: 70.6%;
+    height: 1px;
+    background-color: #b9bdc2;
+    position: relative;
+    left: 30em;
+    margin-bottom: 1em;
+}

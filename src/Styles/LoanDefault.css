@@ -1,19 +1,23 @@
-.form-container {
+.form-containersss {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 650px;
-  max-width: 1000px;
-  /*margin: 0 auto;
-  padding: 25px;*/
+  max-height: 530px;
+  max-width: 800px;
+  margin: 15px auto; 
+  padding: 25px;
   border: 1px solid grey;
   background-color: #f2f2f2;
 }
-
+.predict-h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+}
 .Loan_form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
+
 }
 
 .column {
@@ -22,22 +26,26 @@
   gap: 5px;
 }
 
-.row {
+/* .row {
   margin-bottom: 10px;
-}
+} */
 
-h3 {
+.predict-h3 {
   margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  
 }
 
 button {
   margin-top: 10px;
 }
-
-input[type="text"],
-select[type="text"] {
+.loan-default{
   width: 100%;
-  padding: 10px;
+}
+.loan-default,
+select[type="text"] {
+  padding: 10px 40px;
   border-radius: 5px;
 }
 

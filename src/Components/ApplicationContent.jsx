@@ -5,6 +5,7 @@ import userIcon from '../assets/user-icon.svg';
 import approvedTransparent from '../assets/approved-transparent.svg';
 import rejectedTransparent from '../assets/rejected-transparent.svg';
 import '../Styles/Dashboard-down.css';
+import { Link } from 'react-router-dom';
 
 function ApplicationContent() {
   return (
@@ -12,7 +13,7 @@ function ApplicationContent() {
         <div>
             <ul>
                 <li>Applications</li>
-                <li>All Applications</li>
+                <li className='appcnt'> All Applications</li>
             </ul>
         </div>
         <div className="dashBoardTable">
@@ -47,9 +48,10 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Ogbeni Malani</h4>
+              <Link to='/applicantinfo'><h4>Ogbeni Malani</h4></Link>
                 <span>012889</span>
               </div>
+              
             </td>
             <td>02 / 04 / 23</td>
             <td>
@@ -67,7 +69,8 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Oloyomi stutern</h4>
+              <h4>Muktarr Bello</h4>
+                <Link to='/applicantinfo'><h4>Oloyomi stutern</h4></Link>
                 <span>014907</span>
               </div>
             </td>
@@ -87,7 +90,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Musa Ibrahim</h4>
+              <h4>Ogbeni Malani</h4>
                 <span>014990</span>
               </div>
             </td>
@@ -107,7 +110,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Bukola Adepoju</h4>
+              <h4>Rukayat stute</h4>
                 <span>014990</span>
               </div>
             </td>
@@ -127,7 +130,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Love Onyeka</h4>
+                <h4>Love Onyekah</h4>
                 <span>015678</span>
               </div>
             </td>
@@ -147,7 +150,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Chrisopher Fals</h4>
+              <h4>Ogbeni Malani</h4>
                 <span>015679</span>
               </div>
             </td>
@@ -187,7 +190,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Poju Great</h4>
+              <h4>Rukayat stute</h4>
                 <span>015078</span>
               </div>
             </td>
