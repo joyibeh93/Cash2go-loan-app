@@ -135,6 +135,50 @@ const Models= () => {
             <td>Gbenga</td>
             <td><i class="fa-regular fa-pen-to-square"></i></td>
           </tr>
+          <tr>
+          <td className="first-data">
+              <Switch
+              isOn ={value}
+              onColor="#ff6f5a"
+              handleToggle={()=> setValue(!value)}/>{' '}
+              <div className="data-title">
+                <h4>Credit First Model</h4>
+                <span>Credit Score Main</span>
+              </div>
+            </td>
+            <td>01/04/23</td>
+            <td>
+              <p className="rejected-btn">
+                {' '}
+                <img src={rejectedTransparent} alt="approved-icon" />
+              inactive
+              </p>
+            </td>
+            <td>Gbenga</td>
+            <td><i class="fa-regular fa-pen-to-square"></i></td>
+          </tr>
+          <tr >
+            <td className="first-data">
+              <Switch
+              isOn ={value}
+              onColor="#ff6f5a"
+              handleToggle={()=> setValue(!value)}/>{' '}
+              <div className="data-title">
+                <h4>Default Model</h4>
+                <span>Machine Learning AI</span>
+              </div>
+            </td>
+            <td>01/04/23</td>
+            <td>
+              <p className="rejected-down">
+                {' '}
+                <img src={approvedTransparent} alt="approved-icon" />
+              Active
+              </p>
+            </td>
+            <td>Default</td>
+            <td>{Padlock}</td>
+          </tr>
 
 
           </tbody> 
