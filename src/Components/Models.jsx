@@ -15,7 +15,7 @@ const Models= () => {
     <div >
       <div className='heady
       '>
-        <h1>Settings</h1>
+        <h2>Settings</h2>
         <div className="exit-new">
           <button className="markAll">Manage</button>
           <button className="markRead">Create new Model</button>
@@ -31,17 +31,17 @@ const Models= () => {
             <table>
             <thead>
           <tr>
-            <th>Model Name</th>
-            <th>
+            <th className='tableheady'>Model Name</th>
+            <th className='tableheady'>
               Status <img src={downArrow} alt="" />{' '}
             </th>
-            <th>
+            <th className='tableheady'>
               Date Created <img src={downArrow} alt="" />{' '}
             </th>
-            <th>
+            <th className='tableheady'>
               Created by <img src={downArrow} alt="" />{' '}
             </th>
-            <th>
+            <th className='tableheady'>
               Edit
             </th>
         </tr>

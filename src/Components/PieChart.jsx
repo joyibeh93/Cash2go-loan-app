@@ -48,7 +48,7 @@ const PieChart = ({ color, Anlytper }) => {
     <div>
       <div className="container">
         <div className="pie">
-          <h4>Credit Score</h4>
+          <h3>Credit Score</h3>
           <h6>FICO Model</h6>
           <hr />
           <div className="doughnut">
