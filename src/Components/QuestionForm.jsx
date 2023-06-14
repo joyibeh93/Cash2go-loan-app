@@ -225,7 +225,7 @@ const QuestionForm = () => {
             <label className="label" htmlFor="Question">
               Select your security question
             </label>
-            <Field as="select" id="Question" name="Question" className="input">
+            <Field as="select" id="Question" name="Question" className=" Question-input">
               <option value="">Select a question</option>
               <option value="Where did you meet your spouse?">
                 Where did you meet your spouse?
@@ -252,14 +252,14 @@ const QuestionForm = () => {
             <label htmlFor="Answer" className="label">
               Your answer
             </label>
-            <Field type="text" id="Answer" name="Answer" className="input" />
+            <Field type="text" id="Answer" name="Answer" className="Question-input" />
             <ErrorMessage
               name="Answer"
               component="div"
               className="error-message"
             />
 
-            <div className="button">
+            <div className=" Question-button">
               <Buttons button="Submit" />
             </div>
           </Form>
