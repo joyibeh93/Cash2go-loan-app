@@ -13,7 +13,7 @@ const UserInfo = () => {
     navigate('/ContactInfo')
   }
   const Review = () =>{
-    navigate('/ReviewPage')
+    navigate('/Review')
   }
   return (
     <div className="info-content">
