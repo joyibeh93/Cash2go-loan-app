@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import {useNavigate} from 'react-router-dom'
 import * as Yup from 'yup';
 import Buttons from './Buttons';
-// import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
 import '../Styles/Signup1.css';
-// import axios from 'axios';
+//import axios from 'axios';
 import OtpForm from './OtpForm';
 
 const Signup = () => {
@@ -20,6 +20,14 @@ const Signup = () => {
       .required('Email is required'),
     companyID: Yup.string().required('Company ID is required'),
   });
+
+
+//   const handleSubmit = (values, { setSubmitting }, reset) => {
+//     console.log(values);
+//     setSubmitting(true);
+//     navigate('../SignUpStep2')
+//     reset();
+// };
 
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
