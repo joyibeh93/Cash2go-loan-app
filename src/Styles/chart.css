@@ -35,13 +35,15 @@
     padding: 0.625em;
 }
 .tablehead{
-    display: flex;
+display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem 0;
-  padding: 0 1rem;
-  border-bottom: 0.0625em solid;
+  padding: 0.5rem;
+  border-bottom: 1px solid #8a85852f;
+
   border-width: 100%;
+ 
 }
 .previousTable{
     margin: 0 auto;

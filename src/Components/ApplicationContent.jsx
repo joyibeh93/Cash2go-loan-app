@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function ApplicationContent() {
   return (
     <div>
-        <div>
+        <div style={{marginBottom:"20px"}}>
             <ul>
                 <li>Applications</li>
                 <li className='appcnt'> All Applications</li>
@@ -19,7 +19,7 @@ function ApplicationContent() {
         <div className="dashBoardTable">
       <div className="tablehead">
         <div>
-          <h3>All Applications</h3>
+          <h3>All Applications</h3><br/>
           <span>Sorted by Date</span>
         </div>
         <img src={download} alt="download-icon" />
@@ -70,7 +70,6 @@ function ApplicationContent() {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
               <h4>Muktarr Bello</h4>
-                <Link to='/applicantinfo'><h4>Oloyomi stutern</h4></Link>
                 <span>014907</span>
               </div>
             </td>
@@ -96,7 +95,7 @@ function ApplicationContent() {
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p className="approved-down rejected">
+              <p className="approved-down rejected-reject">
                 <img src={rejectedTransparent} alt="rejected-img" /> Rejected
               </p>
             </td>
@@ -176,7 +175,7 @@ function ApplicationContent() {
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p className="approved-down rejected">
+              <p className="approved-down rejected-reject">
                 <img src={rejectedTransparent} alt="rejected-text" /> Rejected
               </p>
             </td>
@@ -210,6 +209,21 @@ function ApplicationContent() {
       </table>
     </div>
        
+    <div className="goTo">
+        <button className="prev">
+          <span className="arrow-left">&larr;</span>Prev
+        </button>
+        <div className="numbers">
+          <button>1</button>
+          <button>2</button>
+          <button>...</button>
+          <button>5</button>
+          <button>6</button>
+        </div>
+        <button className="next">
+          Next<span className="arrow-right">&rarr;</span>
+        </button>
+      </div>
     </div>
   )
 }

@@ -110,7 +110,9 @@
     flex-direction: row;
     gap: 2.5em;
 }
-.rejected-setting{
+
+/* .rejected-btn{
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,3 +148,6 @@
   padding: 0.6rem 0;
   background-color: #f0f0f0;
 }
+
+} */
+

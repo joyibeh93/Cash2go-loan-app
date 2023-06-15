@@ -60,7 +60,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-down">
+              <p className="approved-down">
                 {' '}
                 <img src={approvedTransparent} alt="approved-icon" />
               Active
@@ -82,7 +82,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-setting">
+              <p className="approved-down rejected-reject">
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -105,6 +105,10 @@ const Models= () => {
             <td>01/04/23</td>
             <td>
               <p className="rejected-setting">
+
+              <p className="approved-down rejected-reject">
+
+                
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -126,7 +130,9 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-setting">
+
+              <p className="approved-down rejected-reject">
+
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -148,7 +154,11 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
+
               <p className="rejected-setting">
+
+              <p className="approved-down rejected-reject">
+
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -157,7 +167,30 @@ const Models= () => {
             <td>Gbenga</td>
             <td><i class="fa-regular fa-pen-to-square"></i></td>
           </tr>
-          
+
+          <tr >
+            <td className="first-data">
+              <Switch
+              isOn ={value}
+              onColor="#ff6f5a"
+              handleToggle={()=> setValue(!value)}/>{' '}
+              <div className="data-title">
+                <h4>Default Model</h4>
+                <span>Machine Learning AI</span>
+              </div>
+            </td>
+            <td>01/04/23</td>
+            <td>
+              <p className="approved-down">
+                {' '}
+                <img src={approvedTransparent} alt="approved-icon" />
+              Active
+              </p>
+            </td>
+            <td>Default</td>
+            <td>{Padlock}</td>
+          </tr>
+
 
 
           </tbody> 

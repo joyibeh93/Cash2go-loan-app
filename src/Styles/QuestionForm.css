@@ -19,22 +19,38 @@
 
 .select {
   display: block;
-  padding: 0.8em;
+  padding: 1em;
   outline: none;
-  border-radius: 0.6em;
+  border-radius: 0.5em;
   margin-bottom: 1em;
   margin-top: 0.5em;
-  width: 100%;
+  width: 90%;
 }
 
-input {
+ .Question-input {
   display: block;
-  padding: 0.5em 5em;
-  border-radius: 0.6em;
+  padding: 1em;
+  border-radius: 0.5em;
   margin-top: 0.5em;
-  width: 100%;
+  margin-bottom: 0.5em;
+  width: 90%;
 }
-
+.Question-button{
+  font-family: var(--font-family-body);
+  background-color: var(--submit-btn-bg-clr);
+  padding: 0.6em;
+  border-radius: 0.75em;
+  margin-top: 0.125em;
+  text-align: center;
+  width: 70%;
+  margin-left: 3em;
+}
+.Question-button button{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
 .terms {
   margin-top: 5em;
   font-size: 0.8rem;

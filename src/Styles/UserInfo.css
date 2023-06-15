@@ -13,7 +13,7 @@
     --new-btn-bg-clr: #ff6f5a;
     --approved-btn-bg-clr: #169872;
     --rejected-btn-bg-clr: #fd3d39;
-    --pending-btn-bg-clr: #c0f5f9;
+    --pending-btn-bg-clr: #418286;
     --credit-score-bg-clr: #b9bdc2;
     --excellent-btn-bg-clr: #169872;
     --good-btn-bg-clr: #747a85;
@@ -44,20 +44,20 @@
   }
   .side-btn button {
     margin-left: 0.8rem;
-    border-radius: 0.5em;
+    border-radius: 0.3125em;
     cursor: pointer;
   }
   .Info {
     background-color: var(--existing-btn-bg-clr);
     border: none;
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 2rem;
     font-size: 0.8rem;
   }
   .Review {
     background-color: var(--new-btn-bg-clr);
     color: var(--main-bg-clr);
     border: none;
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 2rem;
     font-size: 0.8rem;
   }
   .user-status {
@@ -70,21 +70,21 @@
     margin: 1rem 0;
   }
   
-  .approved {
+  /* .approved {
     background-color: var(--approved-btn-bg-clr);
     color: var(--main-bg-clr);
     border: none;
-    padding: 0.2rem;
-    font-size: 0.8rem;
+    padding: 0.2rem 1rem;
+    font-size: 0.6rem;
     border-radius: 0.5em;
-  }
-  .pending {
+  } */
+  /* .pending {
     background-color: var(--pending-btn-bg-clr);
     border: none;
-    padding: 0.2rem;
-    font-size: 0.9rem;
+    padding: 0.2rem 1.5rem;
+    font-size: 0.7rem;
     border-radius: 0.5em;
-  }
+  } */
   
   .excellent {
     background-color: var(--excellent-btn-bg-clr);
@@ -97,21 +97,22 @@
   .details { 
     margin: 0.5rem 0;
   }
-  .approved-black {
+  /* .approved-black {
     position: absolute;
     left: 36.5rem;
     bottom: 28rem;
     width: 1.875rem;
-  }
-  .pending-black {
+  } */
+  /* .pending-black {
     position: absolute;
     left: 54.5rem;
     bottom: 28rem;
     width: 1.875rem;
-  }
-  .rejected-black {
+    background-color:var(--pending-btn-bg-clr)
+  } */
+  /* .rejected-black {
     position: absolute;
     left: 75.9rem;
     bottom: 28rem;
     width: 1.875rem;
-  }
+  } */

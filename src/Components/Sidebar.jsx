@@ -14,8 +14,8 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="sidebar-logo">
-        <Logo />
+      <div className="sidebar-log">
+        <Logo  sideb="10px"/>
       </div>
 
       <div className="sidebar-items1">
@@ -65,9 +65,9 @@ const Sidebar = () => {
            <Link to="/login" className="log-out">Log out</Link>
         </div>
       </div>
-      <div className='logout-div'>
-           <Link to="/login" className="log-out">Log out</Link>
-  </div>
+
+      <Link to="/login" className="log-out">Log out</Link>
+     
       
 
       

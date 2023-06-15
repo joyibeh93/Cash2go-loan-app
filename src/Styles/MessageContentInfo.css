@@ -56,8 +56,10 @@
 .lineDiv{
     width: 70.6%;
     height: 1px;
-    background-color: #b9bdc2;
+    background-color: #f0f0f0;
+    border: 0.2px solid #8a85852f;
     position: relative;
     left: 30em;
     margin-bottom: 1em;
+    
 }
