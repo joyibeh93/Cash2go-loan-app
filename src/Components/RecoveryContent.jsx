@@ -109,7 +109,7 @@ const DashBoard1_Down = () => {
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p className="approved-down rejected">
+              <p className="approved-down rejected-reject">
                 <img src={rejectedTransparent} alt="" /> Rejected
               </p>
             </td>
@@ -197,7 +197,7 @@ const DashBoard1_Down = () => {
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p className="approved-down rejected">
+              <p className="approved-down rejected-reject">
                 <img src={rejectedTransparent} alt="" /> Rejected
               </p>
             </td>
@@ -212,6 +212,21 @@ const DashBoard1_Down = () => {
         </tbody>
       </table>
     </div>
+    <div className="goTo">
+        <button className="prev">
+          <span className="arrow-left">&larr;</span>Prev
+        </button>
+        <div className="numbers">
+          <button>1</button>
+          <button>2</button>
+          <button>...</button>
+          <button>5</button>
+          <button>6</button>
+        </div>
+        <button className="next">
+          Next<span className="arrow-right">&rarr;</span>
+        </button>
+      </div>
 
     </div>
     
