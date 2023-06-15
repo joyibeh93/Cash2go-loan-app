@@ -30,7 +30,7 @@ const Chart = () => {
         datasets: [
             {
                 labels: ['Short-term', 'Long-term'],
-                data: [50, 100, 90, 80, 40, 85],
+                data: [50, 90, 60, 80, 40, 85],
                 backgroundColor: '#454e5c',
             }],
     }
@@ -54,9 +54,9 @@ const Chart = () => {
                 max:100,
                 ticks:{
                     stepSize:25,
-                    callback:(value)=>value + "%",
+                    callback:(value)=>value + "k",
                     autoSkipPadding:0,  
-                    maxTicksLimit: 4, 
+                    maxTicksLimit: 4.5, 
                     
                 },
 
