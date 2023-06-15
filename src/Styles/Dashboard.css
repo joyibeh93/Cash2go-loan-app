@@ -39,7 +39,7 @@
 .dashboard-container {
   display: flex;
   justify-content: space-between;
-  height: 160vh;
+  height: 100vh;
 }
 .left-sidebar {
   width: 20%;
@@ -53,8 +53,8 @@
 }
 .top-bar {
   background-color: var(--side-bar-bg-clr);
-  margin-left: 0.7rem;
-  padding: 0.1rem;
+  margin-left: 0.1rem;
+  padding: 0.3rem 0.5rem;
 }
 .content-container {
   padding: 1rem 5rem;

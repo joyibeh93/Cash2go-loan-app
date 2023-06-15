@@ -14,8 +14,8 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="sidebar-logo">
-        <Logo />
+      <div className="sidebar-log">
+        <Logo  sideb="10px"/>
       </div>
 
       <div className="sidebar-items1">
