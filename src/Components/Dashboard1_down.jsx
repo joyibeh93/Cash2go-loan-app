@@ -50,11 +50,11 @@ const DashBoard1_Down = () => {
   return (
     <div className="dashBoardTable">
       <div className="tablehead">
-        <div>
-          <h3>All Applications</h3>
+        <div className='head-content'>
+          <h3>All Applications</h3><br/>
           <span>Sorted by Date</span>
         </div>
-        <img src={download} alt="download-icon" />
+        <img src={download} alt="download-icon"  className='ddownload-icon'/>
       </div>
       <table>
         <thead>
@@ -129,7 +129,7 @@ const DashBoard1_Down = () => {
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p className="approved-down">
+              <p className="approved-down rejected-reject">
                 <img src={rejectedTransparent} alt="" /> Rejected
               </p>
             </td>
@@ -162,6 +162,21 @@ const DashBoard1_Down = () => {
           </tr>
         </tbody>
       </table>
+      <div className="goTo">
+        <button className="prev">
+          <span className="arrow-left">&larr;</span>Prev
+        </button>
+        <div className="numbers">
+          <button>1</button>
+          <button>2</button>
+          <button>...</button>
+          <button>5</button>
+          <button>6</button>
+        </div>
+        <button className="next">
+          Next<span className="arrow-right">&rarr;</span>
+        </button>
+      </div>
     </div>
   );
 };

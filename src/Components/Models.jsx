@@ -60,7 +60,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-down">
+              <p className="approved-down">
                 {' '}
                 <img src={approvedTransparent} alt="approved-icon" />
               Active
@@ -82,7 +82,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-btn">
+              <p className="approved-down rejected-reject">
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -104,7 +104,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-btn">
+              <p className="approved-down rejected-reject">
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -126,7 +126,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-btn">
+              <p className="approved-down rejected-reject">
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -148,7 +148,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-btn">
+              <p className="approved-down rejected-reject">
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -170,7 +170,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-down">
+              <p className="approved-down">
                 {' '}
                 <img src={approvedTransparent} alt="approved-icon" />
               Active

@@ -107,7 +107,7 @@
     flex-direction: row;
   gap: 40px;
 }
-.rejected-btn{
+/* .rejected-btn{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,4 +116,4 @@
   color: var(--main-bg-clr);
   width: 60%;
   margin-left: 1rem;
-}
+} */

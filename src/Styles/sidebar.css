@@ -40,7 +40,7 @@
   flex-direction: column;
   justify-content: center;
   color: var(--existing-btn-bg-clr);
-  position: relative;
+  /* position: relative; */
 }
 .sidebar-logo {
   position: absolute;
@@ -49,10 +49,11 @@
 .sidebarlogo1{
   /* margin-top: 15px;
   margin-left:20px; */
-  margin: 15px auto;
+  margin-top: 7px;
+  margin-left: -29px;
 }
 .sidelogo1{
-  width: 30px;
+  width: 20px;
 }
 .sidelogo2{
   width:90px;
@@ -79,7 +80,7 @@
 
 .sidebar-items2 {
   position: absolute;
-  top: 20rem;
+  top: 18rem;
   left: 2rem;
 }
 .p-red,

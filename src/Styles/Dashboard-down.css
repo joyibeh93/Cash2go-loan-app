@@ -59,13 +59,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   background-color: var(--approved-btn-bg-clr);
   color: var(--main-bg-clr);
-  width: 60%;
-  margin-left: 1rem;
+  border-radius: 10px;
+  padding: 1px 0px;
+}
+.head-content{
+  line-height:1.2em
 }
 
-.rejected{
+.rejected-reject{
   background-color: var(--defaulted-bg-clr);
-}
+} 

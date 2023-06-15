@@ -75,12 +75,12 @@
 .msg-line{
     height: 2px;
     width: 2.7em;
-    background-color: #bac0ba;
+    background-color: #f0f0f0;
     margin-top: 0.5em;
 }
 
 .selected{
-    background-color: #747a74;
+    background-color: #f0f0f0;
 }
 
 .msg-cnt-note{
@@ -88,10 +88,12 @@
     justify-content: space-between;
     padding: 1em;
     font-size: 17px;
+    border-bottom:0.2px solid #8a85852f
 }
 
 .Msg-inbox{
-    background-color: #f2f6f7;
+    background-color: #f0f0f0;
+    border-bottom:0.2px solid #8a85852f
 }
 
 h4, h1{
@@ -114,8 +116,8 @@ h4, h1{
 .goTo{
     display: flex;
     justify-content: space-between;
-    border: 1px solid var(--credit-score-bg-clr);
-    background-color: #f2f6f7;
+    border: 1px solid#8a85852f;
+    background-color: #f0f0f0;
     padding: 0.3em 0.2em 0.7em 1em;
     border-radius: 5px;
 }
