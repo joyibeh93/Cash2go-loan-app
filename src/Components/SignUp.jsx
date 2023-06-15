@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, navigate } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Buttons from './Buttons';
@@ -9,7 +8,7 @@ import '../Styles/Signup1.css';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
-  const [showOtpForm, setShowOtpForm] = useState(false);
+  const [showOtpForm, setShowOtpForm, setSignUpMessage, signupMessage] = useState(false);
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -67,19 +66,19 @@ const Signup = () => {
   };
 
   return (
-    <div className="form-container" style={{ paddingTop: '190px' }}>
-      <h1>Sign Up</h1>
+    <div className="form-container-signup1" style={{ paddingTop: '170px' }}>
+      <h2>Sign Up</h2>
       <Formik
         initialValues={{ email: '', companyID: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="form">
-          <label htmlFor="email" className="label">
+        <Form className="form-signup1">
+          <label htmlFor="email" className="label-signup1" style={{ paddingTop: '35px' }} >
             Email
           </label>
           <Field
-            className="input"
+            className="input-signup1"
             type="email"
             id="email"
             name="email"
@@ -87,11 +86,11 @@ const Signup = () => {
           />
           <ErrorMessage name="email" component="div" className="error-message" />
 
-          <label htmlFor="companyID" className="label">
+          <label htmlFor="companyID" className="label-signup1">
             Company ID
           </label>
           <Field
-            className="input"
+            className="input-signup1"
             type="text"
             required
             maxLength={6}
@@ -99,13 +98,14 @@ const Signup = () => {
             name="companyID"
             placeholder="******"
           />
-          <img src={eyeIcon} className="eye1" alt="eye-icon" />
+          <img src={eyeIcon} className="eye1-signup1" alt="eye-icon" />
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
-          <div className="button">
-            <Buttons button="Next" />
-          </div>
-          <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+
+          <button className='button-signup1'>Next -></button>
+          {/* <Buttons button="Next ->" /> */}
+
+          <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
       {showOtpForm && <OtpForm email={email} />}
