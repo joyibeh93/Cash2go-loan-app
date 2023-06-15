@@ -44,7 +44,7 @@
     
 }
 .AnalyticsChart{
-    width: 750px;
+    width: 900px;
     margin-left:20px;
     background-color:#b9bdc288 ;
     border: 3px sold var(--credit-score-bg-clr); 
@@ -53,4 +53,5 @@
 .chartAnalystics{
     display: flex;
     justify-content: space-between;
+    margin-top: 50px;
 }

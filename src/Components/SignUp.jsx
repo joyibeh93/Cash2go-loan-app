@@ -1,16 +1,18 @@
+
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import Buttons from './Buttons';
-import { Link } from 'react-router-dom';
 import eyeIcon from '../assets/eye icon.svg';
-import '../Styles/Signup1.css';
-import axios from 'axios';
 import OtpForm from './OtpForm';
+import '../Styles/Signup1.css';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [showOtpForm, setShowOtpForm] = useState(false);
+  const [signupMessage, setSignUpMessage] = useState('');
+  const navigate = useNavigate();
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -22,56 +24,50 @@ const Signup = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
 
-
-    //navigate('/signupstep2');
     const email = values.email;
     const companyID = values.companyID;
-    const data = {
-      email: email,
-      companyID: companyID,
-    };
 
     try {
       const response = await fetch(
-        'https://cash2go-backendd.onrender.com/api/v1/user',
+        'https://cash2go-backendd.onrender.com/api/v1/user/send-otp',
         {
-          method: 'PATCH',
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify({
+            email: email,
+            companyID: companyID,
+          }),
         }
       );
 
-      const authenticated = await response.json();
+      const data = await response.json();
 
-    //console.log(authenticated);
-      //alert(authenticated);
+      if (response.ok) {
+        const isAuthenticated = data;
+        console.log(isAuthenticated);
 
-
-      if (authenticated) {
-        setEmail(email);
-        setShowOtpForm(true);
+        if (isAuthenticated) {
+          setEmail(values.email);
+          setShowOtpForm(true);
+          navigate('../SignUpStep2');
+        }
+      } else {
+        setSignUpMessage(data.message);
+        setTimeout(() => {
+          setSignUpMessage('');
+        }, 5000);
       }
+    } catch (error) {
+      console.error('Error:', error);
+      setSignUpMessage('An error occurred during the request.');
+      setTimeout(() => {
+        setSignUpMessage('');
+      }, 5000);
     } finally {
       setSubmitting(false);
     }
-
-    // try {
-    //   const response = await axios.patch(
-    //     'https://cash2go-backendd.onrender.com/api/v1/user/signup',
-    //     data
-    //   );
-
-    //   const authenticated = response.data;
-
-    //   if (authenticated) {
-    //     setEmail(email);
-    //     setShowOtpForm(true);
-    //   }
-    // } finally {
-    //   setSubmitting(false);
-    // }
   };
 
   return (
@@ -93,11 +89,7 @@ const Signup = () => {
             name="email"
             placeholder="myworkemail@work.com"
           />
-          <ErrorMessage
-            name="email"
-            component="div"
-            className="error-message"
-          />
+          <ErrorMessage name="email" component="div" className="error-message" />
 
           <label htmlFor="companyID" className="label">
             Company ID
@@ -112,26 +104,20 @@ const Signup = () => {
             placeholder="******"
           />
           <img src={eyeIcon} className="eye1" alt="eye-icon" />
-          <ErrorMessage
-            name="companyID"
-            component="div"
-            className="error-message"
-          />
+          <ErrorMessage name="companyID" component="div" className="error-message" />
 
           <div className="button">
-            {/* <Buttons button="Next" /> */}
-            <Link to="/signupstep2" className="button">
-              <Buttons button="Next" />
-            </Link>
+            <Buttons button="Next" />
           </div>
           <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
       {showOtpForm && <OtpForm email={email} />}
+      <div style={{ textAlign: 'center', color: 'red' }}>
+        {signupMessage && <p className="login-message">{signupMessage}</p>}
+      </div>
     </div>
   );
 };
 
 export default Signup;
-
-

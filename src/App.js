@@ -20,14 +20,13 @@ import Message from './Pages/Message';
 import Application from './Pages/Application';
 import Applicantinfo from './Pages/ApplicantInfo'
 import Notification from './Pages/Notification';
+import ReviewPage from './Pages/ReviewPage';
 import Analytics from './Pages/Analytics';
-import Settings from './Pages/Settings'
 import Recovery from './Pages/Recovery';
-
+import Settings from './Pages/Settings';
 
 function App() {
   return (
-
     <Router>
       <Routes>
         <Route path="/bvn" element={<BvnPage />} />
@@ -36,7 +35,7 @@ function App() {
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/signupstep4" element={<SignUpStep4 />} />
         <Route path="/signupstep3" element={<SignUpStep3 />} />
-         <Route exact path="/" element={<Login />} /> 
+        <Route exact path="/" element={<Login />} />
         <Route path="/signupstep1" element={<SignUpStep1 />} />
         <Route path="/resetpassword2" element={<PasswordResetPage />} />
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
@@ -49,10 +48,15 @@ function App() {
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
+        <Route path="/review" element={<ReviewPage />} />
+        <Route path="/" element={<Settings />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/recovery" element={<Recovery />} />
-        <Route path="/settings" element={<Settings/>} />
-
+        <Route path="/settings" element={<Settings />} />
+        
+        
+        
+        
       </Routes>
     </Router>
   );

@@ -1,46 +1,56 @@
-import React from 'react'
-import download from '../assets/Download.svg';
+import React from 'react';
+// import '../Styles/Dashboard-down.css';
+//import download from '../assets/Download.svg';
 import downArrow from '../assets/down-arrow.svg';
 import userIcon from '../assets/user-icon.svg';
 import approvedTransparent from '../assets/approved-transparent.svg';
 import rejectedTransparent from '../assets/rejected-transparent.svg';
-import '../Styles/Dashboard-down.css';
+//import { Link } from "react-router-dom"
+import '../Styles/Recovery.css'
 import { Link } from 'react-router-dom';
 
-function ApplicationContent() {
+const DashBoard1_Down = () => {
   return (
     <div>
-        <div>
-            <ul>
-                <li>Applications</li>
-                <li className='appcnt'> All Applications</li>
-            </ul>
+         <div className="dashboard-content">
+            <p>Notification</p>
+            <div className="notification">
+                <div>
+                <h2>Recovery</h2>
+                
+                </div>
+                <div className="exit-new">
+                <button className="exisiting recoverybtn">Settings</button>
+                <button className="new reoveryEdit">Edit</button>
+                </div>
+            </div>
         </div>
-        <div className="dashBoardTable">
-      <div className="tablehead">
-        <div>
-          <h3>All Applications</h3>
-          <span>Sorted by Date</span>
-        </div>
-        <img src={download} alt="download-icon" />
+        <div className="tablehead recooveryTablHead2">
+            <div>
+                <h3 className='recovery-tablhead'>All Applications</h3>
+                <span>Sorted by Date</span>
+            </div>
       </div>
+    <div className="dashBoardTable">
+     
       <table>
         <thead>
           <tr>
-            <th>Product</th>
+            <th>Applicants</th>
             <th>
-              Date <img src={downArrow} alt="down-arrow" />{' '}
+              Date Due <img src={downArrow} alt="" />{' '}
             </th>
             <th>
-              Status <img src={downArrow}  alt="down-arrow" />{' '}
+              Progress <img src={downArrow} alt="" />{' '}
             </th>
             <th>
-              Credit Score <img src={downArrow}  alt="down-arrow" />{' '}
+              Credit Score <img src={downArrow} alt="" />{' '}
             </th>
             <th>
-              Amount <img src={downArrow} alt="down-arrow" />{' '}
+              Total Amount <img src={downArrow} alt="" />{' '}
             </th>
-            <th>Download </th>
+            <th>Amount Left <img src={downArrow} alt="" />{' '}</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -48,70 +58,75 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-              <Link to='/applicantinfo'><h4>Ogbeni Malani</h4></Link>
-                <span>012889</span>
+                <Link to='/applicantinfo'><h4>Ogbeni Malani</h4></Link>
+                <p className='recoveryID'> ID202390112 </p>
+                {/* <span>more info</span> */}
               </div>
-              
             </td>
             <td>02 / 04 / 23</td>
             <td>
               <p className="approved-down">
-                <img src={approvedTransparent} alt="approved-img" /> Approved
+                <img src={approvedTransparent} alt="" /> Approved
               </p>
             </td>
             <td>810</td>
             <td>N 35,000.00</td>
+            <td>N 2,000.00</td>
             <td>
-              <img src={download} alt="download-icon" />
+            <p className="msg-cnt-dot">...</p>
             </td>
           </tr>
           <tr>
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-              <h4>Muktarr Bello</h4>
-                <Link to='/applicantinfo'><h4>Oloyomi stutern</h4></Link>
-                <span>014907</span>
+                <h4>Muktarr Bello</h4>
+                <p className='recoveryID'> ID202390112 </p>
+                {/* <span>more info</span> */}
               </div>
             </td>
             <td>02 / 04 / 23</td>
             <td>
               <p className="approved-down">
-                <img src={approvedTransparent} alt="approved-img" /> Approved
+                <img src={approvedTransparent} alt="" /> Approved
               </p>
             </td>
             <td>205</td>
             <td>N 102,000.00</td>
+            <td>N 20,000.00</td>
             <td>
-              <img src={download} alt="download-icon" />
+            <p className="msg-cnt-dot">...</p>
             </td>
           </tr>
           <tr>
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-              <h4>Ogbeni Malani</h4>
-                <span>014990</span>
+                <h4>Rukayat stute</h4>
+                <p className='recoveryID'> ID202390112 </p>
+                {/* <span>more info</span> */}
               </div>
             </td>
             <td>02 / 04 / 23</td>
             <td>
               <p className="approved-down rejected">
-                <img src={rejectedTransparent} alt="rejected-img" /> Rejected
+                <img src={rejectedTransparent} alt="" /> Rejected
               </p>
             </td>
             <td>330</td>
-            <td>N 40,000.00</td>
+            <td>N 72,000.00</td>
+            <td>N 70,000.00</td>
             <td>
-              <img src={download} alt="" />
+            <p className="msg-cnt-dot">...</p>
             </td>
           </tr>
           <tr>
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-              <h4>Rukayat stute</h4>
-                <span>014990</span>
+                <h4>Ogbeni Malani</h4>
+                <p className='recoveryID'> ID202390112 </p>
+                {/* <span>more info</span> */}
               </div>
             </td>
             <td>02 / 04 / 23</td>
@@ -122,16 +137,18 @@ function ApplicationContent() {
             </td>
             <td>332</td>
             <td>N 50,000.00</td>
+            <td>N 10,000.00</td>
             <td>
-              <img src={download} alt="" />
+            <p className="msg-cnt-dot">...</p>
             </td>
           </tr>
           <tr>
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Love Onyekah</h4>
-                <span>015678</span>
+                <h4>Ogbeni Malani</h4>
+                <p className='recoveryID'> ID202390112 </p>
+                {/* <span>more info</span> */}
               </div>
             </td>
             <td>02 / 04 / 23</td>
@@ -141,17 +158,19 @@ function ApplicationContent() {
               </p>
             </td>
             <td>810</td>
-            <td>N50,000.00</td>
+            <td>N 35,000.00</td>
+            <td>N 2,000.00</td>
             <td>
-              <img src={download} alt="" />
+            <p className="msg-cnt-dot">...</p>
             </td>
           </tr>
           <tr>
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-              <h4>Ogbeni Malani</h4>
-                <span>015679</span>
+                <h4>Muktarr Bello</h4>
+                <p className='recoveryID'> ID202390112 </p>
+                {/* <span>more info</span> */}
               </div>
             </td>
             <td>02 / 04 / 23</td>
@@ -161,57 +180,42 @@ function ApplicationContent() {
               </p>
             </td>
             <td>205</td>
-            <td>N 500,000.00</td>
+            <td>N 102,000.00</td>
+            <td>N 20,000.00</td>
             <td>
-              <img src={download} alt="" />
+            <p className="msg-cnt-dot">...</p>
             </td>
           </tr>
           <tr>
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Janet Oluwole</h4>
-                <span>019678</span>
+                <h4>Rukayat stute</h4>
+                <p className='recoveryID'> ID202390112 </p>
+                {/* <span>more info</span> */}
               </div>
             </td>
             <td>02 / 04 / 23</td>
             <td>
               <p className="approved-down rejected">
-                <img src={rejectedTransparent} alt="rejected-text" /> Rejected
+                <img src={rejectedTransparent} alt="" /> Rejected
               </p>
             </td>
             <td>330</td>
-            <td>N 30,000.00</td>
+            <td>N 72,000.00</td>
+            <td>N 70,000.00</td>
             <td>
-              <img src={download} alt="" />
+            <p className="msg-cnt-dot">...</p>
             </td>
-          </tr>
-          <tr>
-            <td className="first-data">
-              <img src={userIcon} alt="user-icon" />{' '}
-              <div className="data-title">
-              <h4>Rukayat stute</h4>
-                <span>015078</span>
-              </div>
-            </td>
-            <td>02 / 04 / 23</td>
-            <td>
-              <p className="approved-down">
-                <img src={approvedTransparent} alt="" /> Approved
-              </p>
-            </td>
-            <td>332</td>
-            <td>N 50,000.00</td>
-            <td>
-              <img src={download} alt="" />
-            </td>
-          </tr>
+          </tr>checkout 
+          
         </tbody>
       </table>
     </div>
-       
-    </div>
-  )
-}
 
-export default ApplicationContent
+    </div>
+    
+  );
+};
+
+export default DashBoard1_Down;

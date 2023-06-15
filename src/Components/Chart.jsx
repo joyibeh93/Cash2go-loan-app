@@ -77,14 +77,19 @@ const Chart = () => {
         }
     }
     return (
-        <div className="container">
+        <div className="container-pie">
+            <div>
             <div className="bar">
-                <h3>Previous Loans </h3>
-                <h6>Subtitle</h6>
-                <hr />
+            <h4>Previous Loans</h4>
+             <h6>Subtitle</h6>
+             <hr />
+            </div>
+                
+                
+                <div>
                 <h4>Maximum Loan Request</h4>
                 <h3>N 92000</h3>
-
+                </div>
                 <Bar data={data} options={options}></Bar>
                 <hr />
                 <Link> More <img src={RightArrow} alt="right-arrow" /></Link>

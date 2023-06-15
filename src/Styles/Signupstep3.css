@@ -1,11 +1,11 @@
 .button {
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
-  padding: 0.8em;
-  border-radius: 12px;
-  margin-top: 2px;
+  padding: 0.6em;
+  border-radius: 0.75em;
+  margin-top: 0.125em;
   text-align: center;
-  width: 80%;
+  width: 70%;
   margin-left: 3em;
 }
 .button button {
@@ -16,17 +16,33 @@
 }
 .eye {
   position: absolute;
-  left: 77em;
+  left: 84em;
   bottom: 19.5em;
 }
 
 .eye2 {
   position: absolute;
   top: 24em;
-  left: 77em;
+  left: 84em;
   cursor: pointer;
 }
 
 .terms {
   margin: 3em auto;
+}
+
+.signup {
+  display: block;
+  padding: 1em 20em;
+  border-radius: 0.5em;
+  width: 90%;
+  margin-top: 0.5rem;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4em;
 }

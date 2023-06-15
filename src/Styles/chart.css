@@ -1,14 +1,14 @@
 
 .pie{
-    width: 300px;
+    width: 16em;
     border: gray;
     background-color:white;
     
 }
 .bar{
-    width: 35rem;
-    border: 1px transparent;
+    width: 33em;
     background-color: white;
+    
 }  
 .doughnut{
     width: 10px;
