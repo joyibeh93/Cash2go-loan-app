@@ -76,7 +76,7 @@ const MessageContentInfo = () => {
             <p className="name">Niyi Analyst</p>
             <p className="text">
               Hi Gbenga, the risk analyst course is already available at AZ
-              University. Don’t forget to register on time, deadline is on
+              University. Don't forget to register on time, deadline is on
             </p>
           </div>
           <div className="msg-icons">
