@@ -54,30 +54,6 @@ const PieChart = ({ color, Anlytper }) => {
 
   return (
     <div>
-    
-      <div className="container-pie">
-        <div className="pie">
-          <h3>Credit Score</h3>
-          <h6>FICO Model</h6>
-          <hr />
-          <div className="doughnut">
-            <Doughnut data={data} options={options} plugins={[textCenter]} />
-            <p className="pie-p">
-              (720 - 850)
-              <button className="approved">
-                {' '}
-                <img src={approvedTransparent} alt="approved-icon" /> Excellent
-              </button>
-            </p>
-            <hr />
-            <div className="Model">
-              <p>Change Model </p>
-              <Link className="link">
-                More <img src={RightArrow} alt="right-arrow" />
-              </Link>
-            </div>
-          </div>
-     </div>     
       <div className="container-pie">
     <div className='pie'>
       <h4>Credit Score</h4>
@@ -106,7 +82,7 @@ const PieChart = ({ color, Anlytper }) => {
     </div>
   </div>
     </div>
-    </div>
+  
  );
  
  };

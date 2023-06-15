@@ -36,46 +36,34 @@ const Chart = () => {
     }
 
     const options = {
-        type: 'bar',
-        data,
-        options: {
-            scales: {
-                x: [{
-                    grid: {
-                        drawOnChartArea: false
-                    },
-                    border: {
-                        display: false,
-                    }
-                }],
-                y: {
-                    beginAtZero: true,
-                    grid: {
-                        drawOnChartArea: false
-                    },
-                    ticks: {
-                        maxTicksLimit: 4,
-                        callback: ((context, index) => {
-                            console.log(context)
-                            let response;
-                            if (context === 1) {
-                                response = '10k';
-                            } else if (context === 2) {
-                                response = '50k';
-                            } else if (context === 3) {
-                                response = '100k';
-                            } else {
-                                response = '0';
-                            }
-                            return response;
-                        })
-                    },
 
+        plugins:{
+            legend:false,
+        },
+        scales:{
+            x:{
+                grid:{
+                    display:false
                 }
+            },
+            y:{
+                grid:{
+                    display:false
+                },
+                min:0,
+                max:100,
+                ticks:{
+                    stepSize:25,
+                    callback:(value)=>value + "%",
+                    autoSkipPadding:0,  
+                    maxTicksLimit: 4, 
+                    
+                },
 
             }
         }
     }
+    
     return (
         <div className="container-pie">
             <div>
