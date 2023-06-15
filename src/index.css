@@ -35,6 +35,7 @@
   --font-family-body: 'Inter', sans-serif;
   --font-size: 1rem;
 }
+
 *,
 *::after,
 *::before {
@@ -42,18 +43,22 @@
   padding: 0;
   margin: 0;
 }
+
 html {
   font-family: var(--font-family-body);
   color: var(--main-text-color);
 }
+
 a {
   text-decoration: none;
   color: var(--main-text-color);
 }
+
 .container {
   display: flex;
   justify-content: space-between;
 }
+
 .right-side {
   flex: 1;
   display: flex;
@@ -72,6 +77,7 @@ a {
   height: 100vh;
   flex-shrink: 0;
 }
+
 .background-container {
   display: flex;
   background-image: url(./assets/5623076\ 1.png);
@@ -81,6 +87,7 @@ a {
   height: 100%;
   width: 100%;
 }
+
 .check {
   width: 12em;
   margin-top: 0.7em;
@@ -88,7 +95,7 @@ a {
 
 .steps-container {
   margin-top: 5em;
-  /* margin-left: 3em; */
+  margin-left: 4em;
   padding: 0 3em;
   display: flex;
   flex-direction: column;
@@ -104,6 +111,7 @@ a {
   margin-left: 1em;
   margin-top: 5.5em;
 }
+
 .logo img {
   margin-right: 0.2em;
 }
@@ -112,6 +120,7 @@ a {
   /* Hide the default checkbox */
   visibility: hidden;
 }
+
 .input-checkbox label {
   background-color: transparent;
   border: 1px solid #fff;
@@ -122,6 +131,7 @@ a {
   position: absolute;
   width: 28px;
 }
+
 /* .input-checkbox label::after {
   content: '';
   position: absolute;
@@ -167,6 +177,7 @@ a {
   display: flex;
   justify-content: center;
 }
+
 .desc {
   font-size: 0.8rem;
   margin-bottom: 3em;
@@ -176,9 +187,11 @@ a {
 .step-num {
   text-transform: uppercase;
 }
+
 .num {
   margin-bottom: 1em;
 }
+
 /******************** end of blue background section **************************/
 
 /* ********** button styles *****************/
