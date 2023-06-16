@@ -420,7 +420,7 @@ const OtpForm = ({ email }) => {
               {Array.from({ length: 4 }).map((_, i) => (
                 <Field
                   key={nanoid()}
-                  type="number"
+                  type="text"
                   name={`otp[${i}]`}
                   value={values.otp[i]}
                   onChange={handleChange}
