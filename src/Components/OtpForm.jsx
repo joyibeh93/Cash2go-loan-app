@@ -340,15 +340,13 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import { nanoid } from 'nanoid';
 import Buttons from './Buttons';
 import { useNavigate } from 'react-router-dom';
 
-const OtpForm = ({ email }) => {
+const OtpForm = ({ email, nextStep }) => {
   const initialValues = {
     otp: ['', '', '', ''],
   };
-  //const [otpRequested, setOtpRequested] = useState(false);
   const [otpError, setOtpError] = useState('');
 
   const validationSchema = yup.object().shape({
@@ -360,55 +358,71 @@ const OtpForm = ({ email }) => {
   });
 
   const navigate = useNavigate();
+  const handleVerifyOtp = async (otp, email) => {
+    //const { otp } = values; // Extract otp array from values object
+  //  const enteredOtp = otp.join('');
 
-  const sendOtpToEmail = async () => {
+  // const submitForm = async (otp, email) => {
+  //   setSubmitting(true); // Set form submission state to true
+
     try {
-      const response = await fetch('https://cash2go-backendd.onrender.com/api/v1/user/resend-otp', {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+      // Send request to server to confirm OTP
+      const response = await fetch(
+        `https://cash2go-backendd.onrender.com/api/v1/user/verify-otp?email=${email}`,
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ otp: otp }),
+        }
+      );
+      const isAuthenticated = await response.json(); // Get authentication status from response
 
-      const data = await response.json();
+      if (isAuthenticated) {
+        // If user is authenticated, pass the nextStep function as a prop to the parent component
+        navigate('../SignUpStep3');
+      }else {
+        setSubmitting(false);
+        setStatus('Incorrect OTP. Please try again.');
+      }
+      
+    } catch (error) {
+      console.error('Error:', error);
+      if (error.response) {
+        setStatus(error.response.data.message); // Set error message from response
+        setTimeout(() => {
+          setStatus('');
+        }, 5000); // Clear status message after 5 seconds
+      }
+    } finally {
+      setSubmitting(false); // Set form submission state to false
+    }
+  };
 
-      if (data) {
+  const handleResendOTP = async () => {
+    try {
+      // Send request to server to resend OTP
+      const response = await fetch(
+        `https://cash2go-backendd.onrender.com/api/v1/user/resend-otp?email=${email}`,
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+      if (response.ok) {
+        // If user is authenticated, set status message from response
         setOtpError('New OTP has been sent. Please check your email.');
       }
     } catch (error) {
       console.error('Error:', error);
       setOtpError('Failed to resend OTP. Please try again.');
+      // setSubmitting(false);
+      // setStatus('Failed to verify OTP. Please try again.');
     }
-  };
-
-  const handleVerifyOtp = async (values, { setSubmitting, setStatus }) => {
-    const otp  = values;
-    const enteredOtp = otp.join('');
-
-    try {
-      const response = await fetch('https://cash2go-backendd.onrender.com/api/v1/user/verify-otp', {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, otp: enteredOtp }),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        console.log('OTP verification successful!');
-        navigate('../signupstep3');
-      } else {
-        setSubmitting(false);
-        setStatus('Incorrect OTP. Please try again.');
-      }
-    } catch (error) {
-      console.error('Failed to verify OTP:', error);
-      setSubmitting(false);
-      setStatus('Failed to verify OTP. Please try again.');
-    }
+    
   };
 
   return (
@@ -419,14 +433,13 @@ const OtpForm = ({ email }) => {
             <div className="otpInput">
               {Array.from({ length: 4 }).map((_, i) => (
                 <Field
-                  key={nanoid()}
+                  key={i}
                   type="text"
                   name={`otp[${i}]`}
                   value={values.otp[i]}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={errors.otp && errors.otp[i] ? 'error' : ''}
-                  //disabled={otpRequested}
                   autoComplete="off"
                 />
               ))}
@@ -438,7 +451,7 @@ const OtpForm = ({ email }) => {
           <p>
             Click{' '}
             <span>
-              <button type="button" onClick={sendOtpToEmail}>
+              <button type="button" onClick={handleResendOTP}>
                 HERE
               </button>
             </span>{' '}
@@ -446,9 +459,11 @@ const OtpForm = ({ email }) => {
           </p>
           {otpError && <p className="error-message">{otpError}</p>}
           <div className="btn otp">
-            <Buttons button="Submit" disabled={!isSubmitting} />
+            <Buttons button="Submit" disabled={isSubmitting} />
           </div>
-          <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+          <p className="terms">
+            Term of use &nbsp; &nbsp; Privacy policy
+          </p>
         </Form>
       )}
     </Formik>
@@ -456,4 +471,3 @@ const OtpForm = ({ email }) => {
 };
 
 export default OtpForm;
-
