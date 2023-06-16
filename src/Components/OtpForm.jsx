@@ -358,7 +358,7 @@ const OtpForm = ({ email, nextStep }) => {
   });
 
   const navigate = useNavigate();
-  const handleVerifyOtp = async (otp, email) => {
+  const handleVerifyOtp = async (otp, email,setSubmitting) => {
     //const { otp } = values; // Extract otp array from values object
   //  const enteredOtp = otp.join('');
 
@@ -384,15 +384,15 @@ const OtpForm = ({ email, nextStep }) => {
         navigate('../SignUpStep3');
       }else {
         setSubmitting(false);
-        setStatus('Incorrect OTP. Please try again.');
+        setOtpError('Incorrect OTP. Please try again.');
       }
       
     } catch (error) {
       console.error('Error:', error);
       if (error.response) {
-        setStatus(error.response.data.message); // Set error message from response
+        setOtpError(error.response.data.message); // Set error message from response
         setTimeout(() => {
-          setStatus('');
+          setOtpError('');
         }, 5000); // Clear status message after 5 seconds
       }
     } finally {
