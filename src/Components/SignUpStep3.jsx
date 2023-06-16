@@ -324,18 +324,18 @@ const SignIn = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="Signup3-container">
       <Formik
         initialValues={{ username: '', password: '', confirmPassword: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="form" style={{ paddingTop: '190px' }}>
-          <label htmlFor="username" className="label">
+        <Form className="forms" style={{ paddingTop: '190px' }}>
+          <label htmlFor="username" className="labels">
             Username
           </label>
           <Field
-            className="input"
+            className="signup"
             type="text"
             id="username"
             name="username"
@@ -347,12 +347,12 @@ const SignIn = () => {
             className="error-message"
           />
 
-          <label className="label" htmlFor="password">
+          <label className="labels" htmlFor="password">
             Password
           </label>
 
           <Field
-            className="input"
+            className="signup"
             type={showPassword ? 'text' : 'password'}
             id="password"
             maxLength={8}
@@ -372,12 +372,12 @@ const SignIn = () => {
             className="error-message"
           />
 
-          <label htmlFor="confirmpassword" className="label">
+          <label htmlFor="confirmpassword" className="labels">
             Re-enter Password
           </label>
 
           <Field
-            className="input password-input"
+            className="signup"
             type={showPassword ? 'text' : 'password'}
             id="confirmPassword"
             maxLength={8}

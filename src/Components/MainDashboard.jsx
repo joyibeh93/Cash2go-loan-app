@@ -19,10 +19,10 @@ import { useNavigate } from 'react-router-dom';
     <div className="dashboard-content">
       <p>Dashboard</p>
       <div className="notification">
-        <div>
-          <h2>Hello Gbenga</h2>
+        <div className='dash-welcomenote'>
+          <h2>Hello Gbenga</h2><br/>
           <p>
-            Welcome back you have <span> 13 </span> New Notification
+            Welcome back you have <strong> 13 </strong> New Notification
           </p>
         </div>
         <div className="exit-new">
@@ -53,7 +53,7 @@ import { useNavigate } from 'react-router-dom';
           <p className="loan-stats">
             +2 from Yesterday{' '}
             <button className="pending">
-              <img src={pendingTransparent} alt="pending-icon" /> Pending
+              <img src={pendingTransparent} alt="pending-icon" className="icn"/> Pending
             </button>
           </p>
         </div>

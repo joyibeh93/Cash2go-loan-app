@@ -15,8 +15,8 @@ const Models= () => {
     <div >
       <div className='heady
       '>
-        <h1>Settings</h1>
-        <div className="exit-new">
+        <h2 className='set-head'>Settings</h2>
+        <div className="settings-buttpn">
           <button className="markAll">Manage</button>
           <button className="markRead">Create new Model</button>
           </div>
@@ -28,20 +28,20 @@ const Models= () => {
       <span>Activity</span>
     </div>
         <div className='settings'>
-            <table>
+            <table className='maintable'>
             <thead>
           <tr>
-            <th>Model Name</th>
-            <th>
+            <th className='tableheady'>Model Name</th>
+            <th className='tableheady'>
               Status <img src={downArrow} alt="" />{' '}
             </th>
-            <th>
+            <th className='tableheady'>
               Date Created <img src={downArrow} alt="" />{' '}
             </th>
-            <th>
+            <th className='tableheady'>
               Created by <img src={downArrow} alt="" />{' '}
             </th>
-            <th>
+            <th className='tableheady'>
               Edit
             </th>
         </tr>
@@ -60,7 +60,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-down">
+              <p className="approved-down">
                 {' '}
                 <img src={approvedTransparent} alt="approved-icon" />
               Active
@@ -70,7 +70,7 @@ const Models= () => {
             <td>{Padlock}</td>
           </tr>
           <tr >
-            <td className="first-data">
+            <td className="first-set">
               <Switch
               isOn ={value}
               onColor="#ff6f5a"
@@ -82,7 +82,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-btn">
+              <p className="approved-down rejected-reject">
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -92,7 +92,7 @@ const Models= () => {
             <td><i class="fa-regular fa-pen-to-square"></i></td>
           </tr>
           <tr >
-            <td className="first-data">
+            <td className="first-set">
               <Switch
               isOn ={value}
               onColor="#ff6f5a"
@@ -104,7 +104,11 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-btn">
+              <p className="rejected-setting">
+
+              <p className="approved-down rejected-reject">
+
+                
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -114,7 +118,7 @@ const Models= () => {
             <td><i class="fa-regular fa-pen-to-square"></i></td>
           </tr>
           <tr >
-            <td className="first-data">
+            <td className="first-set">
               <Switch
               isOn ={value}
               onColor="#ff6f5a"
@@ -126,7 +130,9 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-btn">
+
+              <p className="approved-down rejected-reject">
+
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -136,7 +142,7 @@ const Models= () => {
             <td><i class="fa-regular fa-pen-to-square"></i></td>
           </tr>
           <tr>
-          <td className="first-data">
+          <td className="first-set">
               <Switch
               isOn ={value}
               onColor="#ff6f5a"
@@ -148,7 +154,11 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-btn">
+
+              <p className="rejected-setting">
+
+              <p className="approved-down rejected-reject">
+
                 {' '}
                 <img src={rejectedTransparent} alt="approved-icon" />
               inactive
@@ -157,6 +167,7 @@ const Models= () => {
             <td>Gbenga</td>
             <td><i class="fa-regular fa-pen-to-square"></i></td>
           </tr>
+
           <tr >
             <td className="first-data">
               <Switch
@@ -170,7 +181,7 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-              <p className="rejected-down">
+              <p className="approved-down">
                 {' '}
                 <img src={approvedTransparent} alt="approved-icon" />
               Active
@@ -179,6 +190,7 @@ const Models= () => {
             <td>Default</td>
             <td>{Padlock}</td>
           </tr>
+
 
 
           </tbody> 

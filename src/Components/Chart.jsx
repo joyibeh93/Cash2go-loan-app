@@ -30,61 +30,54 @@ const Chart = () => {
         datasets: [
             {
                 labels: ['Short-term', 'Long-term'],
-                data: [50, 100, 90, 80, 40, 85],
+                data: [50, 90, 60, 80, 40, 85],
                 backgroundColor: '#454e5c',
             }],
     }
 
     const options = {
-        type: 'bar',
-        data,
-        options: {
-            scales: {
-                x: [{
-                    grid: {
-                        drawOnChartArea: false
-                    },
-                    border: {
-                        display: false,
-                    }
-                }],
-                y: {
-                    beginAtZero: true,
-                    grid: {
-                        drawOnChartArea: false
-                    },
-                    ticks: {
-                        maxTicksLimit: 4,
-                        callback: ((context, index) => {
-                            console.log(context)
-                            let response;
-                            if (context === 1) {
-                                response = '10k';
-                            } else if (context === 2) {
-                                response = '50k';
-                            } else if (context === 3) {
-                                response = '100k';
-                            } else {
-                                response = '0';
-                            }
-                            return response;
-                        })
-                    },
 
+        plugins:{
+            legend:false,
+        },
+        scales:{
+            x:{
+                grid:{
+                    display:false
                 }
+            },
+            y:{
+                grid:{
+                    display:false
+                },
+                min:0,
+                max:100,
+                ticks:{
+                    stepSize:25,
+                    callback:(value)=>value + "k",
+                    autoSkipPadding:0,  
+                    maxTicksLimit: 4.5, 
+                    
+                },
 
             }
         }
     }
+    
     return (
-        <div className="container">
+        <div className="container-pie">
+            <div>
             <div className="bar">
-                <h3>Previous Loans </h3>
-                <h6>Subtitle</h6>
-                <hr />
+            <h4>Previous Loans</h4>
+             <h6>Subtitle</h6>
+             <hr />
+            </div>
+                
+                
+                <div>
                 <h4>Maximum Loan Request</h4>
                 <h3>N 92000</h3>
-
+                </div>
                 <Bar data={data} options={options}></Bar>
                 <hr />
                 <Link> More <img src={RightArrow} alt="right-arrow" /></Link>
