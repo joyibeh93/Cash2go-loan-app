@@ -7,45 +7,7 @@ import approvedTransparent from '../assets/approved-transparent.svg';
 import rejectedTransparent from '../assets/rejected-transparent.svg';
 import pendingTransparent from '../assets/pending-transparent.svg';
 import { Link } from "react-router-dom"
-//import MoreInfo from "./MoreInfo"
-// import pendingTransparent from '../assets/pending-transparent.svg';
-// const data = [
-//   {
-//     product: 'Ogbeni Malani',
-//     date: '02 / 04 / 23',
-//     status: 'Approved',
-//     creditScore: '810',
-//     amount: 'N 35,000.00',
-//   },
-//   {
-//     product: 'Muktar Bello',
-//     date: '02 / 04 / 23',
-//     status: 'Approved',
-//     creditScore: '205',
-//     amount: 'N 102,000.00',
-//   },
-//   {
-//     product: 'Rukayat Stutern',
-//     date: '01 / 04 / 23',
-//     status: 'Rejected',
-//     creditScore: '332',
-//     amount: 'N 40,000.00',
-//   },
-//   {
-//     product: 'oloyuyomi Stutern',
-//     date: '01 / 04 / 23',
-//     status: 'Rejected',
-//     creditScore: '790',
-//     amount: 'N 50,000.00',
-//   },
-//   {
-//     product: 'Ekere Stutern',
-//     date: '01 / 04 / 23',
-//     status: 'Pending',
-//     creditScore: '650',
-//     amount: 'N 50,000.00',
-//   },
-// ];
+
 
 const DashBoard1_Down = () => {
   return (
@@ -82,7 +44,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="dashDown-data-title"  >
                 <h4>Ogbeni Malani</h4>
-                <Link to="/applicantinfo" style={{ color: '#74757a' }}> More info </Link>
+                <Link to="/applicantinfo" style={{ color: '#74757a', paddingRight: '25px' }}> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>
@@ -103,7 +65,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
                 <h4>Muktarr Bello</h4>
-                <Link to="/applicantinfo" style={{ color: '#74757a' }}> More info </Link>
+                <Link to="/applicantinfo" style={{ color: '#74757a', paddingRight: '25px' }}> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>
@@ -123,7 +85,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
                 <h4>Ekere Stutern</h4>
-                <Link to="/applicantinfo" style={{ color: '#74757a' }}> More info </Link>
+                <Link to="/applicantinfo" style={{ color: '#74757a', paddingRight: '25px' }}> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>
@@ -145,7 +107,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
                 <h4>Rukayat stute</h4>
-                <Link to="/applicantinfo" style={{ color: '#74757a' }}> More info </Link>
+                <Link to="/applicantinfo" style={{ color: '#74757a', paddingRight: '25px' }}> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>
@@ -166,7 +128,7 @@ const DashBoard1_Down = () => {
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
                 <h4>Ogbeni Malani</h4>
-                <Link to="/applicantinfo" style={{ color: '#74757a' }}> More info </Link>
+                <Link to="/applicantinfo" style={{ color: '#74757a', paddingRight: '25px' }}> More info </Link>
                 {/* <span>more info</span> */}
               </div>
             </td>
