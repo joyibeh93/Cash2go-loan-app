@@ -1,5 +1,5 @@
 import React from "react";
-import RightArrow from '../assets/Right-arrow.svg'
+import RightArrow from '../assets/Right-arrow.svg';
 import '../Styles/LineChart.css';
 import { Line } from "react-chartjs-2";
 import {
