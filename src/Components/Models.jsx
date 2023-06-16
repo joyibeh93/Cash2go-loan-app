@@ -104,7 +104,6 @@ const Models= () => {
             </td>
             <td>01/04/23</td>
             <td>
-
               <p className="approved-down rejected-reject">
 
                 
