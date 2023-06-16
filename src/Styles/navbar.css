@@ -4,7 +4,7 @@
 }
 
 .navbar-search {
-  width: 13.85rem;
+  width: 15.85rem;
   height: 2.1875rem;
   margin-top: -0.125rem;
 }
@@ -15,8 +15,9 @@
 }
 .searchicon {
   position: absolute;
-  top: 0.45rem;
-  left: 18rem;
+  top: 0.66rem;
+  left: 18.1rem;
+  width: 18px;
 }
 .bell {
   margin-right: 1rem;
@@ -24,7 +25,7 @@
 .right-arrow {
   position: absolute;
   top: 0.8rem;
-  left: 27.5rem;
+  left: 29.5rem;
 }
 .navbar-userIcon {
   margin-right: 0.5rem;

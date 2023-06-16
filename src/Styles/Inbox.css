@@ -1,57 +1,3 @@
-.messages{
-    margin-left: -30em;
-    margin-top: 3em;
-}
-
-.message{
-    display: flex;
-    height: 7em;
-}
-.msgcntinfo{
-    height: 1em;
-    margin-right: -37em;
-    margin-left: -17em;
-    position: relative;
-    top: 1.7em;
-    left: 0.5em;
-} 
-
-.doubleclick{
-    height: 1.3em;
-    margin-right: 1em;
-}
-
-.share{
-    height: 1em;
-}
-
-.msg-icons{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    top: 2.1em;
-    left: 4em;
-}
-
-.profile{
-    margin-left: -10em;
-    margin-right: 2em;
-    height: 5em;
-}
-
-.messageDiv{
-    width: 50em;
-}
-
-.name{
-    margin-bottom: 1em;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.green{
-    color: rgb(57, 158, 57);
-}
 
 .lineDiv{
     width: 70.6%;
@@ -60,26 +6,4 @@
     position: relative;
     left: 30em;
     margin-bottom: 1em;
-}
-
-.goTo{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid var(--credit-score-bg-clr);
-    background-color: #f2f6f7;
-    padding: 0.3em 0.2em 0.7em 1em;
-    border-radius: 5px;
-    margin-top: 2em;
-}
-
-.goto , button {
-    border: none;
-}
-
-.numbers , button{
-    margin-right: 1em;
-}
-
-button{
-    cursor: pointer;
 }

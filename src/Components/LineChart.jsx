@@ -1,4 +1,6 @@
 import React from "react";
+import RightArrow from '../assets/Right-arrow.svg'
+import '../Styles/LineChart.css';
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJs,
@@ -72,7 +74,11 @@ const LineChart = () => {
         <p>Jan-May 2023</p>
       </div>
       <hr />
-      <div style={{ width: "600px", height: "300px" }}>
+      <div>
+        <div className="chart-description">
+          <p>Data in person range</p>
+          <p>Link <span><img src={RightArrow} alt="right-arrow" /></span></p>
+        </div>
         <Line data={data} options={options}></Line>
       </div>
     </div>
