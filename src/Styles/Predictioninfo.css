@@ -2,12 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
-  border-bottom: 1px solid;
+  padding: 2rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.575);
+}
+
+.top-header {
+  padding: 10px;
 }
 
 .top-header h1 {
   color: #172232;
+  margin-bottom: 5px;
 }
 
 .icon img {
@@ -44,7 +49,7 @@ table,
 th,
 td {
   padding: 0.6rem 0;
-  background-color: #f7f7f7;
+  background-color: #f0f0f0;
 }
 
 table {
@@ -59,8 +64,7 @@ table {
 
 th,
 td {
-  border-bottom: 0.1px solid #b9bdc2;
-
+  border-bottom: 1px solid #8a85852f;
 }
 
 /* th:last-child {

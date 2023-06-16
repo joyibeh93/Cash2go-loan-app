@@ -75,7 +75,7 @@
 .msg-line{
     height: 2px;
     width: 2.7em;
-    background-color: #bac0ba;
+    background-color: #f0f0f0;
     margin-top: 0.5em;
 }
 
@@ -88,10 +88,12 @@
     justify-content: space-between;
     padding: 1em;
     font-size: 17px;
+    border-bottom:0.2px solid #8a85852f
 }
 
 .Msg-inbox{
-    background-color: #f2f6f7;
+    background-color: #f0f0f0;
+    border-bottom:0.2px solid #8a85852f
 }
 
 h4, h1{
@@ -128,14 +130,14 @@ h4, h1{
     margin-left: 0.5em;
 }
 
-.goto , button {
-    border: none;
-}
-
-.numbers , button{
-    margin-right: 1em;
-}
-
 button{
     cursor: pointer;
+}
+
+.back-nav{
+    cursor: pointer;
+}
+
+.back{
+    margin-right: 1em;
 }

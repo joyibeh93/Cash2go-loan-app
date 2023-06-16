@@ -1,41 +1,53 @@
 .msg-heading{
     display: flex;
     justify-content: space-between;
+    background-color: #f2f6f7;
+    width: 100%;
+    padding-top: 0.5em;
 }
 
 .new-msg{
-    position: relative;
-    left: -31em;
+  position: relative;  
+  left: 1em;
+  border-bottom: rgb(49, 45, 45);
+}
+
+.new-msg > h2{
+    color: #172232;
 }
 
 .email-div{
     display: flex;
+    position: relative;
+    left: 0.3em;
 }
 
 .email-label{
     font-size: 15px;
-    margin-top: 0.3em;
-    margin-right: -1.5em;
+    position: relative;
+    top: 0.55em;
+    right: 1em;
     color: #172232;
 }
 
 .email{
-    position: relative;
-    left: 20em;
-    top:-0.5em;
+    
     border: 1px solid #b9bdc2;
     height: 2em;
     width: 20em;
 }
 
 .email::placeholder{
-    margin-left: -5em;
+    position: relative;
+    left: -4em;
 }
 
 .ellipses1{
+    font-size: 20px;
+    font-weight: bold;
     position: relative;
-    left: 15em;
-    bottom: 2.3em;
+    top: 0.1em;
+    right: 1.5em;
 }
 
 .linediv{
@@ -45,37 +57,72 @@
 }
 
 .msg-title{
+    display: flex;
+    margin-left: -25.5em;
     position: relative;
-    right: 1em;
+    top: 1em;
+    right: -17em;
 }
 
-/* .input{
+.msg-label{
+    position: relative;
+    top: 1.5em;
+    left: 9.5em;
+}
+
+.msg-title-input{
     height: 5em;
     background-color: #f4f6f8;
     border: none;
     width: 20em;
-} */
+    border-radius: 0;
+    border-bottom: 1px solid #252d39;
+}
+
+.msg-title-input::placeholder{
+    position: relative;
+    top: 1em;
+    left: -4em;
+}
+
+.ellipses2{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 0.5em;
+    right: 1.5em;
+}
 
 .body{
     position: relative;
-    bottom: 9em;
-    right: 15em;
+    bottom: 5.5em;;
+    left: 3em;
     font-size: 15px;
 }
 
 textarea{
     position: relative;
-    top: 3em;
-    right: 20em;
+    top: 4.5em;
+    left: -2.3em;
     border-radius: 5px;
+    border: none;
+}
+
+textarea::placeholder{
+    font-size: 15px;
+    margin-bottom: 0.5em;
 }
 
 .send{
     position: relative;
-    top: 3em;
-    right: 14em;
+    top: 4em;
     margin-bottom: 1.5em;
     background-color: #ff6f5a;
-    padding: 0.5em;
+    color: #f4f6f8;
+    padding: 0.5em 1.5em 0.5em 1.5em;
     border-radius: 5px;
+}
+
+input , textarea:focus{
+    outline: none;
 }

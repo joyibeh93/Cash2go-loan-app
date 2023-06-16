@@ -144,6 +144,7 @@ import * as Yup from 'yup';
 import '../Styles/QuestionForm.css';
 import { useNavigate } from 'react-router-dom';
 import Buttons from './Buttons';
+import RightArrow from '../assets/Right-arrow.svg';
 import '../Styles/OtpForm.css';
 import Congrats from '../assets/congratulations.svg';
 
@@ -214,18 +215,18 @@ const QuestionForm = () => {
   };
 
   return (
-    <div className="form-container" style={{ paddingTop: '190px' }}>
+    <div className="Question-container">
       <Formik
         initialValues={{ Question: '', Answer: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         {({ errors, touched }) => (
-          <Form className="form">
+          <Form className="Question-form">
             <label className="label" htmlFor="Question">
               Select your security question
             </label>
-            <Field as="select" id="Question" name="Question" className="input">
+            <Field as="select" id="Question" name="Question" className=" Question-input">
               <option value="">Select a question</option>
               <option value="Where did you meet your spouse?">
                 Where did you meet your spouse?
@@ -252,15 +253,16 @@ const QuestionForm = () => {
             <label htmlFor="Answer" className="label">
               Your answer
             </label>
-            <Field type="text" id="Answer" name="Answer" className="input" />
+            <Field type="text" id="Answer" name="Answer" className="Question-input" />
             <ErrorMessage
               name="Answer"
               component="div"
               className="error-message"
             />
 
-            <div className="button">
-              <Buttons button="Submit" />
+            <div className=" Question-button">
+              <Buttons button="Sign up"/><span><img src={RightArrow} alt="right-arrow" /></span>
+
             </div>
           </Form>
         )}
