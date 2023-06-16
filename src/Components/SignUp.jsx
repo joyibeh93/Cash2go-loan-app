@@ -1,4 +1,5 @@
 import React, { useState, navigate } from 'react';
+import { useNavigate } from 'react-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Buttons from './Buttons';
@@ -66,7 +67,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="form-container-signup1" style={{ paddingTop: '170px' }}>
+    <div className="form-container-signup1" style={{ paddingTop: '180px' }}>
       <h2>Sign Up</h2>
       <Formik
         initialValues={{ email: '', companyID: '' }}
@@ -102,7 +103,7 @@ const Signup = () => {
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
 
-          <button className='button-signup1'>Next -></button>
+          <button className='button-signup1'>Next  -></button>
           {/* <Buttons button="Next ->" /> */}
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
