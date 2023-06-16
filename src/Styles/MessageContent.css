@@ -80,7 +80,7 @@
 }
 
 .selected{
-    background-color: #f0f0f0;
+    background-color: #747a74;
 }
 
 .msg-cnt-note{
@@ -116,8 +116,8 @@ h4, h1{
 .goTo{
     display: flex;
     justify-content: space-between;
-    border: 1px solid#8a85852f;
-    background-color: #f0f0f0;
+    border: 1px solid var(--credit-score-bg-clr);
+    background-color: #f2f6f7;
     padding: 0.3em 0.2em 0.7em 1em;
     border-radius: 5px;
 }
@@ -130,14 +130,14 @@ h4, h1{
     margin-left: 0.5em;
 }
 
-.goto , button {
-    border: none;
-}
-
-.numbers , button{
-    margin-right: 1em;
-}
-
 button{
     cursor: pointer;
+}
+
+.back-nav{
+    cursor: pointer;
+}
+
+.back{
+    margin-right: 1em;
 }
