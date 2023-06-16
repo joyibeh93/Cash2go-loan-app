@@ -1,7 +1,8 @@
-import React, { useState, navigate } from 'react';
+import React, { useState} from 'react';
+import {useNavigate } from 'react-router-dom'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import Buttons from './Buttons';
+//import Buttons from './Buttons';
 import eyeIcon from '../assets/eye icon.svg';
 import OtpForm from './OtpForm';
 import '../Styles/Signup1.css';
@@ -16,6 +17,7 @@ const Signup = () => {
       .required('Email is required'),
     companyID: Yup.string().required('Company ID is required'),
   });
+  const navigate = useNavigate()
 
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
@@ -102,7 +104,7 @@ const Signup = () => {
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
 
-          <button className='button-signup1'>Next -></button>
+          <button type="submit" className='button-signup1'>Next</button>
           {/* <Buttons button="Next ->" /> */}
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/MessageContentInfo.css";
+import "../Styles/Inbox.css";
 import doubleClickRed from "../assets/doubleClickRed.png";
 import shareArrow from "../assets/shareArrow.jpg";
 import msg1 from "../assets/msg1.jpg";
@@ -7,7 +7,7 @@ import msg2 from "../assets/msg2.jpg";
 import msg3 from "../assets/msg3.jpg";
 import msg4 from "../assets/msg4.jpg";
 
-const MessageContentInfo = () => {
+const Inbox = () => {
   return (
     <div className="Msg-inbox">
       <div className="msg-cnt-note">
@@ -86,8 +86,23 @@ const MessageContentInfo = () => {
         </div>
         <div className="lineDiv"></div>
       </div>
+      <div className="goTo">
+        <button className="prev">
+          <span className="arrow-left">&larr;</span>Prev
+        </button>
+        <div className="numbers">
+          <button>1</button>
+          <button>2</button>
+          <button>...</button>
+          <button>5</button>
+          <button>6</button>
+        </div>
+        <button className="next">
+          Next<span className="arrow-right">&rarr;</span>
+        </button>
+      </div>
     </div>
   );
 };
 
-export default MessageContentInfo;
+export default Inbox;
