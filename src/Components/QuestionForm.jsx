@@ -262,12 +262,11 @@ const QuestionForm = () => {
 
             <div className=" Question-button">
               <Buttons button="Sign up"/><span><img src={RightArrow} alt="right-arrow" /></span>
-
             </div>
           </Form>
         )}
       </Formik>
-      <p className="terms">
+      <p className="Question-terms">
         Term of use &nbsp; &nbsp; Privacy policy
       </p>
       {showModal && <Modal />}
