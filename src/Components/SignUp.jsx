@@ -68,7 +68,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="form-container-signup1" style={{ paddingTop: '180px' }}>
+    <div className="form-container-signup1" style={{ paddingTop: '170px' }}>
       <h2>Sign Up</h2>
       <Formik
         initialValues={{ email: '', companyID: '' }}
@@ -104,7 +104,7 @@ const Signup = () => {
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
 
-          <button type="submit" className='button-signup1'>Next</button>
+          <button className='button-signup1'>Next  -></button>
           {/* <Buttons button="Next ->" /> */}
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
