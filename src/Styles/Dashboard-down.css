@@ -72,7 +72,7 @@ td {
 
 .dashDown-first-data {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   border-bottom: 0.1px solid #b9bdc2;
 }
@@ -103,10 +103,9 @@ td {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
+  text-align: center;
   background-color: var(--approved-btn-bg-clr);
   color: var(--main-bg-clr);
-<<<<<<< HEAD
   width: 60%;
   margin-left: 2rem;
 }
@@ -177,15 +176,3 @@ td {
   font-size: 12.8px;
   padding-left: 310px;
 }
-=======
-  border-radius: 10px;
-  padding: 1px 0px;
-}
-.head-content{
-  line-height:1.2em
-}
-
-.rejected-reject{
-  background-color: var(--defaulted-bg-clr);
-} 
->>>>>>> dev1

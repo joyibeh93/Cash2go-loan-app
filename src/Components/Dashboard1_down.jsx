@@ -11,13 +11,13 @@ import { Link } from "react-router-dom"
 
 const DashBoard1_Down = () => {
   return (
-    <div className="dashBoardTable">
-      <div className="tablehead">
-        <div>
-          <h3>All Applications</h3>
-          <span>Sorted by Date</span>
+    <div className="dashDown-Table">
+      <div className="dashDown-tablehead">
+        <div style={{ paddingBottom: '15px' }} >
+          <h3 className='dashDown-h3'>All Applications</h3>
+          <span >Sorted by Date</span>
         </div>
-        <img src={download} alt="download-icon" />
+        <img src={download} alt="download-icon" style={{ paddingRight: '15px' }} />
       </div>
       <table>
         <thead>
@@ -113,8 +113,8 @@ const DashBoard1_Down = () => {
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p className="approved-down rejected-reject">
-                <img src={rejectedTransparent} alt="" /> Rejected
+              <p className="dashDown-approved">
+                <img src={approvedTransparent} alt="" style={{ marginRight: '5px' }} /> Approved
               </p>
             </td>
             <td>330</td>
@@ -156,21 +156,6 @@ const DashBoard1_Down = () => {
           </tr>
         </tbody>
       </table>
-      <div className="goTo">
-        <button className="prev">
-          <span className="arrow-left">&larr;</span>Prev
-        </button>
-        <div className="numbers">
-          <button>1</button>
-          <button>2</button>
-          <button>...</button>
-          <button>5</button>
-          <button>6</button>
-        </div>
-        <button className="next">
-          Next<span className="arrow-right">&rarr;</span>
-        </button>
-      </div>
     </div>
   );
 };
