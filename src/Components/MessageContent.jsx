@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../Styles/MessageContent.css";
-import MessageContentInfo from "./inbox";
+import "../Styles/Inbox.css";
+import Inbox from "./Inbox";
 import MsgForm from "./MsgForm";
 import ThreadForm from "./ThreadForm";
 
@@ -63,13 +63,13 @@ function MessageContent() {
         </div>
       </div>
       {message === "inbox" ? (
-        <MessageContentInfo />
+        <Inbox />
       ) : message === "new" ? (
         <MsgForm />
       ) : message === "thread" ? (
         <ThreadForm />
       ) : (
-        <MessageContent />
+        <Inbox />
       )}
     </div>
   );
