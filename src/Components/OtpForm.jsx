@@ -352,9 +352,7 @@ const OtpForm = ({ email, nextStep }) => {
   const validationSchema = yup.object().shape({
     otp: yup
       .array()
-      .of(yup.string().required('PIN is required')
-      .matches(/^[0-9]+$/, 'PIN must contain only numbers'))
-
+      .of(yup.string().required('PIN is required'))
       .min(4, 'PIN must be exactly 4 digits')
       .max(4, 'PIN must be exactly 4 digits'),
   });
@@ -443,7 +441,6 @@ const OtpForm = ({ email, nextStep }) => {
                   onBlur={handleBlur}
                   className={errors.otp && errors.otp[i] ? 'error' : ''}
                   autoComplete="off"
-                  pattern="[0-9]*" // Add pattern attribute to allow only numbers
                 />
               ))}
             </div>
