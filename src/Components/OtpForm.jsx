@@ -626,8 +626,13 @@ const OtpForm = ({ email }) => {
   };
 
   const validationSchema = yup.object().shape({
+
     otp: yup.string().matches(/^[0-9]{4}$/, 'Invalid OTP').required('OTP is required'),
-  });
+    otp: yup
+      .array()
+      .of(yup.string().required('PIN is required').matches(/^[0-9]$/, 'PIN must be a number'))
+      .min(4, 'PIN must be exactly 4 digits')
+      .max(4, 'PIN must be exactly 4 digits'),
 
   const handleVerifyOtp = async (values, { setSubmitting }) => {
     try {
@@ -700,9 +705,12 @@ const OtpForm = ({ email }) => {
                   type="text" // Use type "number" for numeric input
                   name={`otp[${i}]`}
                   autoComplete="off"
+
                   inputMode="numeric" // Allow only numeric input
                   maxLength={1} // Limit input to 1 character
                   pattern="[0-9]*" // Only accept numeric characters
+                  maxLength={1}
+
                 />
               ))}
             </div>

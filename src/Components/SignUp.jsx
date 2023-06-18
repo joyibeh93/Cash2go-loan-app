@@ -232,6 +232,10 @@ const Signup = () => {
           <p className="terms-signup1">
             Term of use &nbsp; &nbsp; Privacy policy
           </p>
+
+          <button className='button-signup1' type='submit'>Next  -></button>
+
+          <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
       {showOtpForm && <OtpForm email={email} />}
