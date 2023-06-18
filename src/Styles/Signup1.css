@@ -1,7 +1,7 @@
 .eye1-signup1 {
   position: absolute;
   top: 22.7em;
-  left: 78em;
+  left: 75em;
 }
 
 
@@ -25,7 +25,7 @@
 .form-signup1 {
   padding: 1em 2em;
   /* margin-left: 4.5em; */
-  width: 100%;
+  width: 30em;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -53,19 +53,14 @@
 
 .terms-signup1 {
   margin-top: 5em;
-  margin-left: 11.3em;
+  margin-left: 7em;
   color: #747a74;
   font-family: var(--font-family-body);
 }
 
 .button-signup1 {
   line-height: 2.5;
-  /* padding: 0 220px; */
-  padding-right: 232px;
-  padding-left: 232px;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-  margin-right: 0.2em;
+  width: 26em;
   font-size: 1rem;
   text-align: center;
   color: #fff;

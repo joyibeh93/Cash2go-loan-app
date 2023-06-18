@@ -134,7 +134,7 @@ const DashBoard1_Down = () => {
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p style={{ color: 'black', fontSize: '14.1px' }} className="dashDown-pending">
+              <p style={{ color: 'white', fontSize: '13.1px' }} className="dashDown-pending">
                 <img src={pendingTransparent} alt="" style={{ marginRight: '5px' }} />  Pending
               </p>
             </td>
@@ -146,15 +146,15 @@ const DashBoard1_Down = () => {
           </tr>
           <tr >
             <th className="dashDown-footer"  >
-              <button className='dashDown-foot1' > Prev </button>
+              <button className='dashDown-foot1' ><span className="arrow-left">&larr;</span>Prev</button>
               <button className='dashDown-foot2'   >1</button>
               <button className='dashDown-foot2'   >2</button>
               <button className='dashDown-foot2'  >_</button>
               <button className='dashDown-foot2'  >5</button>
               <button className='dashDown-foot2'  >6</button>
-              <button className='dashDown-foot3'  >Next</button>
+              <button className='dashDown-foot3'  >Next<span className="arrow-right">&rarr;</span></button>
             </th>
-          </tr>
+          </tr >
         </tbody>
       </table>
     </div>

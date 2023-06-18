@@ -104,7 +104,7 @@ const Signup = () => {
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
 
-          <button className='button-signup1' type='submit'>Next  -></button>
+          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
