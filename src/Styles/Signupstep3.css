@@ -1,4 +1,16 @@
-.button {
+.Signup3-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+  padding: 3em;
+  margin-left: 40px;
+  margin-top: 140px;
+}
+
+/* .button {
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
   padding: 0.6em;
@@ -7,28 +19,44 @@
   text-align: center;
   width: 70%;
   margin-left: 3em;
+} */
+
+.button-signup1 {
+  line-height: 2.5;
+  width: 26em;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  font-family: var(--font-family-body);
+  background-color: var(--submit-btn-bg-clr);
 }
+
 .button button {
   background-color: transparent;
   color: #fff;
   border: none;
   cursor: pointer;
 }
+
 .eye {
   position: absolute;
-  left: 84em;
-  bottom: 19.5em;
+  left: 77.4em;
+  top: 17.5em;
 }
 
 .eye2 {
   position: absolute;
-  top: 24em;
-  left: 84em;
+  top: 24.4em;
+  left: 77.4em;
   cursor: pointer;
 }
 
-.terms {
-  margin: 3em auto;
+.terms-signin {
+  margin-top: 2em;
+  margin-left: 7em;
+  color: #747a74;
+  font-family: var(--font-family-body);
 }
 
 .signup {
@@ -49,10 +77,3 @@
   align-items: center;
   margin-bottom: 4em;
 }
-
-
-
-
-
-
-
