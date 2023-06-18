@@ -32,8 +32,11 @@
 }
 
 .signup {
-  display: block;
-  padding: 1em 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
   border-radius: 0.5em;
   width: 90%;
   margin-top: 0.5rem;
@@ -46,3 +49,10 @@
   align-items: center;
   margin-bottom: 4em;
 }
+
+
+
+
+
+
+

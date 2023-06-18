@@ -352,7 +352,7 @@ const OtpForm = ({ email, nextStep }) => {
   const validationSchema = yup.object().shape({
     otp: yup
       .array()
-      .of(yup.string().required('PIN is required'))
+      .of(yup.string().required('PIN is required').matches(/^[0-9]$/, 'PIN must be a number'))
       .min(4, 'PIN must be exactly 4 digits')
       .max(4, 'PIN must be exactly 4 digits'),
   });
@@ -441,6 +441,7 @@ const OtpForm = ({ email, nextStep }) => {
                   onBlur={handleBlur}
                   className={errors.otp && errors.otp[i] ? 'error' : ''}
                   autoComplete="off"
+                  maxLength={1}
                 />
               ))}
             </div>
