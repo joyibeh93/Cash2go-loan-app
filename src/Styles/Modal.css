@@ -1,0 +1,45 @@
+.modal{
+    background-color: white;
+    width: 50%;
+    box-shadow: none;
+    margin-bottom: -19.5em;
+    position: relative;
+    top: 4.5em;
+    border-radius: 10px;
+}
+
+.cancelbtn{
+    background-color: white;
+    color: grey;
+    position: relative;
+    top: -4em;
+    right: -11em;
+}
+
+.alarm{
+    height: 5em;
+    position: relative;
+    top: -1em;
+    left: 1em;
+}
+
+.modal-title{
+    font-weight: bold;
+    font-size: 19px;
+    position: relative;
+    bottom: 1em;
+}
+
+footer > button {
+    padding: 0.5em 2em 0.5em 2em;
+    border-radius: 5px;
+}
+
+.no{
+    background-color: white;
+    border: 1px solid #252d39;
+}
+
+.yes{
+    background-color: #ff6f5a;
+}

@@ -79,10 +79,6 @@
     margin-top: 0.5em;
 }
 
-.selected{
-    background-color: #747a74;
-}
-
 .msg-cnt-note{
     display:flex;
     justify-content: space-between;
@@ -107,10 +103,81 @@ h4, h1{
     width: 100%;
     height: 1px;
     background-color: var(--credit-score-bg-clr);
-    position: relative;
-    margin-bottom: -1em;
 }
 
+.messages{
+    margin-bottom: 2em;
+}
+
+.message{
+    display: flex;
+    height: 8em;
+    justify-content: space-between;
+}
+
+.msgcntinfo{
+    position: relative;
+    left: 1.5em;
+}
+
+.first{
+    margin-top: 1em;
+}
+
+.profile{
+    height: 6em;
+    position: relative;
+    top: 1em;
+}
+
+.messageDiv{
+    width: 70%;
+    position: relative;
+    top: 2em;
+}
+
+.name{
+    font-size: 17px;
+    color: var(--submit-btn-bg-clr);
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.green{
+    color: #169872;
+}
+
+.msg-icons{
+    position: relative;
+    top: 3.8em;
+}
+
+.doubleclick{
+    height: 1.5em;
+    position: relative;
+    left: -2em;
+}
+
+.share{
+    height: 1em;
+    position: relative;
+    right: 1em;
+}
+
+.lineDiv{
+    width: 100%;
+    height: 1px;
+    background-color: var(--credit-score-bg-clr);  
+}
+
+.goTo{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--credit-score-bg-clr);
+    background-color: #f2f6f7;
+    padding: 0.3em 0.2em 0.7em 1em;
+    border-radius: 5px;
+}
 
 .arrow-left{
     margin-right: 0.5em;
