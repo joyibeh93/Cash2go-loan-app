@@ -352,7 +352,7 @@ const OtpForm = ({ email, nextStep }) => {
   const validationSchema = yup.object().shape({
     otp: yup
       .array()
-      .of(yup.string().required('PIN is required').matches(/^[0-9]{1}$/, 'PIN must be a number'))
+      .of(yup.string().required('PIN is required').matches(/^[0-9]$/, 'PIN must be a number'))
       .min(4, 'PIN must be exactly 4 digits')
       .max(4, 'PIN must be exactly 4 digits'),
   });
