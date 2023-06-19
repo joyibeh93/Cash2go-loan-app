@@ -1,4 +1,4 @@
-/*.msg-heading{
+.msg-heading{
     display: flex;
     justify-content: space-between;
     background-color: #f2f6f7;
@@ -120,4 +120,3 @@ textarea::placeholder{
 input , textarea:focus{
     outline: none;
 }
-*/
