@@ -269,7 +269,7 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 //import Buttons from './Buttons';
 import '../Styles/OtpForm.css';
 import '../Styles/Signupstep3.css';
@@ -330,12 +330,12 @@ const SignIn = () => {
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="forms" style={{ paddingTop: '190px' }}>
-          <label htmlFor="username" className="labels">
+        <Form className="form-signup1">
+          <label htmlFor="username" className="label-signup3" style={{ color: '#747a74' }}>
             Username
           </label>
           <Field
-            className="signup"
+            className="input-signup1"
             type="text"
             id="username"
             name="username"
@@ -347,12 +347,12 @@ const SignIn = () => {
             className="error-message"
           />
 
-          <label className="labels" htmlFor="password">
+          <label className="label-signup3" style={{ color: '#747a74' }} htmlFor="password">
             Password
           </label>
 
           <Field
-            className="signup"
+            className="input-signup1"
             type={showPassword ? 'text' : 'password'}
             id="password"
             maxLength={8}
@@ -372,12 +372,12 @@ const SignIn = () => {
             className="error-message"
           />
 
-          <label htmlFor="confirmpassword" className="labels">
+          <label htmlFor="confirmpassword" className="label-signup3" style={{ color: '#747a74' }}>
             Re-enter Password
           </label>
 
           <Field
-            className="signup"
+            className="input-signup1"
             type={showPassword ? 'text' : 'password'}
             id="confirmPassword"
             maxLength={8}
@@ -397,12 +397,13 @@ const SignIn = () => {
             className="error-message"
           />
 
-          <div className="button">
+          {/* <div className="button">
             <button type="submit" className="button">
               Sign In
             </button>
-          </div>
-          <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+          </div> */}
+          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+          <p className="terms-signin">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
     </div>
