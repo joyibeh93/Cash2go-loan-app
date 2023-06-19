@@ -1,5 +1,9 @@
 .thread{
-    position: relative;
-    left: 10em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
 }
 
+.thread-msg{
+    position: relative;
+    left: -14em;
+}
