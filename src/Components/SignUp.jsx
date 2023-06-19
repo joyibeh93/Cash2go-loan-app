@@ -133,7 +133,8 @@ import OtpForm from './OtpForm';
 import '../Styles/Signup1.css';
 
 const Signup = () => {
-  const [email, setEmail] = useState('');
+ 
+  const [useremail, setUserEmail] = useState('');
   const [showOtpForm, setShowOtpForm] = useState(false);
   const [signupMessage, setSignUpMessage] = useState('');
 
@@ -145,6 +146,7 @@ const Signup = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (values, { setSubmitting }) => {
+    
     setSubmitting(true);
     const email = values.email;
     const companyID = values.companyID;
@@ -168,9 +170,10 @@ const Signup = () => {
         console.log(isAuthenticated);
 
         if (isAuthenticated) {
-          setEmail(email);
+          setUserEmail(email);
+          console.log('this is setemail value',setUserEmail(email))
           setShowOtpForm(true);
-          navigate('../SignUpStep2', { state: { email } });
+          navigate('../SignUpStep2');
         }
       } else {
         setSignUpMessage(data.message || 'An error occurred during sign up.');
@@ -207,6 +210,7 @@ const Signup = () => {
             id="email"
             name="email"
             placeholder="myworkemail@work.com"
+  
           />
           <ErrorMessage name="email" component="div" className="error-message" />
 
@@ -232,13 +236,9 @@ const Signup = () => {
           <p className="terms-signup1">
             Term of use &nbsp; &nbsp; Privacy policy
           </p>
-
-          <button className='button-signup1' type='submit'>Next  -></button>
-
-          <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
-      {showOtpForm && <OtpForm email={email} />}
+      {showOtpForm && < OtpForm email= {useremail} />}
       <div style={{ textAlign: 'center', color: 'red' }}>
         {signupMessage && <p className="login-message">{signupMessage}</p>}
       </div>
@@ -247,3 +247,5 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
