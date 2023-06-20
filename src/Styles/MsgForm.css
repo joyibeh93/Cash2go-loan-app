@@ -4,12 +4,12 @@
     background-color: #f2f6f7;
     width: 100%;
     padding-top: 0.5em;
+    border-bottom: rgb(49, 45, 45);
 }
 
 .new-msg{
   position: relative;  
   left: 1em;
-  border-bottom: rgb(49, 45, 45);
 }
 
 .new-msg > h2{
@@ -25,7 +25,7 @@
 .email-label{
     font-size: 15px;
     position: relative;
-    top: 0.55em;
+    top: 0.4em;
     right: 1em;
     color: #172232;
 }
@@ -39,14 +39,14 @@
 
 .email::placeholder{
     position: relative;
-    left: -4em;
+    left: 0.5em;
 }
 
 .ellipses1{
     font-size: 20px;
     font-weight: bold;
     position: relative;
-    top: 0.1em;
+    bottom: 0.23em;
     right: 1.5em;
 }
 
@@ -57,53 +57,47 @@
 }
 
 .msg-title{
-    display: flex;
-    margin-left: -25.5em;
+    background-color: #f4f6f8;
+    height: 5em;
+    width: 20em;
     position: relative;
     top: 1em;
-    right: -17em;
+    padding: 1em 1em 0.5em 1em;
 }
 
-.msg-label{
-    position: relative;
-    top: 1.5em;
-    left: 9.5em;
+.lab-el{
+    display: flex;
+    justify-content: space-between;
 }
 
 .msg-title-input{
-    height: 5em;
-    background-color: #f4f6f8;
     border: none;
-    width: 20em;
-    border-radius: 0;
-    border-bottom: 1px solid #252d39;
-}
-
-.msg-title-input::placeholder{
-    position: relative;
-    top: 1em;
-    left: -4em;
+    background-color: #f4f6f8;
+    height: 2em;
 }
 
 .ellipses2{
     font-size: 20px;
     font-weight: bold;
-    position: relative;
-    top: 0.5em;
-    right: 1.5em;
 }
 
 .body{
     position: relative;
-    bottom: 5.5em;;
     left: 3em;
     font-size: 15px;
+    color: #1c2b42;
+}
+
+.up-angle{
+    position: relative;
+    left: 65em;
+    top: 1em;
+    cursor: pointer;
 }
 
 textarea{
     position: relative;
-    top: 4.5em;
-    left: -2.3em;
+    top: 2em;
     border-radius: 5px;
     border: none;
 }

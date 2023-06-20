@@ -1,5 +1,5 @@
-import React, { useState} from 'react';
-import {useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 //import Buttons from './Buttons';
@@ -104,8 +104,7 @@ const Signup = () => {
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
 
-          <button type="submit" className='button-signup1'>Next</button>
-          {/* <Buttons button="Next ->" /> */}
+          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
