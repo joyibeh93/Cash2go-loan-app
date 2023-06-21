@@ -266,11 +266,12 @@
 // export default SignIn;
 
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 //import Buttons from './Buttons';
+import axios from 'axios'
 import '../Styles/OtpForm.css';
 import '../Styles/Signupstep3.css';
 import eyeIcon from '../assets/eye icon.svg';
@@ -287,36 +288,56 @@ const SignIn = () => {
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [showPassword, setShowPassword] = useState(false);
+  const [status,setStatus]=useState("")
+  const [email,setEmail]=useState("")
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const email = searchParams.get('email');
+    setEmail(email);
+  }, [location.search]);
 
   const handleSubmit = async (values, { setSubmitting }) => {
-    try {
-      const response = await fetch('https://cash2go-backendd.onrender.com/api/v1/user/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: values.username,
-          password: values.password,
-        }),
-      });
+    setSubmitting(true); // Set form submission state to true
+    // setCompleted(true);
+    // toggleModal();
 
-      if (response.ok) {
-        console.log('Login successful!');
-        // Perform any desired actions after successful login
-        navigate('/dashboard'); // Replace '/dashboard' with the desired route
-      } else {
-        console.log('Error while logging in.');
-        // Handle the login error, show error message, etc.
+    //const email = values.email; // Get email value from form
+    const username = values.username; // Get username value from form
+    const password = values.password; // Get password value from form
+    const confirmPassword = values.confirmPassword; // Get confirm password value from form
+
+    try {
+      // Send request to server to authenticate username and password
+      const response = await axios.patch(
+        `https://cash2go-backendd.onrender.com/api/v1/user/signup?email=${email}`,
+        {
+          username: username,
+          password: password,
+          confirmPassword: confirmPassword,
+        }
+      );
+      console.log(response.data);
+      const isAuthenticated = response.data; // Get authentication status from response
+      if (isAuthenticated) {
+        navigate('../dashboard')
+       // setCompleted(true); // If user is authenticated, set completed state to true
+        //toggleModal(); // If user is authenticated, call the open modal function to open modal
       }
     } catch (error) {
-      console.log('Error:', error);
-      // Handle the fetch error, show error message, etc.
+      console.error("Error:", error);
+      if (error.response) {
+        setStatus(error.response.data.message); // Set error message from response
+        setTimeout(() => {
+          setStatus(""); // Clear status message after 5 seconds
+        }, "5000");
+      }
+    } finally {
+      setSubmitting(false); // Set form submission state to false	
     }
-
-    setSubmitting(false);
   };
 
   const togglePasswordVisibility = () => {
@@ -402,7 +423,8 @@ const SignIn = () => {
               Sign In
             </button>
           </div> */}
-          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+           <div style={{ color: 'red' }}>{status}</div>
+          <button className='button-signup1' type='submit'> SignIn <span className="arrow-right">&rarr;</span></button>
           <p className="terms-signin">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
