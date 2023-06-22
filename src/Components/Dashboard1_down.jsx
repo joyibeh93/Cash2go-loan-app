@@ -8,34 +8,33 @@ import rejectedTransparent from '../assets/rejected-transparent.svg';
 import pendingTransparent from '../assets/pending-transparent.svg';
 import { Link } from "react-router-dom"
 
-
 const DashBoard1_Down = () => {
   return (
     <div className="dashDown-Table">
       <div className="dashDown-tablehead">
-        <div style={{ paddingBottom: '15px' }} >
+        <div className="dashdown-div"  >
           <h3 className='dashDown-h3'>All Applications</h3>
           <span >Sorted by Date</span>
         </div>
-        <img src={download} alt="download-icon" style={{ paddingRight: '15px' }} />
+        <img src={download} alt="download-icon" className='dashdown-icon' />
       </div>
       <table>
         <thead>
           <tr >
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>Product</th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>
+            <th className='dash-th'>Product</th>
+            <th>
               Date <img src={downArrow} alt="" />{' '}
             </th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>
+            <th >
               Status <img src={downArrow} alt="" />{' '}
             </th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>
+            <th>
               Credit Score <img src={downArrow} alt="" />{' '}
             </th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>
+            <th>
               Amount <img src={downArrow} alt="" />{' '}
             </th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}> </th>
+            <th> </th>
           </tr>
         </thead>
         <tbody>
