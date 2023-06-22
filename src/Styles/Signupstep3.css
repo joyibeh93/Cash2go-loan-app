@@ -69,9 +69,9 @@
 }
 
 .terms-signin {
-  margin-top: 2em;
+  margin-top: 5em;
   margin-left: 7em;
-  color: #747a74;
+  font-size: 0.8rem;
   font-family: var(--font-family-body);
 }
 

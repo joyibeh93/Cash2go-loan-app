@@ -6,8 +6,10 @@ import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import eyeIcon from '../assets/eye icon.svg';
+import RightArrow from '../assets/Right-arrow.svg';
 import OtpForm from './OtpForm';
 import '../Styles/Signup1.css';
+
 
 const Signup = () => {
  
@@ -105,9 +107,10 @@ const Signup = () => {
           />
           <img src={eyeIcon} className="eye1-signup1" alt="eye-icon" />
           <ErrorMessage name="companyID" component="div" className="error-message" />
-
-
-          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+          <div className="b-signup1">
+          <button className='button-signup1' type='submit'>Next <span><img src={RightArrow} alt="right-arrow" /></span>
+</button>
+</div>
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
