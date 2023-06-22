@@ -1,7 +1,7 @@
 .eye1-signup1 {
   position: absolute;
-  top: 22.7em;
-  left: 75em;
+  top: 22em;
+  left: 74em;
 }
 
 
@@ -17,11 +17,9 @@
 
 .form-container-signup1 h2 {
   font-size: 2.0em;
-  font-weight: lighter;
-  margin-bottom: 0.5em;
-
+  /* font-weight: lighter; */
+  /* margin-bottom: 0.5em; */
 }
-
 .form-signup1 {
   padding: 1em 2em;
   /* margin-left: 4.5em; */
@@ -39,8 +37,17 @@
   color: #747a74;
   font-family: var(--font-family-body);
 }
+.input-signup1{
+    border-radius: 5px;
+    width: 30em;
+    padding: 1em;
+    margin-bottom: 1em;
+    font-family: var(--font-family-body);
+    outline: 0;
+    border: 2px solid #747a85;
+}
 
-.input-signup1 {
+/* .input-signup1 {
   display: block;
   width: 100%;
   padding: 1.2em;
@@ -48,17 +55,34 @@
   outline: none;
   border-radius: 0.5em;
   margin-bottom: 3em;
-}
-
-
+} */
 .terms-signup1 {
   margin-top: 5em;
   margin-left: 7em;
   color: #747a74;
   font-family: var(--font-family-body);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.b-signup1{
+  font-family: var(--font-family-body);
+  background-color: var(--submit-btn-bg-clr);
+  padding: 0.6em;
+  outline: none;
+  border-radius: 0.5em;
+  /* margin-top: 0.125em; */
+  text-align: center;
+  width: 80%;
+  margin-left: 1.5em;
+}
+.b-signup1 button{
+  background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-.button-signup1 {
+/* .b-signup1 {
   line-height: 2.5;
   width: 26em;
   font-size: 1rem;
@@ -67,8 +91,8 @@
   border-radius: 12px;
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
-}
+} */
 
-.button-signup1:hover {
+/* .button-signup1:hover {
   background-color: var(--submit-btn-bg-clr);
-}
+} */

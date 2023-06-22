@@ -462,7 +462,7 @@ const OtpForm = ({ email, nextStep }) => {
           <div className="btn otp">
             <Buttons button="Submit" disabled={isSubmitting} />
           </div>
-          <p className="terms">
+          <p className="otp-term">
             Term of use &nbsp; &nbsp; Privacy policy
           </p>
         </Form>

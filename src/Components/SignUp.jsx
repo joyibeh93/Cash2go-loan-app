@@ -102,10 +102,10 @@ const Signup = () => {
           />
           <img src={eyeIcon} className="eye1-signup1" alt="eye-icon" />
           <ErrorMessage name="companyID" component="div" className="error-message" />
-
-
-          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
-
+          <div className="b-signup1">
+          <button className='' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+          </div>
+          
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
