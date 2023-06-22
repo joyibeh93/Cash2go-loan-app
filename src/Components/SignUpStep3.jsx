@@ -402,8 +402,9 @@ const SignIn = () => {
               Sign In
             </button>
           </div> */}
-          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
-          <p className="terms-signin">Term of use &nbsp; &nbsp; Privacy policy</p>
+          <div className="step3-btn"><button className='' type='submit'>Next <span className="arrow-right">&rarr;</span></button></div>
+          
+          <p className="step3-trm">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
     </div>

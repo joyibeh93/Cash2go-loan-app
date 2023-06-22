@@ -7,7 +7,6 @@
   align-items: center;
   width: 100%;
 }
-
 .form-login {
   width: 100%;
   display: flex;
@@ -25,7 +24,7 @@
   margin-top: 1em;
   font-family: var(--font-family-body);
   outline: 0;
-  border: 1px solid black;
+  border: 2px solid #747a85;
 }
 .loginheader {
   color: var(--main-text-color);
@@ -34,8 +33,19 @@
   font-family: var(--font-family-body);
   font-weight: bold;
 }
+.login-btn{
+  font-family: var(--font-family-body);
+  background-color: var(--submit-btn-bg-clr);
+  padding: 0.6em;
+  outline: none;
+  border-radius: 0.5em;
+  /* margin-top: 0.125em; */
+  text-align: center;
+  width: 80%;
+  margin-left: 1.5em;
+}
 
-.login-btn {
+/* .login-btn {
   width: 80%;
   font-family: var(--font-family-body);
   text-transform: uppercase;
@@ -48,7 +58,7 @@
   text-align: center;
 
   cursor: pointer;
-}
+} */
 
 .login-btn button {
   background-color: transparent;
