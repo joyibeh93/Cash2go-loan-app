@@ -47,7 +47,7 @@ const ResetPasswordForm = () => {
 
   return (
     <div className="form-container">
-      <h1>Reset Password</h1>
+      <h1 className="re-heading">Reset Password</h1>
       <Formik
         initialValues={{ email: '' }}
         validationSchema={emailSchema}
@@ -70,13 +70,13 @@ const ResetPasswordForm = () => {
               component="div"
               className="error-message"
             />
-            <div className="btn re-btn">
+            <div className="re-btn">
               <Buttons button="Next" />
             </div>
           </Form>
         )}
       </Formik>
-      <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+      <p className=" re-terms">Term of use &nbsp; &nbsp; Privacy policy</p>
     </div>
   );
 };

@@ -154,17 +154,15 @@ const QuestionForm = () => {
               className="error-message"
             />
 
-            <div className="Question-button">
-              <Buttons button="Next" disabled={isSubmitting || isLoading} />
-              <span>
-                <img src={RightArrow} alt="right-arrow" />
-              </span>
+            <div className=" Question-button">
+              <Buttons button="Sign up"/><span><img src={RightArrow} alt="right-arrow" /></span>
+
             </div>
             <div style={{ color: 'red' }}>{status}</div>
           </Form>
         )}
       </Formik>
-      <p className="terms">
+      <p className="Question-terms">
         Term of use &nbsp; &nbsp; Privacy policy
       </p>
       {showModal && <Modal handleModalClose={handleModalClose} />}

@@ -97,22 +97,22 @@
   .details { 
     margin: 0.5rem 0;
   }
-  /* .approved-black {
+  .appr-black {
     position: absolute;
     left: 36.5rem;
     bottom: 28rem;
     width: 1.875rem;
-  } */
-  /* .pending-black {
+  }
+  .pend-black {
     position: absolute;
     left: 54.5rem;
     bottom: 28rem;
     width: 1.875rem;
     background-color:var(--pending-btn-bg-clr)
-  } */
-  /* .rejected-black {
+  }
+  .rej-black {
     position: absolute;
     left: 75.9rem;
     bottom: 28rem;
     width: 1.875rem;
-  } */
+  }

@@ -106,13 +106,10 @@ const Signup = () => {
           <img src={eyeIcon} className="eye1-signup1" alt="eye-icon" />
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
-          <button className="button-signup1" type="submit">
-            Next
-          </button>
 
-          <p className="terms-signup1">
-            Term of use &nbsp; &nbsp; Privacy policy
-          </p>
+          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+
+          <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
         {/* ${encodeURIComponent(email)} */}
       </Formik>

@@ -21,7 +21,7 @@
   margin-left: 3em;
 } */
 
-.button-signup1 {
+/* .button-signup1 {
   line-height: 2.5;
   width: 26em;
   font-size: 1rem;
@@ -30,9 +30,20 @@
   border-radius: 12px;
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
+} */
+.step3-btn{
+  font-family: var(--font-family-body);
+  background-color: var(--submit-btn-bg-clr);
+  padding: 0.6em;
+  outline: none;
+  border-radius: 0.5em;
+  /* margin-top: 0.125em; */
+  text-align: center;
+  width: 80%;
+  margin-left: 1.5em;
 }
 
-.button button {
+.step3-btn button {
   background-color: transparent;
   color: #fff;
   border: none;
@@ -41,14 +52,19 @@
 
 .eye {
   position: absolute;
-  left: 77.4em;
-  top: 17.5em;
+  left: 77em;
+  top: 15em;
 }
+/* .eye{
+  position: absolute;
+  top: 22em;
+  left: 74em;
+} */
 
 .eye2 {
   position: absolute;
-  top: 24.4em;
-  left: 77.4em;
+  top: 20em;
+  left: 77em;
   cursor: pointer;
 }
 
@@ -76,4 +92,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 4em;
+}
+.step3-trm{
+  margin-top: 5em;
+  margin-left: 8em;
+  font-size: 0.8rem;
+  cursor: pointer;
 }
