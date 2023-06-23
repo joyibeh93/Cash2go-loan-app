@@ -306,7 +306,8 @@ const SignIn = () => {
     // toggleModal();
 
     //const email = values.email; // Get email value from form
-    const username = values.username; // Get username value from form
+    const firstname = values.firstname; // Get username value from form
+    const lastname = values.lastname;
     const password = values.password; // Get password value from form
     const confirmPassword = values.confirmPassword; // Get confirm password value from form
 
@@ -315,7 +316,8 @@ const SignIn = () => {
       const response = await axios.patch(
         `https://cash2go-backendd.onrender.com/api/v1/user/signup?email=${email}`,
         {
-          username: username,
+          firstname: firstname,
+          lastname:lastname,
           password: password,
           confirmPassword: confirmPassword,
         }
@@ -347,23 +349,38 @@ const SignIn = () => {
   return (
     <div className="Signup3-container">
       <Formik
-        initialValues={{ username: '', password: '', confirmPassword: '' }}
+        initialValues={{ firstname: '', lastname: '', password: '', confirmPassword: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         <Form className="form-signup1">
-          <label htmlFor="username" className="label-signup3" style={{ color: '#747a74' }}>
-            Username
+          <label htmlFor="firstname" className="label-signup3" style={{ color: '#747a74' }}>
+            Firstname
           </label>
           <Field
             className="input-signup1"
             type="text"
-            id="username"
-            name="username"
+            id="firstname"
+            name="firstname"
             placeholder="myworkemail@work.com"
           />
           <ErrorMessage
-            name="username"
+            name="firstname"
+            component="div"
+            className="error-message"
+          />
+            <label htmlFor="lastname" className="label-signup3" style={{ color: '#747a74' }}>
+            Lastname
+          </label>
+          <Field
+            className="input-signup1"
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="myworkemail@work.com"
+          />
+          <ErrorMessage
+            name="lastname"
             component="div"
             className="error-message"
           />
