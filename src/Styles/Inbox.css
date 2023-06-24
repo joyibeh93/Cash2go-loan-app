@@ -125,9 +125,9 @@ h4, h1{
 }
 
 .profile{
-    height: 6em;
+    height: 5em;
     position: relative;
-    top: 1em;
+    top: 1.5em;
 }
 
 .messageDiv{
@@ -153,6 +153,12 @@ h4, h1{
 }
 
 .doubleclick{
+    height: 1.5em;
+    position: relative;
+    left: -2em;
+}
+
+.doubleclickGrey{
     height: 1.5em;
     position: relative;
     left: -2em;
