@@ -67,13 +67,14 @@
 .b-signup1{
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
-  padding: 0.6em;
+  padding: 0.8em ;
   outline: none;
   border-radius: 0.5em;
   /* margin-top: 0.125em; */
   text-align: center;
-  width: 80%;
-  margin-left: 1.5em;
+  width: 95%;
+  margin-left: 0.6em;
+  color: #fff;
 }
 .b-signup1 button{
   background-color: transparent;

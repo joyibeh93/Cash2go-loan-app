@@ -71,6 +71,9 @@ const Signup = () => {
 
   return (
     <div className="form-container-signup1" style={{ paddingTop: '170px' }}>
+      <div style={{ textAlign: 'center', color: 'red' }}>
+        {signupMessage && <p className="login-message">{signupMessage}</p>}
+      </div>
       <h2>Sign Up</h2>
       <Formik
         initialValues={{ email: '', companyID: '' }}
@@ -107,16 +110,14 @@ const Signup = () => {
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
 
-          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+          <button className='b-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
         {/* ${encodeURIComponent(email)} */}
       </Formik>
       {showOtpForm && < OtpForm />} 
-      <div style={{ textAlign: 'center', color: 'red' }}>
-        {signupMessage && <p className="login-message">{signupMessage}</p>}
-      </div>
+      
     </div>
   );
 };

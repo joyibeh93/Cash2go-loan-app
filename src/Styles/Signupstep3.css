@@ -21,7 +21,7 @@
   margin-left: 3em;
 } */
 
-/* .button-signup1 {
+.button-signup1 {
   line-height: 2.5;
   width: 26em;
   font-size: 1rem;
@@ -30,7 +30,7 @@
   border-radius: 12px;
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
-} */
+}
 .step3-btn{
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);

@@ -59,7 +59,7 @@ const QuestionForm = () => {
 
   const handleModalClose = () => {
     setShowModal(false);
-    navigate(`/signupstep3?email=${encodeURIComponent(email)}`);;
+    navigate(`/signupstep3?email=${encodeURIComponent(email)}`);
   };
 
   const handleSubmit = async (values, { setSubmitting }) => {
@@ -158,6 +158,7 @@ const QuestionForm = () => {
               <Buttons button="Sign up"/><span><img src={RightArrow} alt="right-arrow" /></span>
 
             </div>
+            <div>{isLoading}</div>
             <div style={{ color: 'red' }}>{status}</div>
           </Form>
         )}
