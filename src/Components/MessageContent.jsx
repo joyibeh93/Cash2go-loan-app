@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/Inbox.css";
-import Inbox from "./Inbox";
+import Inbox from "./inbox";
 import MsgForm from "./MsgForm";
 import ThreadForm from "./ThreadForm";
 import Modal from "./Modal";

@@ -266,11 +266,12 @@
 // export default SignIn;
 
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate} from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 //import Buttons from './Buttons';
+import axios from 'axios'
 import '../Styles/OtpForm.css';
 import '../Styles/Signupstep3.css';
 import eyeIcon from '../assets/eye icon.svg';
@@ -287,36 +288,58 @@ const SignIn = () => {
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [showPassword, setShowPassword] = useState(false);
+  const [status,setStatus]=useState("")
+  const [email,setEmail]=useState("")
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const email = searchParams.get('email');
+    setEmail(email);
+  }, [location.search]);
 
   const handleSubmit = async (values, { setSubmitting }) => {
-    try {
-      const response = await fetch('https://cash2go-backendd.onrender.com/api/v1/user/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: values.username,
-          password: values.password,
-        }),
-      });
+    setSubmitting(true); // Set form submission state to true
+    // setCompleted(true);
+    // toggleModal();
 
-      if (response.ok) {
-        console.log('Login successful!');
-        // Perform any desired actions after successful login
-        navigate('/dashboard'); // Replace '/dashboard' with the desired route
-      } else {
-        console.log('Error while logging in.');
-        // Handle the login error, show error message, etc.
+    //const email = values.email; // Get email value from form
+    const firstname = values.firstname; // Get username value from form
+    const lastname = values.lastname;
+    const password = values.password; // Get password value from form
+    const confirmPassword = values.confirmPassword; // Get confirm password value from form
+
+    try {
+      // Send request to server to authenticate username and password
+      const response = await axios.patch(
+        `https://cash2go-backendd.onrender.com/api/v1/user/signup?email=${email}`,
+        {
+          firstname: firstname,
+          lastname:lastname,
+          password: password,
+          confirmPassword: confirmPassword,
+        }
+      );
+      console.log(response.data);
+      const isAuthenticated = response.data; // Get authentication status from response
+      if (isAuthenticated) {
+        navigate('../dashboard')
+       // setCompleted(true); // If user is authenticated, set completed state to true
+        //toggleModal(); // If user is authenticated, call the open modal function to open modal
       }
     } catch (error) {
-      console.log('Error:', error);
-      // Handle the fetch error, show error message, etc.
+      console.error("Error:", error);
+      if (error.response) {
+        setStatus(error.response.data.message); // Set error message from response
+        setTimeout(() => {
+          setStatus(""); // Clear status message after 5 seconds
+        }, "5000");
+      }
+    } finally {
+      setSubmitting(false); // Set form submission state to false	
     }
-
-    setSubmitting(false);
   };
 
   const togglePasswordVisibility = () => {
@@ -326,33 +349,48 @@ const SignIn = () => {
   return (
     <div className="Signup3-container">
       <Formik
-        initialValues={{ username: '', password: '', confirmPassword: '' }}
+        initialValues={{ firstname: '', lastname: '', password: '', confirmPassword: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="forms" style={{ paddingTop: '190px' }}>
-          <label htmlFor="username" className="labels">
-            Username
+        <Form className="form-signup1">
+          <label htmlFor="firstname" className="label-signup3" style={{ color: '#747a74' }}>
+            Firstname
           </label>
           <Field
-            className="signup"
+            className="input-signup1"
             type="text"
-            id="username"
-            name="username"
+            id="firstname"
+            name="firstname"
             placeholder="myworkemail@work.com"
           />
           <ErrorMessage
-            name="username"
+            name="firstname"
+            component="div"
+            className="error-message"
+          />
+            <label htmlFor="lastname" className="label-signup3" style={{ color: '#747a74' }}>
+            Lastname
+          </label>
+          <Field
+            className="input-signup1"
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="myworkemail@work.com"
+          />
+          <ErrorMessage
+            name="lastname"
             component="div"
             className="error-message"
           />
 
-          <label className="labels" htmlFor="password">
+          <label className="label-signup3" style={{ color: '#747a74' }} htmlFor="password">
             Password
           </label>
 
           <Field
-            className="signup"
+            className="input-signup1"
             type={showPassword ? 'text' : 'password'}
             id="password"
             maxLength={8}
@@ -372,12 +410,12 @@ const SignIn = () => {
             className="error-message"
           />
 
-          <label htmlFor="confirmpassword" className="labels">
+          <label htmlFor="confirmpassword" className="label-signup3" style={{ color: '#747a74' }}>
             Re-enter Password
           </label>
 
           <Field
-            className="signup"
+            className="input-signup1"
             type={showPassword ? 'text' : 'password'}
             id="confirmPassword"
             maxLength={8}
@@ -397,12 +435,14 @@ const SignIn = () => {
             className="error-message"
           />
 
-          <div className="button">
+          {/* <div className="button">
             <button type="submit" className="button">
               Sign In
             </button>
-          </div>
-          <p className="terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+          </div> */}
+           <div style={{ color: 'red' }}>{status}</div>
+          <button className='button-signup1' type='submit'> SignIn <span className="arrow-right">&rarr;</span></button>
+          <p className="terms-signin">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
     </div>

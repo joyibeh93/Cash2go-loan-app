@@ -32,7 +32,7 @@ const StepsContainer = () => {
           <CheckBoxSteps
             stepsNum="step"
             Num="3"
-            stepsDescription="create your password"
+            stepsDescription="security questions"
           />
         </div>
       </div>
@@ -42,7 +42,7 @@ const StepsContainer = () => {
           <CheckBoxSteps
             stepsNum="step"
             Num="4"
-            stepsDescription="security questions"
+            stepsDescription="create your password"
           />
         </div>
       </div>

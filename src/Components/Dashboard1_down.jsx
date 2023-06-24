@@ -8,34 +8,33 @@ import rejectedTransparent from '../assets/rejected-transparent.svg';
 import pendingTransparent from '../assets/pending-transparent.svg';
 import { Link } from "react-router-dom"
 
-
 const DashBoard1_Down = () => {
   return (
     <div className="dashDown-Table">
       <div className="dashDown-tablehead">
-        <div style={{ paddingBottom: '15px' }} >
+        <div className="dashdown-div"  >
           <h3 className='dashDown-h3'>All Applications</h3>
           <span >Sorted by Date</span>
         </div>
-        <img src={download} alt="download-icon" style={{ paddingRight: '15px' }} />
+        <img src={download} alt="download-icon" className='dashdown-icon' />
       </div>
       <table>
         <thead>
           <tr >
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>Product</th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>
+            <th className='dash-th'>Product</th>
+            <th>
               Date <img src={downArrow} alt="" />{' '}
             </th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>
+            <th >
               Status <img src={downArrow} alt="" />{' '}
             </th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>
+            <th>
               Credit Score <img src={downArrow} alt="" />{' '}
             </th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}>
+            <th>
               Amount <img src={downArrow} alt="" />{' '}
             </th>
-            <th style={{ borderBottom: '1px solid #b9bdc2' }}> </th>
+            <th> </th>
           </tr>
         </thead>
         <tbody>
@@ -134,7 +133,7 @@ const DashBoard1_Down = () => {
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p style={{ color: 'black', fontSize: '14.1px' }} className="dashDown-pending">
+              <p style={{ color: 'white', fontSize: '13.1px' }} className="dashDown-pending">
                 <img src={pendingTransparent} alt="" style={{ marginRight: '5px' }} />  Pending
               </p>
             </td>
@@ -146,15 +145,15 @@ const DashBoard1_Down = () => {
           </tr>
           <tr >
             <th className="dashDown-footer"  >
-              <button className='dashDown-foot1' > Prev </button>
+              <button className='dashDown-foot1' ><span className="arrow-left">&larr;</span>Prev</button>
               <button className='dashDown-foot2'   >1</button>
               <button className='dashDown-foot2'   >2</button>
               <button className='dashDown-foot2'  >_</button>
               <button className='dashDown-foot2'  >5</button>
               <button className='dashDown-foot2'  >6</button>
-              <button className='dashDown-foot3'  >Next</button>
+              <button className='dashDown-foot3'  >Next<span className="arrow-right">&rarr;</span></button>
             </th>
-          </tr>
+          </tr >
         </tbody>
       </table>
     </div>

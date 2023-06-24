@@ -34,18 +34,16 @@ const Sidebar = () => {
         <Link to="/recovery" className="links">
           <img src={Recovery} alt="Dashboard-icon" />
           <p>Recovery</p>
-          <p className='p-red'>
+          {/*<p className='p-red'>
             <span className='one'>1</span>
-          </p>
+              </p>*/}
         </Link>
         <Link to="/message" className="links">
           <img src={Message} alt="Dashboard-icon" />
           <p>Messages</p>
-          <p className='p-green'>
+          {/*<p className='p-green'>
             <span className='one1'>1</span>
-          </p>
-          
-
+            </p>*/}
         </Link>
       </div>
       <div className="sidebar-items2">
@@ -67,12 +65,11 @@ const Sidebar = () => {
       </div>
 
       <Link to="/login" className="log-out">Log out</Link>
-     
-      
-
       
     </div>
   );
 };
 
 export default Sidebar;
+
+

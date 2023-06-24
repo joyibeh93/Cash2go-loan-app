@@ -40,7 +40,7 @@ const UserInfo = () => {
               <img src={approvedTransparent} alt="approved-icon" /> Approved
             </button>
           </p>
-          <img className="approved-black" src={approvedBlack} alt="" />
+          <img className="appr-black" src={approvedBlack} alt="" />
         </div>
         {/* credit utilization details */}
         <div>
@@ -55,7 +55,7 @@ const UserInfo = () => {
               <img src={pendingTransparent} alt="approved-icon" /> Pending
             </button>
           </p>
-          <img className="pending-black" src={pendingBlack} alt="" />
+          <img className="pend-black" src={pendingBlack} alt="" />
         </div>
         {/* outstanding debt details */}
         <div>
@@ -70,7 +70,7 @@ const UserInfo = () => {
               <img src={approvedTransparent} alt="approved-icon" /> Excellent
             </button>
           </p>
-          <img className="rejected-black" src={rejectedBlack} alt="" />
+          <img className="rej-black" src={rejectedBlack} alt="" />
         </div>
       </div>
     </div>
