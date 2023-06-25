@@ -275,6 +275,7 @@ import axios from 'axios'
 import '../Styles/OtpForm.css';
 import '../Styles/Signupstep3.css';
 import eyeIcon from '../assets/eye icon.svg';
+import RightArrow from '../assets/Right-arrow.svg';
 
 const SignIn = () => {
   const validationSchema = Yup.object({
@@ -441,7 +442,9 @@ const SignIn = () => {
             </button>
           </div> */}
            <div style={{ color: 'red' }}>{status}</div>
-          <button className='button-signup1' type='submit'> SignIn <span className="arrow-right">&rarr;</span></button>
+           <div className="step3-btn">
+          <button className='' type='submit'> Sign in<span><img src={RightArrow} alt="right-arrow" /></span></button>
+          </div>
           <p className="terms-signin">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
