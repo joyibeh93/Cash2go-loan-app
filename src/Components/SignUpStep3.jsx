@@ -470,11 +470,13 @@ const SignIn = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [status, setStatus] = useState("");
   const [email, setEmail] = useState("");
+  
+
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const email = searchParams.get('email');
-    setEmail(email);
+    setEmail(email)
   }, [location.search]);
 
   const handleSubmit = async (values, { setSubmitting }) => {
@@ -484,11 +486,11 @@ const SignIn = () => {
     const lastName = values.lastName;
     const password = values.password;
     const confirmPassword = values.confirmPassword;
-
+    
     try {
       const response = await axios.patch(
         `https://cash2go-backendd.onrender.com/api/v1/user/signup?email=${email}`,
-        {
+          {
           firstName: firstName,
           lastName: lastName,
           password: password,
@@ -498,7 +500,10 @@ const SignIn = () => {
       console.log(response.data);
       const isAuthenticated = response.data;
       if (isAuthenticated) {
-        navigate(`/dashboard?email=${encodeURIComponent(email)}`);
+        // Store the email in session storage
+        //sessionStorage.setItem('email', values.email);
+        navigate('/dashboard');
+        //navigate(`/dashboard?email=${encodeURIComponent(email)}`);
       }
     } catch (error) {
       console.error("Error:", error);

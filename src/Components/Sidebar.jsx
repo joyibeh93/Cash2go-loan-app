@@ -62,11 +62,11 @@ const Sidebar = () => {
           <p>Help Center</p>
         </Link>
         <div className='logout-div'>
-           <Link to="/login" className="log-out">Log out</Link>
+           <Link to="/" className="log-out">Log out</Link>
         </div>
       </div>
 
-      <Link to="/login" className="log-out">Log out</Link>
+      <Link to="/" className="log-out">Log out</Link>
      
       
 

@@ -59,6 +59,7 @@ const QuestionForm = () => {
 
   const handleModalClose = () => {
     setShowModal(false);
+    //navigate('/signupstep3')
     navigate(`/signupstep3?email=${encodeURIComponent(email)}`);
   };
 

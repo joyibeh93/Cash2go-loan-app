@@ -48,7 +48,8 @@ const Signup = () => {
         if (isAuthenticated) {
         
           setShowOtpForm(true);
-          navigate(`/signupstep2?email=${encodeURIComponent(email)}`);
+          //navigate('/signupstep2')
+        navigate(`/signupstep2?email=${encodeURIComponent(email)}`);
 
 
         }
