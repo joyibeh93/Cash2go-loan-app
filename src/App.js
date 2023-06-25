@@ -49,7 +49,7 @@ function App() {
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/review" element={<ReviewPage />} />
-        <Route path="/" element={<Settings />} />
+        <Route path="/setting" element={<Settings />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/recovery" element={<Recovery />} />
         <Route path="/settings" element={<Settings />} />

@@ -20,7 +20,7 @@ const validationSchema = Yup.object().shape({
 const Modal = ({ handleModalClose }) => {
   return (
     <div>
-      <div className="modal">
+      <div className="question-modal">
         <button className="close-modal" onClick={handleModalClose}>
           &times;
         </button>
@@ -45,7 +45,7 @@ const QuestionForm = () => {
   const [status, setStatus] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [email,setEmail]=useState("")
+  const [email,setEmail]=useState("");
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -156,11 +156,12 @@ const QuestionForm = () => {
             />
 
             <div className=" Question-button">
-              <Buttons button="Sign up"/><span><img src={RightArrow} alt="right-arrow" /></span>
+              <Buttons button="Next"/><span><img src={RightArrow} alt="right-arrow" /></span>
 
             </div>
             <div>{isLoading}</div>
             <div style={{ color: 'red' }}>{status}</div>
+            <div>{isLoading}</div>
           </Form>
         )}
       </Formik>

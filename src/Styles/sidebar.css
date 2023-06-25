@@ -95,7 +95,7 @@
 .p-green {
   background-color: var(--approved-btn-bg-clr);
 }
-.one {
+/*.one {
   position: absolute;
   top: 10.2rem;
   left: 8.2rem;
@@ -104,7 +104,7 @@
   position: absolute;
   top: 13.4rem;
   left: 8.3rem;
-}
+}*/
 .logout-div{
   background-color: var(--side-bar-bg-clr);
   
@@ -117,3 +117,12 @@
   font-size: 1.2rem;
   color:var(--steps-clr) 
 }
+
+
+.links.active {
+  background-color: red;
+  color: #000;
+  font-weight: bold;
+}
+
+

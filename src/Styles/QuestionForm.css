@@ -61,7 +61,7 @@
   margin-right: 8em;
   font-size: 0.8rem;
 }
-.modal {
+.question-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
