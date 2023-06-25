@@ -74,14 +74,14 @@ export default Sidebar;*/
 
 
       
-    </div>
-  );
-};
+//     </div>
+//   );
+// };
 
-export default Sidebar;
+// export default Sidebar;
 
 
-/*import React, { useState } from 'react';
+import React, { useState } from 'react';
 import '../Styles/sidebar.css';
 import Logo from './Logo';
 import Grid from '../assets/ViewGrid.svg';
@@ -192,4 +192,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;*/
+export default Sidebar;
