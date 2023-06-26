@@ -117,7 +117,7 @@ const ResetPasswordForm = () => {
       const isAuthenticated = response.data;
       console.log(isAuthenticated);
       if (isAuthenticated) {
-        navigate(`/security-question?email=${encodeURIComponent(email)}`);
+        navigate(`/resetpassword2?email=${encodeURIComponent(email)}`);
       }
     } catch (error) {
       console.error("Error:", error);

@@ -93,13 +93,21 @@ import Resources from '../assets/Resources.svg';
 import Settings from '../assets/Settings.svg';
 import HelpCenter from '../assets/Helpcenter.svg';
 import { NavLink } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom'
 
 const Sidebar = () => {
   const [activeLink, setActiveLink] = useState('');
+  const navigate=useNavigate()
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
+  const handleLogout = () => {
+    // Perform logout actions if needed
+    
+    navigate('/'); // Redirect to the login page
+  };
+
 
   return (
     <div className="sidebar">
@@ -110,7 +118,7 @@ const Sidebar = () => {
       <div className="sidebar-items1">
         <NavLink
           to="/dashboard"
-          className="links"
+          className={`links ${activeLink === '/dashboard' ? 'active' : ''}`}
           activeClassName="active"
           onClick={() => handleLinkClick('/dashboard')}
         >
@@ -119,7 +127,7 @@ const Sidebar = () => {
         </NavLink>
         <NavLink
           to="/application"
-          className="links"
+          className={`links ${activeLink === '/dashboard' ? 'active' : ''}`}
           activeClassName="active"
           onClick={() => handleLinkClick('/application')}
         >
@@ -128,7 +136,7 @@ const Sidebar = () => {
         </NavLink>
         <NavLink
           to="/analytics"
-          className="links"
+          className={`links ${activeLink === '/dashboard' ? 'active' : ''}`}
           activeClassName="active"
           onClick={() => handleLinkClick('/analytics')}
         >
@@ -137,7 +145,7 @@ const Sidebar = () => {
         </NavLink>
         <NavLink
           to="/recovery"
-          className="links"
+          className= {`links ${activeLink === '/dashboard' ? 'active' : ''}`}
           activeClassName="active"
           onClick={() => handleLinkClick('/recovery')}
         >
@@ -146,7 +154,7 @@ const Sidebar = () => {
         </NavLink>
         <NavLink
           to="/message"
-          className="links"
+          className={`links ${activeLink === '/dashboard' ? 'active' : ''}`}
           activeClassName="active"
           onClick={() => handleLinkClick('/message')}
         >
@@ -158,7 +166,7 @@ const Sidebar = () => {
         <NavLink
           exact
           to="/resources"
-          className="links"
+          className={`links ${activeLink === '/dashboard' ? 'active' : ''}`}
           activeClassName="active"
           onClick={() => handleLinkClick('')}
         >
@@ -167,7 +175,7 @@ const Sidebar = () => {
         </NavLink>
         <NavLink
           to="/settings"
-          className="links"
+          className={`links ${activeLink === '/dashboard' ? 'active' : ''}`}
           activeClassName="active"
           onClick={() => handleLinkClick('/settings')}
         >
@@ -179,15 +187,18 @@ const Sidebar = () => {
           <p>Help Center</p>
         </NavLink>
         <div className="logout-div">
-          <NavLink to="/login" className="log-out">
-            Log out
+          <NavLink to="/"  
+              className="log-out"
+              onClick={handleLogout}
+          >
+                Log out
           </NavLink>
         </div>
       </div>
 
-      <NavLink to="/login" className="log-out">
-        Log out
-      </NavLink>
+     
+     
+
     </div>
   );
 };

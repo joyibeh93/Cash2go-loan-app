@@ -76,6 +76,7 @@ const OtpForm = () => {
   };
 
   return (
+    
     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={submitForm}>
       {({ isSubmitting }) => (
         <Form>
