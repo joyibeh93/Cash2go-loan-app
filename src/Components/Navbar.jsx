@@ -34,6 +34,7 @@ function Navbar() {
 
 export default Navbar;
 
+
 /*import React, { useState } from 'react';
 import usericon from '../assets/user-icon.svg';
 import searchicon from '../assets/Search.svg';

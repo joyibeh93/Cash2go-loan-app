@@ -154,10 +154,12 @@ const QuestionForm = () => {
             />
 
             <div className=" Question-button">
-              <Buttons button="Sign up"/><span><img src={RightArrow} alt="right-arrow" /></span>
+              <Buttons button="Next"/><span><img src={RightArrow} alt="right-arrow" /></span>
 
             </div>
+
             <div style={{ color: 'red' }}>{status}</div>
+            <div>{isLoading}</div>
           </Form>
         )}
       </Formik>
