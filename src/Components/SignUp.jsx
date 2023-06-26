@@ -107,7 +107,7 @@ const Signup = () => {
           <img src={eyeIcon} className="eye1-signup1" alt="eye-icon" />
           <ErrorMessage name="companyID" component="div" className="error-message" />
           <div className="b-signup1">
-          <button className='button-signup1' type='submit'>Next <span><img src={RightArrow} alt="right-arrow" /></span>
+          <button className='' type='submit'>Next <span><img src={RightArrow} alt="right-arrow" /></span>
 </button>
 </div>
 
