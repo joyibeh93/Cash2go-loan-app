@@ -20,7 +20,6 @@ const Signup = () => {
     email: Yup.string().email('Invalid email address').required('Email is required'),
     companyID: Yup.string().required('Company ID is required'),
   });
-
   const navigate = useNavigate();
 
   const handleSubmit = async (values, { setSubmitting }) => {
