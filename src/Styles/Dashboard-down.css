@@ -46,6 +46,7 @@
   border-width: 100%;
 }
 
+/* styling for dash-down title :style={{ color: '#74757a', paddingRight: '25px' }} */
 .dashDown-Table {
   background-color: #f7f7f7;
   border-radius: 10px;
@@ -72,11 +73,13 @@
   border-bottom: '1px solid #b9bdc2'
  }
 
-
+/* approved downstyling style={{ marginRight: '5px' }}  */
+/*  */
 /* th,
 td {
   border-bottom: 0.1px solid #b9bdc2;
   font-weight: 100;
+  style={{ borderBottom: '1px solid #b9bdc2' }}
 } */
 
 
@@ -89,10 +92,12 @@ td {
 
 
 .dashDown-first-data h4 {
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
+  padding-right: '25px';
   margin-left: 2px;
-  color: #252d39;
+  color: '#74757a';
   font-weight: 100;
+  /* style={{ ', }} */
 }
 
 .dashDown-first-data Link {
@@ -103,54 +108,56 @@ td {
   margin: 0 0.4rem;
 }
 
-.dashDown-img {
+/* .dashDown-img {
   padding-Left: 70px;
-}
+} */
 
 .dashDown-approved {
   display: flex;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  /* padding-top: 3px;
+  padding-bottom: 3px; */
+  padding: 4px 5px;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: var(--approved-btn-bg-clr);
   color: var(--main-bg-clr);
-  width: 60%;
+  /* width: 60%; */
   margin-left: 2rem;
 }
 
 .dashDown-pending {
   display: flex;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding: 4px 5px;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: hsl(184, 40%, 59%);
   color: var(--main-bg-clr);
-  width: 60%;
+  /* width: 60%; */
   margin-left: 2rem;
 }
 
 .dashDown-rejected {
   display: flex;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  /* padding-top: 3px;
+  padding-bottom: 3px; */
+  padding: 4px 5px;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: #fd3d39;
   color: var(--main-bg-clr);
-  width: 60%;
-  margin-left: 2rem;
+  /* width: 60%; */
+  /* margin-left: 2rem; */
+ margin-left: 2rem;
 }
 
 
-.dashRev-approved {
+/* .dashRev-approved {
   display: flex;
   padding: 5px;
   border-radius: 3px;
@@ -185,7 +192,7 @@ td {
 .dashDown-footer {
   display: flex;
   /* justify-content: space-between; */
-  align-items: center;
+  /* align-items: center;
   padding-bottom: 30px;
 }
 
@@ -200,9 +207,9 @@ td {
   padding-right: 280px;
   padding-left: 20px;
   border: none;
-}
+} */
 
-.dashDown-foot2 {
+/* .dashDown-foot2 {
   color: #74757a;
   font-size: 12.8px;
   padding-right: 30px;
@@ -215,9 +222,9 @@ td {
   padding-right: 30px;
   padding-left: 60px;
   border: none;
-}
+} */
 
-.dashDown-foot3 {
+/* .dashDown-foot3 {
   color: #74757a;
   font-size: 12.8px;
   padding-left: 315px;
@@ -229,4 +236,4 @@ td {
   font-size: 12.8px;
   padding-left: 235px;
   border: none;
-}
+} */ 

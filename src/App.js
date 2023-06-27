@@ -45,7 +45,7 @@ function App() {
         <Route path="/loandefault" element={<LoanDefaultPage />} />
         <Route path="/application" element={<Application />} />
         <Route path="/message" element={<Message />} />
-        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+        {/* <Route path="/resetpassword3" element={<ResetPassword3page />} /> */}
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/review" element={<ReviewPage />} />

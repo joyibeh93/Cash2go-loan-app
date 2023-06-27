@@ -266,12 +266,187 @@
 // export default SignIn;
 
 
-import React, { useState,useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+// import { Formik, Form, Field, ErrorMessage } from 'formik';
+// import * as Yup from 'yup';
+// import { useLocation, useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// import '../Styles/OtpForm.css';
+// import '../Styles/Signupstep3.css';
+// import eyeIcon from '../assets/eye icon.svg';
+
+// const SignIn = () => {
+//   const validationSchema = Yup.object({
+//     username: Yup.string().required('Username is required'),
+//     password: Yup.string()
+//       .required('Password is required')
+//       .min(8, 'Password must be at least 8 characters long'),
+//     confirmPassword: Yup.string()
+//       .oneOf([Yup.ref('password'), null], 'Passwords must match')
+//       .required('Please re-enter your password'),
+//   });
+
+//   const navigate = useNavigate();
+//   const location = useLocation();
+
+//   const [showPassword, setShowPassword] = useState(false);
+//   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+//   const [status, setStatus] = useState("");
+//   const [email, setEmail] = useState("");
+
+//   useEffect(() => {
+//     const searchParams = new URLSearchParams(location.search);
+//     const email = searchParams.get('email');
+//     setEmail(email);
+//   }, [location.search]);
+
+//   const handleSubmit = async (values, { setSubmitting }) => {
+//     setSubmitting(true);
+
+//     const firstName = values.firstname;
+//     const lastName = values.lastname;
+//     const password = values.password;
+//     const confirmPassword = values.confirmPassword;
+
+//     try {
+//       const response = await axios.patch(
+//         `https://cash2go-backendd.onrender.com/api/v1/user/signup?email=${email}`,
+//         {
+//           firstName: firstName,
+//           lastName: lastName,
+//           password: password,
+//           confirmPassword: confirmPassword,
+//         }
+//       );
+//       console.log(response.data);
+//       const isAuthenticated = response.data;
+//       if (isAuthenticated) {
+//         navigate(`/dashboard?email=${encodeURIComponent(email)}`);
+//       }
+//     } catch (error) {
+//       console.error("Error:", error);
+//       if (error.response) {
+//         setStatus(error.response.data.message);
+//         setTimeout(() => {
+//           setStatus("");
+//         }, 5000);
+//       }
+//     } finally {
+//       setSubmitting(false);
+//     }
+//   };
+
+//   const togglePasswordVisibility = () => {
+//     setShowPassword((prevShowPassword) => !prevShowPassword);
+//   };
+
+//   const toggleConfirmPasswordVisibility = () => {
+//     setShowConfirmPassword((prevShowConfirmPassword) => !prevShowConfirmPassword);
+//   };
+
+//   return (
+//     <div className="Signup3-container">
+//       <Formik
+//         initialValues={{ firstname: '', lastname: '', password: '', confirmPassword: '' }}
+//         validationSchema={validationSchema}
+//         onSubmit={handleSubmit}
+//       >
+//         <Form className="form-signup1">
+//           <label htmlFor="firstname" className="label-signup3" style={{ color: '#747a74' }}>
+//             First Name
+//           </label>
+//           <Field
+//             className="input-signup1"
+//             type="text"
+//             id="firstname"
+//             name="firstname"
+//             placeholder="Enter your first name"
+//           />
+//           <ErrorMessage
+//             name="firstname"
+//             component="div"
+//             className="error-message"
+//           />
+
+//           <label htmlFor="lastname" className="label-signup3" style={{ color: '#747a74' }}>
+//             Last Name
+//           </label>
+//           <Field
+//             className="input-signup1"
+//             type="text"
+//             id="lastname"
+//             name="lastname"
+//             placeholder="Enter your last name"
+//           />
+//           <ErrorMessage
+//             name="lastname"
+//             component="div"
+//             className="error-message"
+//           />
+
+//           <label className="label-signup3" style={{ color: '#747a74' }} htmlFor="password">
+//             Password
+//           </label>
+//           <Field
+//             className="input-signup1"
+//             type={showPassword ? 'text' : 'password'}
+//             id="password"
+//             maxLength={8}
+//             name="password"
+//             placeholder="********"
+//           />
+//           <img
+//             src={eyeIcon}
+//             className="eye"
+//             alt="eye-icon"
+//             onClick={togglePasswordVisibility}
+//           />
+//           <ErrorMessage
+//             name="password"
+//             component="div"
+//             className="error-message"
+//           />
+
+//           <label htmlFor="confirmPassword" className="label-signup3" style={{ color: '#747a74' }}>
+//             Re-enter Password
+//           </label>
+//           <Field
+//             className="input-signup1"
+//             type={showConfirmPassword ? 'text' : 'password'}
+//             id="confirmPassword"
+//             maxLength={8}
+//             name="confirmPassword"
+//             placeholder="********"
+//           />
+//           <img
+//             src={eyeIcon}
+//             className="eye2"
+//             alt="eye-icon"
+//             onClick={toggleConfirmPasswordVisibility}
+//           />
+//           <ErrorMessage
+//             name="confirmPassword"
+//             component="div"
+//             className="error-message"
+//           />
+
+//           <div style={{ color: 'red' }}>{status}</div>
+//           <button className='button-signup1' type='submit'> SignIn <span className="arrow-right">&rarr;</span></button>
+//           <p className="terms-signin">Term of use &nbsp; &nbsp; Privacy policy</p>
+//         </Form>
+//       </Formik>
+//     </div>
+//   );
+// };
+
+// export default SignIn;
+
+
+import React, { useState, useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useLocation, useNavigate } from 'react-router-dom';
-//import Buttons from './Buttons';
-import axios from 'axios'
+import axios from 'axios';
 import '../Styles/OtpForm.css';
 import '../Styles/Signupstep3.css';
 import eyeIcon from '../assets/eye icon.svg';
@@ -279,7 +454,8 @@ import RightArrow from '../assets/Right-arrow.svg';
 
 const SignIn = () => {
   const validationSchema = Yup.object({
-    username: Yup.string().required('Username is required'),
+    firstName: Yup.string().required('First Name is required'),
+    lastName: Yup.string().required('Last Name is required'),
     password: Yup.string()
       .required('Password is required')
       .min(8, 'Password must be at least 8 characters long'),
@@ -292,96 +468,101 @@ const SignIn = () => {
   const location = useLocation();
 
   const [showPassword, setShowPassword] = useState(false);
-  const [status,setStatus]=useState("")
-  const [email,setEmail]=useState("")
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [status, setStatus] = useState("");
+  const [email, setEmail] = useState("");
+  
+
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const email = searchParams.get('email');
-    setEmail(email);
+    setEmail(email)
   }, [location.search]);
 
   const handleSubmit = async (values, { setSubmitting }) => {
-    setSubmitting(true); // Set form submission state to true
-    // setCompleted(true);
-    // toggleModal();
+    setSubmitting(true);
 
-    //const email = values.email; // Get email value from form
-    const firstname = values.firstname; // Get username value from form
-    const lastname = values.lastname;
-    const password = values.password; // Get password value from form
-    const confirmPassword = values.confirmPassword; // Get confirm password value from form
-
+    const firstName = values.firstName;
+    const lastName = values.lastName;
+    const password = values.password;
+    const confirmPassword = values.confirmPassword;
+    
     try {
-      // Send request to server to authenticate username and password
       const response = await axios.patch(
         `https://cash2go-backendd.onrender.com/api/v1/user/signup?email=${email}`,
-        {
-          firstname: firstname,
-          lastname:lastname,
+          {
+          firstName: firstName,
+          lastName: lastName,
           password: password,
           confirmPassword: confirmPassword,
         }
       );
       console.log(response.data);
-      const isAuthenticated = response.data; // Get authentication status from response
+      const isAuthenticated = response.data;
       if (isAuthenticated) {
-        navigate('../dashboard')
-       // setCompleted(true); // If user is authenticated, set completed state to true
-        //toggleModal(); // If user is authenticated, call the open modal function to open modal
+        // Store the email in session storage
+        //sessionStorage.setItem('email', values.email);
+        navigate('/dashboard');
+        //navigate(`/dashboard?email=${encodeURIComponent(email)}`);
       }
     } catch (error) {
       console.error("Error:", error);
       if (error.response) {
-        setStatus(error.response.data.message); // Set error message from response
+        setStatus(error.response.data.message);
         setTimeout(() => {
-          setStatus(""); // Clear status message after 5 seconds
-        }, "5000");
+          setStatus("");
+        }, 5000);
       }
     } finally {
-      setSubmitting(false); // Set form submission state to false	
+      setSubmitting(false);
     }
   };
 
   const togglePasswordVisibility = () => {
-    setShowPassword((prevState) => !prevState);
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword((prevShowConfirmPassword) => !prevShowConfirmPassword);
   };
 
   return (
     <div className="Signup3-container">
       <Formik
-        initialValues={{ firstname: '', lastname: '', password: '', confirmPassword: '' }}
+        initialValues={{ firstName: '', lastName: '', password: '', confirmPassword: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         <Form className="form-signup1">
-          <label htmlFor="firstname" className="label-signup3" style={{ color: '#747a74' }}>
-            Firstname
+          <label htmlFor="firstName" className="label-signup3" style={{ color: '#747a74' }}>
+            First Name
           </label>
           <Field
             className="input-signup1"
             type="text"
-            id="firstname"
-            name="firstname"
-            placeholder="myworkemail@work.com"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter your first name"
           />
           <ErrorMessage
-            name="firstname"
+            name="firstName"
             component="div"
             className="error-message"
           />
-            <label htmlFor="lastname" className="label-signup3" style={{ color: '#747a74' }}>
-            Lastname
+
+          <label htmlFor="lastName" className="label-signup3" style={{ color: '#747a74' }}>
+            Last Name
           </label>
           <Field
             className="input-signup1"
             type="text"
-            id="lastname"
-            name="lastname"
-            placeholder="myworkemail@work.com"
+            id="lastName"
+            name="lastName"
+            placeholder="Enter your last name"
           />
           <ErrorMessage
-            name="lastname"
+            name="lastName"
             component="div"
             className="error-message"
           />
@@ -389,7 +570,6 @@ const SignIn = () => {
           <label className="label-signup3" style={{ color: '#747a74' }} htmlFor="password">
             Password
           </label>
-
           <Field
             className="input-signup1"
             type={showPassword ? 'text' : 'password'}
@@ -404,20 +584,18 @@ const SignIn = () => {
             alt="eye-icon"
             onClick={togglePasswordVisibility}
           />
-
           <ErrorMessage
             name="password"
             component="div"
             className="error-message"
           />
 
-          <label htmlFor="confirmpassword" className="label-signup3" style={{ color: '#747a74' }}>
+          <label htmlFor="confirmPassword" className="label-signup3" style={{ color: '#747a74' }}>
             Re-enter Password
           </label>
-
           <Field
             className="input-signup1"
-            type={showPassword ? 'text' : 'password'}
+            type={showConfirmPassword ? 'text' : 'password'}
             id="confirmPassword"
             maxLength={8}
             name="confirmPassword"
@@ -427,24 +605,16 @@ const SignIn = () => {
             src={eyeIcon}
             className="eye2"
             alt="eye-icon"
-            onClick={togglePasswordVisibility}
+            onClick={toggleConfirmPasswordVisibility}
           />
-
           <ErrorMessage
             name="confirmPassword"
             component="div"
             className="error-message"
           />
 
-          {/* <div className="button">
-            <button type="submit" className="button">
-              Sign In
-            </button>
-          </div> */}
-           <div style={{ color: 'red' }}>{status}</div>
-           <div className="step3-btn">
-          <button className='' type='submit'> Sign in<span><img src={RightArrow} alt="right-arrow" /></span></button>
-          </div>
+          <div style={{ color: 'red' }}>{status}</div>
+          <button className='button-signup1' type='submit'> SignIn <span className="arrow-right">&rarr;</span></button>
           <p className="terms-signin">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>

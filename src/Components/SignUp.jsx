@@ -49,7 +49,8 @@ const Signup = () => {
         if (isAuthenticated) {
         
           setShowOtpForm(true);
-          navigate(`/signupstep2?email=${encodeURIComponent(email)}`);
+          //navigate('/signupstep2')
+        navigate(`/signupstep2?email=${encodeURIComponent(email)}`);
 
 
         }
@@ -72,6 +73,9 @@ const Signup = () => {
 
   return (
     <div className="form-container-signup1" style={{ paddingTop: '170px' }}>
+      <div style={{ textAlign: 'center', color: 'red' }}>
+        {signupMessage && <p className="login-message">{signupMessage}</p>}
+      </div>
       <h2>Sign Up</h2>
       <Formik
         initialValues={{ email: '', companyID: '' }}
@@ -106,19 +110,18 @@ const Signup = () => {
           />
           <img src={eyeIcon} className="eye1-signup1" alt="eye-icon" />
           <ErrorMessage name="companyID" component="div" className="error-message" />
-          <div className="b-signup1">
-          <button className='' type='submit'>Next <span><img src={RightArrow} alt="right-arrow" /></span>
-</button>
-</div>
+
+
+
+          <button className='b-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
         {/* ${encodeURIComponent(email)} */}
       </Formik>
       {showOtpForm && < OtpForm />} 
-      <div style={{ textAlign: 'center', color: 'red' }}>
-        {signupMessage && <p className="login-message">{signupMessage}</p>}
-      </div>
+      
     </div>
   );
 };
