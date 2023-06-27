@@ -15,7 +15,7 @@ const Modal = ({ closeModal, setMarkAllClicked , setClickAll}) => {
             setClickAll(false)
           }}
         >
-          x
+          &times;
         </button>
       </header>
       <p className="modal-title">Delete Selected Items?</p>
