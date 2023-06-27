@@ -113,7 +113,7 @@ const Signup = () => {
 
 
 
-          <button className='b-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+          <button className='b-signup1' type='submit'>Next <span><img src={RightArrow} alt="right-arrow" /></span></button>
 
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>

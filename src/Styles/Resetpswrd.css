@@ -36,8 +36,6 @@
     border: 2px solid #747a85;
 }
 .re-btn {
-  /* margin-left: 4em;
-  width: 70%; */
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
   padding: 0.6em;
@@ -45,8 +43,7 @@
   border-radius: 0.5em;
   margin-top: 0.125em;
   text-align: center;
-  width: 60%;
-  margin-left: 1.5em;
+  width:25em;
 }
 .re-btn button{
     background-color: transparent;
