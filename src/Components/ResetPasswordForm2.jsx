@@ -196,7 +196,7 @@ const validationSchema = Yup.object().shape({
 
 const ResetPasswordForm2 = () => {
   const navigate = useNavigate();
-  const { token } = useParams();
+  const { email } = useParams();
   const [showModal, setShowModal] = useState(false);
   const [status, setStatus] = useState('');
 
@@ -216,7 +216,7 @@ const ResetPasswordForm2 = () => {
 
     try {
       const response = await axios.patch(
-        `https://cash2go-backendd.onrender.com/api/v1/user/reset-password?email=${token}`,
+        `https://cash2go-backendd.onrender.com/api/v1/user/reset-password?email=${encodeURIComponent(email)}`,
         {
           securityQuestion: Question,
           securityQuestionAnswer: Answer,
@@ -226,6 +226,7 @@ const ResetPasswordForm2 = () => {
       const isAuthenticated = response.data;
 
       if (isAuthenticated) {
+        console.log(isAuthenticated)
         handleModalOpen();
       }
     } catch (error) {
@@ -285,7 +286,7 @@ const ResetPasswordForm2 = () => {
           <img src={Congrats} alt="good-mark" className="good" />
           <h3>Reset Link</h3>
           <p>
-            A password reset link has been sent to <span>myworkemail@work.com</span>
+            A password reset link has been sent to <span>{email}</span>
           </p>
           <button className="continue" onClick={handleModalClose}>
             Continue
@@ -299,4 +300,3 @@ const ResetPasswordForm2 = () => {
 };
 
 export default ResetPasswordForm2;
-

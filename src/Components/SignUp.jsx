@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import eyeIcon from '../assets/eye icon.svg';
-import RightArrow from '../assets/Right-arrow.svg';
+//import RightArrow from '../assets/Right-arrow.svg';
 import OtpForm from './OtpForm';
 import '../Styles/Signup1.css';
 
