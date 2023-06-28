@@ -1,7 +1,9 @@
 import React from 'react'
-import Models from '../Components/Models'
+import SettingContent from '../Components/SettingContent';
 import Sidebar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar';
+import "../Styles/settings.css"
+
 const Settings = () => {
   return (
     <div>
@@ -14,7 +16,7 @@ const Settings = () => {
           <Navbar />
         </div>
         <div className="content-container">
-        <Models/> 
+      <SettingContent/>
         </div>
       </div>
     </div>  
