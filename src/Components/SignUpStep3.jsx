@@ -614,7 +614,9 @@ const SignIn = () => {
           />
 
           <div style={{ color: 'red' }}>{status}</div>
-          <button className='button-signup1' type='submit'> SignIn <span className="arrow-right">&rarr;</span></button>
+          <div className='b-signup3'>
+          <button className='' type='submit'> Sign In <span><img src={RightArrow} alt="right-arrow" /></span></button>
+          </div>
           <p className="terms-signin">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
       </Formik>
