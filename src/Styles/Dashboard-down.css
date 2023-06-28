@@ -63,6 +63,8 @@
 }
 .dashdown-icon{
   padding-right: '15px'; 
+  display: block;
+  margin-right: 55px;
 }
 
 .dashDown-h3 span {
@@ -70,7 +72,7 @@
   margin-bottom: 5px;
 }
 .dash-th{
-  border-bottom: '1px solid #b9bdc2'
+  border-bottom: 1px solid #b9bdc2;
  }
 
 /* approved downstyling style={{ marginRight: '5px' }}  */
@@ -94,7 +96,7 @@ td {
 .dashDown-first-data h4 {
   /* padding-bottom: 5px; */
   padding-right: '25px';
-  margin-left: 2px;
+  margin-left: 25px;
   color: '#74757a';
   font-weight: 100;
   /* style={{ ', }} */
@@ -138,6 +140,7 @@ td {
   color: var(--main-bg-clr);
   /* width: 60%; */
   margin-left: 2rem;
+
 }
 
 .dashDown-rejected {

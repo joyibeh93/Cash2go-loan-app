@@ -450,7 +450,7 @@ import axios from 'axios';
 import '../Styles/OtpForm.css';
 import '../Styles/Signupstep3.css';
 import eyeIcon from '../assets/eye icon.svg';
-import RightArrow from '../assets/Right-arrow.svg';
+//import RightArrow from '../assets/Right-arrow.svg';
 
 const SignIn = () => {
   const validationSchema = Yup.object({

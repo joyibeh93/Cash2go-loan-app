@@ -62,9 +62,9 @@ const DashBoard1_Down = () => {
             <td className="dashDown-first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Muktarr Bello</h4>
-                <Link to="/applicantinfo"> More info </Link>
-                {/* <span>more info</span> */}
+                <h4>Muktarr Bello</h4><br />
+                <span><Link to="/applicantinfo"> More info </Link></span>
+                {/* more info */}
               </div>
             </td>
             <td>02 / 04 / 23</td>
