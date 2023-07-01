@@ -167,7 +167,7 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import Buttons from './Buttons';
 import '../Styles/Resetpassword3.css';
@@ -188,6 +188,8 @@ const ResetPassword3 = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [status,setStatus]=useState("")
 
+  const { email } = useParams();
+
   // const handleSubmit = (values, { setSubmitting }) => {
   //   console.log(values);
   //   setSubmitting(false);
@@ -203,7 +205,7 @@ const ResetPassword3 = () => {
     try {
       // Send request to server to authenticate new password
       const response = await axios.patch(
-        `https://cash2go-backendd.onrender.com/api/v1/user/update-password/${token}`,
+        `https://cash2go-backendd.onrender.com/api/v1/user/update-password?email=${encodeURIComponent(email)}`,
         {
           password: password,
           confirmPassword: confirmPassword,
@@ -243,21 +245,21 @@ const ResetPassword3 = () => {
   };
   const navigate = useNavigate();
   const goToLogin = () => {
-    navigate('/login');
+    navigate('/');
   };
 
   return (
     <div className="form-container">
       <h1>Reset Password</h1>
       <Formik
-        initialValues={{ password: '', confirmPassword: '' }}
-        validationSchema={validationSchema}
-        onSubmit={(values) => {
-          console.log(values);
-          openModal();
-          handleSubmit();
-        }}
-      >
+          initialValues={{ password: '', confirmPassword: '' }}
+          validationSchema={validationSchema}
+          onSubmit={(values, { setSubmitting }) => {
+            openModal();
+            handleSubmit(values, { setSubmitting }); // Pass the setSubmitting function
+          }}
+        >
+
         <Form className="form">
           <label className="label" htmlFor="password">
             New Password
@@ -326,6 +328,7 @@ const ResetPassword3 = () => {
           <button className="continue" onClick={goToLogin}>
             Continue
           </button>
+          <div className="status-message">{status}</div>
         </div>
       )}
       {showModal && <div className="overlay"></div>}

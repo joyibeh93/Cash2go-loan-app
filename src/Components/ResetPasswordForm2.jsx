@@ -206,7 +206,7 @@ const ResetPasswordForm2 = () => {
 
   const handleModalClose = () => {
     setShowModal(false);
-    navigate('/resetpassword3');
+    navigate(`/resetpassword3/${encodeURIComponent(email)}`);
   };
 
   const handleSubmit = async (values, { setSubmitting }) => {
