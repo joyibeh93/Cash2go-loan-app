@@ -37,7 +37,10 @@ function App() {
         <Route path="/signupstep3" element={<SignUpStep3 />} />
         <Route exact path="/" element={<Login />} />
         <Route path="/signupstep1" element={<SignUpStep1 />} />
-        <Route path="/resetpassword2" element={<PasswordResetPage />} />
+        <Route path="/resetpassword2/:email" element={<PasswordResetPage />} />
+
+        {/* <Route path="/resetpassword2" element={<PasswordResetPage />} /> */}
+
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
@@ -45,7 +48,7 @@ function App() {
         <Route path="/loandefault" element={<LoanDefaultPage />} />
         <Route path="/application" element={<Application />} />
         <Route path="/message" element={<Message />} />
-        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+        {/* <Route path="/resetpassword3" element={<ResetPassword3page />} /> */}
         <Route path="/applicantinfo" element={<Applicantinfo />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/review" element={<ReviewPage />} />

@@ -111,18 +111,22 @@
 }
 .log-out {
   position: absolute; 
-  top: 33rem;
+  top: 15rem;
   left: 2rem; 
   /* margin-top: 150px; */
   font-size: 1.2rem;
   color:var(--steps-clr) 
 }
 
-
-.links.active {
-  background-color: lightslategray;
-  color: #000;
+.links.active p{
+  background-color: #b9bdc2;
+  /* color: #b9bdc3; */
+  color: #1e293b;
   font-weight: bold;
+  border-radius: 1em;
+  padding: 0.5rem 0.5rem;
 }
-
+.links.active p :hover{
+  color: #747a74;
+}
 

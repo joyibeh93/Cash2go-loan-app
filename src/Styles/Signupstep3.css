@@ -21,7 +21,7 @@
   margin-left: 3em;
 } */
 
-.button-signup1 {
+/* .b-signup1 {
   line-height: 2.5;
   width: 26em;
   font-size: 1rem;
@@ -30,8 +30,8 @@
   border-radius: 12px;
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
-} 
-.step3-btn{
+} */
+.b-signup3{
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
   padding: 0.6em;
@@ -39,11 +39,10 @@
   border-radius: 0.5em;
   /* margin-top: 0.125em; */
   text-align: center;
-  width: 80%;
-  margin-left: 1.5em;
+  width: 25em;
 }
 
-.step3-btn button {
+.b-signup3 button {
   background-color: transparent;
   color: #fff;
   border: none;
@@ -69,9 +68,9 @@
 }
 
 .terms-signin {
-  margin-top: 2em;
+  margin-top: 5em;
   margin-left: 7em;
-  color: #747a74;
+  font-size: 0.8rem;
   font-family: var(--font-family-body);
 }
 

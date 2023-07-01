@@ -6,8 +6,10 @@ import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import eyeIcon from '../assets/eye icon.svg';
+//import RightArrow from '../assets/Right-arrow.svg';
 import OtpForm from './OtpForm';
 import '../Styles/Signup1.css';
+
 
 const Signup = () => {
  
@@ -18,7 +20,6 @@ const Signup = () => {
     email: Yup.string().email('Invalid email address').required('Email is required'),
     companyID: Yup.string().required('Company ID is required'),
   });
-
   const navigate = useNavigate();
 
   const handleSubmit = async (values, { setSubmitting }) => {
@@ -48,7 +49,8 @@ const Signup = () => {
         if (isAuthenticated) {
         
           setShowOtpForm(true);
-          navigate(`/signupstep2?email=${encodeURIComponent(email)}`);
+          //navigate('/signupstep2')
+        navigate(`/signupstep2?email=${encodeURIComponent(email)}`);
 
 
         }
@@ -71,6 +73,9 @@ const Signup = () => {
 
   return (
     <div className="form-container-signup1" style={{ paddingTop: '170px' }}>
+      <div style={{ textAlign: 'center', color: 'red' }}>
+        {signupMessage && <p className="login-message">{signupMessage}</p>}
+      </div>
       <h2>Sign Up</h2>
       <Formik
         initialValues={{ email: '', companyID: '' }}
@@ -107,16 +112,16 @@ const Signup = () => {
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
 
-          <button className='button-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+
+          <button className='b-signup1' type='submit'>Next <span><img src={RightArrow} alt="right-arrow" /></span></button>
+
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>
         {/* ${encodeURIComponent(email)} */}
       </Formik>
       {showOtpForm && < OtpForm />} 
-      <div style={{ textAlign: 'center', color: 'red' }}>
-        {signupMessage && <p className="login-message">{signupMessage}</p>}
-      </div>
+      
     </div>
   );
 };

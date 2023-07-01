@@ -1,13 +1,14 @@
 import React from "react";
 import "../Styles/Inbox.css";
 import doubleClickRed from "../assets/doubleClickRed.png";
+import doubleClickGrey from "../assets/doubleClickGrey.png";
 import shareArrow from "../assets/shareArrow.jpg";
 import msg1 from "../assets/msg1.jpg";
 import msg2 from "../assets/msg2.jpg";
 import msg3 from "../assets/msg3.jpg";
 import msg4 from "../assets/msg4.jpg";
 
-const Inbox = () => {
+const Inbox = ({clickAll}) => {
   return (
     <>
       <div className="Msg-inbox">
@@ -32,11 +33,19 @@ const Inbox = () => {
               </p>
             </div>
             <div className="msg-icons">
-              <img
+              { clickAll ? (
+                <img
                 src={doubleClickRed}
                 alt="selected"
                 className="doubleclick"
               />
+              ) : (
+                <img
+                src={doubleClickGrey}
+                alt="selected"
+                className="doubleclickGrey"
+              /> 
+              )}
               <img src={shareArrow} alt="share" className="share" />
             </div>
           </div>
@@ -53,11 +62,19 @@ const Inbox = () => {
               </p>
             </div>
             <div className="msg-icons">
-              <img
+            { clickAll ? (
+                <img
                 src={doubleClickRed}
                 alt="selected"
                 className="doubleclick"
               />
+              ) : (
+                <img
+                src={doubleClickGrey}
+                alt="selected"
+                className="doubleclickGrey"
+              /> 
+              )}
               <img src={shareArrow} alt="share" className="share" />
             </div>
           </div>
@@ -74,11 +91,19 @@ const Inbox = () => {
               </p>
             </div>
             <div className="msg-icons">
-              <img
+            { clickAll ? (
+                <img
                 src={doubleClickRed}
                 alt="selected"
                 className="doubleclick"
               />
+              ) : (
+                <img
+                src={doubleClickGrey}
+                alt="selected"
+                className="doubleclickGrey"
+              /> 
+              )}
               <img src={shareArrow} alt="share" className="share" />
             </div>
           </div>
@@ -94,11 +119,19 @@ const Inbox = () => {
               </p>
             </div>
             <div className="msg-icons">
-              <img
+            { clickAll ? (
+                <img
                 src={doubleClickRed}
                 alt="selected"
                 className="doubleclick"
               />
+              ) : (
+                <img
+                src={doubleClickGrey}
+                alt="selected"
+                className="doubleclickGrey"
+              /> 
+              )}
               <img src={shareArrow} alt="share" className="share" />
             </div>
           </div>

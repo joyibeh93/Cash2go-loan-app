@@ -9,14 +9,22 @@ function MessageContent() {
   const [message, setMessage] = useState("inbox");
   const [markAllClicked, setMarkAllClicked] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [clickAll, setClickAll] = useState(false);
 
   const handleMarkAllClick = () => {
     setMarkAllClicked(!markAllClicked);
+    setClickAll(true);
   };
 
   return (
     <div className="messageContent">
-      {modalOpen && <Modal closeModal={setModalOpen} />}
+      {modalOpen && (
+        <Modal
+          closeModal={setModalOpen}
+          setMarkAllClicked={setMarkAllClicked}
+          setClickAll = {setClickAll}
+        />
+      )}
       <div className="msg-top-bar">
         <div>
           <p className="msg-cnt-mb">
@@ -27,7 +35,9 @@ function MessageContent() {
         </div>
         {message === "inbox" ? (
           <div className="exit-new">
-            <button className="markAll">Mark All</button>
+            <button className="markAll" onClick={() => setClickAll(!clickAll)}>
+              Mark All
+            </button>
             {markAllClicked ? (
               <button className="markRead" onClick={() => setModalOpen(true)}>
                 Delete Marked
@@ -88,7 +98,7 @@ function MessageContent() {
         </div>
       </div>
       {message === "inbox" ? (
-        <Inbox />
+        <Inbox clickAll={clickAll} />
       ) : message === "new" ? (
         <MsgForm />
       ) : message === "thread" ? (
