@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import eyeIcon from '../assets/eye icon.svg';
-//import RightArrow from '../assets/Right-arrow.svg';
+import RightArrow from '../assets/Right-arrow.svg';
 import OtpForm from './OtpForm';
 import '../Styles/Signup1.css';
 
@@ -18,7 +18,6 @@ const Signup = () => {
     email: Yup.string().email('Invalid email address').required('Email is required'),
     companyID: Yup.string().required('Company ID is required'),
   });
-
   const navigate = useNavigate();
 
   const handleSubmit = async (values, { setSubmitting }) => {
@@ -111,7 +110,9 @@ const Signup = () => {
           <ErrorMessage name="companyID" component="div" className="error-message" />
 
 
-          <button className='b-signup1' type='submit'>Next <span className="arrow-right">&rarr;</span></button>
+
+          <button className='b-signup1' type='submit'>Next <span><img src={RightArrow} alt="right-arrow" /></span></button>
+
 
           <p className="terms-signup1">Term of use &nbsp; &nbsp; Privacy policy</p>
         </Form>

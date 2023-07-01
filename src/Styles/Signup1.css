@@ -1,6 +1,6 @@
 .eye1-signup1 {
   position: absolute;
-  top: 22em;
+  top: 22.5em;
   left: 74em;
 }
 .form-container-signup1 {
@@ -66,10 +66,9 @@
   padding: 0.8em ;
   outline: none;
   border-radius: 0.5em;
-  /* margin-top: 0.125em; */
   text-align: center;
-  width: 95%;
-  margin-left: 0.6em;
+  width: 25em;
+  /* margin-left: 0.6em; */
   color: #fff;
 }
 .b-signup1 button{

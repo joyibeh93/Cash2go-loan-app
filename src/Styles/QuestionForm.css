@@ -45,7 +45,7 @@
   border-radius: 0.5em;
   margin-top: 0.125em;
   text-align: center;
-  width: 75%;
+  width: 25em;
 }
 .Question-button button{
     background-color: transparent;
@@ -53,11 +53,7 @@
     border: none;
     cursor: pointer;
   }
-  .Question-button span{
-    margin-left: 1em;
-  }
 .Question-terms {
-  /* margin: 3em ; */
   margin-right: 8em;
   font-size: 0.8rem;
 }
