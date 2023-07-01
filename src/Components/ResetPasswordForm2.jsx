@@ -271,7 +271,7 @@ const ResetPasswordForm2 = () => {
             <ErrorMessage name="Answer" component="div" className="error-message" />
             <div className="status-message">{status}</div>
 
-            <div className="button">
+            <div className="b-signup1" style={{width:"75%"}}>
               <Buttons button="Reset" />
             </div>
           </Form>
@@ -279,7 +279,7 @@ const ResetPasswordForm2 = () => {
       </Formik>
 
       {showModal && (
-        <div className="modal">
+        <div className="question-modal">
           <button className="close-modal" onClick={handleModalClose}>
             &times;
           </button>

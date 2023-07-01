@@ -309,13 +309,13 @@ const ResetPassword3 = () => {
             className="error-message"
           />
 
-          <div className="button">
+          <div className="b-signup1" style={{width:"75%"}}>
             <Buttons button="Reset" />
           </div>
         </Form>
       </Formik>
       {showModal && (
-        <div className="modal">
+        <div className="question-modal">
           <button class="close-modal" onClick={closeModal}>
             &times;
           </button>
