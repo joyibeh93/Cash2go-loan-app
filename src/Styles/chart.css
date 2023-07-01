@@ -1,21 +1,22 @@
 
 .pie{
-    width: 300px;
+    width: 16em;
     border: gray;
     background-color:white;
     
 }
 .bar{
-    width: 35rem;
-    border: 1px transparent;
+    width: 33em;
     background-color: white;
+    
 }  
 .doughnut{
-    width: 10px;
+    width: 0.625em;
     height: 20%;
-    font-size: 30px;
+    font-size: 1.875em;
 }
-p{
+
+.pie-p{
     display: flex;
   justify-content:space-evenly;
 }
@@ -28,19 +29,21 @@ p{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
-    max-width: 900px;
+    gap: 1.25em;
+    max-width: 56.25em;
     margin: 0 auto;
-    padding: 10px;
+    padding: 0.625em;
 }
 .tablehead{
-    display: flex;
+display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem 0;
-  padding: 0 1rem;
-  border-bottom: 1px solid;
+  padding: 0.5rem;
+  border-bottom: 1px solid #8a85852f;
+
   border-width: 100%;
+ 
 }
 .previousTable{
     margin: 0 auto;

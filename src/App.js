@@ -1,20 +1,10 @@
-import './index.css';
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import SignUpStep1 from './Pages/SignUpStep1';
 import SignUpStep2 from './Pages/SignUpStep2';
 import Dashboard from './Pages/Dashboard';
 import './index.css';
 import './App.css';
-//import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-//import SignUpStep1 from './Pages/SignUpStep1';
-//import SignUpStep2 from './Pages/SignUpStep2';
-//import Dashboard from './Pages/Dashboard';
-//import './index.css';
-//import './App.css';
-//import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 //import SignUpStep1 from './Pages/SignUpStep1';
 //import SignUpStep2 from './Pages/SignUpStep2';
@@ -29,12 +19,20 @@ import ContactInfoPage from './Pages/ContactInfoPage';
 import ResetPassword3page from './Pages/ResetPassword3page';
 import LoanDefaultPage from './Pages/LoanDefaultPage'
 import BvnPage from './Pages/BvnPage';
+import Message from './Pages/Message';
+import Application from './Pages/Application';
+import Applicantinfo from './Pages/ApplicantInfo'
+import Notification from './Pages/Notification';
+import ReviewPage from './Pages/ReviewPage';
+import Analytics from './Pages/Analytics';
+import Recovery from './Pages/Recovery';
+import Settings from './Pages/Settings';
 
 function App() {
   return (
     <Router>
       <Routes>
-         <Route path="/bvn" element={<BvnPage />} />
+        <Route path="/bvn" element={<BvnPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signupstep2" element={<SignUpStep2 />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
@@ -42,13 +40,28 @@ function App() {
         <Route path="/signupstep3" element={<SignUpStep3 />} />
         <Route exact path="/" element={<Login />} />
         <Route path="/signupstep1" element={<SignUpStep1 />} />
-        <Route path="/resetpassword2" element={<PasswordResetPage />} />
+        <Route path="/resetpassword2/:email" element={<PasswordResetPage />} />
+
+        {/* <Route path="/resetpassword2" element={<PasswordResetPage />} /> */}
+
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />
         <Route path="/resetpassword3" element={<ResetPassword3page />} />
         <Route path="/bvn" element={<BvnPage />} />
         <Route path="/loandefault" element={<LoanDefaultPage />} />
-        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+        <Route path="/application" element={<Application />} />
+        <Route path="/message" element={<Message />} />
+        {/* <Route path="/resetpassword3" element={<ResetPassword3page />} /> */}
+        <Route path="/applicantinfo" element={<Applicantinfo />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/review" element={<ReviewPage />} />
+        <Route path="/setting" element={<Settings />} />
+        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/recovery" element={<Recovery />} />
+        <Route path="/settings" element={<Settings />} />
+        
+        
+        
         
       </Routes>
     </Router>

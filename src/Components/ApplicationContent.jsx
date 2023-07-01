@@ -5,20 +5,21 @@ import userIcon from '../assets/user-icon.svg';
 import approvedTransparent from '../assets/approved-transparent.svg';
 import rejectedTransparent from '../assets/rejected-transparent.svg';
 import '../Styles/Dashboard-down.css';
+import { Link } from 'react-router-dom';
 
 function ApplicationContent() {
   return (
     <div>
-        <div>
+        <div style={{marginBottom:"20px"}}>
             <ul>
                 <li>Applications</li>
-                <li>All Applications</li>
+                <li className='appcnt'> All Applications</li>
             </ul>
         </div>
         <div className="dashBoardTable">
       <div className="tablehead">
         <div>
-          <h3>All Applications</h3>
+          <h3>All Applications</h3><br/>
           <span>Sorted by Date</span>
         </div>
         <img src={download} alt="download-icon" />
@@ -47,9 +48,10 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Ogbeni Malani</h4>
+              <Link to='/applicantinfo'><h4>Ogbeni Malani</h4></Link>
                 <span>012889</span>
               </div>
+              
             </td>
             <td>02 / 04 / 23</td>
             <td>
@@ -67,7 +69,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Oloyomi stutern</h4>
+              <h4>Muktarr Bello</h4>
                 <span>014907</span>
               </div>
             </td>
@@ -87,13 +89,13 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Musa Ibrahim</h4>
+              <h4>Ogbeni Malani</h4>
                 <span>014990</span>
               </div>
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p className="approved-down rejected">
+              <p className="approved-down rejected-reject">
                 <img src={rejectedTransparent} alt="rejected-img" /> Rejected
               </p>
             </td>
@@ -107,7 +109,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Bukola Adepoju</h4>
+              <h4>Rukayat stute</h4>
                 <span>014990</span>
               </div>
             </td>
@@ -127,7 +129,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Love Onyeka</h4>
+                <h4>Love Onyekah</h4>
                 <span>015678</span>
               </div>
             </td>
@@ -147,7 +149,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Chrisopher Fals</h4>
+              <h4>Ogbeni Malani</h4>
                 <span>015679</span>
               </div>
             </td>
@@ -173,7 +175,7 @@ function ApplicationContent() {
             </td>
             <td>02 / 04 / 23</td>
             <td>
-              <p className="approved-down rejected">
+              <p className="approved-down rejected-reject">
                 <img src={rejectedTransparent} alt="rejected-text" /> Rejected
               </p>
             </td>
@@ -187,7 +189,7 @@ function ApplicationContent() {
             <td className="first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Poju Great</h4>
+              <h4>Rukayat stute</h4>
                 <span>015078</span>
               </div>
             </td>
@@ -207,6 +209,21 @@ function ApplicationContent() {
       </table>
     </div>
        
+    <div className="goTo">
+        <button className="prev">
+          <span className="arrow-left">&larr;</span>Prev
+        </button>
+        <div className="numbers">
+          <button>1</button>
+          <button>2</button>
+          <button>...</button>
+          <button>5</button>
+          <button>6</button>
+        </div>
+        <button className="next">
+          Next<span className="arrow-right">&rarr;</span>
+        </button>
+      </div>
     </div>
   )
 }

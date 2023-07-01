@@ -19,10 +19,10 @@ import { useNavigate } from 'react-router-dom';
     <div className="dashboard-content">
       <p>Dashboard</p>
       <div className="notification">
-        <div>
-          <h2>Hello Gbenga</h2>
+        <div className='dash-welcomenote'>
+          <h2>Hello Gbenga</h2><br/>
           <p>
-            Welcome back you have <span> 13 </span> New Notification
+            Welcome back you have <strong> 13 </strong> New Notification
           </p>
         </div>
         <div className="exit-new">
@@ -31,7 +31,7 @@ import { useNavigate } from 'react-router-dom';
         </div>
       </div>
       <div className="dash-top">
-        <div>
+        <div className='dast-top1'>
           <p>Approved Loan</p>
           <p className="loan-count">
             <strong>104</strong>
@@ -45,7 +45,7 @@ import { useNavigate } from 'react-router-dom';
           </p>
         </div>
         <img src={approvedBlack} className="approved-black" alt="" />
-        <div>
+        <div className='dast-top1'>
           <p>Pending Reviews</p>
           <p className="loan-count">
             <strong>81</strong>
@@ -53,12 +53,12 @@ import { useNavigate } from 'react-router-dom';
           <p className="loan-stats">
             +2 from Yesterday{' '}
             <button className="pending">
-              <img src={pendingTransparent} alt="pending-icon" /> Pending
+              <img src={pendingTransparent} alt="pending-icon" className="icn"/> Pending
             </button>
           </p>
         </div>
         <img src={pendingBlack} className="pending-black" alt="" />
-        <div>
+        <div className='dast-top1'>
           <p>Approved Loan</p>
           <p className="loan-count">
             <strong>20</strong>

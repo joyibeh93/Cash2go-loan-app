@@ -86,17 +86,23 @@ form p {
 .btn {
   font-family: var(--font-family-body);
   background-color: var(--submit-btn-bg-clr);
-  padding: 15px 5px;
-  border-radius: 12px;
-  margin-top: 5px;
+  padding: 0.6em;
+  border-radius: 0.5em;
+  margin-top: 0.125em;
   text-align: center;
-  width: 50%;
-  margin-left: 3em;
+  width: 20em;
 }
 .btn button {
   background-color: transparent;
   color: #fff;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+.otp-term{
+  margin-top: 5em;
+  margin-left: 3em;
+  font-family: var(--font-family-body);
+  font-size: 0.8rem;
   cursor: pointer;
 }

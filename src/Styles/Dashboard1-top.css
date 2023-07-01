@@ -13,7 +13,7 @@
   --new-btn-bg-clr: #ff6f5a;
   --approved-btn-bg-clr: #169872;
   --rejected-btn-bg-clr: #fd3d39;
-  --pending-btn-bg-clr: #c0f5f9;
+  --pending-btn-bg-clr: #52898d;
   --credit-score-bg-clr: #b9bdc2;
   --excellent-btn-bg-clr: #169872;
   --good-btn-bg-clr: #747a85;
@@ -63,46 +63,66 @@
   justify-content: space-between;
   align-items: center;
   background-color: #f0f0f0;
-  padding: 0.8rem;
+  padding: 1rem;
   border-radius: 0.6rem;
   margin: 1rem 0;
 }
+
 
 .approved {
   background-color: var(--approved-btn-bg-clr);
   color: var(--main-bg-clr);
   border: none;
-  padding: 0.2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius:0.3rem;
   font-size: 0.8rem;
+  margin-left: 0.4rem;
 }
 .pending {
-  background-color: var(--pending-btn-bg-clr);
+  background-color: hsl(184, 40%, 59%);
+  color: var(--main-bg-clr);
   border: none;
-  padding: 0.2rem;
+  padding: 0.25rem 0.5rem;
   font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  border-radius:0.3rem;
+  font-size: 0.8rem;
+  margin-left: 0.4rem;
+} 
+.icn{
+  color: var(--main-bg-clr);
 }
-
 .rejected {
   background-color: var(--rejected-btn-bg-clr);
-  border: none;
-  padding: 0.2rem;
   color: var(--main-bg-clr);
+  border: none;
+  padding: 0.3rem;
+  padding: 0.25rem 0.5rem;
+  border-radius:0.3rem;
   font-size: 0.8rem;
+  margin-left: 0.4rem;
 }
 .approved-black {
   position: absolute;
-  left: 34.5rem;
-  bottom: 24.8rem;
-}
+  left: 36.5rem;
+  bottom: 26rem;
+  width: 1.875rem;
+} 
 .pending-black {
   position: absolute;
-  left: 51.5rem;
-  bottom: 24.8rem;
+  left: 54.5rem;
+  bottom: 26rem;
+  width: 1.875rem;
 }
+
 .rejected-black {
   position: absolute;
-  left: 66.5rem;
-  bottom: 24.8rem;
+  left: 75.9rem;
+  bottom: 26rem;
+  width: 1.875rem;
+} 
+.ddownload-icon{
+  color: #f0f1f321;
 }
 .loan-count {
   margin: 0.5rem 0;
