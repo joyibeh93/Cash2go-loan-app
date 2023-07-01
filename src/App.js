@@ -46,7 +46,10 @@ function App() {
 
         <Route path="/predictioninfo" element={<PredictionInfoPage />} />
         <Route path="/contactinfo" element={<ContactInfoPage />} />
-        <Route path="/resetpassword3" element={<ResetPassword3page />} />
+        <Route path="/resetpassword3/:email" element={<ResetPassword3page />} />
+
+        {/* <Route path="/resetpassword3" element={<ResetPassword3page />} /> */}
+
         <Route path="/bvn" element={<BvnPage />} />
         <Route path="/loandefault" element={<LoanDefaultPage />} />
         <Route path="/application" element={<Application />} />
