@@ -22,7 +22,7 @@
 .bell {
   margin-right: 1rem;
 }
-.right-arrow {
+/* .right-arrow {
   position: absolute;
   top: 0.8rem;
   left: 29.5rem;
@@ -32,4 +32,44 @@
 }
 .name-desc {
   font-size: 0.75rem;
+} */
+
+/* .right-arrow {
+  Remove absolute positioning
+
+} */
+
+.navbar-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 79%;
+  display: flex;
+  align-items: center;
+  background-color: var(--side-bar-bg-clr);
+  z-index: 999;
+  padding: 0 20px;
+  margin-left: 22%;
+}
+
+.right-arrow {
+  margin-left: auto;
+}
+
+.navbar-userIcon {
+  margin-right: 0.5rem;
+}
+
+.name-desc {
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.navbar-userIcon {
+  margin-right: 0.5rem;
+}
+
+.name-desc {
+  font-size: 0.75rem;
+  margin-left: 0.5rem; /* Add margin to align with other elements */
 }
