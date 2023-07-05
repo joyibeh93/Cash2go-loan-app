@@ -2,20 +2,8 @@ import React from 'react'
 
 const Activity = () => {
   return (
-     <div>
-       {/* <div className='heady'>
-        <h2 className='set-head'>Settings</h2>
-        <div className="settings-button">
-          <button className="markAll">Turn ALL OFF</button>
-          <button className="markRead">Turn ALL ON</button>
-          </div>
-        </div>
-        <div className='categories'>
-      <span>Models</span>
-      <span>Notification</span>
-      <span>Security & privacy</span>
-      <span>Activity</span>
-    </div>  */}
+     <div style={{marginTop:"5em" , marginLeft:"-20em"}}>
+      
 
 
 

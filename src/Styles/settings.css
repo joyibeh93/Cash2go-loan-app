@@ -36,12 +36,12 @@
     --font-size: 1rem;
   }
 .settings{
-    display: flex;
+     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     gap: 1.25em;
-    margin: 0 auto;
+    margin: 0;
     padding: 1.25em;
 }
 .tableheadSet{
@@ -158,5 +158,3 @@
 .toggle-switch input[type="checkbox"]:checked + .switch {
   background-color: #fd3d39 ;
 }
-
-

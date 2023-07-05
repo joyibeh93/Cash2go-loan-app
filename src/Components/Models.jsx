@@ -11,9 +11,8 @@ import Toggle from './Toggle';
 
 const Models= () => {
  
-  
   return (
-    <div >
+     <div style={{marginTop:"5em" , marginLeft:"-20em"}}>
         <div className='settings'>
           <table>
           <thead>
@@ -72,7 +71,7 @@ const Models= () => {
             <td className="dashDown-first-data">
               <Toggle style={{ paddingLeft: '20px' }} />{' '}
               <div className="data-title">
-                <h4 style={{ paddingRight: '16px' }}>Credit First Model</h4>
+                <h4 style={{ paddingRight: '20px' }}>Credit First Model</h4>
                 <span>Credit Score Main</span>
               </div>
             </td>
