@@ -11,10 +11,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
-
     "chart": "^0.1.2",
     "chart.js": "^4.3.0",
-
     "formik": "^2.2.9",
     "nanoid": "^4.0.2",
     "pie-chart": "^0.0.1",
@@ -52,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.21.8"
+    "@babel/eslint-parser": "^7.21.8",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

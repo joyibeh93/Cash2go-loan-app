@@ -102,6 +102,8 @@ const Sidebar = () => {
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
+  
+  
   const handleLogout = () => {
     // Perform logout actions if needed
     
