@@ -22,7 +22,7 @@ function MessageContent() {
         <Modal
           closeModal={setModalOpen}
           setMarkAllClicked={setMarkAllClicked}
-          setClickAll = {setClickAll}
+          setClickAll={setClickAll}
         />
       )}
       <div className="msg-top-bar">
