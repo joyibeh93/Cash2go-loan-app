@@ -84,6 +84,95 @@
 // export default ResetPasswordForm;
 
 
+// import React, { useState } from 'react';
+// import { Formik, Form, Field, ErrorMessage } from 'formik';
+// import * as Yup from 'yup';
+// import { useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Buttons from './Buttons';
+// import '../Styles/Resetpswrd.css';
+
+// const emailSchema = Yup.object().shape({
+//   email: Yup.string()
+//     .email('Email incorrect')
+//     .required('Please enter your email address'),
+// });
+
+// const ResetPasswordForm = () => {
+//   const navigate = useNavigate();
+//   const [status, setStatus] = useState(""); // Add this line to define the status variable
+
+//   const handleSubmit = async (values, { setSubmitting }) => {
+//     setSubmitting(true); // Set form submission state to true
+
+//     const email = values.email;
+
+//     try {
+//       const response = await axios.post(
+//         "https://cash2go-backendd.onrender.com/api/v1/user/verify-email",
+//         {
+//           email: email,
+//         }
+//       );
+//       const isAuthenticated = response.data;
+      
+//       if (isAuthenticated) {
+//         console.log(isAuthenticated);
+//         navigate(`/resetpassword2?email=${encodeURIComponent(email)}`);
+//       }
+//     } catch (error) {
+//       console.error("Error:", error);
+//       if (error.response) {
+//         setStatus(error.response.data.message);
+//         setTimeout(() => {
+//           setStatus("");
+//         }, 5000);
+//       }
+//     } finally {
+//       setSubmitting(false);
+//     }
+//   };
+
+//   return (
+//     <div className="form-container">
+//       <h1 className="re-heading">Reset Password</h1>
+//       <Formik
+//         initialValues={{ email: '' }}
+//         validationSchema={emailSchema}
+//         onSubmit={handleSubmit}
+//       >
+//         {({ errors, touched }) => (
+//           <Form className="form">
+//             <label htmlFor="email" className="label">
+//               Email
+//             </label>
+//             <Field
+//               className="input"
+//               id="email"
+//               name="email"
+//               type="email"
+//               placeholder="Enter your email address"
+//             />
+//             <ErrorMessage
+//               name="email"
+//               component="div"
+//               className="error-message"
+//             />
+//             <div className="re-btn">
+//               <Buttons button="Next" />
+//             </div>
+//             <div style={{ color: 'red' }}>{status}</div> {/* Display status message */}
+//           </Form>
+//         )}
+//       </Formik>
+//       <p className="re-terms">Term of use &nbsp; &nbsp; Privacy policy</p>
+//     </div>
+//   );
+// };
+
+// export default ResetPasswordForm;
+
+
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -100,10 +189,10 @@ const emailSchema = Yup.object().shape({
 
 const ResetPasswordForm = () => {
   const navigate = useNavigate();
-  const [status, setStatus] = useState(""); // Add this line to define the status variable
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (values, { setSubmitting }) => {
-    setSubmitting(true); // Set form submission state to true
+    setSubmitting(true);
 
     const email = values.email;
 
@@ -115,9 +204,11 @@ const ResetPasswordForm = () => {
         }
       );
       const isAuthenticated = response.data;
-      console.log(isAuthenticated);
+      
       if (isAuthenticated) {
-        navigate(`/security-question?email=${encodeURIComponent(email)}`);
+        console.log('Email:', email);
+        console.log('Authenticated:', isAuthenticated);
+        navigate(`/resetpassword2/${encodeURIComponent(email)}`);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -160,7 +251,7 @@ const ResetPasswordForm = () => {
             <div className="re-btn">
               <Buttons button="Next" />
             </div>
-            <div style={{ color: 'red' }}>{status}</div> {/* Display status message */}
+            <div style={{ color: 'red' }}>{status}</div>
           </Form>
         )}
       </Formik>

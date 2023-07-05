@@ -40,8 +40,8 @@ const OtpForm = () => {
       });
 
       const isAuthenticated = response.data;
-
       if (isAuthenticated) {
+        //navigate('/signupstep4')
         navigate(`/signupstep4?email=${encodeURIComponent(email)}`);
       }
     } catch (error) {
@@ -76,6 +76,7 @@ const OtpForm = () => {
   };
 
   return (
+    
     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={submitForm}>
       {({ isSubmitting }) => (
         <Form>
