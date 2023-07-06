@@ -47,7 +47,7 @@
 }
 
 /* styling for dash-down title :style={{ color: '#74757a', paddingRight: '25px' }} */
-.dashDown-Table {
+/* .dashDown-Table {
   background-color: #f7f7f7;
   border-radius: 10px;
 }
@@ -75,15 +75,6 @@
   border-bottom: 1px solid #b9bdc2;
  }
 
-/* approved downstyling style={{ marginRight: '5px' }}  */
-/*  */
-/* th,
-td {
-  border-bottom: 0.1px solid #b9bdc2;
-  font-weight: 100;
-  style={{ borderBottom: '1px solid #b9bdc2' }}
-} */
-
 
 .dashDown-first-data {
   display: flex;
@@ -94,12 +85,10 @@ td {
 
 
 .dashDown-first-data h4 {
-  /* padding-bottom: 5px; */
   padding-right: '25px';
-  margin-left: 25px;
   color: '#74757a';
   font-weight: 100;
-  /* style={{ ', }} */
+ 
 }
 
 .dashDown-first-data Link {
@@ -110,14 +99,9 @@ td {
   margin: 0 0.4rem;
 }
 
-/* .dashDown-img {
-  padding-Left: 70px;
-} */
 
 .dashDown-approved {
   display: flex;
-  /* padding-top: 3px;
-  padding-bottom: 3px; */
   padding: 4px 5px;
   border-radius: 4px;
   justify-content: center;
@@ -125,7 +109,7 @@ td {
   text-align: center;
   background-color: var(--approved-btn-bg-clr);
   color: var(--main-bg-clr);
-  /* width: 60%; */
+ 
   margin-left: 2rem;
 }
 
@@ -138,15 +122,14 @@ td {
   text-align: center;
   background-color: hsl(184, 40%, 59%);
   color: var(--main-bg-clr);
-  /* width: 60%; */
+  
   margin-left: 2rem;
 
 }
 
 .dashDown-rejected {
   display: flex;
-  /* padding-top: 3px;
-  padding-bottom: 3px; */
+  
   padding: 4px 5px;
   border-radius: 4px;
   justify-content: center;
@@ -154,11 +137,71 @@ td {
   text-align: center;
   background-color: #fd3d39;
   color: var(--main-bg-clr);
-  /* width: 60%; */
-  /* margin-left: 2rem; */
+  
  margin-left: 2rem;
+} */
+
+
+.dashDown-tablehead{
+  padding: 13px;
+}
+.dashDown-Table {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+.dashdown-div h3{
+  margin-bottom: 10px;
 }
 
+.dash-th {
+  text-align: left;
+  padding: 15px;
+}
+
+.dashDown-first-data {
+  display: flex;
+  align-items: center;
+}
+
+.dashDown-first-data img {
+  margin-right: 15px;
+  padding: 15px;
+}
+
+.dashDown-data-title {
+  display: flex;
+  flex-direction: column;
+}
+.data-title h4{
+  margin-bottom: 7px;
+}
+
+.dashDown-data-title h4 {
+  margin: 0;
+}
+
+.dashDown-data-title a {
+  color: #74757a;
+}
+
+.dashDown-pending,
+.dashDown-approved,
+.dashDown-rejected {
+  margin: 0;
+}
+
+.dashDown-img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+
+
+
+/* differnt don't combine with top */
 
 /* .dashRev-approved {
   display: flex;

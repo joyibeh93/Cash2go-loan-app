@@ -9,6 +9,7 @@ import SettingsModal from "./SettingsModal";
 const SettingContent = () => {
   const [setting, setSetting] = useState(false);
   const [markAllClicked, setMarkAllClicked] = useState(false);
+ const [setModalOpen] = useState(false);
   const [settingsModalOpen, setSettingsModalOpen] = useState(false);
   const [ clickAll, setClickAll] = useState(false);
 

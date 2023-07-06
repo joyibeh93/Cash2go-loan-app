@@ -40,7 +40,7 @@ const DashBoard1_Down = () => {
           <tr>
             <td className="dashDown-first-data">
               <img src={userIcon} alt="user-icon" />{' '}
-              <div className="dashDown-data-title"  >
+              <div className="data-title"  >
                 <h4>Ogbeni Malani</h4>
                 <Link to="/applicantinfo"> More info </Link>
                 {/* <span>more info</span> */}
@@ -62,7 +62,7 @@ const DashBoard1_Down = () => {
             <td className="dashDown-first-data">
               <img src={userIcon} alt="user-icon" />{' '}
               <div className="data-title">
-                <h4>Muktarr Bello</h4><br />
+                <h4>Muktarr Bello</h4> 
                 <span><Link to="/applicantinfo"> More info </Link></span>
                 {/* more info */}
               </div>
