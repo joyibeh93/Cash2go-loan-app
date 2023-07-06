@@ -1,28 +1,19 @@
-/* .modal{
-    background-color: white;
-    width: 50%;
-    box-shadow: none;
-    margin-bottom: -19.5em;
-    position: relative;
-    top: 4.5em;
-    border-radius: 10px;
-} */
 .modal{
-display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* width: 60%; */
-  background-color: #b9bdc2;
+  background-color: white;
+  position: relative;
+  top: -2em;
+  left: 21em;
+  width: 50%;
   padding: 2.5rem;
   border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  box-shadow: none;
   text-align: center;
+  z-index: 20;
+  margin-bottom: -18em;
 }
 .cancelbtn{
     color: grey;
