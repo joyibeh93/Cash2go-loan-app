@@ -67,7 +67,7 @@
 .categories{
     display: flex;
     flex-direction: row;
-    gap: 2.5em;
+    gap: 0.25em;
 }
 
 .rejected-btn{
