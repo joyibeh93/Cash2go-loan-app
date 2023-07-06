@@ -4,19 +4,29 @@ import Notifications2 from "./Notifications2";
 import Security from "./Security";
 import Activity from "./Activity";
 import { useState } from "react";
+import SettingsModal from "./SettingsModal";
 
 const SettingContent = () => {
   const [setting, setSetting] = useState(false);
   const [markAllClicked, setMarkAllClicked] = useState(false);
-  const [setModalOpen] = useState(false);
+  const [settingsModalOpen, setSettingsModalOpen] = useState(false);
+  const [ clickAll, setClickAll] = useState(false);
 
   const handleMarkAllClick = () => {
     setMarkAllClicked(!markAllClicked);
+    setClickAll(true);
   };
 
 
   return (
     <div className="messageContent" >
+      {settingsModalOpen && (
+        <SettingsModal
+          closeModal={setSettingsModalOpen}
+          setMarkAllClicked={setMarkAllClicked}
+          setClickAll = {setClickAll}
+        />
+      )}
          <div className="msg-top-bar">
         <div>
           <p className="msg-cnt-mb">
@@ -29,11 +39,11 @@ const SettingContent = () => {
           <div className="exit-new">
             <button className="markAll">Manage</button>
             {markAllClicked ? (
-              <button className="markRead" onClick={() => setModalOpen(true)}>
+              <button className="markRead" onClick={() => setClickAll(!clickAll)} >
                 Create New Model
               </button>
             ) : (
-              <button className="markRead" onClick={handleMarkAllClick}>
+              <button className="markRead" onClick={() =>setSettingsModalOpen(true)}>
                 Create New Model
               </button>
             )}
@@ -47,7 +57,7 @@ const SettingContent = () => {
          Turn ALL OFF
        </button>
        {markAllClicked ? (
-         <button className="markRead" onClick={() => setModalOpen(true)}>
+         <button className="markRead" onClick={() => setSettingsModalOpen(true)}>
            Turn  ALL ON
          </button>
        ) : (

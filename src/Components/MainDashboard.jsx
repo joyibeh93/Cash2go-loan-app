@@ -20,9 +20,9 @@ import { useNavigate } from 'react-router-dom';
       <p>Dashboard</p>
       <div className="notification">
         <div className='dash-welcomenote'>
-          <h2>Hello Gbenga</h2><br/>
+          <h1 className='notifctn-header1'>Hello Gbenga</h1><br/>
           <p>
-            Welcome back you have <strong> 13 </strong> New Notification
+            Welcome back you have <strong style={{fontWeight:'bold',fontSize:"16px"}}> 13 </strong> New Notification
           </p>
         </div>
         <div className="exit-new">
@@ -34,9 +34,9 @@ import { useNavigate } from 'react-router-dom';
         <div className='dast-top1'>
           <p>Approved Loan</p>
           <p className="loan-count">
-            <strong>104</strong>
+            <strong style={{fontWeight:'bold',fontSize:"18px"}}>104</strong>
           </p>
-          <p className="loan-stats">
+          <p className="loan-stats" >
             +10 from Yesterday{' '}
             <button className="approved">
               {' '}
@@ -48,7 +48,7 @@ import { useNavigate } from 'react-router-dom';
         <div className='dast-top1'>
           <p>Pending Reviews</p>
           <p className="loan-count">
-            <strong>81</strong>
+            <strong style={{fontWeight:'bold',fontSize:"18px"}}>81</strong>
           </p>
           <p className="loan-stats">
             +2 from Yesterday{' '}
@@ -61,7 +61,7 @@ import { useNavigate } from 'react-router-dom';
         <div className='dast-top1'>
           <p>Approved Loan</p>
           <p className="loan-count">
-            <strong>20</strong>
+            <strong style={{fontWeight:'bold',fontSize:"18px"}}>20</strong>
           </p>
           <p className="loan-stats">
             +1 from Yesterday{' '}
