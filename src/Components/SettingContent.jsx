@@ -8,7 +8,7 @@ import { useState } from "react";
 const SettingContent = () => {
   const [setting, setSetting] = useState(false);
   const [markAllClicked, setMarkAllClicked] = useState(false);
-  const [setModalOpen] = useState(false);
+ const [setModalOpen] = useState(false);
 
   const handleMarkAllClick = () => {
     setMarkAllClicked(!markAllClicked);
