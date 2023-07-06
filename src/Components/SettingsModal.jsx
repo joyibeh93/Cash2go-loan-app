@@ -93,7 +93,7 @@ const SettingsModal = ({ closeModal, setMarkAllClicked, setClickAll }) => {
           <input
             className="form-input"
             type="text"
-            placeholder="Add New Value" 
+            placeholder="Add New Value    +" 
             
           />
         </div>
