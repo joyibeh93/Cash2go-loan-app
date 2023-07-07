@@ -7,7 +7,11 @@
   height: 100vh;
   padding: 3em;
 }
-
+.re-heading{
+  text-align: center;
+  color: var(--sign-up-btn-bg-clr);
+  margin-right: 3em;
+}
 .form {
   padding: 1em 2em;
   /* margin-left: 4.5em; */
@@ -22,22 +26,34 @@
   margin-bottom: 5px;
   margin-right: 8em;
 }
-
-.input {
-  display: block;
-  width: 100%;
-  padding: 1.2em;
-  border: 1px solid black;
+.input{
+    border-radius: 5px;
+    width: 30em;
+    padding: 1em;
+    margin-bottom: 1em;
+    font-family: var(--font-family-body);
+    outline: 0;
+    border: 2px solid #747a85;
+}
+.re-btn {
+  font-family: var(--font-family-body);
+  background-color: var(--submit-btn-bg-clr);
+  padding: 0.6em;
   outline: none;
   border-radius: 0.5em;
-  margin-bottom: 1em;
+  margin-top: 0.125em;
+  text-align: center;
+  width:25em;
 }
-
-.re-btn {
-  margin-left: 4em;
-  width: 70%;
-}
-
-.terms {
+.re-btn button{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+.re-terms {
   margin-top: 5em;
+  margin-right: 8em;
+  font-size: 0.8rem;
+  cursor: pointer;
 }

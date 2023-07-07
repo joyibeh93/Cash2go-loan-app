@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <div className="navbar-item">
-      <img src={searchicon} alt="searhicon" className="searchicon" />
+      <img src={searchicon} alt="searchicon" className="searchicon" />
       <input type="search" placeholder="Search" className="navbar-search" />
       <img src={rightarrow} alt="right-arrow" className="right-arrow" />
       <div className="navbar-item2">
@@ -33,6 +33,7 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 /*import React, { useState } from 'react';
 import usericon from '../assets/user-icon.svg';
