@@ -15,7 +15,9 @@
   z-index: 20;
   margin-bottom: -18em;
 }
+
 .cancelbtn{
+    background-color: white;
     color: grey;
     position: relative;
     top: -4em;
@@ -26,6 +28,11 @@
     position: relative;
     top: -1em;
     left: 1em;
+    height: 5em;
+}
+
+.bold-q{
+    font-weight: 800;
 }
 
 .modal-title{
