@@ -120,14 +120,12 @@
 
 // Second code
 import React, { useState } from 'react';
-import Buttons from './Buttons';
 import eyeIcon from '../assets/eye icon.svg';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import '../Styles/Login.css';
-import { Formik, Form, Field} from 'formik';
-import axios from 'axios'
+import { Formik } from 'formik';
 //import { Colors } from 'chart.js';
 
 // Creating schema
@@ -142,45 +140,35 @@ const schema = Yup.object().shape({
 
 export const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  //const [loginMessage, setLoginMessage] = useState('');
-  const [status,setStatus]=useState("")
+  const [loginMessage, setLoginMessage] = useState('');
   const navigate = useNavigate();
 
-// Handles form submission
-const handleSubmit =  async (values, { setSubmitting }) =>{
-  setSubmitting(true); // Set form submission state to true
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const response = await fetch(
+        'https://cash2go-backendd.onrender.com/api/v1/user/login',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
+        }
+      );
 
-  const email = values.email; // Get password value from form
-  const password = values.password; // Get password value from form
-
-  try {
-    // Send request to server to authenticate the user email and password
-    const response = await axios.post(
-      "https://cash2go-backendd.onrender.com/api/v1/user/login",
-      {
-        email: email,
-        password: password,
+      if (response.ok) {
+        setLoginMessage('Login successful!');
+        navigate('/dashboard');
+      } else {
+        setLoginMessage('Login failed. Please check your credentials.');
       }
-    );
-    const isAuthenticated = response.data; // Get authentication status from response
-    console.log(isAuthenticated);
-    if (isAuthenticated) {
-      // If user is authenticated, pass the loginToApp function as a prop to the parent component
-      navigate('/dashboard'); // Navigate to the next page
+    } catch (error) {
+      console.log('Error:', error);
+      setLoginMessage('Login failed. Please check your credentials.');
     }
-  } catch (error) {
-    console.error("Error:", error);
-    if (error.response) {
-      setStatus(error.response.data.message); // Set error message from response
-      setTimeout(() => {
-        setStatus("");
-      }, "5000"); // Clear status message after 5 seconds
-    }
-  } finally {
-    setSubmitting(false); // Set form submission state to false
-  }
-};
 
+    setSubmitting(false);
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
@@ -194,25 +182,24 @@ const handleSubmit =  async (values, { setSubmitting }) =>{
         onSubmit={handleSubmit}
       >
         {({
-          // values,
+          values,
           errors,
           touched,
           handleChange,
           handleBlur,
-          // handleSubmit,
+          handleSubmit,
         }) => (
           <div>
-            
-            
-            <Form className="form-login">
-              <span className="loginheader">Login</span>
+
+            <form noValidate onSubmit={handleSubmit} className="form-login">
+              <span className="loginheader">Log In</span>
               <label htmlFor="email">Email</label>
-              <Field
+              <input
                 type="email"
                 name="email"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                // value={values.email}
+                value={values.email}
                 placeholder="myworkemail@work.com"
                 id="email"
                 className="login-input"
@@ -222,14 +209,13 @@ const handleSubmit =  async (values, { setSubmitting }) =>{
               </p>
 
               <label htmlFor="password">Password</label>
-              <Field
+              <input
                 type={showPassword ? 'text' : 'password'}
                 name="password"
-                id="password"
                 maxLength={8}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                // value={values.password}
+                value={values.password}
                 className="login-input"
               />
               <img
@@ -243,11 +229,13 @@ const handleSubmit =  async (values, { setSubmitting }) =>{
               </p>
 
               <div className="login-btn">
-                <Buttons button="Login" />
+                <button className='Login' type='submit'>Log In <span className="arrow-right">&rarr;</span></button>
               </div>
-            </Form>
-            <div style={{ color: 'red' }}>{status}</div>
-            
+            </form>
+            <div style={{ textAlign: 'center', color: "red" }}>
+              {loginMessage && <p className="login-message">{loginMessage}</p>}
+            </div>
+
           </div>
         )}
       </Formik>
