@@ -187,7 +187,23 @@
 .dashDown-pending,
 .dashDown-approved,
 .dashDown-rejected {
-  margin: 0;
+  margin: 0 50px;
+  width: 100px;
+  padding: 4px 0;
+  border-radius:0.3rem;
+}
+.dashDown-approved{
+  background-color:var(--approved-btn-bg-clr);
+  color:#fff;
+}
+.dashDown-pending{
+  background-color:hsl(184, 40%, 59%);
+  color:#000;
+}
+.dashDown-rejected{
+  background-color: #fd3d39;
+  color:#fff;
+
 }
 
 .dashDown-img {
