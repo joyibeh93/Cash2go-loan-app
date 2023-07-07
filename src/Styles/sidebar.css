@@ -41,7 +41,9 @@
   justify-content: center;
   color: var(--existing-btn-bg-clr);
  
+ 
 }
+.sidebar-log 
 .sidebar-log {
   position: absolute;
   left: 70px;
@@ -61,9 +63,7 @@
   position: absolute;
   top: 3.5rem;
   left: 2rem;
-  color: #fff;
-  margin-top: 1rem 0;
-} */
+}
 .links {
   display: flex;
   margin: 1.5rem 0;
@@ -85,8 +85,7 @@
   position: absolute;
   top: 18rem;
   left: 2rem;
-  margin-top: 6rem;
-} */
+}
 .p-red,
 .p-green {
   height: 1.34rem;
@@ -99,32 +98,50 @@
 .p-green {
   background-color: var(--approved-btn-bg-clr);
 }
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 21.9%;
-  height: 100vh;
-  background-color: var(--side-bar-bg-clr);
-  overflow-y: auto;
+/*.one {
+  position: absolute;
+  top: 10.2rem;
+  left: 8.2rem;
 }
+.one1 {
+  position: absolute;
+  top: 13.4rem;
+  left: 8.3rem;
+}*/
 .logout-div{
-  margin-left: 2rem;
+  background-color: var(--side-bar-bg-clr);
+  
 }
 .log-out {
-  /* position: absolute; 
-  top: 16rem;
-  left: 2rem;  */
+  position: absolute; 
+  top: 15rem;
+  left: 2rem; 
+  /* margin-top: 150px; */
   font-size: 1.2rem;
   color:var(--steps-clr) 
 }
 
-.links.active {
-    background-color: rgba(248, 248, 252, 0.651);
-    opacity: 0.6;
-    padding: 0.5rem;
+.links.active p{
+  background-color: #b9bdc2;
+  /* color: #b9bdc3; */
+  color: #1e293b;
+  font-weight: bold;
+  border-radius: 1em;
+  padding: 0.5rem 0.5rem;
 }
+
+.p-green {
+  background-color: var(--approved-btn-bg-clr);
+}
+
+.log-out {
+  position: absolute;
+  top: 15rem;
+  left: 2rem;
+  font-size: 1.2rem;
+  color: var(--steps-clr);
+} */
+
 
  /* .logout-div {
   position: fixed;
@@ -202,5 +219,4 @@
   left: 2rem;
   font-size: 1.2rem;
   color: var(--steps-clr);
-} */
-
+} 
