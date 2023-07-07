@@ -4,7 +4,7 @@ import "../Styles/settings.css"
 
 const Notifications2 = () => {
   return (
-    <div style={{marginTop:"5em" , marginLeft:"-20em"}}>
+    <div style={{marginTop:"5em"}}>
 
     <div> 
         <table>

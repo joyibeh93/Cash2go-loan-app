@@ -5,8 +5,8 @@ import "../Styles/settings.css"
 
 const Security = () => {
   return (
-    <div style={{marginTop:"5em" , marginLeft:"-20em"}}>
-      
+    <div style={{marginTop:"5em"}}>
+       
     <div className="Msg-inbox">
         <table >
             <thead>

@@ -2,11 +2,8 @@ import React from 'react'
 
 const Activity = () => {
   return (
-     <div style={{marginTop:"5em" , marginLeft:"-20em"}}>
-      
-
-
-
+     <div style={{marginTop:"5em"}}>
+    
       <div className="msg-cnt-note">
           <div>
             <h4>All Activities</h4>
