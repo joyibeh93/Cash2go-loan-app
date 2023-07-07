@@ -8,7 +8,7 @@ import { useState } from "react";
 const SettingContent = () => {
   const [setting, setSetting] = useState(false);
   const [markAllClicked, setMarkAllClicked] = useState(false);
- const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleMarkAllClick = () => {
     setMarkAllClicked(!markAllClicked);
@@ -44,9 +44,9 @@ const SettingContent = () => {
        ) : (
           <div className="back-nav"> 
             <div className="settings-button">
-          <button className="markAll">Manage</button>
-          <button className="markRead">Create new Model</button>
-          </div>
+              <button className="markAll">Manage</button>
+              <button className="markRead">Create new Model</button>
+            </div>
           </div>
         )} 
 
@@ -111,3 +111,5 @@ const SettingContent = () => {
 };
 
 export default SettingContent;
+
+

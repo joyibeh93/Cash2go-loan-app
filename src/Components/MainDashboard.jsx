@@ -40,7 +40,7 @@ import { useNavigate } from 'react-router-dom';
             +10 from Yesterday{' '}
             <button className="approved">
               {' '}
-              <img src={approvedTransparent} alt="approved-icon" /> Approved
+              <img src={approvedTransparent} alt="approved-icon" className='approvedTransparent'/> Approved
             </button>
           </p>
         </div>
