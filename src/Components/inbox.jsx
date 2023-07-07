@@ -10,7 +10,7 @@ import msg4 from "../assets/msg4.jpg";
 
 const Inbox = ({clickAll}) => {
   return (
-    <>
+    <div className="inbox">
       <div className="Msg-inbox">
         <div className="msg-cnt-note">
           <div>
@@ -153,7 +153,7 @@ const Inbox = ({clickAll}) => {
           Next<span className="arrow-right">&rarr;</span>
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

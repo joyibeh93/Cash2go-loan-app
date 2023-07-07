@@ -13,7 +13,7 @@ const Models= () => {
  
   
   return (
-    <div >
+    <div style={{marginTop:"5em" }}>
         <div className='settings'>
           <table>
           <thead>

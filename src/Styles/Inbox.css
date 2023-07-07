@@ -36,6 +36,12 @@
     --font-size: 1rem;
   }
 
+.inbox{
+    width: 98%;
+    position: relative;
+    left: 2em;
+}
+
 .msg-top-bar{
     display: flex;
     justify-content: space-between;
@@ -117,7 +123,7 @@ h4, h1{
 
 .msgcntinfo{
     position: relative;
-    left: 1.5em;
+    left: 3em;
 }
 
 .first{
@@ -134,6 +140,7 @@ h4, h1{
     width: 70%;
     position: relative;
     top: 2em;
+    margin-left: -3em;
 }
 
 .name{
@@ -150,6 +157,7 @@ h4, h1{
 .msg-icons{
     position: relative;
     top: 3.8em;
+    left: -2em;
 }
 
 .doubleclick{

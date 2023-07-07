@@ -4,19 +4,29 @@ import Notifications2 from "./Notifications2";
 import Security from "./Security";
 import Activity from "./Activity";
 import { useState } from "react";
+import SettingsModal from "./SettingsModal";
 
 const SettingContent = () => {
   const [setting, setSetting] = useState(false);
   const [markAllClicked, setMarkAllClicked] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+  const [settingsModalOpen, setSettingsModalOpen] = useState(false);
+  const [ clickAll, setClickAll] = useState(false);
 
   const handleMarkAllClick = () => {
     setMarkAllClicked(!markAllClicked);
+    setClickAll(true);
   };
 
 
   return (
     <div className="messageContent" >
+      {settingsModalOpen && (
+        <SettingsModal
+          closeModal={setSettingsModalOpen}
+          setMarkAllClicked={setMarkAllClicked}
+          setClickAll = {setClickAll}
+        />
+      )}
          <div className="msg-top-bar">
         <div>
           <p className="msg-cnt-mb">
@@ -29,11 +39,11 @@ const SettingContent = () => {
           <div className="exit-new">
             <button className="markAll">Manage</button>
             {markAllClicked ? (
-              <button className="markRead" onClick={() => setModalOpen(true)}>
+              <button className="markRead" onClick={() => setClickAll(!clickAll)} >
                 Create New Model
               </button>
             ) : (
-              <button className="markRead" onClick={handleMarkAllClick}>
+              <button className="markRead" onClick={() =>setSettingsModalOpen(true)}>
                 Create New Model
               </button>
             )}
@@ -42,39 +52,49 @@ const SettingContent = () => {
 
 
        ) : (
-          <div className="back-nav"> 
-            <div className="settings-button">
-              <button className="markAll">Manage</button>
-              <button className="markRead">Create new Model</button>
-            </div>
-          </div>
+        <div className="back-nav">
+        <button className="markAll" >
+         Turn ALL OFF
+       </button>
+       {markAllClicked ? (
+         <button className="markRead" onClick={() => setSettingsModalOpen(true)}>
+           Turn  ALL ON
+         </button>
+       ) : (
+         <button className="markRead" onClick={handleMarkAllClick}>
+          Turn ALL On
+        </button>
+        )
+     }
+   
+     </div>
         )} 
 
 
       </div>
-    
-      <div className="">
-        <div className="msg-nav">
-          <div className="msg-section" onClick={() => setSetting("models")}>
-            <p>Models</p>
+        <div className="categories">
+          <div className="msg-section" onClick={() => setSetting("Model")}>
+            <p>Model</p>
             <div
               className="msg-line"
               style={
-                setting === "models"
+                setting === "Model"
                   ? { backgroundColor: "#747a74" }
                   : { backgroundColor: "#bac0ba" }
               }></div>
-          </div>
+      
         </div>
-        <div className="msg-section" onClick={() => setSetting("notification2")}>
+    
+        <div className="msg-section" onClick={() => setSetting("notification")}>
           <p>Notifications</p>
           <div
             className="msg-line"
             style={
-              setting === "models"
+              setting === "notification"
                 ? { backgroundColor: "#747a74" }
                 : { backgroundColor: "#bac0ba" }
             }></div>
+            
         </div>
         <div className="msg-section" onClick={() => setSetting("security")}>
           <p>Security & Privacy</p>
@@ -89,16 +109,17 @@ const SettingContent = () => {
         <div className="msg-section" onClick={() => setSetting("activity")}>
           <p>Activity</p>
           <div
-            className="msg-line"
+            className="msg-line "
             style={
               setting === "activity"
                 ? { backgroundColor: "#747a74" }
                 : { backgroundColor: "#bac0ba" }
             }></div>
+            </div>
         </div>
-        {setting === "models" ? (
+        {setting === "Model" ? (
           <Models />
-        ) : setting === "notifications2" ? (
+        ) : setting === "notification" ? (
           <Notifications2 />
         ) : setting === "security" ? (
           <Security />
@@ -106,7 +127,6 @@ const SettingContent = () => {
           <Activity />
         )}
       </div>
-    </div>
   );
 };
 
