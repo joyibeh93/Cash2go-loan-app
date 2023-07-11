@@ -81,52 +81,66 @@
   background-color: var(--approved-btn-bg-clr);
   color: var(--main-bg-clr);
   border: none;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1.4rem;
   border-radius:0.3rem;
   font-size: 0.8rem;
   margin-left: 0.4rem;
+}
+.approvedTransparent{
+  position:absolute;
+  top:17.rem;
+  left: 32.8rem;
+ 
 }
 .pending {
   background-color: hsl(184, 40%, 59%);
   color: var(--);
   border: none;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.9rem;
-  padding: 0.25rem 0.5rem;
-  border-radius:0.3rem;
+  padding: 0.20rem 1.4rem;
   font-size: 0.8rem;
+  border-radius:0.3rem;
   margin-left: 0.4rem;
 } 
 .icn{
   color: #000000d2;
 }
+.pendingTransparent{
+  position:absolute;
+  top:17.5rem;
+  left: 57.8rem;
+
+}
 .rejected {
   background-color: var(--rejected-btn-bg-clr);
   color: var(--main-bg-clr);
   border: none;
-  padding: 0.3rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1.4rem;
   border-radius:0.3rem;
   font-size: 0.8rem;
   margin-left: 0.4rem;
 }
+.rejected-icon{
+  position:absolute;
+  top:17.4rem;
+  left: 82.5rem;
+}
 .approved-black {
   position: absolute;
   left: 39.5rem;
-  bottom: 28.7rem;
+  bottom: 27rem;
   width: 1.875rem;
 } 
 .pending-black {
   position: absolute;
   left: 61.5rem;
-  bottom: 28.7rem;
+  bottom: 27rem;
   width: 1.875rem;
 }
 
 .rejected-black {
   position: absolute;
   left: 86.9rem;
-  bottom: 28.7rem;
+  bottom: 27rem;
   width: 1.875rem;
 } 
 .ddownload-icon{

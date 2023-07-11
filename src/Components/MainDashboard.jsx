@@ -40,7 +40,7 @@ import { useNavigate } from 'react-router-dom';
             +10 from Yesterday{' '}
             <button className="approved">
               {' '}
-              <img src={approvedTransparent} alt="approved-icon" /> Approved
+              <img src={approvedTransparent} alt="approved-icon" className='approvedTransparent'/> Approved
             </button>
           </p>
         </div>
@@ -53,7 +53,7 @@ import { useNavigate } from 'react-router-dom';
           <p className="loan-stats">
             +2 from Yesterday{' '}
             <button className="pending">
-              <img src={pendingTransparent} alt="pending-icon" className="icn"/> Pending
+              <img src={pendingTransparent} alt="pending-icon" className="icn pendingTransparent"/> Pending
             </button>
           </p>
         </div>
@@ -66,7 +66,7 @@ import { useNavigate } from 'react-router-dom';
           <p className="loan-stats">
             +1 from Yesterday{' '}
             <button className="rejected">
-              <img src={rejectedTransparent} alt="rejected-icon" /> Rejected
+              <img src={rejectedTransparent} alt="rejected-icon" className="rejected-icon" /> Rejected
             </button>
           </p>
         </div>
