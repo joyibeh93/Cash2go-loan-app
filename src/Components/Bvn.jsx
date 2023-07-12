@@ -87,7 +87,8 @@ export default Bvn;*/
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import { useNavigate } from "react-router-dom";
-import '../Styles/LoanDefault.css'
+import { Link } from "react-router-dom";
+import '../Styles/Bvn.css'
 
 const initialValues = {
   id: "",
@@ -115,13 +116,24 @@ const navigate = useNavigate();
   };
 
   return (
-    <div className="form-containersss">
-      <h1 className="predict-h1">Predict Loan Default</h1>
+    <div className="form-containerss">
+      <div className="top-nav">
+        <ul className="nav-item">
+          <li>
+            <Link to="/bvn"> Contact Info </Link>
+          </li>
+          <li>
+            <Link to="/loan_default">Prediction Info</Link>
+          </li>
+          <li>Financial History</li>
+        </ul>
+      </div>
+      <h1 className="bvn-h1">Personal Information</h1>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form className="Loan_form">
+        <Form className="bvn_form">
           <div className="column">
             <div className="row">
-              <h3 className="predict-h3">ID Number</h3>
+              <h3 className="bvn-h3">ID Number</h3>
               <Field
                 as="select"
                 type="text"
@@ -139,29 +151,29 @@ const navigate = useNavigate();
             </div>
 
             <div className="row">
-              <h3 className="predict-h3">First Name</h3>
+              <h3 className="bvn-h3">First Name</h3>
               <Field
                 type="text"
                 name="first_name"
                 required
                 placeholder="First Name"
-                className="loan-default"
+                className="bvn-default"
               />
             </div>
 
             <div className="row">
-              <h3 className="predict-h3">Surname</h3>
+              <h3 className="bvn-h3">Surname</h3>
               <Field
                 type="text"
                 name="surname"
                 required
                 placeholder="Surname"
-                className="loan-default"
+                className="bvn-default"
               />
             </div>
 
             <div className="row">
-              <h3 className="predict-h3">Gender</h3>
+              <h3 className="bvn-h3">Gender</h3>
               <Field
                 as="select"
                 type="text"
@@ -176,13 +188,13 @@ const navigate = useNavigate();
             </div>
 
             <div className="row">
-              <h3 className="predict-h3">Date of Birth</h3>
+              <h3 className="bvn-h3">Date of Birth</h3>
               <Field
                 type="text"
                 name="date_of_birth"
                 required
                 placeholder="DD/MM/YY"
-                className="loan-default"
+                className="bvn-default"
               />
             </div>
           </div>
@@ -239,67 +251,55 @@ const navigate = useNavigate();
             </div>
 
             <div className="row">
-              <h3 className="predict-h3">Applicants income</h3>
+              <h3 className="bvn-h3">Address</h3>
               <Field
                 type="text"
-                name="applicants_income"
+                name="address"
                 required
-                placeholder=">25,000.00"
-                inputMode="numeric"
-                pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
-                className="loan-default"
+                placeholder="Contact Address"
+                className="bvn-default"
               />
             </div>
 
             <div className="row">
-              <h3 className="predict-h3">Co-applicants income</h3>
+              <h3 className="bvn-h3">Work Address</h3>
               <Field
                 type="text"
-                name="co_applicants_income"
+                name="work_address"
                 required
-                placeholder=">25,000.00"
-                inputMode="numeric"
-                pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
-                className="loan-default"
+                placeholder="Employee's Address"
+                className="bvn-default"
               />
             </div>
 
             <div className="row">
-              <h3 className="predict-h3">Credit history</h3>
+              <h3 className="bvn-h3">Phone Number</h3>
               <Field
-                as="select"
                 type="text"
-                id="credit_history"
-                name="credit_history"
-                className="input"
-              >
-                <option value="">Select an option</option>
-                <option value="option1">0</option>
-                <option value="option2">1</option>
-                <option value="option3">2</option>
-                <option value="option4">3</option>
-                <option value="option5">4</option>
-                <option value="option6">5</option>
-              </Field>
+                name="phone_number"
+                required
+                placeholder="08012345678"
+                inputMode="numeric"
+                pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
+                className="bvn-default"
+              />
             </div>
 
             <div className="row">
-              <h3 className="predict-h3">Property area</h3>
+              <h3 className="bvn-h3">Next of Kin Phone Number</h3>
               <Field
-                as="select"
                 type="text"
-                id="property_area"
-                name="property_area"
-                className="input"
-              >
-                <option value="">Select an option</option>
-                <option value="option1">Rural</option>
-                <option value="option2">Urban</option>
-              </Field>
+                name="next_of_kin_phone_number"
+                required
+                placeholder="08012345678"
+                inputMode="numeric"
+                pattern="[0-9]+(,[0-9]{3})*(\.[0-9]{2})?"
+                className="bvn-default"
+              />
             </div>
           </div>
 
-          <button type="submit" className="default-submit">Next</button>
+          <button type="submit" className="info-submit">Next</button>
         </Form>
       </Formik>
     </div>
