@@ -4,7 +4,9 @@
   align-items: center;
   max-height: 530px;
   max-width: 900px;
+
   margin: 15px auto; 
+
   padding: 25px;
   border: 1px solid grey;
   background-color: #f2f2f2;
@@ -34,7 +36,7 @@
   margin: 0;
   font-size: 20px;
   font-weight: 600;
-  
+
 }
 
 button {
@@ -54,6 +56,7 @@ select[type="text"] {
   color: white;
   padding: 5px;
 }
+
 
 
 /*.bvn-header {
@@ -109,5 +112,6 @@ select[type="text"] {
   h3 {
     border-bottom: 1px solid black ;
   }*/
+
   
   
