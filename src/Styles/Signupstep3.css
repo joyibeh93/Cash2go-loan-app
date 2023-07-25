@@ -51,8 +51,8 @@
 
 .eye {
   position: absolute;
-  left: 77em;
-  top: 25em;
+  left: 76rem;
+  top: 25rem;
 }
 /* .eye{
   position: absolute;
@@ -62,8 +62,8 @@
 
 .eye2 {
   position: absolute;
-  top: 20em;
-  left: 77em;
+  top: 20rem;
+  left: 76rem;
   cursor: pointer;
 }
 
@@ -97,4 +97,9 @@
   margin-left: 8em;
   font-size: 0.8rem;
   cursor: pointer;
+}
+.logo{
+  position: absolute;
+  top:397px;
+  left:175px;
 }
