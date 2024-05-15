@@ -1,5 +1,5 @@
-:root {
   /*** background colors ***/
+:root {
   --main-bg-clr: #f7f7f7;
   --otp-bg-clr: #dfdede;
   --input-bg-clr: #b9bdc2;
@@ -40,33 +40,42 @@
   flex-direction: column;
   justify-content: center;
   color: var(--existing-btn-bg-clr);
-  position: relative;
+ 
 }
-.sidebar-logo {
+.sidebar-log {
   position: absolute;
+  left: 70px;
+  top:10px;
 }
-.sidebar-items1 {
-  position: absolute;
-  top: 3.5rem;
-  left: 2rem;
+.sidebarlogo1{
+  margin-top: 7px;
+  margin-left: -29px;
 }
+.sidelogo1{
+  width: 20px;
+}
+.sidelogo2{
+  width:90px;
+} 
+
 .links {
   display: flex;
   margin: 1.5rem 0;
   font-size: 1.2rem;
-  margin-left: 0.5rem;
   font-size: 0.9rem;
+}
+.links img{
+  margin-left: 1rem;
 }
 .links p {
   margin-left: 1rem;
   color:var(--steps-clr) 
 }
-
-.sidebar-items2 {
-  position: absolute;
-  top: 20rem;
-  left: 2rem;
+.sidebarlogo{
+  width:180px;
 }
+
+
 .p-red,
 .p-green {
   height: 1.34rem;
@@ -79,25 +88,29 @@
 .p-green {
   background-color: var(--approved-btn-bg-clr);
 }
-.one {
-  position: absolute;
-  top: 10.2rem;
-  left: 8.2rem;
-}
-.one1 {
-  position: absolute;
-  top: 13.4rem;
-  left: 8.3rem;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 21.9%;
+  height: 100vh;
+  background-color: var(--side-bar-bg-clr);
+  overflow-y: auto;
 }
 .logout-div{
-  background-color: var(--side-bar-bg-clr);
-  
+  margin-left: 2rem;
+  margin-top: 7rem;
 }
 .log-out {
-  position: absolute; 
-  top: 33rem;
-  left: 2rem; 
-  margin-top: 150px;
+  
   font-size: 1.2rem;
-  color:var(--steps-clr) 
+  color:var(--steps-clr);
 }
+
+.links.active {
+    background-color: rgba(248, 248, 252, 0.651);
+    opacity: 0.6;
+    padding: 0.5rem;
+}
+

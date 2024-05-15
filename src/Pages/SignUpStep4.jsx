@@ -9,13 +9,14 @@ const SignUpStep4 = () => {
     <div className="container">
     <div className="left-side">
       <div className="background-container">
-        <Logo />
-  
+          <div className='logo'>
+            <Logo  />
+          </div>
         <StepsContainer />
+      </div>
       </div>
       <div className="right-side">
         <QuestionForm />
-      </div>
     </div>
   </div>
     

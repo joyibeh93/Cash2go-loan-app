@@ -19,10 +19,10 @@ import { useNavigate } from 'react-router-dom';
     <div className="dashboard-content">
       <p>Dashboard</p>
       <div className="notification">
-        <div>
-          <h2>Hello Gbenga</h2>
+        <div className='dash-welcomenote'>
+          <h1 className='notifctn-header1'>Hello Gbenga</h1><br/>
           <p>
-            Welcome back you have <span> 13 </span> New Notification
+            Welcome back you have <strong style={{fontWeight:'bold',fontSize:"16px"}}> 13 </strong> New Notification
           </p>
         </div>
         <div className="exit-new">
@@ -34,13 +34,13 @@ import { useNavigate } from 'react-router-dom';
         <div className='dast-top1'>
           <p>Approved Loan</p>
           <p className="loan-count">
-            <strong>104</strong>
+            <strong style={{fontWeight:'bold',fontSize:"18px"}}>104</strong>
           </p>
-          <p className="loan-stats">
+          <p className="loan-stats" >
             +10 from Yesterday{' '}
             <button className="approved">
               {' '}
-              <img src={approvedTransparent} alt="approved-icon" /> Approved
+              <img src={approvedTransparent} alt="approved-icon" className='approvedTransparent'/> Approved
             </button>
           </p>
         </div>
@@ -48,12 +48,12 @@ import { useNavigate } from 'react-router-dom';
         <div className='dast-top1'>
           <p>Pending Reviews</p>
           <p className="loan-count">
-            <strong>81</strong>
+            <strong style={{fontWeight:'bold',fontSize:"18px"}}>81</strong>
           </p>
           <p className="loan-stats">
             +2 from Yesterday{' '}
             <button className="pending">
-              <img src={pendingTransparent} alt="pending-icon" /> Pending
+              <img src={pendingTransparent} alt="pending-icon" className="icn pendingTransparent"/> Pending
             </button>
           </p>
         </div>
@@ -61,17 +61,18 @@ import { useNavigate } from 'react-router-dom';
         <div className='dast-top1'>
           <p>Approved Loan</p>
           <p className="loan-count">
-            <strong>20</strong>
+            <strong style={{fontWeight:'bold',fontSize:"18px"}}>20</strong>
           </p>
           <p className="loan-stats">
             +1 from Yesterday{' '}
             <button className="rejected">
-              <img src={rejectedTransparent} alt="rejected-icon" /> Rejected
+              <img src={rejectedTransparent} alt="rejected-icon" className="rejected-icon" /> Rejected
             </button>
           </p>
         </div>
         <img src={rejectedBlack} className="rejected-black" alt="" />
       </div>
+      
     </div>
   );
 }

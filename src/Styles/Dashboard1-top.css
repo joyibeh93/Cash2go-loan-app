@@ -13,7 +13,7 @@
   --new-btn-bg-clr: #ff6f5a;
   --approved-btn-bg-clr: #169872;
   --rejected-btn-bg-clr: #fd3d39;
-  --pending-btn-bg-clr: #c0f5f9;
+  --pending-btn-bg-clr: #52898d;
   --credit-score-bg-clr: #b9bdc2;
   --excellent-btn-bg-clr: #169872;
   --good-btn-bg-clr: #747a85;
@@ -44,12 +44,20 @@
 }
 .exit-new button {
   margin-left: 0.8rem;
+  /* width: 110px; */
+  padding: 12px 20px;
+  border-radius: 5px;
+}
+.notifctn-header1{
+  color: var(--main-text-color);
 }
 .exisiting {
   background-color: var(--existing-btn-bg-clr);
+  display: inline-block;
   border: none;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   font-size: 0.8rem;
+  border-radius: 5px;
 }
 .new {
   background-color: var(--new-btn-bg-clr);
@@ -57,15 +65,16 @@
   border: none;
   padding: 0.5rem 1.2rem;
   font-size: 0.8rem;
+  border-radius: 5px;
 }
 .dash-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f0f0f0;
-  padding: 0.8rem;
+  background-color: var(--dashboard-bg-clr);
+  padding: 1rem;
   border-radius: 0.6rem;
-  margin: 1rem 0;
+  margin: 2rem 0px;
 }
 
 
@@ -73,41 +82,70 @@
   background-color: var(--approved-btn-bg-clr);
   color: var(--main-bg-clr);
   border: none;
-  padding: 0.3rem;
+  padding: 0.25rem 1.4rem;
+  border-radius:0.3rem;
   font-size: 0.8rem;
+  margin-left: 0.4rem;
+}
+.approvedTransparent{
+  position:absolute;
+  top:17.8rem;
+  left: 30.8rem;
+ 
 }
 .pending {
-  background-color: var(--pending-btn-bg-clr);
+  background-color: hsl(184, 40%, 59%);
+  color: var(--);
   border: none;
-  padding: 0.3rem;
-  font-size: 0.9rem;
+  padding: 0.20rem 1.4rem;
+  font-size: 0.8rem;
+  border-radius:0.3rem;
+  margin-left: 0.4rem;
+} 
+.icn{
+  color: #000000d2;
+}
+.pendingTransparent{
+  position:absolute;
+  top:17.8rem;
+  left: 52.1rem;
 
 }
-
 .rejected {
   background-color: var(--rejected-btn-bg-clr);
-  border: none;
-  padding: 0.3rem;
   color: var(--main-bg-clr);
+  border: none;
+  padding: 0.25rem 1.4rem;
+  border-radius:0.3rem;
   font-size: 0.8rem;
+  margin-left: 0.4rem;
+}
+.rejected-icon{
+  position:absolute;
+  top:17.8rem;
+  left: 72.9rem;
 }
 .approved-black {
   position: absolute;
-  left: 36.5rem;
-  bottom: 28rem;
+  left: 37.5rem;
+  bottom: 22.5rem;
   width: 1.875rem;
-}
+} 
 .pending-black {
   position: absolute;
-  left: 54.5rem;
-  bottom: 28rem;
+  left: 57.5rem;
+  bottom: 22.5rem;
   width: 1.875rem;
 }
+
 .rejected-black {
   position: absolute;
-  left: 75.9rem;
-  bottom: 28rem;
+  left: 76.9rem;
+  bottom: 22.5rem;
   width: 1.875rem;
+} 
+.ddownload-icon{
+  color: #f0f1f321;
 }
 .loan-count {
   margin: 0.5rem 0;

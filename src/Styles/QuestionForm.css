@@ -1,45 +1,63 @@
-.form-container {
-  width: 60em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #f7f7f7;
-  /* height: 100vh; */
-  padding: 3em;
-}
-
-.form {
+.Question-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f7f7f7; */
+  /* height: 100vh; */
 }
 
-.select {
+.Question-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 5em;
+}
+
+/* .select {
   display: block;
-  padding: 0.8em;
+  padding: 1em;
   outline: none;
-  border-radius: 0.6em;
+  border-radius: 0.5em;
   margin-bottom: 1em;
   margin-top: 0.5em;
-  width: 100%;
-}
+  width: 90%;
+} */
 
-input {
-  display: block;
-  padding: 0.5em 5em;
-  border-radius: 0.6em;
-  margin-top: 0.5em;
-  width: 100%;
+ .Question-input {
+  /* display: block; */
+  padding: 1em;
+  border-radius: 5px;
+  border: 2px solid #747a85;
+  outline: none;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 30em;
 }
-
-.terms {
-  margin-top: 5em;
+.Question-button{
+  font-family: var(--font-family-body);
+  background-color: var(--submit-btn-bg-clr);
+  padding: 0.6em;
+  outline: none;
+  border-radius: 0.5em;
+  margin-top: 0.125em;
+  text-align: center;
+  width: 25em;
+}
+.Question-button button{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+.Question-terms {
+  margin-right: 8em;
   font-size: 0.8rem;
 }
-.modal {
+.question-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,4 +107,37 @@ input {
 }
 .hidden {
   display: none;
+}
+@media (max-width: 768px)  {
+.left-side{
+  display: none;
+}
+.right-side{
+width: 100%;
+}
+.Question-form{
+  padding: 0 1rem;
+}
+.Question-input{
+  width: 90vw;
+}
+.Question-button{
+  width: 90vw;
+}
+.Question-terms{
+  margin-top: 50px;
+  margin-right: 0;
+}
+.question-modal {
+  width: 90%;
+}.close-modal{
+  top: -0.5rem;
+  right: -1rem;
+}
+.good{
+  margin-bottom: 1rem;
+}
+.close-modal h3{
+  margin-bottom: 1rem;
+}
 }

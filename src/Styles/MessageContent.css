@@ -48,7 +48,7 @@
 
 .markAll{
     border: none;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.5em 2em;
     border-radius: 5px;
     font-size: 15px;
 }
@@ -57,7 +57,7 @@
     background-color: var(--new-btn-bg-clr);
     border: none;
     color: var(--sign-up-cl);
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.5em 1em;
     border-radius: 5px;
     font-size: 15px;
 }
@@ -79,8 +79,8 @@
     margin-top: 0.5em;
 }
 
-.selected{
-    background-color: #747a74;
+.add{
+    width: 3.5em;
 }
 
 .msg-cnt-note{
@@ -111,15 +111,6 @@ h4, h1{
     margin-bottom: -1em;
 }
 
-.goTo{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid var(--credit-score-bg-clr);
-    background-color: #f2f6f7;
-    padding: 0.3em 0.2em 0.7em 1em;
-    border-radius: 5px;
-}
-
 .arrow-left{
     margin-right: 0.5em;
 }
@@ -128,14 +119,14 @@ h4, h1{
     margin-left: 0.5em;
 }
 
-.goto , button {
-    border: none;
-}
-
-.numbers , button{
-    margin-right: 1em;
-}
-
 button{
     cursor: pointer;
+}
+
+.back-nav{
+    cursor: pointer;
+}
+
+.back{
+    margin-right: 1em;
 }

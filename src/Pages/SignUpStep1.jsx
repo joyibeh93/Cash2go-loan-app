@@ -8,7 +8,10 @@ const SignUpPage = () => {
     <div className="container">
       <div className="left-side">
         <div className="background-container">
-          <Logo />
+          <div className='logo'>
+            <Logo  />
+          </div>
+          
           <StepsContainer />
         </div>
       </div>

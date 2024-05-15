@@ -1,162 +1,111 @@
-/*import React from "react";
-import "../Styles/MessageContent.css";
-import MessageContentInfo from "./MessageContentInfo";
-import { useState } from "react";
-import MsgForm from "./MsgForm";
-import ThreadForm from "./ThreadForm";
-
-function MessageContent() {
-  const [message, setMessage] = useState("inbox");
-
-  return (
-    <div className="messageContent">
-      <div className="msg-top-bar">
-        <div>
-          <p className="msg-cnt-mb">
-            Message <span>&gt;</span> Inbox
-          </p>
-          <h1>Messages</h1>
-        </div>
-        <div className="exit-new">
-          <button className="markAll">Mark All</button>
-          <button className="markRead">Mark All as Read</button>
-        </div>
-      </div>
-      <div className="msg-nav">
-        <div className="msg-section" onClick={() => setMessage("inbox")}>
-          <p>Inbox</p>
-          <div className="msg-line selected"></div>
-        </div>
-        <div className="msg-section" >
-          <p>New</p>
-          <div className="msg-line"></div>
-        </div>
-        <div className="msg-section" >
-          <p>Sent</p>
-          <div className="msg-line"></div>
-        </div>
-        <div className="msg-section" >
-          <p>Thread</p>
-          <div className="msg-line"></div>
-        </div>
-        <div className="msg-section" >
-          <p>Trash</p>
-          <div className="msg-line"></div>
-        </div>
-      </div>
-      {message === "inbox" ? (
-        <MessageContentInfo />
-      ) : message === "new" ? (
-        <MsgForm />
-      ) : message === "thread" ? (
-        <ThreadForm />
-      ) : (
-        <MessageContent />
-      )}
-      <div className="goTo">
-        <button className="prev">
-          <span className="arrow-left">&larr;</span>Prev
-        </button>
-        <div className="numbers">
-          <button>1</button>
-          <button>2</button>
-          <button>...</button>
-          <button>5</button>
-          <button>6</button>
-        </div>
-        <button className="next">
-          Next<span className="arrow-right">&rarr;</span>
-        </button>
-      </div>
-    </div>
-  );
-}
-
-export default MessageContent;*/
-
-
 import React, { useState } from "react";
-import "../Styles/MessageContent.css";
-import MessageContentInfo from "./MessageContentInfo";
+import "../Styles/Inbox.css";
+import Inbox from "./inbox";
 import MsgForm from "./MsgForm";
 import ThreadForm from "./ThreadForm";
+import Modal from "./Modal";
 
 function MessageContent() {
   const [message, setMessage] = useState("inbox");
   const [markAllClicked, setMarkAllClicked] = useState(false);
-
+  const [modalOpen, setModalOpen] = useState(false);
+  const [clickAll, setClickAll] = useState(false);
 
   const handleMarkAllClick = () => {
     setMarkAllClicked(!markAllClicked);
-    
+    setClickAll(true);
   };
 
   return (
     <div className="messageContent">
+      {modalOpen && (
+        <Modal
+          closeModal={setModalOpen}
+          setMarkAllClicked={setMarkAllClicked}
+          setClickAll={setClickAll}
+        />
+      )}
       <div className="msg-top-bar">
         <div>
           <p className="msg-cnt-mb">
-            Message <span>&gt;</span> Inbox
+            Message <span>&gt;</span>{" "}
+            {message === "inbox" ? "Inbox" : "Create New"}
           </p>
           <h1>Messages</h1>
         </div>
-        <div className="exit-new">
-          <button className="markAll">Mark All</button>
-          {markAllClicked ? (
-            <button className="markRead">Delete Marked</button>
-          ) : (
-            <button className="markRead" onClick={handleMarkAllClick}>
-              Mark All as Read
+        {message === "inbox" ? (
+          <div className="exit-new">
+            <button className="markAll" onClick={() => setClickAll(!clickAll)}>
+              Mark All
             </button>
-          )}
-        </div>
+            {markAllClicked ? (
+              <button className="markRead" onClick={() => setModalOpen(true)}>
+                Delete Marked
+              </button>
+            ) : (
+              <button className="markRead" onClick={handleMarkAllClick}>
+                Mark All as Read
+              </button>
+            )}
+          </div>
+        ) : (
+          <p className="back-nav">
+            <span className="back">&larr;</span>Back
+          </p>
+        )}
       </div>
       <div className="msg-nav">
         <div className="msg-section" onClick={() => setMessage("inbox")}>
           <p>Inbox</p>
-          <div className="msg-line selected"></div>
+          <div
+            className="msg-line"
+            style={
+              message === "inbox"
+                ? { backgroundColor: "#747a74" }
+                : { backgroundColor: "#bac0ba" }
+            }
+          ></div>
         </div>
-        <div className="msg-section" >
+        <div className="msg-section" onClick={() => setMessage("new")}>
           <p>New</p>
-          <div className="msg-line"></div>
+          <div
+            className="msg-line"
+            style={
+              message === "new"
+                ? { backgroundColor: "#747a74" }
+                : { backgroundColor: "#bac0ba" }
+            }
+          ></div>
         </div>
-        <div className="msg-section" >
+        <div className="msg-section">
           <p>Sent</p>
           <div className="msg-line"></div>
         </div>
-        <div className="msg-section" >
+        <div className="msg-section" onClick={() => setMessage("thread")}>
           <p>Thread</p>
-          <div className="msg-line"></div>
+          <div
+            className="msg-line add"
+            style={
+              message === "thread"
+                ? { backgroundColor: "#747a74" }
+                : { backgroundColor: "#bac0ba" }
+            }
+          ></div>
         </div>
-        <div className="msg-section" >
+        <div className="msg-section">
           <p>Trash</p>
           <div className="msg-line"></div>
         </div>
       </div>
       {message === "inbox" ? (
-        <MessageContentInfo />
+        <Inbox clickAll={clickAll} />
       ) : message === "new" ? (
         <MsgForm />
       ) : message === "thread" ? (
         <ThreadForm />
       ) : (
-        <MessageContent />
+        <Inbox />
       )}
-      <div className="goTo">
-        <button className="prev">
-          <span className="arrow-left">&larr;</span>Prev
-        </button>
-        <div className="numbers">
-          <button>1</button>
-          <button>2</button>
-          <button>...</button>
-          <button>5</button>
-          <button>6</button>
-        </div>
-        <button className="next">
-          Next<span className="arrow-right">&rarr;</span>
-        </button>
-      </div>
     </div>
   );
 }

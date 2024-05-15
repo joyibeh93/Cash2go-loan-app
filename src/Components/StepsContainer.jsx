@@ -1,6 +1,7 @@
 import React from 'react';
 import CheckBoxSteps from './CheckBoxSteps';
 import CheckBox from './CheckBox';
+import '../index.css'
 
 const StepsContainer = () => {
   return (
@@ -32,7 +33,7 @@ const StepsContainer = () => {
           <CheckBoxSteps
             stepsNum="step"
             Num="3"
-            stepsDescription="create your password"
+            stepsDescription="security questions"
           />
         </div>
       </div>
@@ -42,7 +43,7 @@ const StepsContainer = () => {
           <CheckBoxSteps
             stepsNum="step"
             Num="4"
-            stepsDescription="security questions"
+            stepsDescription="create your password"
           />
         </div>
       </div>
